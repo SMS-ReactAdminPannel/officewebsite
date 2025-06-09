@@ -1,4 +1,12 @@
-<!-- Walmart-style Color Bar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Walmart-style Color Bar -->
 <div class="color-bar"></div>
 
 <!-- Navbar -->
@@ -11,10 +19,11 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="#" data-page="Home" class="active">Home</a></li>
-            <li><a href="#" data-page="About">About</a></li>
-            <li><a href="#" data-page="Services">Services</a></li>
-            <li><a href="#" data-page="Contact">Contact</a></li>
+            <li><a href="../HTML/Home.html" data-page="Home" class="active">Home</a></li>
+            <li><a href="../HTML/About.html" data-page="About">Who We Are</a></li>
+            <li><a href="#" data-page="Services">What We Do</a></li>
+            <li><a href="#" data-page="Careers">Careers</a></li>
+            <li><a href="../HTML/Contact.html" data-page="Contact">Contact</a></li>
         </ul>
 
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
@@ -50,3 +59,5 @@
         menuIcon.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
     }
 </script>
+</body>
+</html>
