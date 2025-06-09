@@ -1,6 +1,6 @@
 /* Walmart Global Tech Hero Section */
 .hero-section {
-    min-height: 100vh;
+    height: 110vh;
     background-image: linear-gradient(180deg, rgba(0, 9, 21, 0.7) 0%, rgba(4, 30, 65, 0.7) 100%), url('../Assets/home-hero.jpg');
     position: relative;
     overflow: hidden;
@@ -26,9 +26,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    /* background-image: 
         linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px); */
     background-size: 20px 20px;
 }
 
@@ -166,7 +166,7 @@
 }
 
 .code-block .highlight {
-    color: #78be20;
+    color: #78bd23;
 }
 
 .services-list {
@@ -246,7 +246,7 @@
 }
 
 .hero-code-text .highlight {
-    color: #0076CE;
+    color: #15de79;
 }
 
 .hero-title {
@@ -274,7 +274,7 @@
 
 .hero-cta {
     display: inline-block;
-    background: #0076CE;
+    background: #058746;
     color: white;
     font-size: 1rem;
     font-weight: 700;
@@ -406,25 +406,27 @@
 
 .careers-form-container {
     display: flex;
-    position: relative;
+    position: absolute;
     flex-direction: row;
     max-width: 900px;
+    width: 50%;
     margin: 0 auto;
-    margin-top: -30px;
+    margin-top: -40px;
     padding: 20px;
     background: #fff;
     border-radius: 250px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
     z-index: 1;
+    left: 25%;
 }
 
 .careers-form-container .form-label {
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 5%;
     padding: 0 5px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     background: #fff;
 }
 
@@ -487,200 +489,100 @@
     font-size: 25px;
 }
 
+
 /* Features Section */
 .features-section {
-    padding: 6rem 0;
-    background-color: #f8f9fa;
+  padding: 100px 20px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  /* min-height: 50%; */
+  height: 80%;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.features-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+  align-items: flex-start;
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
+.features-left {
+  flex: 1;
+  max-width: 450px;
 }
 
-.section-header h2 {
-    font-size: 2.5rem;
-    color: #001833;
-    margin-bottom: 1rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+.features-left h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
 }
 
-.section-header p {
-    font-size: 1.25rem;
-    color: #4a5568;
-    max-width: 700px;
-    margin: 0 auto;
-    letter-spacing: -0.01em;
-    line-height: 1.5;
+.features-left p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+.features-left .learn-more {
+  color: #0071dc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.features-right {
+  flex: 2;
+  overflow-x: auto ;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.features-right::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.card-slider {
+  display: flex;
+  gap: 20px;
+  min-width: 1000px;
 }
 
 .feature-card {
-    background: white;
-    border-radius: 8px;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  /* padding: 16px; */
+  min-width: 300px;
+  max-width: 300px;
+  height: 400px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.feature-icon {
-    font-size: 2.5rem;
-    color: #0071ce;
-    margin-bottom: 1.5rem;
-    display: inline-block;
-    background: rgba(0, 113, 206, 0.1);
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    border-radius: 50%;
+.feature-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .feature-card h3 {
-    font-size: 1.5rem;
-    color: #001833;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
+  font-size: 16px;
+  margin: 10px 0 6px;
+  color: #111;
 }
 
 .feature-card p {
-    color: #4a5568;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
 }
 
-/* Error Page */
-.error-container {
-    padding: 5rem 2rem;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.error-container h2 {
-    font-size: 2rem;
-    color: #001833;
-    margin-bottom: 1rem;
-}
-
-.error-container p {
-    margin-bottom: 2rem;
-    color: #4a5568;
-}
-
-.error-container button {
-    background: #0071ce;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.error-container button:hover {
-    background: #0062b1;
-}
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .nav-container {
-        padding: 0 1rem;
-    }
-    
-    .hero-section {
-        padding: 140px 0 80px;
-    }
-    
-    .hero-code-text {
-        font-size: 1.5rem;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
-    }
-    
-    .hero-cta {
-        padding: 0.75rem 1.5rem;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .hero-video-container {
-        width: 300px;
-        height: 300px;
-        margin-top: 40px;
-    }
-    
-    .video-toggle-btn {
-        padding: 8px 12px;
-        font-size: 0.8rem;
-    }
-    
-    .video-content-inner {
-        padding: 20px;
-    }
-    
-    .code-block {
-        padding: 15px;
-    }
-    
-    .code-block pre {
-        font-size: 1rem;
-    }
-    
-    .return-to-video-btn {
-        align-self: center;
-        width: 100%;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .features-section {
-        padding: 4rem 0;
-    }
+.feature-card .see-more {
+  border: 2px solid #000;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
 }
