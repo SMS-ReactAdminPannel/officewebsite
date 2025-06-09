@@ -1,17 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="navbar">
-      <nav>
-        <a href="#" data-page="Home">Home</a>
-        <a href="#" data-page="About">About</a>
-        <a href="#" data-page="Contact">Contact</a>
-      </nav>
+<!-- Walmart-style Color Bar -->
+<div class="color-bar"></div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="#" data-page="Home">
+                <img src="Src/Assets/yohologo.png" alt="Yoho Technologies" id="navbar-logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#" data-page="Home" class="active">Home</a></li>
+            <li><a href="#" data-page="About">About</a></li>
+            <li><a href="#" data-page="Services">Services</a></li>
+            <li><a href="#" data-page="Contact">Contact</a></li>
+        </ul>
+
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <span id="menu-icon">☰</span>
+        </button>
     </div>
-  </body>
-</html>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#" data-page="Home" class="active">Home</a>
+        <a href="#" data-page="About">About</a>
+        <a href="#" data-page="Services">Services</a>
+        <a href="#" data-page="Contact">Contact</a>
+    </div>
+</nav>
+
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        
+        mobileMenu.classList.toggle('active');
+        menuIcon.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+    }
+</script>

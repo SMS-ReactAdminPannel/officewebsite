@@ -1,3 +1,8 @@
 {
+<<<<<<< HEAD
     "liveServer.settings.port": 5501
+=======
+    "liveServer.settings.port": 5501,
+    "zencoder.enableRepoIndexing": true
+>>>>>>> 2522a87375f2dacef3f33027560b4ea35c4ac34d
 }
