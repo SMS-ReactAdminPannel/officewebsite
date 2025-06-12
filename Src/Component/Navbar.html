@@ -1,263 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoho Technologies</title>
-    <link rel="stylesheet" href="../CSS/Navbar.css">
-</head>
-<body>
-    <!-- Color Bar -->
-    <div class="color-bar"></div>
+<div class="color-bar"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="../HTML/Home.html" data-page="Home">
-                    <img src="../Assets/yohologo.png" alt="Yoho Technologies" id="navbar-logo">
-                </a>
-            </div>
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="#" data-page="Home">
+                <div class="logo-container">
+                    <img src="Src/Assets/yoho Green Color.png" alt="Yoho Technologies" id="navbar-logo">
+                    <img src="Src/Assets/yohologo_white.png" alt="Yoho Technologies" id="navbar-logo-white">
+                </div>
+            </a>
+        </div>
 
-            <ul class="nav-links">
-                <li><a href="../HTML/Home.html" data-page="Home" class="active">Home</a></li>
-                <li><a href="../HTML/About.html" data-page="About">Who We Are</a></li>
-                <li>
-                    <a href="#" data-page="Services">What We Do</a>
-                    <div class="dropdown-backdrop"></div>
-                    <div class="mega-dropdown">
-                        <div class="mega-dropdown-container">
-                            <!-- Left Categories -->
-                            <div class="dropdown-categories">
-                                <a href="#" class="category-item" data-category="website-design">Website Design</a>
-                                <a href="#" class="category-item" data-category="website-development">Website Development</a>
-                                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
-                                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+        <ul class="nav-links">
+            <li><a href="#" data-page="Home" class="active">Home</a></li>
+            <li><a href="#" data-page="About">Who We Are</a></li>
+            <li class="dropdown-parent">
+                <a href="#" data-page="Services" class="dropdown-trigger">What We Do</a>
+                <div class="dropdown-backdrop"></div>
+                <div class="mega-dropdown">
+                    <div class="mega-dropdown-container">
+                        <!-- Left Categories -->
+                        <div class="dropdown-categories">
+                            <a href="#" class="category-item active" data-category="website-design">Website Design</a>
+                            <a href="#" class="category-item" data-category="website-development">Website Development</a>
+                            <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                            <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+                        </div>
+                        <!-- Right Services -->
+                        <div class="dropdown-services active" id="website-design">
+                            <div class="services-title">Website Design</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Static Website Designing</a>
+                                <a href="#" class="service-item">Dynamic Website Designing</a>
+                                <a href="#" class="service-item">Corporate Website Designing</a>
+                                <a href="#" class="service-item">Professional Website Designing</a>
+                                <a href="#" class="service-item">Customized Website Designing</a>
+                                <a href="#" class="service-item">Website Re-Designing</a>
+                                <a href="#" class="service-item">Responsive Website Designing</a>
+                                <a href="#" class="service-item">Angular JS Website Designing</a>
+                                <a href="#" class="service-item">Landing Page Designing</a>
                             </div>
-                            <!-- Right Services -->
-                            <div class="dropdown-services active" id="website-design">
-                                <div class="services-title">Website Design</div>
-                                <div class="services-grid">
-                                    <a href="#" class="service-item">Static Website Designing</a>
-                                    <a href="#" class="service-item">Dynamic Website Designing</a>
-                                    <a href="#" class="service-item">Corporate Website Designing</a>
-                                    <a href="#" class="service-item">Professional Website Designing</a>
-                                    <a href="#" class="service-item">Customized Website Designing</a>
-                                    <a href="#" class="service-item">Website Re-Designing</a>
-                                    <a href="#" class="service-item">Responsive Website Designing</a>
-                                    <a href="#" class="service-item">Angular JS Website Designing</a>
-                                    <a href="#" class="service-item">Landing Page Designing</a>
-                                </div>
+                        </div>
+                        <div class="dropdown-services" id="website-development">
+                            <div class="services-title">Website Development</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Web Application Development</a>
+                                <a href="#" class="service-item">PHP Website Development</a>
+                                <a href="#" class="service-item">Web Portal Development</a>
+                                <a href="#" class="service-item">E-Commerce Website Development</a>
+                                <a href="#" class="service-item">React JS Development</a>
+                                <a href="#" class="service-item">WordPress Development</a>
+                                <a href="#" class="service-item">PHP Application Development</a>
+                                <a href="#" class="service-item">OpenSource Framework</a>
                             </div>
-                            <div class="dropdown-services" id="website-development">
-                                <div class="services-title">Website Development</div>
-                                <div class="services-grid">
-                                    <a href="#" class="service-item">Web Application Development</a>
-                                    <a href="#" class="service-item">PHP Website Development</a>
-                                    <a href="#" class="service-item">Web Portal Development</a>
-                                    <a href="#" class="service-item">E-Commerce Website Development</a>
-                                    <a href="#" class="service-item">React JS Development</a>
-                                    <a href="#" class="service-item">WordPress Development</a>
-                                    <a href="#" class="service-item">PHP Application Development</a>
-                                    <a href="#" class="service-item">OpenSource Framework</a>
-                                </div>
+                        </div>
+                        <div class="dropdown-services" id="mobile-solutions">
+                            <div class="services-title">Mobile App Development</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Hybrid Apps Development</a>
+                                <a href="#" class="service-item">Android Apps Development</a>
+                                <a href="#" class="service-item">iPhone Apps Development</a>
+                                <a href="#" class="service-item">Cross Platform Apps Development</a>
+                                <a href="#" class="service-item">Mobile Apps Upgradation</a>
+                                <a href="#" class="service-item">Mobile Apps Re-Design</a>
                             </div>
-                            <div class="dropdown-services" id="mobile-solutions">
-                                <div class="services-title">Mobile App Development</div>
-                                <div class="services-grid">
-                                    <a href="#" class="service-item">Hybrid Apps Development</a>
-                                    <a href="#" class="service-item">Android Apps Development</a>
-                                    <a href="#" class="service-item">iPhone Apps Development</a>
-                                    <a href="#" class="service-item">Cross Platform Apps Development</a>
-                                    <a href="#" class="service-item">Mobile Apps Upgradation</a>
-                                    <a href="#" class="service-item">Mobile Apps Re-Design</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-services" id="digital-marketing">
-                                <div class="services-title">Digital Marketing</div>
-                                <div class="services-grid">
-                                    <a href="#" class="service-item">Market Research and Analysis</a>
-                                    <a href="#" class="service-item">Content Writing Services</a>
-                                    <a href="#" class="service-item">Search Engine Optimization</a>
-                                    <a href="#" class="service-item">Search Engine Marketing</a>
-                                    <a href="#" class="service-item">Social Media Optimization</a>
-                                    <a href="#" class="service-item">Social Media Marketing</a>
-                                    <a href="#" class="service-item">E-Mail Marketing</a>
-                                    <a href="#" class="service-item">SMS Marketing</a>
-                                    <a href="#" class="service-item">Lead Generation</a>
-                                    <a href="#" class="service-item">Google PPC</a>
-                                </div>
+                        </div>
+                        <div class="dropdown-services" id="digital-marketing">
+                            <div class="services-title">Digital Marketing</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Market Research and Analysis</a>
+                                <a href="#" class="service-item">Content Writing Services</a>
+                                <a href="#" class="service-item">Search Engine Optimization</a>
+                                <a href="#" class="service-item">Search Engine Marketing</a>
+                                <a href="#" class="service-item">Social Media Optimization</a>
+                                <a href="#" class="service-item">Social Media Marketing</a>
+                                <a href="#" class="service-item">E-Mail Marketing</a>
+                                <a href="#" class="service-item">SMS Marketing</a>
+                                <a href="#" class="service-item">Lead Generation</a>
+                                <a href="#" class="service-item">Google PPC</a>
                             </div>
                         </div>
                     </div>
-                </li>
-                <li><a href="#" data-page="Careers">Careers</a></li>
-                <li><a href="../HTML/Contact.html" data-page="Contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <span id="menu-icon">☰</span>
-            </button>
-        </div>
-
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="../HTML/Home.html" data-page="Home" class="active">Home</a>
-            <a href="../HTML/About.html" data-page="About">Who We Are</a>
-            <div class="mobile-submenu-parent">
-                <a href="#" data-page="Services" class="has-submenu">What We Do</a>
-                <div class="mobile-submenu">
-                    <a href="#" class="mobile-category" data-category="website-design">Website Design</a>
-                    <a href="#" class="mobile-category" data-category="website-development">Website Development</a>
-                    <a href="#" class="mobile-category" data-category="mobile-solutions">Mobile Solutions</a>
-                    <a href="#" class="mobile-category" data-category="digital-marketing">Digital Marketing</a>
                 </div>
+            </li>
+            <li><a href="#" data-page="Careers">Careers</a></li>
+            <li><a href="#" data-page="Contact">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <span id="menu-icon">☰</span>
+        </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#" data-page="Home" class="active">Home</a>
+        <a href="#" data-page="About">Who We Are</a>
+        <div class="mobile-submenu-parent">
+            <a href="#" data-page="Services" class="has-submenu dropdown-trigger">What We Do</a>
+            <div class="mobile-submenu">
+                <a href="#" class="mobile-category" data-category="website-design">Website Design</a>
+                <a href="#" class="mobile-category" data-category="website-development">Website Development</a>
+                <a href="#" class="mobile-category" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="mobile-category" data-category="digital-marketing">Digital Marketing</a>
             </div>
-            <a href="#" data-page="Careers">Careers</a>
-            <a href="../HTML/Contact.html" data-page="Contact">Contact</a>
         </div>
-    </nav>
-
-    <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            const colorBar = document.querySelector('.color-bar');
-            
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-                colorBar.classList.add('hidden');
-            } else {
-                navbar.classList.remove('scrolled');
-                colorBar.classList.remove('hidden');
-            }
-        });
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            
-            mobileMenu.classList.toggle('active');
-            menuIcon.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
-        }
-        
-        // Set up mobile submenu toggles
-        document.addEventListener('DOMContentLoaded', function() {
-            const hasSubmenuLinks = document.querySelectorAll('.has-submenu');
-            
-            hasSubmenuLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    this.classList.toggle('active');
-                    const submenu = this.nextElementSibling;
-                    if (submenu && submenu.classList.contains('mobile-submenu')) {
-                        submenu.classList.toggle('active');
-                    }
-                });
-            });
-            
-            // Mega dropdown functionality
-            const categoryItems = document.querySelectorAll('.category-item');
-            const servicesMenu = document.querySelector('[data-page="Services"]');
-            const megaDropdown = document.querySelector('.mega-dropdown');
-            const dropdownBackdrop = document.querySelector('.dropdown-backdrop');
-            
-            // Show services menu on hover
-            servicesMenu.parentElement.addEventListener('mouseenter', function() {
-                megaDropdown.style.opacity = '1';
-                megaDropdown.style.visibility = 'visible';
-                megaDropdown.style.transform = 'translateY(0)';
-                dropdownBackdrop.style.display = 'block';
-            });
-            
-            megaDropdown.addEventListener('mouseenter', function() {
-                megaDropdown.style.opacity = '1';
-                megaDropdown.style.visibility = 'visible';
-                megaDropdown.style.transform = 'translateY(0)';
-                dropdownBackdrop.style.display = 'block';
-            });
-            
-            servicesMenu.parentElement.addEventListener('mouseleave', function(e) {
-                if (!megaDropdown.contains(e.relatedTarget)) {
-                    megaDropdown.style.opacity = '0';
-                    megaDropdown.style.visibility = 'hidden';
-                    megaDropdown.style.transform = 'translateY(-10px)';
-                    dropdownBackdrop.style.display = 'none';
-                }
-            });
-            
-            megaDropdown.addEventListener('mouseleave', function() {
-                megaDropdown.style.opacity = '0';
-                megaDropdown.style.visibility = 'hidden';
-                megaDropdown.style.transform = 'translateY(-10px)';
-                dropdownBackdrop.style.display = 'none';
-            });
-            
-            // Category hover functionality
-            categoryItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    // Get category ID
-                    const categoryId = this.getAttribute('data-category');
-                    
-                    // Update active category
-                    categoryItems.forEach(cat => cat.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Hide all service sections
-                    document.querySelectorAll('.dropdown-services').forEach(section => {
-                        section.classList.remove('active');
-                        section.style.opacity = '0';
-                        section.style.display = 'none';
-                    });
-                    
-                    // Show selected section
-                    const activeSection = document.getElementById(categoryId);
-                    if (activeSection) {
-                        activeSection.style.display = 'block';
-                        activeSection.classList.add('active');
-                        
-                        // Delay opacity change to ensure display change has taken effect
-                        setTimeout(() => {
-                            activeSection.style.opacity = '1';
-                        }, 10);
-                    }
-                });
-                
-                // Prevent default link behavior
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                });
-            });
-            
-            // Handle mobile categories
-            const mobileCategories = document.querySelectorAll('.mobile-category');
-            mobileCategories.forEach(item => {
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const categoryId = this.getAttribute('data-category');
-                    alert('Selected category: ' + categoryId);
-                });
-            });
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(event) {
-                const whatWeDo = document.querySelector('[data-page="Services"]').parentElement;
-                
-                if (!whatWeDo.contains(event.target) && !megaDropdown.contains(event.target)) {
-                    megaDropdown.style.opacity = '0';
-                    megaDropdown.style.visibility = 'hidden';
-                    megaDropdown.style.transform = 'translateY(-10px)';
-                    dropdownBackdrop.style.display = 'none';
-                }
-            });
-            
-            // Initialize - set website-design as active by default
-            const websiteDesign = document.getElementById('website-design');
-            websiteDesign.classList.add('active');
-            websiteDesign.style.display = 'block';
-            websiteDesign.style.opacity = '1';
-            
-            document.querySelector('[data-category="website-design"]').classList.add('active');
-        });
-    </script>
-</body>
-</html>
+        <a href="#" data-page="Careers">Careers</a>
+        <a href="#" data-page="Contact">Contact</a>
+    </div>
+</nav>
