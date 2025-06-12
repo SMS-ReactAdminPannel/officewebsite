@@ -2,80 +2,54 @@
   //   alert("Search clicked!");
   // });
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing animations...');
-    
-    const featuresSection = document.getElementById('features-section');
-    const featureCards = document.querySelectorAll('.feature-card');
-    
-    console.log('Found', featureCards.length, 'feature cards');
-    
-    featureCards.forEach(card => {
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(50px)';
-    });
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            console.log('Section intersection:', entry.isIntersecting);
-            if (entry.isIntersecting) {
-                console.log('Triggering animations...');
-                animateCards();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1, 
-        rootMargin: '0px 0px -100px 0px' 
-    });
-    
-    if (featuresSection) {
-        observer.observe(featuresSection);
-        console.log('Started observing features section');
-    } else {
-        console.log('Features section not found!');
-        setTimeout(animateCards, 1000);
+$(document).ready(function() {
+
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 3000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
+
+  function pagination() {
+    scrolling = true;
+
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
+
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
+
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
+
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
+
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else { 
+      navigateDown();
     }
-    
-    function animateCards() {
-        console.log('Animating cards...');
-        featureCards.forEach((card, index) => {
-            setTimeout(() => {
-                console.log('Animating card', index);
-                card.classList.add('animate');
-                card.classList.add('visible');
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, index * 150); 
-        });
+  });
+
+  $(document).on("keydown", function(e) {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
     }
-    
-    let animationTriggered = false;
-    window.addEventListener('scroll', function() {
-        if (!animationTriggered && featuresSection) {
-            const rect = featuresSection.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            
-            if (rect.top < windowHeight && rect.bottom > 0) {
-                console.log('Scroll fallback triggered');
-                animationTriggered = true;
-                animateCards();
-            }
-        }
-    });
-    
-    const seeMoreButtons = document.querySelectorAll('.see-more');
-    seeMoreButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            console.log('See more clicked for:', this.parentElement.querySelector('h3').textContent);
-        });
-    });
-    
-    const learnMoreLink = document.querySelector('.learn-more');
-    if (learnMoreLink) {
-        learnMoreLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Learn more clicked');
-        });
-    }
+  });
+
 });
