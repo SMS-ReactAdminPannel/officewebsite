@@ -43,20 +43,52 @@ fetch("Src/Component/Navbar.html")
         
         isDropdownVisible = true;
         
-        // Only apply styles to the dropdown, not the entire navbar
-        // Removed: navbar.style.background = dropdownColor;
-        // Removed: navbar.style.backdropFilter = "blur(10px)";
-        // Removed: navbar.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.2)";
-        // Removed: navbar.classList.add("dropdown-hovered");
+        // Add active class to dropdown parent for styling
+        if (dropdownParent) {
+          dropdownParent.classList.add("active");
+        }
         
         // Style the dropdown - set transition to be fast when showing
         if (megaDropdown) {
-          const dropdownColor = "rgba(0, 24, 51, 0.98)";
+          // Use the same background color as the scrolled navbar for consistency
+          const dropdownColor = "rgba(0, 24, 51, 0.95)";
           megaDropdown.style.background = dropdownColor;
           megaDropdown.style.transition = "opacity 0.2s ease, transform 0.2s ease, visibility 0s";
           megaDropdown.style.opacity = "1";
           megaDropdown.style.visibility = "visible";
           megaDropdown.style.transform = "translateY(0)";
+          
+          // Force the navbar to have the scrolled appearance when dropdown is visible
+          if (navbar && !navbar.classList.contains('scrolled')) {
+            navbar.classList.add('scrolled-temp');
+            navbar.style.background = dropdownColor;
+            navbar.style.backdropFilter = "blur(10px)";
+          }
+          
+          // Activate the first category by default
+          const firstCategory = document.querySelector('.category-item');
+          if (firstCategory && !document.querySelector('.category-item.active')) {
+            firstCategory.classList.add('active');
+            const categoryId = firstCategory.getAttribute('data-category');
+            const serviceSection = document.getElementById(categoryId);
+            
+            if (serviceSection) {
+              // Hide all sections first
+              document.querySelectorAll('.dropdown-services').forEach(section => {
+                section.classList.remove('active');
+                section.style.opacity = '0';
+                section.style.display = 'none';
+              });
+              
+              // Show the first section
+              serviceSection.style.display = 'block';
+              serviceSection.classList.add('active');
+              
+              setTimeout(() => {
+                serviceSection.style.opacity = '1';
+              }, 10);
+            }
+          }
         }
         
         // Show backdrop
@@ -71,6 +103,11 @@ fetch("Src/Component/Navbar.html")
         
         isDropdownVisible = false;
         
+        // Remove active class from dropdown parent
+        if (dropdownParent) {
+          dropdownParent.classList.remove("active");
+        }
+        
         // Hide the dropdown immediately with faster transition
         if (megaDropdown) {
           megaDropdown.style.opacity = "0";
@@ -84,29 +121,50 @@ fetch("Src/Component/Navbar.html")
           dropdownBackdrop.style.display = "none";
         }
         
-        // No need to reset navbar styles since we no longer change them
-        // Removed: navbar.classList.remove("dropdown-hovered");
-        // Removed: if (!navbar.classList.contains("scrolled")) {
-        //   navbar.style.background = "";
-        //   navbar.style.backdropFilter = "";
-        //   navbar.style.boxShadow = "";
-        // }
+        // Reset navbar styles if we added the temporary class
+        if (navbar && navbar.classList.contains('scrolled-temp')) {
+          navbar.classList.remove('scrolled-temp');
+          // Only remove styles if we're not actually scrolled
+          if (!navbar.classList.contains('scrolled')) {
+            navbar.style.background = "";
+            navbar.style.backdropFilter = "";
+            navbar.style.boxShadow = "";
+          }
+        }
         
         if (megaDropdown) {
-          megaDropdown.style.background = "";
+          // Keep the background color consistent until fully hidden
+          // megaDropdown.style.background = "";
         }
       }
       
-      // Show dropdown only when hovering the "What We Do" menu item
-      dropdownParent.addEventListener("mouseenter", function() {
-        showDropdown();
-      });
+      // Toggle dropdown when clicking the "What We Do" menu item
+      const dropdownTrigger = dropdownParent.querySelector(".dropdown-trigger");
+      if (dropdownTrigger) {
+        // Remove any existing click event listeners to avoid duplicates
+        dropdownTrigger.removeEventListener("click", toggleDropdown);
+        
+        // Define toggle function
+        function toggleDropdown(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Toggle dropdown visibility
+          if (isDropdownVisible) {
+            hideDropdown();
+          } else {
+            showDropdown();
+          }
+        }
+        
+        // Add click event listener
+        dropdownTrigger.addEventListener("click", toggleDropdown);
+      }
       
-      // Handle hovering other navigation items - immediately hide dropdown
+      // Close dropdown when clicking on any other navigation items
       allNavItems.forEach(navItem => {
         if (navItem !== dropdownParent) {
-          navItem.addEventListener("mouseenter", function() {
-            // Immediately hide dropdown when hovering other nav items
+          navItem.addEventListener("click", function() {
             if (isDropdownVisible) {
               hideDropdown();
             }
@@ -114,37 +172,28 @@ fetch("Src/Component/Navbar.html")
         }
       });
       
-      // Keep dropdown visible when hovering the dropdown itself
-      if (megaDropdown) {
-        megaDropdown.addEventListener("mouseenter", function() {
-          showDropdown();
-        });
-        
-        megaDropdown.addEventListener("mouseleave", function() {
-          hideDropdown();
-        });
-      }
-      
-      // Hide dropdown when mouse leaves the dropdown parent
-      dropdownParent.addEventListener("mouseleave", function(e) {
-        // Check if the mouse is moving to the dropdown
-        const toElement = e.relatedTarget;
-        // If not moving to the dropdown or moving to another nav item, hide dropdown
-        if (!megaDropdown.contains(toElement)) {
-          hideDropdown();
-        }
-      });
-      
-      // Close dropdown when clicking anywhere on the document
+      // Close dropdown when clicking anywhere outside of the dropdown
       document.addEventListener("click", function(event) {
-        if (!dropdownParent.contains(event.target) && !megaDropdown.contains(event.target)) {
+        // Don't process if dropdown isn't visible
+        if (!isDropdownVisible) return;
+        
+        // Check if click was outside dropdown and trigger
+        const isClickInsideDropdown = megaDropdown.contains(event.target);
+        const isClickOnTrigger = dropdownTrigger.contains(event.target);
+        
+        // Only hide if clicking outside both elements
+        if (!isClickInsideDropdown && !isClickOnTrigger) {
           hideDropdown();
         }
       });
       
-      // Category hover functionality
+      // Category hover functionality (changed from click)
       categoryItems.forEach(item => {
-        item.addEventListener("mouseenter", function() {
+        // Use mouseenter event instead of click
+        item.addEventListener("mouseenter", function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
           const categoryId = this.getAttribute("data-category");
           
           // Update active category
@@ -174,10 +223,6 @@ fetch("Src/Component/Navbar.html")
             showDropdown();
           }
         });
-        
-        item.addEventListener("click", function(e) {
-          e.preventDefault();
-        });
       });
       
       // Initialize first category as active
@@ -191,6 +236,16 @@ fetch("Src/Component/Navbar.html")
       const firstCategory = document.querySelector('[data-category="website-design"]');
       if (firstCategory) {
         firstCategory.classList.add("active");
+      }
+      
+      // Add event listeners to ensure dropdown remains open while hovering categories
+      const dropdownContainer = document.querySelector('.mega-dropdown-container');
+      if (dropdownContainer) {
+        dropdownContainer.addEventListener("mouseenter", function() {
+          if (!isDropdownVisible) {
+            showDropdown();
+          }
+        });
       }
     }
     
@@ -218,10 +273,17 @@ fetch("Src/Component/Navbar.html")
             }
           }
           
+          // Don't navigate for category items or dropdown triggers
           if (link.classList.contains("category-item") || 
-              link.classList.contains("service-item") || 
               link.classList.contains("has-submenu")) {
-            return; // Don't navigate for dropdown items
+            return; // Don't navigate for these dropdown items
+          }
+          
+          // If it's a service item, close the dropdown after click
+          if (link.classList.contains("service-item")) {
+            if (typeof hideDropdown === 'function') {
+              setTimeout(hideDropdown, 100); // Small delay to allow the click to register
+            }
           }
           
           e.preventDefault();
@@ -302,14 +364,34 @@ function initPageScripts() {
   const handleScroll = function() {
     const navbar = document.getElementById('navbar');
     const colorBar = document.querySelector('.color-bar');
+    const regularLogo = document.getElementById('navbar-logo');
+    const whiteLogo = document.getElementById('navbar-logo-white');
     const currentScroll = window.scrollY;
     
     // Navbar background effect
     if (navbar) {
       if (currentScroll > 50) {
         navbar.classList.add('scrolled');
+        
+        // For smoother transition, directly manage the opacity with JavaScript
+        if (regularLogo && whiteLogo) {
+          // Adding a slight delay between hiding one logo and showing another
+          // helps create a smoother crossfade effect
+          regularLogo.style.opacity = "0";
+          setTimeout(() => {
+            whiteLogo.style.opacity = "1";
+          }, 50);
+        }
       } else {
         navbar.classList.remove('scrolled');
+        
+        // When scrolling back to top, reverse the transition
+        if (regularLogo && whiteLogo) {
+          whiteLogo.style.opacity = "0";
+          setTimeout(() => {
+            regularLogo.style.opacity = "1";
+          }, 50);
+        }
       }
     }
     
