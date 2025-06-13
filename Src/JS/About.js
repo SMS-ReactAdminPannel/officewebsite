@@ -66,30 +66,44 @@ function initStatCounters() {
 
 // Function to set up video players
 function setupVideoPlayers() {
-    // Hero video setup
-    const heroVideo = document.getElementById('about-hero-video');
-    const playHeroBtn = document.getElementById('play-video-btn');
-    const heroOverlay = document.querySelector('.video-overlay');
+    // Background video setup
+    const bgVideo = document.getElementById('bg-video');
     
-    if (heroVideo && playHeroBtn) {
-        playHeroBtn.addEventListener('click', function() {
-            if (heroVideo.paused) {
-                heroVideo.play();
-                heroVideo.controls = true;
-                heroOverlay.style.opacity = '0';
-                heroOverlay.style.pointerEvents = 'none';
-            } else {
-                heroVideo.pause();
-                heroVideo.controls = false;
-                heroOverlay.style.opacity = '1';
-                heroOverlay.style.pointerEvents = 'auto';
-            }
+    if (bgVideo) {
+        // Ensure the video is muted to allow autoplay
+        bgVideo.muted = true;
+        
+        // Set video attributes explicitly
+        bgVideo.setAttribute('playsinline', '');
+        bgVideo.setAttribute('autoplay', '');
+        bgVideo.setAttribute('loop', '');
+        
+        // Force play on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            bgVideo.play().catch(error => {
+                console.log('Video autoplay was prevented:', error);
+                
+                // Add a click event to the banner to start video on user interaction
+                document.querySelector('.video-banner').addEventListener('click', () => {
+                    bgVideo.play();
+                }, { once: true });
+            });
         });
         
-        heroVideo.addEventListener('ended', function() {
-            heroVideo.controls = false;
-            heroOverlay.style.opacity = '1';
-            heroOverlay.style.pointerEvents = 'auto';
+        // If window is resized, make sure video still fills the screen
+        window.addEventListener('resize', () => {
+            const videoAspect = bgVideo.videoWidth / bgVideo.videoHeight;
+            const windowAspect = window.innerWidth / window.innerHeight;
+            
+            if (windowAspect > videoAspect) {
+                // Window is wider than video
+                bgVideo.style.width = '100%';
+                bgVideo.style.height = 'auto';
+            } else {
+                // Window is taller than video
+                bgVideo.style.width = 'auto';
+                bgVideo.style.height = '100%';
+            }
         });
     }
     
