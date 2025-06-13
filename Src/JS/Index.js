@@ -1,3 +1,20 @@
+// Loading screen handler
+document.addEventListener('DOMContentLoaded', function() {
+  // Show loading screen
+  const loadingScreen = document.getElementById('loading-screen');
+  
+  // Hide loading screen when all content is loaded
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      loadingScreen.classList.add('hidden');
+      // Remove loading screen from DOM after transition completes
+      setTimeout(function() {
+        loadingScreen.style.display = 'none';
+      }, 500);
+    }, 800); // Show loading screen for at least 800ms for better UX
+  });
+});
+
 // Load navbar
 fetch("Src/Component/Navbar.html")
   .then((response) => response.text())
@@ -330,6 +347,11 @@ fetch("Src/Component/Footer.html")
 
 // Function to load a page into the main content area
 function loadPage(pageName) {
+  // Show loading screen during navigation
+  const loadingScreen = document.getElementById('loading-screen');
+  loadingScreen.style.display = 'flex';
+  loadingScreen.classList.remove('hidden');
+  
   fetch(`Src/HTML/${pageName}.html`)
     .then(response => {
       if (!response.ok) {
@@ -339,6 +361,14 @@ function loadPage(pageName) {
     })
     .then(data => {
       document.getElementById("main-content").innerHTML = data;
+      
+      // Hide loading screen
+      setTimeout(function() {
+        loadingScreen.classList.add('hidden');
+        setTimeout(function() {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 300);
       
       // Scroll to top when loading a new page
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -355,6 +385,14 @@ function loadPage(pageName) {
           <button onclick="loadPage('Home')">Return to Home</button>
         </div>
       `;
+      
+      // Hide loading screen on error
+      setTimeout(function() {
+        loadingScreen.classList.add('hidden');
+        setTimeout(function() {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 300);
     });
 }
 
@@ -453,3 +491,4 @@ function initPageScripts() {
 window.addEventListener("DOMContentLoaded", () => {
   loadPage("Home");
 });
+
