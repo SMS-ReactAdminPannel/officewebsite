@@ -52,9 +52,9 @@
 }
 
 .nav-container {
-  /* max-width: 1200px; */
+  /* max-width: 1300px; */
   margin: 0 auto;
-  padding: 2rem 5rem;
+  padding: 2rem 7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,10 +76,10 @@
 .logo-container {
   position: relative;
   height: 45px;
-  width: 180px; /* Fixed width to prevent layout shifts */
+  width: 180px; 
   display: flex;
   justify-content: start;
-  /* align-items: center; */
+  align-items: center;
   transition: transform 0.3s ease;
 }
 
@@ -130,8 +130,9 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 5rem;
+  gap: 4rem;
   align-items: center;
+  padding-right: 7rem;
 }
 
 .nav-links a {

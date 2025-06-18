@@ -37,6 +37,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    /* position: fixed; */
 }
 
 /* Full screen video */
@@ -230,7 +231,7 @@
 .value-icon i {
     font-size: 28px;
     background: linear-gradient(90deg, #15de79, #2785dd);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
