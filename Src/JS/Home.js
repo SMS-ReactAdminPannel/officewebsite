@@ -28,3 +28,35 @@ $(document).ready(function() {
   });
 
 })
+
+
+
+  const track = document.getElementById("logoTrack");
+  const slides = document.querySelectorAll(".logo-slide");
+  let current = 0;
+
+  function updateSlider() {
+    const slideWidth = slides[0].offsetWidth + 64; // 64px = gap-4rem
+    track.style.transform = `translateX(${-slideWidth * current}px)`;
+
+    slides.forEach((slide, index) => {
+      slide.classList.toggle("active", index === current);
+    });
+  }
+
+  function slideNext() {
+    if (current < slides.length - 1) {
+      current++;
+      updateSlider();
+    }
+  }
+
+  function slidePrev() {
+    if (current > 0) {
+      current--;
+      updateSlider();
+    }
+  }
+
+  window.addEventListener("load", updateSlider);
+

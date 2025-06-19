@@ -46,5 +46,17 @@ body {
 }
 
 
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Regular.woff2") format("woff2"),
+       url("/fonts/PPMori-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "PP Mori", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 
 
