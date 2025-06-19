@@ -45,7 +45,8 @@
   background: transparent;
 }
 
-.navbar.scrolled, .navbar.scrolled-temp {
+.navbar.scrolled,
+.navbar.scrolled-temp {
   background: rgba(0, 24, 51, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -76,7 +77,7 @@
 .logo-container {
   position: relative;
   height: 45px;
-  width: 180px; 
+  width: 180px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -293,9 +294,7 @@
   visibility: hidden;
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.2s ease, 
-              transform 0.2s ease, 
-              visibility 0s linear 0.2s; /* Faster transitions for better response */
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s; /* Faster transitions for better response */
   will-change: transform, opacity; /* Performance optimization */
   padding: 30px 0;
   border-radius: 0; /* Remove rounded corners */
@@ -309,9 +308,7 @@
 /* When visible, enable pointer events */
 .mega-dropdown[style*="visibility: visible"] {
   pointer-events: auto;
-  transition: opacity 0.2s ease, 
-              transform 0.2s ease, 
-              visibility 0s; /* No delay for visibility when showing */
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s; /* No delay for visibility when showing */
 }
 
 .mega-dropdown-container {
@@ -344,7 +341,7 @@
 
 /* Add a more generous click area */
 .dropdown-trigger::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -355,7 +352,7 @@
 
 /* TCS-style dropdown arrow indicator */
 .dropdown-trigger::before {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 50%;
@@ -393,7 +390,8 @@
   text-decoration: none;
   margin-bottom: 10px;
   border-radius: 4px;
-  transition: all 0.25s ease, background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: all 0.25s ease, background 0.2s ease-in-out,
+    color 0.2s ease-in-out;
   font-weight: 500;
   position: relative;
   background: rgba(255, 255, 255, 0.03);
@@ -402,7 +400,7 @@
 }
 
 .category-item::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 15px;
   top: 50%;
@@ -429,7 +427,7 @@
 }
 
 .category-item.active::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -440,7 +438,7 @@
 }
 
 .category-item::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -466,8 +464,14 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dropdown-services.active {
@@ -487,7 +491,7 @@
 }
 
 .services-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -516,7 +520,7 @@
 }
 
 .service-item::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -543,13 +547,13 @@
   .mega-dropdown-container {
     flex-direction: column;
   }
-  
+
   .dropdown-categories,
   .dropdown-services {
     width: 100%;
     border-right: none;
   }
-  
+
   .dropdown-categories {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
@@ -557,16 +561,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+
   .category-item {
     width: 48%;
     margin-bottom: 10px;
   }
-  
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .nav-links {
     gap: 2rem;
   }
@@ -576,26 +580,24 @@
   .nav-links {
     display: none;
   }
-  
+
   .mobile-menu-btn {
     display: block;
   }
-  
+
   .mega-dropdown {
     display: none;
   }
-  
+
   .dropdown-categories {
     flex-direction: column;
   }
-  
+
   .category-item {
     width: 100%;
   }
-  
+
   .services-grid {
     grid-template-columns: 1fr;
   }
 }
-
-
