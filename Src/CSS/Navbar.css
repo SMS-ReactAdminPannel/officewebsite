@@ -43,6 +43,7 @@
   z-index: 1001;
   transition: all 0.3s ease, background 0.2s ease-in-out;
   background: transparent;
+  /* margin-bottom: 20; */
 }
 
 .navbar.scrolled, .navbar.scrolled-temp {
