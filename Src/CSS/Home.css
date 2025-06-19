@@ -535,12 +535,90 @@
 
 
 
-.custom-heading {
-  font-size: 52px;
-  /* font-family: "PP Mori", Arial, "Helvetica Neue", Helvetica, sans-serif; */
-  font-weight: 100!important;
+@font-face {
+  font-family: "PP Mori";
+  src: url("Src/Assets/fonts/ppmori-bold.woff2") format("woff2"),
+       url("Src/Assets/fonts/ppmori-regular.woff2") format("woff");
+  font-weight: 100;
+  font-style: normal;
 }
 
+body {
+  font-family: "PP Mori", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.custom-heading {
+  font-size: 52px;
+  font-family: "PP Mori", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 100 !important;
+}
+
+
+ .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 40px 0;
+      background-color: #000; /* black bg */
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 2rem;
+    }
+
+    .carousel-item-custom {
+      flex: 0 0 20%; /* Show 5 items at once */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s;
+      padding: 10px;
+    }
+
+    .carousel-item-custom img {
+      width: 100%;
+      max-width: 120px;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+      filter: grayscale(100%);
+    }
+
+    .carousel-item-custom.active img {
+      transform: scale(1.4);
+      filter: none;
+    }
+
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fff;
+      border: none;
+      z-index: 10;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-item-custom {
+        flex: 0 0 50%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .carousel-item-custom {
+        flex: 0 0 100%;
+      }
+    }
   
   
 
@@ -568,7 +646,80 @@
 }
 
 
+.vega-card {
+      position: relative;
+      background-color: #000;
+      border: 1px solid #fff;
+      border-radius: 2rem;
+      padding: 60px 50px 60px 50px;
+      margin: 60px auto;
+      max-width: 1050px;
+      overflow: hidden;
+    }
 
+    .vega-card h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    .vega-card p {
+      font-size: 1.25rem;
+      line-height: 2;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight {
+      font-weight: 600;
+    }
+
+    /* Decorative SVG positioning */
+    .vega-decoration {
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 300px;
+      height: 300px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 992px) {
+      .vega-card {
+        padding: 50px 30px;
+        margin: 40px 15px;
+      }
+
+      .vega-card h1 {
+        font-size: 2.25rem;
+      }
+
+      .vega-card p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .vega-decoration {
+        width: 200px;
+        height: 200px;
+        top: -40px;
+        right: -40px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .vega-card {
+        padding: 40px 20px;
+      }
+
+      .vega-card h1 {
+        font-size: 1.75rem;
+      }
+
+      .vega-card p {
+        font-size: 1rem;
+      }
+    }
 
 
 /* Scroll indicator */

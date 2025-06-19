@@ -30,33 +30,29 @@ $(document).ready(function() {
 })
 
 
+let currentIndex = 0;
+  const track = document.getElementById("carousel-track");
+  const items = track.children;
+  const visibleCount = 5;
 
-  const track = document.getElementById("logoTrack");
-  const slides = document.querySelectorAll(".logo-slide");
-  let current = 0;
-
-  function updateSlider() {
-    const slideWidth = slides[0].offsetWidth + 64; // 64px = gap-4rem
-    track.style.transform = `translateX(${-slideWidth * current}px)`;
-
-    slides.forEach((slide, index) => {
-      slide.classList.toggle("active", index === current);
-    });
+  function updateActive() {
+    for (let i = 0; i < items.length; i++) {
+      items[i].classList.remove("active");
+    }
+    const center = currentIndex + Math.floor(visibleCount / 2);
+    if (items[center]) items[center].classList.add("active");
   }
 
-  function slideNext() {
-    if (current < slides.length - 1) {
-      current++;
-      updateSlider();
+  function moveSlide(direction) {
+    const totalItems = items.length;
+    if (currentIndex + direction >= 0 && currentIndex + visibleCount + direction <= totalItems) {
+      currentIndex += direction;
+      const offset = (100 / visibleCount) * currentIndex;
+      track.style.transform = `translateX(-${offset}%)`;
+      updateActive();
+
+      
     }
   }
 
-  function slidePrev() {
-    if (current > 0) {
-      current--;
-      updateSlider();
-    }
-  }
-
-  window.addEventListener("load", updateSlider);
-
+    updateActive(); // set initial
