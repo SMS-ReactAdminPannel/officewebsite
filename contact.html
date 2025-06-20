@@ -378,15 +378,15 @@
           <div class="footer-contact">
             <div class="contact-item">
               <i class="fas fa-phone"></i>
-              <span>+1 (555) 123-4567</span>
+              <span>+91 98844 92652</span>
             </div>
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
-              <span>contact@yohotech.com</span>
+              <span>info@yohotechnologies.com</span>
             </div>
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <span>123 Innovation Drive, Tech City, TC 12345</span>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117. (Near:ESAF BANK)</span>
             </div>
           </div>
         </div>
@@ -442,21 +442,7 @@
         </div>
       </div>
 
-      <!-- Newsletter Subscription -->
-      <div class="footer-newsletter">
-        <div class="newsletter-content">
-          <h3>Stay Updated</h3>
-          <p>Subscribe to our newsletter for the latest insights and technology trends</p>
-        </div>
-        <div class="newsletter-form">
-          <form id="newsletter-form">
-            <div class="input-group">
-              <input type="email" placeholder="Enter your email address" required>
-              <button type="submit">Subscribe</button>
-            </div>
-          </form>
-        </div>
-      </div>
+    
       
       <!-- Footer Bottom Section -->
       <div class="footer-bottom">
@@ -465,7 +451,7 @@
         </div>
         <div class="footer-bottom-left">
           <div class="copyright">
-            &copy; 2024 Yoho Technologies. All rights reserved.
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
           </div>
           <div class="footer-bottom-links">
             <a href="privacy.html">Privacy Policy</a>
@@ -502,6 +488,7 @@
 
   <!-- Scripts -->
   <script src="Src/JS/dropdown.js"></script>
+  <script src="Src/JS/search.js"></script>
   <script>
     // Ensure navbar stays fixed
     document.addEventListener('DOMContentLoaded', function() {
@@ -528,6 +515,9 @@
           loadingScreen.style.display = 'none';
         }, 500);
       }, 800);
+      
+      // Dynamic copyright year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
 
     function showContactForm(type) {
