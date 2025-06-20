@@ -552,20 +552,7 @@
   align-items: center;
 }
 
-/* Section title */
-/* .section-title {
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-  margin-bottom: 60px;
-  text-align: start;
-  color:white
-} */
 
-
-.section-title {
-  color: white; /* Ensure text is white */
-}
 
 /* Logo image styles */
 .company-logo {
@@ -659,10 +646,20 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+
+ .section-title1 {
+     font-family: "Inter", sans-serif;
+      font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
+ }
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 2.5rem;
+  .section-title1 {
+     font-family: "Inter", sans-serif;
+      font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
     margin-bottom: 40px;
   }
 
@@ -676,8 +673,11 @@
 }
 
 @media (max-width: 576px) {
-  .section-title {
-    font-size: 2rem;
+  .section-title1 {
+    font-family: "Inter", sans-serif;
+      font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
     padding: 0 20px;
   }
 
@@ -705,9 +705,11 @@
 }
 
 /* Main heading */
-.section-title {
-  font-size: 3rem;
-  font-weight: 300;
+.section-title2 {
+  font-family: "Inter", sans-serif;
+      font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
   margin-bottom: 40px;
 }
 
@@ -735,8 +737,11 @@
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .section-title {
-    font-size: 2.2rem;
+  .section-title2 {
+  font-family: "Inter", sans-serif;
+      font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
     text-align: center;
   }
 
@@ -764,9 +769,12 @@
 }
 
 .section-heading {
-  font-size: 3rem;
-  font-weight: 300;
+     font-family: "Inter", sans-serif;
+      font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
   margin-bottom: 15px;
+  align-items: left;
 }
 
 .sub-text {
@@ -791,7 +799,7 @@
 }
 
 .service-card:hover {
-  border-color: #15de79;
+
   transform: translateY(-4px);
 }
 
@@ -802,20 +810,27 @@
   max-width: 80%;
 }
 
-.read-more {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: underline;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.read-more-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.read-more span {
-  font-weight: bold;
-  font-size: 1.2rem;
+.read-more-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
 }
+
+.read-more:hover .read-more-text::after {
+  width: 100%;
+}
+
 
 .service-icon {
   position: absolute;
@@ -833,7 +848,11 @@
 /* Responsive Tweaks */
 @media (max-width: 768px) {
   .section-heading {
-    font-size: 2.2rem;
+    
+     font-family: "Inter", sans-serif;
+      font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
   }
 
   .card-title {
@@ -860,12 +879,14 @@
         }
         
         .main-title {
-            font-size: 3.5rem;
-            font-weight: 300;
+            font-family: "Inter", sans-serif;
+      font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
             line-height: 1.2;
             margin-bottom: 60px;
             letter-spacing: -0.02em;
-            color: white;
+        
         }
         
         .tech-grid {
@@ -905,9 +926,9 @@
             font-size: 1.1rem;
             line-height: 1.6;
             max-width: 600px;
-            margin: 0 auto;
             opacity: 0.9;
             color: white;
+          text-align: left;
         }
         
         .specialty-label {
