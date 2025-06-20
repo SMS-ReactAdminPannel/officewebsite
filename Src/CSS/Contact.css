@@ -2,11 +2,12 @@
 
 /* Hero Section */
 .contact-hero {
-    background: linear-gradient(135deg, #001833 0%, #0a2a4a 100%);
+    background: #000000;
     padding: 120px 20px 80px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin-top: 74px;
 }
 
 .contact-hero::before {
@@ -32,25 +33,28 @@
     margin: 0 auto;
 }
 
-/* .hero-title {
+.hero-title {
     font-size: 56px;
-    font-weight: 700;
-    
+    font-weight: 200;
+    color: #ffffff;
     margin-bottom: 20px;
     line-height: 1.2;
-} */
+    font-family: "Inter", sans-serif;
+}
 
 .hero-subtitle {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     margin-bottom: 0;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    font-weight: 300;
 }
 
 /* Contact Options Section */
 .contact-options {
     padding: 80px 20px;
-    background: #f8f9fa;
+    background: #000000;
 }
 
 .contact-container {
@@ -66,23 +70,24 @@
 }
 
 .contact-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 40px 30px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .contact-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .contact-card.primary {
     border-color: #15de79;
-    background: linear-gradient(135deg, #ffffff 0%, #f0fff4 100%);
+    background: rgba(21, 222, 121, 0.1);
 }
 
 .card-icon {
@@ -104,35 +109,40 @@
 .contact-card h3 {
     font-size: 24px;
     font-weight: 600;
-    color: #001833;
+    color: #ffffff;
     margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
 }
 
 .contact-card p {
     font-size: 16px;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
     margin-bottom: 25px;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .card-btn {
-    background: #ffffff;
-    color: #001833;
-    border: 2px solid #e2e8f0;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 12px 30px;
-    border-radius: 8px;
+    border-radius: 25px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    font-family: "Inter", sans-serif;
 }
 
 .card-btn:hover {
-    background: #001833;
+    background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
-    border-color: #001833;
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
 }
 
 .primary-btn {
@@ -154,8 +164,10 @@
 
 .additional-options h3 {
     font-size: 28px;
-    color: #001833;
+    color: #ffffff;
     margin-bottom: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
 }
 
 .option-links {
@@ -170,19 +182,21 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     text-decoration: none;
-    color: #001833;
+    color: #ffffff;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .option-link:hover {
-    background: #001833;
+    background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .option-link i {
@@ -203,7 +217,7 @@
 /* Contact Form Section */
 .contact-form-section {
     padding: 80px 20px;
-    background: #ffffff;
+    background: #000000;
 }
 
 .form-header {
@@ -230,8 +244,10 @@
 
 .form-header h2 {
     font-size: 36px;
-    color: #001833;
+    color: #ffffff;
     margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
 }
 
 .contact-content {
@@ -243,25 +259,31 @@
 
 /* Contact Info Styles */
 .contact-info {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 40px;
     height: fit-content;
     position: sticky;
     top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .contact-info h3 {
     font-size: 24px;
-    color: #001833;
+    color: #ffffff;
     margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
 .contact-info p {
     font-size: 16px;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
     margin-bottom: 30px;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .contact-details {
@@ -294,23 +316,27 @@
 .contact-text h4 {
     font-size: 16px;
     font-weight: 600;
-    color: #001833;
+    color: #ffffff;
     margin: 0 0 5px 0;
+    font-family: "Inter", sans-serif;
 }
 
 .contact-text p {
     font-size: 14px;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.7);
     margin: 0;
     line-height: 1.5;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    font-weight: 300;
 }
 
 /* Social Links */
 .social-links h4 {
     font-size: 16px;
     font-weight: 600;
-    color: #001833;
+    color: #ffffff;
     margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
 }
 
 .social-icons {
@@ -321,13 +347,13 @@
 .social-icon {
     width: 40px;
     height: 40px;
-    background: #ffffff;
-    border: 2px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #4a5568;
+    color: #ffffff;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -341,10 +367,12 @@
 
 /* Form Styles */
 .contact-form {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .form-row {
@@ -361,20 +389,22 @@
     display: block;
     font-size: 14px;
     font-weight: 600;
-    color: #001833;
+    color: #ffffff;
     margin-bottom: 8px;
+    font-family: "Inter", sans-serif;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 15px;
-    border: 2px solid #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     font-size: 16px;
     transition: all 0.3s ease;
-    font-family: inherit;
+    font-family: "Inter", sans-serif;
     box-sizing: border-box;
 }
 
@@ -382,7 +412,13 @@
 .form-group textarea:focus {
     outline: none;
     border-color: #15de79;
-    box-shadow: 0 0 0 3px rgba(21, 222, 121, 0.1);
+    box-shadow: 0 0 0 3px rgba(21, 222, 121, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .form-group textarea {
@@ -400,8 +436,10 @@
     align-items: flex-start;
     cursor: pointer;
     font-size: 14px;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -411,12 +449,13 @@
 .checkmark {
     width: 20px;
     height: 20px;
-    border: 2px solid #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     margin-right: 12px;
     flex-shrink: 0;
     position: relative;
     transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .checkbox-label input[type="checkbox"]:checked + .checkmark {
@@ -470,7 +509,7 @@
 /* Global Presence Section */
 .global-presence {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: #000000;
 }
 
 .presence-header {
@@ -480,16 +519,19 @@
 
 .presence-header h2 {
     font-size: 36px;
-    font-weight: 700;
-    color: #001833;
+    font-weight: 300;
+    color: #ffffff;
     margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
 }
 
 .presence-header p {
     font-size: 18px;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.8);
     max-width: 600px;
     margin: 0 auto;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .presence-stats {
@@ -501,10 +543,12 @@
 
 .stat-item {
     text-align: center;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
     padding: 30px 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .stat-number {
@@ -519,8 +563,9 @@
 
 .stat-label {
     font-size: 16px;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
+    font-family: "Inter", sans-serif;
 }
 
 .office-locations {
@@ -530,30 +575,36 @@
 }
 
 .location-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     position: relative;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .location-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .location-card h4 {
     font-size: 20px;
     font-weight: 600;
-    color: #001833;
+    color: #ffffff;
     margin-bottom: 8px;
+    font-family: "Inter", sans-serif;
 }
 
 .location-card p {
     font-size: 16px;
-    color: #4a5568;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 15px;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .location-badge {

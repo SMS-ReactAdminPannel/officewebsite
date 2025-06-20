@@ -68,7 +68,8 @@ html {
   left: 0;
   right: 0;
   z-index: 1001;
-  background: transparent;
+  width: 100% !important;
+  background: rgb(0, 0, 0) !important;
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,7 +84,8 @@ html {
 }
 
 .nav-container {
-  max-width: 1400px;
+  /* max-width: 1400px; */
+  width: 80%;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -176,7 +178,7 @@ html {
 .nav-links a:hover {
   color: #ffffff;
   transform: translateY(-1px);
-  /* text-decoration: underline; */
+  text-decoration: none !important;
 }
 
 .nav-links a::after {
