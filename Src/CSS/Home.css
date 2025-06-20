@@ -712,11 +712,11 @@
 /* Main heading */
 .section-title2 {
   font-family: "Inter", sans-serif;
-      font-weight: 100;
+  font-weight: 100;
   font-style: normal;
   color: #ffffff;
   margin-bottom: 40px;
-  font-size: 40px;
+  font-size: 56px;
 }
 
 /* Text content */
@@ -780,7 +780,7 @@
   color: #ffffff;
   margin-bottom: 15px;
   align-items: left;
-  font-size: 40px;
+  font-size: 56px;
 }
 
 .sub-text {
@@ -865,6 +865,7 @@
       font-weight: 100;
   font-style: normal;
   color: #ffffff;
+  
   }
 
   .card-title {
@@ -898,6 +899,7 @@
             line-height: 1.2;
             margin-bottom: 60px;
             letter-spacing: -0.02em;
+            font-size: 56px;
         
         }
         
@@ -980,9 +982,15 @@
   background-color: #000;
 }
 
-.section-heading {
-  font-size: 32px;
-  font-weight: 400;
+.section-heading2 {
+  font-size: 56px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+
 }
 
 .stat-icon {
