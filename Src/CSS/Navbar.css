@@ -42,13 +42,13 @@
   right: 0;
   z-index: 1001;
   transition: all 0.3s ease, background 0.2s ease-in-out;
-  background: transparent;
+  background: #000000;
   /* margin-bottom: 20; */
 }
 
 .navbar.scrolled,
 .navbar.scrolled-temp {
-  background: rgba(0, 24, 51, 0.95);
+  background: #000000;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
