@@ -4,8 +4,8 @@
   height: 110vh;
   background-image: linear-gradient(
       180deg,
-      rgba(0, 6, 14, 0.5) 0%,
-      rgba(0, 0, 0, 0.6) 100%
+      rgba(0, 6, 14, 0.849) 0%,
+      rgba(0, 0, 0, 0.514) 100%
     ),
     url("../Assets/bg/03b6dcbd-0868-4605-b502-bf2fa4c70c1f_large.webp");
   background-position: 0% center;
@@ -14,6 +14,7 @@
   overflow: hidden;
   padding: 270px 0 100px;
   display: block;
+  margin-top: -150px;
 }
 
 .hero-bg {
@@ -564,7 +565,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 120px;
+  /* min-height: 120px; */
   padding: 0 15px;
 }
 

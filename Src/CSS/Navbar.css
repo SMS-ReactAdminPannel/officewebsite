@@ -68,22 +68,26 @@ html {
   left: 0;
   right: 0;
   z-index: 1001;
-  transition: all 0.3s ease, background 0.2s ease-in-out;
-  background: #000000;
-  /* margin-bottom: 20; */
+  width: 100% !important;
+  background: rgb(0, 0, 0) !important;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color, backdrop-filter, box-shadow;
+  transform: translate3d(0, 0, 0);
 }
 
-.navbar.scrolled,
-.navbar.scrolled-temp {
-  background: #000000;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+.navbar.scrolled, .navbar.scrolled-temp {
+  background: rgba(0, 24, 51, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .nav-container {
-  /* max-width: 1300px; */
+  /* max-width: 1400px; */
+  width: 80%;
   margin: 0 auto;
-  padding: 2rem 7rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,11 +109,12 @@ html {
 .logo-container {
   position: relative;
   height: 45px;
-  width: 180px;
+  width: 180px; /* Fixed width to prevent layout shifts */
   display: flex;
-  justify-content: start;
   align-items: center;
-  transition: transform 0.3s ease;
+  justify-content: flex-start;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
 /* Styles for both logos to ensure consistent sizing and perfect alignment */
@@ -151,9 +156,10 @@ html {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
-  padding-right: 7rem;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -172,7 +178,7 @@ html {
 .nav-links a:hover {
   color: #ffffff;
   transform: translateY(-1px);
-  /* text-decoration: underline; */
+  text-decoration: none !important;
 }
 
 .nav-links a::after {
@@ -470,10 +476,10 @@ html {
   z-index: 1000; /* Just below navbar */
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s; /* Faster transitions for better response */
-  will-change: transform, opacity; /* Performance optimization */
-  padding: 30px 0;
+  transform: translateY(-20px) scale(0.98);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Smoother easing */
+  will-change: transform, opacity, visibility; /* Performance optimization */
+  padding: 40px 0;
   border-radius: 0; /* Remove rounded corners */
   right: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -487,7 +493,10 @@ html {
 .mega-dropdown[style*="visibility: visible"],
 .dropdown-parent.active .mega-dropdown {
   pointer-events: auto;
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s; /* No delay for visibility when showing */
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth transition when showing */
 }
 
 /* Enhanced active states for better visual feedback - moved to avoid duplication */
@@ -522,7 +531,7 @@ html {
 
 /* Add a more generous click area */
 .dropdown-trigger::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   left: -10px;
@@ -533,7 +542,7 @@ html {
 
 /* TCS-style dropdown arrow indicator */
 .dropdown-trigger::before {
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   top: 50%;
@@ -579,8 +588,7 @@ html {
   text-decoration: none;
   margin-bottom: 10px;
   border-radius: 4px;
-  transition: all 0.25s ease, background 0.2s ease-in-out,
-    color 0.2s ease-in-out;
+  transition: all 0.25s ease, background 0.2s ease-in-out, color 0.2s ease-in-out;
   font-weight: 500;
   position: relative;
   background: rgba(255, 255, 255, 0.03);
@@ -589,7 +597,7 @@ html {
 }
 
 .category-item::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 15px;
   top: 50%;
@@ -614,7 +622,7 @@ html {
 }
 
 .category-item.active::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -625,7 +633,7 @@ html {
 }
 
 .category-item::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -649,14 +657,14 @@ html {
   will-change: opacity, transform;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+@keyframes fadeInServices {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px) translateY(10px);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  to { 
+    opacity: 1; 
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -678,7 +686,7 @@ html {
 }
 
 .services-title::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -707,7 +715,7 @@ html {
 }
 
 .service-item::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -724,13 +732,13 @@ html {
   .mega-dropdown-container {
     flex-direction: column;
   }
-
+  
   .dropdown-categories,
   .dropdown-services {
     width: 100%;
     border-right: none;
   }
-
+  
   .dropdown-categories {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
@@ -738,16 +746,16 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
+  
   .category-item {
     width: 48%;
     margin-bottom: 10px;
   }
-
+  
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  
   .nav-links {
     gap: 2rem;
   }
@@ -761,24 +769,58 @@ html {
   .nav-links {
     display: none;
   }
-
-  .mobile-menu-btn {
-    display: block;
+  
+  .navbar-right {
+    gap: 1rem;
   }
-
+  
+  .search-dropdown {
+    width: 250px;
+    right: -10px;
+  }
+  
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 13px;
+  }
+  
   .mega-dropdown {
     display: none;
   }
-
-  .dropdown-categories {
-    flex-direction: column;
+  
+  .logo-container {
+    width: 150px;
   }
-
-  .category-item {
-    width: 100%;
+  
+  .logo-container img {
+    height: 35px;
   }
+}
 
-  .services-grid {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 480px) {
+  .nav-container {
+    padding: 0.5rem;
+  }
+  
+  .navbar-right {
+    gap: 0.5rem;
+  }
+  
+  .search-dropdown {
+    width: 200px;
+    right: 0;
+  }
+  
+  .cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+  
+  .logo-container {
+    width: 120px;
+  }
+  
+  .logo-container img {
+    height: 30px;
   }
 }
