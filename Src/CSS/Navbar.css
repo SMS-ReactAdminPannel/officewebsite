@@ -68,31 +68,30 @@ html {
   left: 0;
   right: 0;
   z-index: 1001;
-  width: 100% !important;
-  background: rgb(0, 0, 0) !important;
-  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: background-color, backdrop-filter, box-shadow;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
 }
 
 .navbar.scrolled, .navbar.scrolled-temp {
-  background: rgba(0, 24, 51, 0.95);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.98) !important;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
-  /* max-width: 1400px; */
-  width: 80%;
+  max-width: 1400px;
+  width: 90%;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 70px;
-  transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo img {
@@ -156,10 +155,12 @@ html {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
   flex: 1;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -170,8 +171,7 @@ html {
   padding: 0.5rem 0;
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: EverydaySans, EverydaySans, "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   will-change: color, transform;
 }
 
@@ -293,6 +293,7 @@ html {
   padding: 0.75rem 1rem;
   color: #ffffff;
   font-size: 14px;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   outline: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: border-color, box-shadow, transform;
@@ -342,6 +343,7 @@ html {
   border-radius: 8px;
   font-weight: 600;
   font-size: 14px;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   cursor: pointer;
@@ -465,38 +467,34 @@ html {
 
 .mega-dropdown {
   position: fixed;
-  top: 54px; /* Adjusted to account for navbar height */
+  top: 54px;
   left: 0;
-  width: 100vw; /* Full viewport width */
-  max-width: 100vw; /* Force full width */
-  margin: 0; /* Remove any margins */
-  background: rgba(0, 24, 51, 0.98); /* Match navbar.scrolled background */
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.98);
   backdrop-filter: blur(20px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-  z-index: 1000; /* Just below navbar */
+  z-index: 1000;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-20px) scale(0.98);
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Smoother easing */
-  will-change: transform, opacity, visibility; /* Performance optimization */
+  transition: all 0.3s ease;
   padding: 40px 0;
-  border-radius: 0; /* Remove rounded corners */
+  border-radius: 0;
   right: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  box-sizing: border-box; /* Include padding in width calculation */
-  pointer-events: none; /* Prevent interaction when hidden */
-  margin-top: 0; /* Eliminate gap between navbar and dropdown */
+  overflow-x: hidden;
+  box-sizing: border-box;
+  pointer-events: none;
+  margin-top: 0;
 }
 
-/* When visible, enable pointer events */
-.mega-dropdown[style*="visibility: visible"],
 .dropdown-parent.active .mega-dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
   pointer-events: auto;
-  visibility: visible !important;
-  opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth transition when showing */
 }
 
 /* Enhanced active states for better visual feedback - moved to avoid duplication */
@@ -590,6 +588,7 @@ html {
   border-radius: 4px;
   transition: all 0.25s ease, background 0.2s ease-in-out, color 0.2s ease-in-out;
   font-weight: 500;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   position: relative;
   background: rgba(255, 255, 255, 0.03);
   overflow: hidden;
@@ -679,6 +678,7 @@ html {
   color: #3aed6a;
   font-size: 22px;
   font-weight: 600;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   margin-bottom: 20px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(58, 237, 106, 0.3);
@@ -708,6 +708,7 @@ html {
   border-radius: 4px;
   transition: all 0.3s ease;
   font-size: 14px;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   border-left: 3px solid transparent;
   position: relative;
   overflow: hidden;
