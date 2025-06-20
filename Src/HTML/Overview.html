@@ -7,10 +7,108 @@
     <link rel="stylesheet" href="../CSS/Overview.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS/Navbar.css">
 
 </head>
  
 <body>
+
+    <div class="color-bar"></div>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+  <div class="container d-flex justify-content-between align-items-center nav-container">
+    <!-- Logo -->
+    <a href="#" data-page="Home" class="navbar-brand d-flex align-items-center">
+      <div class="logo-container position-relative">
+        <img 
+          src="../Assets/Green-logo.png" 
+          alt="Yoho Technologies" 
+          id="navbar-logo" 
+          class="img-fluid d-block"
+        >
+        <img 
+          src="../Assets/White-logo.png" 
+          alt="Yoho Technologies" 
+          id="navbar-logo-white" 
+          class="img-fluid d-none"
+        >
+      </div>
+    </a>
+
+    <!-- Mobile toggle button -->
+    <button class="navbar-toggler" type="button" id="mobile-menu-btn">
+      <span class="navbar-toggler-icon" id="menu-icon">☰</span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto nav-links">
+        <li class="nav-item"><a class="nav-link" href="../HTML/About.html" data-page="About">Who We Are</a></li>
+
+        <li class="nav-item dropdown dropdown-parent">
+          <a href="#" class="nav-link dropdown-toggle dropdown-trigger" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            What We Do
+          </a>
+
+          <!-- Mega Dropdown -->
+          <div class="dropdown-menu mega-dropdown">
+            <div class="mega-dropdown-contain er d-flex">
+              <!-- Left Categories -->
+              <div class="dropdown-categories">
+                <a href="/officewebsite/Src/HTML/Overview.html" class="category-item" data-category="website-design">Overview</a>
+                <a href="#" class="category-item active" data-category="website-design">Website Design</a>
+                <a href="#" class="category-item" data-category="website-development">Website Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+
+              <!-- Right Services (default: website-design visible) -->
+              <div class="dropdown-services active" id="website-design">
+                <div class="services-title">Website Design</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Static Website Designing</a>
+                  <a href="#" class="service-item">Dynamic Website Designing</a>
+                  <!-- ...more items -->
+                </div>
+              </div>
+
+              <div class="dropdown-services" id="website-development">
+                <div class="services-title">Website Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">React JS Development</a>
+                  <!-- ... -->
+                </div>
+              </div>
+
+              <!-- Add mobile-solutions & digital-marketing similarly -->
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#" data-page="Careers">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-page="Contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu d-lg-none" id="mobile-menu">
+    <a href="#" data-page="Home" class="active">Home</a>
+    <a href="#" data-page="About">Who We Are</a>
+    <div class="mobile-submenu-parent">
+      <a href="#" class="has-submenu dropdown-trigger">What We Do</a>
+      <div class="mobile-submenu">
+        <a href="#" class="mobile-category" data-category="website-design">Website Design</a>
+        <a href="#" class="mobile-category" data-category="website-development">Website Development</a>
+        <a href="#" class="mobile-category" data-category="mobile-solutions">Mobile Solutions</a>
+        <a href="#" class="mobile-category" data-category="digital-marketing">Digital Marketing</a>
+      </div>
+    </div>
+    <a href="#" data-page="Careers">Careers</a>
+    <a href="#" data-page="Contact">Contact</a>
+  </div>
+</nav>
 
         <div class="hero-section">
         <div class="container-fluid">
@@ -40,11 +138,11 @@
                             Small enough to care.
                         </h1>
                         
-                        <p class="description">
+                        <p >
                             We're more than just hands on keyboards. We take time to learn everything about your business: your dreams, hopes, fears, challenges. And together, we find new and inventive ways to grow your revenue, delight your customers, and solve the problems you face.
                         </p>
                         
-                        <p class="tagline">
+                        <p >
                             We're not too big that you'll just be a number, and not too small that we can't scale with you.
                         </p>
                         
@@ -512,7 +610,7 @@
 
     <!-- Stats Section -->
     <div class="stats-section">
-        <div class="container">
+        <div class="container-fluid">
             <h2 class="stats-heading text-center mb-5">Strength in numbers</h2>
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -603,108 +701,120 @@
         </div>
     </div>
 
+    <hr class="section-divider">
+
     <!-- Tech Stack Section -->
     <div class="tech-stack-section">
-        <div class="container">
+        <div class="container-fluid">
             <h2 class="tech-heading">Our tech stack. Tailored to yours.</h2>
             
             <div class="tech-grid">
                 <!-- Row 1 -->
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-dotnet">
+                        <img src="../Assets/tech icons/net-core.png" alt=".net-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-dotnet">
                             <text x="50" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor">.NET</text>
                             <circle cx="15" cy="60" r="3" fill="currentColor"/>
                             <circle cx="50" cy="60" r="3" fill="currentColor"/>
                             <circle cx="85" cy="60" r="3" fill="currentColor"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">.NET</div>
                 </div>
                 
+                
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-java">
+                        <img src="../Assets/tech icons/java.png" alt=".net-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-java">
                             <path d="M30 40 Q30 30 40 30 L60 30 Q70 30 70 40 L70 60 Q70 70 60 70 L40 70 Q30 70 30 60 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <path d="M45 20 Q50 15 55 20 L55 35" stroke="currentColor" stroke-width="2" fill="none"/>
                             <circle cx="45" cy="45" r="2" fill="currentColor"/>
                             <circle cx="55" cy="45" r="2" fill="currentColor"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Java</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-python">
+                        <img src="../Assets/tech icons/python-icon.png" alt=".net-image" class="tech-img">                        
+                        <!-- <svg viewBox="0 0 100 100" class="icon-python">
                             <path d="M30 30 Q30 20 40 20 L60 20 Q70 20 70 30 L70 50 Q70 60 60 60 L50 60 L50 70 Q50 80 40 80 L30 80 Q20 80 20 70 L20 50 Q20 40 30 40 L40 40 L40 30 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <circle cx="35" cy="35" r="2" fill="currentColor"/>
                             <circle cx="55" cy="55" r="2" fill="currentColor"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Python</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-nodejs">
+                        <img src="../Assets/tech icons/node-js.png" alt=".net-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-nodejs">
                             <path d="M50 20 L70 35 L70 65 L50 80 L30 65 L30 35 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">node</text>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Node.js</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-html">
+                        <img src="../Assets/tech icons/html.png" alt="html-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-html">
                             <path d="M20 20 L25 75 L50 80 L75 75 L80 20 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="45" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">HTML</text>
                             <text x="50" y="55" text-anchor="middle" font-size="8" fill="currentColor">5</text>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">HTML</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-css">
+                        <img src="../Assets/tech icons/css.png" alt="css-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-css">
                             <path d="M20 20 L25 75 L50 80 L75 75 L80 20 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">CSS</text>
                             <text x="50" y="55" text-anchor="middle" font-size="8" fill="currentColor">3</text>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">CSS</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-react">
+                        <img src="../Assets/tech icons/react.png" alt="react-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-react">
                             <circle cx="50" cy="50" r="5" fill="currentColor"/>
                             <ellipse cx="50" cy="50" rx="25" ry="10" stroke="currentColor" stroke-width="2" fill="none"/>
                             <ellipse cx="50" cy="50" rx="25" ry="10" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(60 50 50)"/>
                             <ellipse cx="50" cy="50" rx="25" ry="10" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(120 50 50)"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">React</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-angular">
+                        <img src="../Assets/tech icons/angular.png" alt="angular-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-angular">
                             <path d="M50 15 L75 30 L70 70 L50 85 L30 70 L25 30 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="55" text-anchor="middle" font-size="18" font-weight="bold" fill="currentColor">A</text>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Angular</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-vue">
+                        <img src="../Assets/tech icons/vue-js.png" alt="vue-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-vue">
                             <path d="M50 20 L70 50 L50 80 L30 50 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor">V</text>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Vue.js</div>
                 </div>
@@ -712,106 +822,115 @@
                 <!-- Row 2 -->
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-react-native">
+                        <img src="../Assets/tech icons/php 1.png" alt="php-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-react-native">
                             <circle cx="50" cy="50" r="5" fill="currentColor"/>
                             <ellipse cx="50" cy="50" rx="20" ry="8" stroke="currentColor" stroke-width="2" fill="none"/>
                             <ellipse cx="50" cy="50" rx="20" ry="8" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(60 50 50)"/>
                             <ellipse cx="50" cy="50" rx="20" ry="8" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(120 50 50)"/>
                             <circle cx="30" cy="30" r="2" fill="currentColor"/>
                             <circle cx="70" cy="30" r="2" fill="currentColor"/>
-                        </svg>
+                        </svg> -->
                     </div>
-                    <div class="tech-label">React Native</div>
+                    <div class="tech-label">Php</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-flutter">
+                        <img src="../Assets/tech icons/flutter.png" alt="flutter-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-flutter">
                             <path d="M30 30 L50 50 L70 30 L70 45 L50 65 L30 45 Z" fill="currentColor"/>
                             <path d="M50 50 L70 70 L50 90 L30 70 Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Flutter</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-android">
+                        <img src="../Assets/tech icons/android.png" alt="android-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-android">
                             <path d="M30 40 Q30 30 40 30 L60 30 Q70 30 70 40 L70 70 Q70 80 60 80 L40 80 Q30 80 30 70 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <line x1="35" y1="25" x2="35" y2="35" stroke="currentColor" stroke-width="2"/>
                             <line x1="65" y1="25" x2="65" y2="35" stroke="currentColor" stroke-width="2"/>
                             <circle cx="42" cy="45" r="2" fill="currentColor"/>
                             <circle cx="58" cy="45" r="2" fill="currentColor"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Android</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-ios">
+                        <img src="../Assets/tech icons/ios.png" alt="ios-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-ios">
                             <circle cx="50" cy="50" r="25" stroke="currentColor" stroke-width="2" fill="none"/>
                             <path d="M45 35 Q50 30 55 35 L55 45 Q50 50 45 45 Z" fill="currentColor"/>
                             <circle cx="50" cy="60" r="3" fill="currentColor"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">iOS</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-kotlin">
+                        <img src="../Assets/tech icons/kotlin.png" alt="kotlin-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-kotlin">
                             <path d="M20 20 L50 20 L20 50 L50 50 L80 20 L80 50 L50 80 L20 80 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">K</text>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Kotlin</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-swift">
+                        <img src="../Assets/tech icons/swift.png" alt="swift-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-swift">
                             <path d="M20 40 Q20 30 30 30 L70 30 Q80 30 80 40 Q80 50 70 50 L50 50 Q40 50 40 60 Q40 70 50 70 L70 70 Q80 70 80 60" stroke="currentColor" stroke-width="3" fill="none"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Swift</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-azure">
+                        <img src="../Assets/tech icons/azure-2.png" alt="azure-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-azure">
                             <path d="M30 30 L70 30 Q80 30 80 40 L80 60 Q80 70 70 70 L30 70 Q20 70 20 60 L20 40 Q20 30 30 30 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor">A</text>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">Azure</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-aws">
+                        <img src="../Assets/tech icons/aws-2.png" alt="aws-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-aws">
                             <path d="M20 50 Q20 40 30 40 L70 40 Q80 40 80 50 L75 60 L70 50 L30 50 L25 60 Z" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="35" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">AWS</text>
                             <path d="M25 65 Q50 70 75 65" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="tech-label">AWS</div>
                 </div>
                 
                 <div class="tech-item">
                     <div class="tech-icon">
-                        <svg viewBox="0 0 100 100" class="icon-gcp">
+                        <img src="../Assets/tech icons/google-cloud-1.png" alt="google-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-gcp">
                             <circle cx="50" cy="40" r="15" stroke="currentColor" stroke-width="2" fill="none"/>
                             <path d="M35 55 L50 70 L65 55" stroke="currentColor" stroke-width="2" fill="none"/>
                             <text x="50" y="45" text-anchor="middle" font-size="8" font-weight="bold" fill="currentColor">GCP</text>
-                        </svg>
+                        </svg> -->
                     </div>
-                    <div class="tech-label">GCP</div>
+                    <div class="tech-label">Google Cloud</div>
                 </div>
             </div>
         </div>
         <section class="products-section">
-        <div class="container">
+        <div class="container-fluid">
             <h2 class="section-title">Our products</h2>
             
             <p class="section-description">
@@ -875,16 +994,21 @@
     </section>
 
     </div>
+        
+    <hr class="section-divider">
 
-        <div class="flow-section">
+        <div class="flow-section ">
         <div class="flow-img-section">
+            <h1 class="services-heading" >Process to join our team </h1> 
             <img src="../Assets/interview flow.png
             " alt="" >
         </div>
+        
         </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="../JS/Overview.js"></script>
+    <script type="module" src="../JS/Navbar.js"></script>
     
 </body>
 </html>

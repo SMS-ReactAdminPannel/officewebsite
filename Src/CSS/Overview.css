@@ -1,12 +1,23 @@
+        :root {
+          --space-sm: 8px;
+          --space-md: 16px;
+          --space-lg: 24px;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: #000;
             color: white;
             overflow-x: hidden;
         }
 
+        p{
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+            font-weight: 300;
+        }
         
         /* Services Section Styles */
         .services-section {
@@ -57,12 +68,21 @@
 
         /* Service section */
 
+        .services-section, .stats-section, .tech-stack-section {
+          padding: var(--space-lg) 0;
+        }
+
+        .container-fluid {
+          padding-left: var(--space-md);
+          padding-right: var(--space-md);
+        }
+
         .service-card {
             background: transparent;
             border: 1px solid #ffffff;
             border-radius: 15px;
-            padding: 40px 30px;
-            height: 250px;
+            padding: 30px 20px;
+            min-height: 250px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -140,7 +160,9 @@
           gap: 8px;
           text-decoration: none;
           position: relative;
-          left: 70%;
+          left: auto;
+          right: -280px;
+          bottom: 30px;
           transition: all 0.3s ease;
         }
 
@@ -183,6 +205,13 @@
             }
         }
 
+        @media (max-width: 768px) {
+          .navigation-arrows {
+            justify-content: center !important;
+            margin-top: var(--space-md);
+          }
+        }
+
         @media (max-width: 576px) {
             .services-heading {
                 font-size: 2rem;
@@ -193,7 +222,7 @@
             }
             
             .service-card {
-                padding: 30px 20px;
+                padding: 20px 15px;
             }
         }
 
@@ -323,6 +352,11 @@
             transition: all 0.3s ease;
         }
 
+        .tech-img{
+            height: 60px;
+            width: 60px;
+        }
+
         .tech-item:hover .tech-icon {
             opacity: 1;
             transform: scale(1.1);
@@ -387,13 +421,13 @@
             }
             
             .tech-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
             }
             
             .tech-icon {
-                width: 45px;
-                height: 45px;
+                width: 40px;
+                height: 40px;
             }
             
             .tech-label {
@@ -483,14 +517,17 @@
         }
 
         .main-heading {
-            font-size: 3.5rem;
-            font-weight: 300;
-            line-height: 1.1;
+            font-family: "Inter", sans-serif;
+            font-size: 3rem;
+            font-weight: 100;
+            color: #ffffff;
+
+            /* line-height: 1.1;
             margin-bottom: 40px;
             background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+            background-clip: text; */
         }
 
         .description {
@@ -558,12 +595,18 @@
             }
             
             .video-container {
-                max-width: 90vw;
+                max-width: 85vw;
+                margin-left: 0;
             }
             
+            .services-heading { font-size: 1.7rem; }
+
             .description {
                 font-size: 1rem;
             }
+            .content-section {
+               padding: 0 20px; 
+             }
         }
 
         /* Subtle animations */
@@ -622,7 +665,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         
@@ -749,7 +792,7 @@
         @media (max-width: 768px) {
             .collage-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
+                gap: 20px;
             }
             
             .card-large,
@@ -765,6 +808,10 @@
         @media (max-width: 576px) {
             .collage-grid {
                 grid-template-columns: 1fr;
+            }
+            .testimonial-card {
+                grid-column: span 1 !important;
+                grid-row: span 1 !important;
             }
         }
 
@@ -799,8 +846,8 @@
         }
         
         .product-card {
-            background-color: #111111;
-            border: 1px solid #333333;
+            background-color:#000;
+            border: 1px solid #ffffff;
             border-radius: 8px;
             padding: 2rem;
             height: 100%;
@@ -930,6 +977,9 @@
         .flow-img-section {
             padding: 0 15px;
         }
+        .flow-img-section img {
+          padding: 20px;
+        }
     }
     
     @media (max-width: 576px) {
@@ -951,6 +1001,6 @@
           border: 0;
           height: 1px;
           background: rgba(255, 255, 255, 0.2); 
-          margin: 0 auto;
+          margin: 0 20px;
           width: 200px; 
     }
