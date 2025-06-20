@@ -1,0 +1,26 @@
+.heading {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.subheading {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.description {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+}
+
+button {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+}
