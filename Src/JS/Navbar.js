@@ -417,9 +417,8 @@ function initializeNavbarFunctionality() {
         console.log('✅ Category hover setup complete');
     }
 
-    // Page navigation functionality
+    // Page navigation functionality with router integration
     function setupPageNavigation() {
-        const loadPage = window.loadPage;
         const navLinks = document.querySelectorAll('[data-page]');
         
         navLinks.forEach(link => {
@@ -439,10 +438,6 @@ function initializeNavbarFunctionality() {
                 e.preventDefault();
                 const page = this.getAttribute('data-page');
                 
-                // Update active state
-                navLinks.forEach(l => l.classList.remove('active'));
-                document.querySelectorAll(`[data-page="${page}"]`).forEach(l => l.classList.add('active'));
-                
                 // Close mobile menu
                 if (mobileMenu && mobileMenu.classList.contains("active")) {
                     mobileMenu.classList.remove("active");
@@ -452,10 +447,21 @@ function initializeNavbarFunctionality() {
                 // Close dropdowns
                 closeAllDropdowns();
                 
-                // Load page
-                if (loadPage && typeof loadPage === 'function') {
-                    loadPage(page);
-                    console.log('Navigating to page:', page);
+                // Navigate using router
+                const path = page.toLowerCase() === 'home' ? '/' : `/${page.toLowerCase()}`;
+                
+                if (window.router) {
+                    window.router.navigate(path);
+                    console.log('🧭 Router navigation to:', path);
+                } else if (window.navigateTo) {
+                    window.navigateTo(path);
+                    console.log('🧭 Direct navigation to:', path);
+                } else {
+                    // Fallback to old method
+                    console.warn('⚠️ Router not available, using fallback');
+                    if (window.loadPage && typeof window.loadPage === 'function') {
+                        window.loadPage(page);
+                    }
                 }
             });
         });
