@@ -4,10 +4,10 @@
   height: 110vh;
   background-image: linear-gradient(
       180deg,
-      rgba(0, 9, 21, 0.7) 0%,
-      rgba(4, 30, 65, 0.7) 100%
+      rgba(0, 6, 14, 0.5) 0%,
+      rgba(0, 0, 0, 0.6) 100%
     ),
-    url("../Assets/home-hero.jpg");
+    url("../Assets/bg/03b6dcbd-0868-4605-b502-bf2fa4c70c1f_large.webp");
   background-position: 0% center;
   background-size: cover;
   position: relative;
@@ -533,16 +533,12 @@
   color: #fff;
 }
 
-
-
-
-
 /* Section base */
 .companies-section {
   background-color: #000;
   color: white;
   padding: 80px 0;
-  min-height: 80vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
 }
@@ -656,15 +652,60 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  white-space: nowrap;
+  position: relative;
+  margin-top: 25px;
+}
+
+.logo-items {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+.logo-items:hover {
+  animation-play-state: paused;
+}
+
+.logo-items img {
+  height: 45px;
+  width: auto;
+  margin-right: 75px;
+  object-fit: cover;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.logo-items img:hover {
+  transform: scale(1.25);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
  .section-title1 {
   font-family: "Inter", sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
   color: #ffffff;
   margin-bottom: 4.5rem;
-   line-height: 1.1;
-   font-size: 40px;
+   line-height: 1;
+   font-size: 46px;
    padding-left: 90px;
  }
 /* Responsive adjustments */
@@ -690,6 +731,9 @@
   .company-logo {
     height: 45px;
   }
+  .hero-text1{
+    font-size: 12px;
+  }
 }
 
 
@@ -712,29 +756,30 @@
 /* Main heading */
 .section-title2 {
   font-family: "Inter", sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
   color: #ffffff;
   margin-bottom: 40px;
-  font-size: 56px;
+  font-size: 46px;
 }
 
 /* Text content */
-.hero-text {
-  font-size: 1rem;
+.hero-text1 {
+  font-size: 16px;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 200;
-  line-height: 1.5;
+  /* line-height: 1.2; */
   margin-bottom: 25px;
+  text-align: justify;
 }
 
 
 
 .corner-graphic {
   position: absolute;
-  top: 0;
-  right: -40px; /* Adjust this to hide half the image */
-  width: 250px; /* Adjust size if needed */
+  top: -140px;
+  right: -20px; /* Adjust this to hide half the image */
+  width: 180px; /* Adjust size if needed */
   max-width: none;
   z-index: 1;
 }
@@ -749,21 +794,24 @@
   font-style: normal;
   color: #ffffff;
     text-align: center;
+    font-size: 34px;
+    margin-bottom: 180px;
   }
 
   .hero-text {
-    font-size: 1rem;
+    font-size: 12px;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 200;
   line-height: 1.5;
-    text-align: center;
+    text-align: justify;
   }
 
   .corner-graphic {
-    max-width: 200px;
-    top: 20px;
-    right: 20px;
+    max-width: 130px;
+    top: 120px;
+    right: 105px;
   }
+
 }
 
 
@@ -800,23 +848,22 @@
   border: 1px solid #fff;
   border-radius: 20px;
   padding: 40px 30px;
-  height: 100%;
   position: relative;
   transition: all 0.3s ease;
-  min-height: 250px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .service-card:hover {
-
   transform: translateY(-4px);
 }
 
 .card-title {
   font-size: 1.3rem;
-  font-weight: 400;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 200;
   margin-bottom: 40px;
   max-width: 80%;
 }
@@ -838,18 +885,17 @@
   transition: width 0.3s ease;
 }
 
-.read-more:hover .read-more-text::after {
+ .service-card:hover .read-more-text::after {
   width: 100%;
 }
 
 
 .service-icon {
   position: absolute;
-  bottom: 25px;
+  top: 25px;
   right: 25px;
-  width: 70px;
-  opacity: 0.8;
-  width:80px;
+  width: 65px;
+  opacity: 1;
 }
 
 /* Column spacing */
@@ -865,7 +911,17 @@
       font-weight: 100;
   font-style: normal;
   color: #ffffff;
-  
+  font-size: 2.5rem;
+  margin-top: 45px;
+  padding:30px
+  }
+  .sub-text{
+    font-size: 1.2rem;
+    padding:0px 30px
+  }
+
+  .discover-section{
+    padding: 20px;
   }
 
   .card-title {
@@ -876,6 +932,7 @@
   .service-card {
     padding: 30px 20px;
     min-height: 220px;
+    width: 100%;
   }
 
   .service-icon {
@@ -1055,6 +1112,11 @@
 @media (max-width: 768px) {
   .custom-card h2 {
     font-size: 28px;
+  }
+
+  .section-heading2{
+    padding: 0px 30px;
+    font-size: 2.5rem;
   }
 
   .decor-img {
