@@ -68,9 +68,7 @@
 
         /* Service section */
 
-        .services-section, .stats-section, .tech-stack-section {
-          padding: var(--space-lg) 0;
-        }
+    
 
         .container-fluid {
           padding-left: var(--space-md);
@@ -81,8 +79,8 @@
             background: transparent;
             border: 1px solid #ffffff;
             border-radius: 15px;
-            padding: 30px 20px;
-            min-height: 250px;
+            padding: 10px 10px;
+            height: 180px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -127,10 +125,10 @@
 
         .service-icon {
             position: relative;
-            top: 60px;
+            right: 10px;
+            top: 40px;
             width: 128px;
             height: 128px;
-            margin-bottom: 30px;
             color: #ffffff;
             opacity: 0.8;
         }
@@ -142,7 +140,7 @@
 
         .service-title {
             position: absolute;
-            top: 30px;
+            top: 15px;
             right: 30px;
             font-size: 1.3rem;
             font-weight: 400;
@@ -161,8 +159,8 @@
           text-decoration: none;
           position: relative;
           left: auto;
-          right: -280px;
-          bottom: 30px;
+          right: -200px;
+          bottom: 15px;
           transition: all 0.3s ease;
         }
 
@@ -229,15 +227,15 @@
         /* Stats Section Styles */
         .stats-section {
             background-color: #000;
-            padding: 100px 0;
+            padding: 20px 0;
             color: white;
         }
 
         .stats-heading {
             font-size: 2.5rem;
             font-weight: 300;
-            margin-bottom: 80px;
             color: white;
+            
         }
 
         .stat-item {
@@ -250,9 +248,9 @@
         }
 
         .stat-icon {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 30px;
+            width: 125px;
+            height: 125px;
+            margin: 0 auto 10px;
             color: #ffffff;
             opacity: 0.9;
         }
@@ -262,8 +260,9 @@
             height: 100%;
         }
 
+
         .stat-number {
-            font-size: 3rem;
+            font-size: 1.5rem;
             font-weight: 300;
             color: green;
             margin-bottom: 15px;
@@ -311,7 +310,7 @@
         /* Tech Stack Section Styles */
         .tech-stack-section {
             background-color: #000;
-            padding: 100px 0;
+            padding: 30px 0;
             color: white;
         }
 
@@ -344,17 +343,20 @@
         }
 
         .tech-icon {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
-            color: #ffffff;
-            opacity: 0.8;
-            transition: all 0.3s ease;
+          width: 60px; /* Fixed container size */
+          height: 60px;
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
         }
 
-        .tech-img{
-            height: 60px;
-            width: 60px;
+        
+        .tech-img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain; 
         }
 
         .tech-item:hover .tech-icon {
@@ -412,7 +414,7 @@
 
         @media (max-width: 576px) {
             .tech-stack-section {
-                padding: 60px 0;
+                padding: 10px 0;
             }
             
             .tech-heading {
@@ -421,13 +423,13 @@
             }
             
             .tech-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
             }
             
             .tech-icon {
-                width: 40px;
-                height: 40px;
+                width: 60px;
+                height: 60px;
             }
             
             .tech-label {
@@ -522,12 +524,12 @@
             font-weight: 100;
             color: #ffffff;
 
-            /* line-height: 1.1;
+            line-height: 1.1; 
             margin-bottom: 40px;
             background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text; */
+            background-clip: text; 
         }
 
         .description {
@@ -590,6 +592,10 @@
         }
 
         @media (max-width: 576px) {
+            .hero-section{
+                margin-top:90px;
+            }
+
             .main-heading {
                 font-size: 2rem;
             }
@@ -646,11 +652,11 @@
             }
         }
 
-             .collage-container::-webkit-scrollbar {
-                display: none;
-            }
+                .collage-container::-webkit-scrollbar {
+            display: none;
+        }
 
-          .collage-container {
+        .collage-container {
             height: 100vh;
             overflow-y: auto;
             overflow-x: hidden;
@@ -661,29 +667,35 @@
             background-color: #000;
         }
         
-        .collage-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            max-width: 1400px;
+        /* Changed from grid to columns for masonry layout */
+        .testimonials-container {
+            columns: 3;
+            column-gap: 20px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
+            background-color: #000;
         }
-        
+
         .testimonial-card {
+            break-inside: avoid;
             background: rgba(0, 0, 0, 0.8);
             border-radius: 15px;
             padding: 20px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffffff;
             transition: all 0.3s ease;
+            margin-bottom: 20px;
             position: relative;
             overflow: hidden;
+            display: inline-block;
+            width: 100%;
         }
         
         .testimonial-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border-color: rgba(255, 255, 255, 0.2);
+            border-color:#ffffff;
         }
         
         .testimonial-card::before {
@@ -702,34 +714,18 @@
             opacity: 1;
         }
         
-        .card-large {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-        
-        .card-wide {
-            grid-column: span 2;
-        }
-        
-        .card-tall {
-            grid-row: span 2;
-        }
-        
         .stars {
             color: #ffd700;
             font-size: 1.2em;
             margin-bottom: 15px;
         }
-        
+
         .testimonial-text {
             color: #ffffff;
             font-size: 0.95em;
             line-height: 1.5;
             margin-bottom: 20px;
-        }
-        
-        .card-large .testimonial-text {
-            font-size: 1.1em;
+            text-justify: auto;
         }
         
         .user-info {
@@ -746,11 +742,6 @@
             border: 2px solid rgba(255, 255, 255, 0.2);
         }
         
-        .card-large .user-avatar {
-            width: 55px;
-            height: 55px;
-        }
-        
         .user-name {
             color: #ffffff;
             font-weight: 600;
@@ -763,6 +754,7 @@
             font-size: 0.8em;
             margin: 0;
         }
+
         
         .header {
             text-align: center;
@@ -782,41 +774,23 @@
             opacity: 0.8;
         }
         
-        /* Responsive adjustments */
-        @media (max-width: 992px) {
-            .collage-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .collage-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .card-large,
-            .card-wide {
-                grid-column: span 1;
-            }
-            
-            .card-tall {
-                grid-row: span 1;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .collage-grid {
-                grid-template-columns: 1fr;
-            }
-            .testimonial-card {
-                grid-column: span 1 !important;
-                grid-row: span 1 !important;
+         @media (max-width: 768px) {
+            .testimonials-container {
+                columns: 2;
+                column-gap: 15px;
+                padding: 15px;
             }
         }
 
+        @media (max-width: 480px) {
+            .testimonials-container {
+                columns: 1;
+                padding: 10px;
+            }
+        }
          .products-section {
-            padding: 80px 0;
+            margin-top: 50px;
+            padding: 10px 0 0 0;
             background-color: #000;
         }
         
@@ -850,7 +824,7 @@
             border: 1px solid #ffffff;
             border-radius: 8px;
             padding: 2rem;
-            height: 100%;
+            min-height: 450px;
             transition: all 0.3s ease;
             position: relative;
         }
@@ -904,12 +878,12 @@
         }
         
         .highlight {
-            color: #ff6b35;
+            color: green;
         }
 
     .flow-section {
     background-color: #000;
-    padding: 20px;
+    padding: 50px;
     position: relative;
     overflow: hidden;
     }
@@ -928,7 +902,7 @@
         height: auto;
         border-radius: 15px;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid #ffffff;
         transition: all 0.3s ease;
         padding: 50px
     }
@@ -936,7 +910,7 @@
     .flow-img-section:hover img {
         transform: scale(1.02);
         box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
-        border-color: rgba(255, 255, 255, 0.2);
+        border-color: #ffffff
     }
     
     /* Optional decorative elements */
@@ -984,23 +958,21 @@
     
     @media (max-width: 576px) {
         .flow-section {
-            padding: 40px 0;
+            padding: 10px 0;
         }
         
         .flow-img-section {
             padding: 0 10px;
         }
+
+        .product-card{
+            margin-bottom:20px;
+        }
     }   
 
-    .horizon-line {
-        width: 1px;
-        height: 20px;
-    }
-
     .section-divider {
-          border: 0;
           height: 1px;
           background: rgba(255, 255, 255, 0.2); 
           margin: 0 20px;
-          width: 200px; 
+          width: 20px; 
     }

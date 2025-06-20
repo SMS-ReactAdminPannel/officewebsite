@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../CSS/Navbar.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+
+    />
+
 </head>
  
 <body>
@@ -111,7 +119,7 @@
 </nav>
 
         <div class="hero-section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row align-items-center min-vh-100 g-0">
                 <div class="col-lg-6 d-flex justify-content-end p-0">
                     <div class="video-container">
@@ -120,14 +128,14 @@
                             <source src="../Assets/Career.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <div class="controls">
+                        <!-- <div class="controls">
                             <div class="play-pause-btn" onclick="togglePlay()">
                                 <i class="fas fa-pause" id="playIcon"></i>
                             </div>
                             <div class="sound-btn" onclick="toggleSound()">
                                 <i class="fas fa-volume-mute" id="soundIcon"></i>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 
@@ -158,11 +166,11 @@
 
     <!-- Services Section -->
     <div class="services-section">
-        <div class="container-fluid px-5">
+        <div class="container px-5">
             <div class="row">
                 <div class="col-lg-8">
                     <h2 class="services-heading">
-                        By your side, every step of the<br>
+                        By your side, every step the<br>
                         product lifecycle
                     </h2>
                     <p class="services-description">
@@ -170,16 +178,6 @@
                         your hands-on digital product development and system integration services partner. 
                         We transform your dreams into tailored digital experiences your users will love.
                     </p>
-                </div>
-                <div class="col-lg-4 d-flex align-items-center justify-content-end">
-                    <div class="navigation-arrows">
-                        <button class="nav-arrow nav-arrow-left">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="nav-arrow nav-arrow-right">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
                 </div>
             </div>
             
@@ -200,7 +198,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <h3 class="service-title">Digital product development</h3>
+                        <h3 class="service-title">Digital Marketing</h3>
                         <a href="#" class="service-link">
                             Read more <i class="fas fa-arrow-right"></i>
                         </a>
@@ -239,7 +237,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <h3 class="service-title">Implementation</h3>
+                        <h3 class="service-title">Mobile App Development</h3>
                         <a href="#" class="service-link">
                             Read more <i class="fas fa-arrow-right"></i>
                         </a>
@@ -258,7 +256,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <h3 class="service-title">Product discovery</h3>
+                        <h3 class="service-title">Website Development</h3>
                         <a href="#" class="service-link">
                             Read more <i class="fas fa-arrow-right"></i>
                         </a>
@@ -323,12 +321,16 @@
         <p>Real testimonials from real people</p>
     </div>
     
-    <div class="collage-container">
-        <div class="collage-grid">
-            <!-- Testimonial 1 - Large -->
-            <div class="testimonial-card card-large">
+     <div class="collage-container">
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"This AI product has completely transformed the way I manage my daily tasks. It's intuitive, incredibly fast, and the accuracy is mind-blowing. I can't imagine working without it now!"</p>
+                <p class="testimonial-text">
+"Yoho Technologies developed our complete e-commerce platform from scratch, and we couldn't be more satisfied with the outcome. From the initial consultation to the final deployment, their team was professional, communicative, and focused on delivering high-quality work. They took the time to understand our business model, customer base, and design preferences, which reflected in the final product.
+
+The user interface is smooth, intuitive, and visually appealing, while the backend is robust and highly scalable. Features like real-time order tracking, secure payment integration, and a custom admin dashboard were all implemented flawlessly. Even when we made a few last-minute changes, the team adapted quickly without compromising delivery timelines.
+</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="Sarah Thompson">
@@ -342,7 +344,7 @@
             <!-- Testimonial 2 -->
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"I was skeptical at first, but this AI tool saved me hours of work. The automation features are a game-changer."</p>
+                <p class="testimonial-text">"We approached Yoho Technologies for a cross-platform mobile app. They handled everything from design to deployment professionally. Their regular updates and transparent process made us feel confident throughout."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="Michael Chen">
@@ -356,7 +358,7 @@
             <!-- Testimonial 3 -->
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The AI's ability to analyze data and provide insights is unmatched. It's like having a personal assistant 24/7!"</p>
+                <p class="testimonial-text">"As a startup, we needed a tech partner who could understand our vision and work closely with us. Yoho Technologies delivered a scalable MVP within our budget and offered continued support post-launch."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="Emily Rodriguez">
@@ -367,10 +369,10 @@
                 </div>
             </div>
 
-            <!-- Testimonial 4 - Wide -->
-            <div class="testimonial-card card-wide">
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"I love how this AI learns and adapts to my specific needs. It's made my daily business operations incredibly smooth and efficient."</p>
+                <p class="testimonial-text">"Yoho Technologies built a custom booking system for my business. Their team listened carefully to our needs and translated them into a user-friendly application. We've seen a 40% increase in customer engagement."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="Ryan Sullivan">
@@ -384,7 +386,7 @@
             <!-- Testimonial 5 -->
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"I've never seen an AI product this user-friendly. It integrated seamlessly into my workflow from day one."</p>
+                <p class="testimonial-text">"Despite being in different time zones, Yoho's communication was consistent and effective. They managed our project remotely with professionalism and precision. I would recommend them to anyone looking for remote tech services."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="David Patel">
@@ -395,10 +397,10 @@
                 </div>
             </div>
 
-            <!-- Testimonial 6 - Tall -->
-            <div class="testimonial-card card-tall">
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"This AI has boosted my productivity tenfold. The predictive features are spot-on and incredibly helpful for my marketing campaigns."</p>
+                <p class="testimonial-text">"Yoho Technologies helped us digitize patient record management. The team followed strict data privacy protocols and built a secure system. We're impressed with their domain understanding and execution."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="Olivia Harper">
@@ -412,7 +414,7 @@
             <!-- Testimonial 7 -->
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The customer support paired with this AI product is phenomenal. It delivers results every single time."</p>
+                <p class="testimonial-text">"I've worked with several development teams, and Yoho stands out for their structured workflow and on-time delivery. They're efficient, technically strong, and committed to quality."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="James Carter">
@@ -426,7 +428,7 @@
             <!-- Testimonial 8 -->
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Outstanding performance and reliability. This AI has become an essential part of my research workflow."</p>
+                <p class="testimonial-text">"We hired Yoho Technologies to develop an online learning portal. They included features like live classes, assessments, and student tracking. The final product was clean, fast, and well-optimized for mobile use."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="Dr. Lisa Wang">
@@ -437,10 +439,10 @@
                 </div>
             </div>
 
-            <!-- Testimonial 9 - Wide -->
-            <div class="testimonial-card card-wide">
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The machine learning capabilities are impressive. It understands context better than any other AI tool I've used."</p>
+                <p class="testimonial-text">"Being from a non-tech background, I was worried about app development. But Yoho Technologies patiently explained each step and guided me through the entire process. I'm very happy with their service and clarity."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="Alex Johnson">
@@ -454,7 +456,7 @@
             <!-- Testimonial 10 -->
             <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Incredible value for money. The ROI we've seen since implementing this AI is remarkable."</p>
+                <p class="testimonial-text">"This is our second time working with Yoho Technologies, and the experience was just as smooth as the first. They maintained code quality, provided timely updates, and handled last-minute changes professionally."</p>
                 <div class="user-info">
                     <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face" 
                          class="user-avatar" alt="Maria Garcia">
@@ -479,8 +481,8 @@
                 </div>
             </div>
 
-            <!-- Testimonial 12 - Large -->
-            <div class="testimonial-card card-large">
+            <!-- Testimonial 12 -->
+            <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
                 <p class="testimonial-text">"This AI platform has revolutionized our entire workflow. The integration capabilities are seamless, and the learning curve is practically non-existent. Our team's productivity has increased by 300%!"</p>
                 <div class="user-info">
@@ -507,8 +509,8 @@
                 </div>
             </div>
 
-            <!-- Testimonial 14 - Tall -->
-            <div class="testimonial-card card-tall">
+            <!-- Testimonial 14 -->
+            <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
                 <p class="testimonial-text">"Security and privacy are top-notch. I feel completely confident using this AI for sensitive business operations."</p>
                 <div class="user-info">
@@ -535,8 +537,8 @@
                 </div>
             </div>
 
-            <!-- Testimonial 16 - Wide -->
-            <div class="testimonial-card card-wide">
+            <!-- Testimonial 16 -->
+            <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
                 <p class="testimonial-text">"The collaborative features make team projects so much more efficient. Everyone can work together seamlessly."</p>
                 <div class="user-info">
@@ -591,8 +593,8 @@
                 </div>
             </div>
 
-            <!-- Testimonial 20 - Large -->
-            <div class="testimonial-card card-large">
+            <!-- Testimonial 20 -->
+            <div class="testimonial-card">
                 <div class="stars">★★★★★</div>
                 <p class="testimonial-text">"After trying dozens of AI solutions, this is the only one that truly delivers on its promises. The innovation and attention to detail are extraordinary. It's not just a tool—it's a game-changer for our entire industry."</p>
                 <div class="user-info">
@@ -606,13 +608,15 @@
             </div>
         </div>
     </div>
-
+    </div>
+    </div>
 
     <!-- Stats Section -->
     <div class="stats-section">
-        <div class="container-fluid">
-            <h2 class="stats-heading text-center mb-5">Strength in numbers</h2>
-            <div class="row">
+        
+        <div class="container">
+        <h2 class="stats-heading text-center t mt-5"> Strength in numbers </h2>
+            <div class="row stats-strength">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-item text-center">
                         <div class="stat-icon">
@@ -629,7 +633,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="stat-number">1500+</div>
+                        <div class="stat-number">150+</div>
                         <div class="stat-label">Projects launched</div>
                     </div>
                 </div>
@@ -650,7 +654,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="stat-number">200+</div>
+                        <div class="stat-number">80+</div>
                         <div class="stat-label">Clients trusting us</div>
                     </div>
                 </div>
@@ -671,7 +675,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="stat-number">900+</div>
+                        <div class="stat-number">90+</div>
                         <div class="stat-label">Expert software engineers</div>
                     </div>
                 </div>
@@ -693,19 +697,16 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="stat-number">17+</div>
+                        <div class="stat-number">10+</div>
                         <div class="stat-label">Years in the market</div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-
-    <hr class="section-divider">
 
     <!-- Tech Stack Section -->
     <div class="tech-stack-section">
-        <div class="container-fluid">
+        <div class="container">
             <h2 class="tech-heading">Our tech stack. Tailored to yours.</h2>
             
             <div class="tech-grid">
@@ -713,12 +714,6 @@
                 <div class="tech-item">
                     <div class="tech-icon">
                         <img src="../Assets/tech icons/net-core.png" alt=".net-image" class="tech-img">
-                        <!-- <svg viewBox="0 0 100 100" class="icon-dotnet">
-                            <text x="50" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor">.NET</text>
-                            <circle cx="15" cy="60" r="3" fill="currentColor"/>
-                            <circle cx="50" cy="60" r="3" fill="currentColor"/>
-                            <circle cx="85" cy="60" r="3" fill="currentColor"/>
-                        </svg> -->
                     </div>
                     <div class="tech-label">.NET</div>
                 </div>
@@ -929,31 +924,23 @@
                 </div>
             </div>
         </div>
+
         <section class="products-section">
-        <div class="container-fluid">
+        <div class="container">
             <h2 class="section-title">Our products</h2>
             
             <p class="section-description">
                 With years of hands-on experience, we know what works, and what doesn't. We not only understand your unique challenges, we anticipate them and deliver <span class="highlight">innovative solutions to speed up your digital development and time to market</span>, keeping you ahead of the curve.
             </p>
             
-            <p class="section-subdescription">
-                Our pre-built solutions are here to save time, cut complexities, and help you deliver great digital products that will give your business a competitive edge.
-            </p>
-            
-            <div class="row g-4">
+            <div class=" products row g-4">
                 <!-- Vega Flywheel -->
                 <div class="col-lg-4 col-md-6">
                     <div class="product-card">
-                        <h3 class="product-title">Vega Flywheel</h3>
+                        <h3 class="product-title">Pharmacy Billing Software</h3>
                         <div class="product-subtitle">Reinventing product discovery.</div>
                         <div class="product-description">
-                            <strong>Innovative. Efficient. Strategic.</strong> Validate your solutions in just four weeks.<br><br>
-                            
-                            Vega Flywheel is engineered to set your ideas into motion, aligning them precisely with market demands.<br><br>
-                            
-                            We ensure your products achieve your business goals and resonate deeply with your target audience, catalyzing swift movement from concept to market-validated solutions.<br><br>
-                            
+                            <strong>Innovative. Efficient. Strategic.</strong> YOHO very proudly presenting Medical store billing software or Pharmacy billing software in chennai the modern technology. Medical store billing software in chennai is specially developed for Medical, Pharma and Drug Shops. It covers all aspects involved in running a day to day medical retail business.
                            
                         </div>
                         <a href="#" class="discover-btn">Discover more</a>
@@ -963,13 +950,10 @@
                 <!-- Vega GuardIAM -->
                 <div class="col-lg-4 col-md-6">
                     <div class="product-card">
-                        <h3 class="product-title">Vega GuardIAM</h3>
-                        <div class="product-subtitle">Ultimate Identity Access Management (IAM).</div>
+                        <h3 class="product-title">Job Portal Development</h3>
+                        <div class="product-subtitle">Ultimate Identity Access Management.</div>
                         <div class="product-description">
-                            Say goodbye to authentication and authorization challenges with our digital identity group exponentially. Without a robust, scalable IAM solution, your company faces increased risks, operational inefficiencies, and regulatory non-compliance.<br><br>
-                            
-                           
-                        </div>
+                          Looking for Job Portal Development / online recruitment software in chennai, then we can provide best job portal development with extra feature. YOHO provide job portal with excellent feature as per client requirements. Job Portals provide an ideal platform for the employers to reach their vision employees.                        </div>
                         <a href="#" class="discover-btn">Discover more</a>
                     </div>
                 </div>
@@ -977,15 +961,10 @@
                 <!-- Chatbot Accelerator -->
                 <div class="col-lg-4 col-md-6">
                     <div class="product-card">
-                        <h3 class="product-title">Chatbot Accelerator</h3>
+                        <h3 class="product-title">Forex Trading</h3>
                         <div class="product-subtitle">Fast-developed. Intuitive. Human-like.</div>
                         <div class="product-description">
-                            At Vega IT, we use Machine Learning and Ai-ML to create intelligent chatbots that meet your needs. German. French. English. Italian. Hindi. Portuguese. Japanese. RetailTech. EdTech. FinTech. RetailTech. EdTech. RetailTech. Ed You name it.<br><br>
-                            
-                            With us, you get more than our technical expertise. We created a software accelerator that fast-tracks software development. Robust. Efficient. Cost-saving.<br><br>
-                            
-                        
-                        </div>
+                           We provide a new trading system for beginners. Our Robot analyze the market as every second. Thats automatically take the desition Buy or Sell. Our automated system provide BUY and sell signals to the robot. Just install this application to get a successful forex trading experience.  </div>
                         <a href="#" class="discover-btn">Discover more</a>
                     </div>
                 </div>
@@ -995,7 +974,6 @@
 
     </div>
         
-    <hr class="section-divider">
 
         <div class="flow-section ">
         <div class="flow-img-section">

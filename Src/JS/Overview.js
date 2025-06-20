@@ -28,6 +28,21 @@
             }
         }
 
+        document.addEventListener('DOMContentLoaded', function() {
+  const statsHeading = document.querySelector('.stats-heading');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        statsHeading.classList.add('animate-underline');
+        observer.unobserve(entry.target); // Stop observing after animation
+      }
+    });
+  }, { threshold: 0.5 }); // Trigger when 50% of element is visible
+
+  observer.observe(statsHeading);
+});
+
         // Add smooth scrolling and interactive effects
         document.addEventListener('DOMContentLoaded', function() {
             // Add hover effects to buttons
