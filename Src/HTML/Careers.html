@@ -1,95 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/Careers.css" />
-    <title>Career</title>
-  </head>
-  <body>
-    <!-- Careers Page Content -->
-    <section class="careers-hero">
-      <div class="careers-hero-container">
-        <div class="career-left">
-          <h1 class="career-title">
-            Define your career with Yoho Technologies
-          </h1>
-          <p class="career-subtitle">Find a career that makes a difference.</p>
-          <p class="career-description">
-            Discover job opportunities tailored to your passions. Search by
-            skill, location, or experience. Dive into our teams and hiring
-            process or join our talent network to stay connected.
-          </p>
-          <div class="career-actions">
-            <button class="career-btn">Explore All Roles</button>
-            <button class="career-btn2">Join Talent Network</button>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../CSS/Careers.css" />
+  <title>Career</title>
+</head>
+
+<body>
+  <!-- Careers Page Content -->
+  <section class="careers-hero">
+    <div class="careers-hero-container">
+      <div class="career-left">
+        <h1 class="career-title">
+          Define your career with Yoho Technologies
+        </h1>
+        <p class="career-subtitle">Find a career that makes a difference.</p>
+        <p class="career-description">
+          Discover job opportunities tailored to your passions. Search by
+          skill, location, or experience. Dive into our teams and hiring
+          process or join our talent network to stay connected.
+        </p>
+        <div class="career-actions">
+          <button class="career-btn">Explore All Roles</button>
+          <button class="career-btn2">Join Talent Network</button>
         </div>
+      </div>
 
 
-        <div class="career-right">
-          <div class="career-stats">
-            <div class="stat-item">
-              <span class="stat-number">500+</span>
-              <span class="stat-label">Openings</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">50+</span>
-              <span class="stat-label">Countries</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">35%</span>
-              <span class="stat-label">Wage Growth</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">95%</span>
-              <span class="stat-label">Career Growth</span>
-            </div>
+      <div class="career-right">
+        <div class="career-stats">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Openings</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Countries</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">35%</span>
+            <span class="stat-label">Wage Growth</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">Career Growth</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-        <!-- <div class="divider"></div> -->
+  <!-- <div class="divider"></div> -->
 
 
-    <section class="job-search-section">
-      <div class="search-container">
-        <h2>Find your next role</h2>
+  <section class="job-search-section">
+    <div class="search-container">
+      <h2>Find your next role</h2>
+      <p>
+        We think big and set the pace in this industry. We empower outcomes.
+        We forge partnerships and bring people and technology together— and
+        here's where your skills could define a better world.
+      </p>
+
+      <div class="search-form-wrapper">
+        <form id="careers-search-form" class="advanced-search-form">
+          <div class="search-inputs">
+            <div class="input-group">
+              <i class="fas fa-search"></i>
+              <input type="text" name="job-keyword" placeholder="Job title, keyword, or company" />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-map-marker-alt"></i>
+              <select name="job-location">
+                <option value="">All Locations</option>
+                <option value="chennai">Chennai</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="pune">Pune</option>
+                <option value="remote">Remote</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-briefcase"></i>
+              <select name="job-department">
+                <option value="">All Departments</option>
+                <option value="software-engineering">
+                  Software Engineering
+                </option>
+                <option value="consulting">Consulting</option>
+                <option value="design-ux">Design & UX</option>
+                <option value="data-analytics">Data & Analytics</option>
+                <option value="cloud">Cloud</option>
+                <option value="security">Security</option>
+                <option value="sales">Sales</option>
+                <option value="marketing">Marketing</option>
+                <option value="project-management">Project Management</option>
+                <option value="ai-ml">AI & Machine Learning</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <i class="fas fa-user-tie"></i>
+              <select name="experience-level">
+                <option value="">All Experience Levels</option>
+                <option value="entry">Entry Level (0-2 years)</option>
+                <option value="mid">Mid Level (3-5 years)</option>
+                <option value="senior">Senior Level (6-10 years)</option>
+                <option value="lead">Lead Level (10+ years)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="search-btn">
+            <i class="fas fa-search"></i>
+            Search Jobs
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="featured-jobs-section">
+    <div class="featured-jobs-container">
+      <h2>Featured Opportunities</h2>
+      <div class="job-listings" id="job-listings">
+        <div class="job-card" data-department="software-engineering" data-location="chennai" data-experience="senior">
+          <div class="job-header">
+            <h3>Senior Full Stack Developer</h3>
+          </div>
+          <div class="job-details">
+            <span class="job-location"><i class="fas fa-map-marker-alt text-white"></i> Chennai</span>
+            <span class="job-type"><i class="fas fa-briefcase text-white"></i> Full-time</span>
+            <span class="job-experience"><i class="fas fa-user-tie text-white"></i> 5+ years</span>
+          </div>
+
+          <div class="job-actions">
+            <button class="apply-btn">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="job-card" data-department="design-ux" data-location="bangalore" data-experience="mid">
+          <div class="job-header">
+            <h3>Senior UX Designer</h3>
+          </div>
+          <div class="job-details">
+            <span class="job-location"><i class="fas fa-map-marker-alt  text-white"></i> Bangalore</span>
+            <span class="job-type"><i class="fas fa-briefcase text-white"></i> Full-time</span>
+            <span class="job-experience"><i class="fas fa-user-tie text-white"></i> 3-5 years</span>
+          </div>
+
+          <div class="job-actions">
+            <button class="apply-btn">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="job-card" data-department="data-analytics" data-location="mumbai" data-experience="mid">
+          <div class="job-header">
+            <h3>Data Scientist</h3>
+          </div>
+          <div class="job-details">
+            <span class="job-location"><i class="fas fa-map-marker-alt text-white"></i> Mumbai</span>
+            <span class="job-type"><i class="fas fa-briefcase text-white"></i> Full-time</span>
+            <span class="job-experience"><i class="fas fa-user-tie text-white"></i> 3-6 years</span>
+          </div>
+
+          <div class="job-actions">
+            <button class="apply-btn">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="job-card" data-department="cloud" data-location="hyderabad" data-experience="senior">
+          <div class="job-header">
+            <h3>Cloud Solutions Architect</h3>
+          </div>
+          <div class="job-details">
+            <span class="job-location"><i class="fas fa-map-marker-alt text-white"></i> Hyderabad</span>
+            <span class="job-type"><i class="fas fa-briefcase text-white"></i> Full-time</span>
+            <span class="job-experience"><i class="fas fa-user-tie text-white"></i> 7+ years</span>
+          </div>
+
+          <div class="job-actions">
+            <button class="apply-btn">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="job-card" data-department="security" data-location="pune" data-experience="mid">
+          <div class="job-header">
+            <h3>Cybersecurity Analyst</h3>
+          </div>
+          <div class="job-details">
+            <span class="job-location"><i class="fas fa-map-marker-alt text-white"></i> Pune</span>
+            <span class="job-type"><i class="fas fa-briefcase text-white"></i> Full-time</span>
+            <span class="job-experience"><i class="fas fa-user-tie text-white"></i> 4-6 years</span>
+          </div>
+
+          <div class="job-actions">
+            <button class="apply-btn">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="job-card" data-department="consulting" data-location="delhi" data-experience="senior">
+          <div class="job-header">
+            <h3>Digital Transformation Consultant</h3>
+          </div>
+          <div class="job-details">
+            <span class="job-location"><i class="fas fa-map-marker-alt text-white"></i> Delhi</span>
+            <span class="job-type"><i class="fas fa-briefcase text-white"></i> Full-time</span>
+            <span class="job-experience"><i class="fas fa-user-tie text-white"></i> 6+ years</span>
+          </div>
+
+          <div class="job-actions">
+            <button class="apply-btn">Apply Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="load-more-container">
+        <button class="load-more-btn" id="load-more-jobs">
+          Load More Jobs
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simplified Talent Network Section -->
+  <section class="talent-network-section">
+    <div class="talent-network-container">
+      <div class="talent-network-content">
+        <h2>Still not found your jobs?</h2>
         <p>
-          We think big and set the pace in this industry. We empower outcomes.
-          We forge partnerships and bring people and technology together— and
-          here's where your skills could define a better world.
+          Stay up-to-date on Yoho Technologies career opportunities that match
+          your skills and interests. Upload your resume and let us find the
+          perfect match for you.
         </p>
 
-        <div class="search-form-wrapper">
-          <form id="careers-search-form" class="advanced-search-form">
-            <div class="search-inputs">
-              <div class="input-group">
-                <i class="fas fa-search"></i>
-                <input
-                  type="text"
-                  name="job-keyword"
-                  placeholder="Job title, keyword, or company"
-                />
+        <form class="talent-network-form" id="talent-network-form">
+          <!-- Personal Information Section -->
+          <!-- <div class="form-section">
+            <h3><i class="fas fa-user"></i> Personal Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
               </div>
-              <div class="input-group">
-                <i class="fas fa-map-marker-alt"></i>
-                <select name="job-location">
-                  <option value="">All Locations</option>
-                  <option value="chennai">Chennai</option>
-                  <option value="bangalore">Bangalore</option>
-                  <option value="mumbai">Mumbai</option>
-                  <option value="delhi">Delhi</option>
-                  <option value="hyderabad">Hyderabad</option>
-                  <option value="pune">Pune</option>
-                  <option value="remote">Remote</option>
-                </select>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
               </div>
-              <div class="input-group">
-                <i class="fas fa-briefcase"></i>
-                <select name="job-department">
-                  <option value="">All Departments</option>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Professional Information Section -->
+          <!-- <div class="form-section">
+            <h3><i class="fas fa-briefcase"></i> Professional Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="interest">Area of Interest *</label>
+                <select id="interest" name="interest" required>
+                  <option value="">Select your area of interest</option>
                   <option value="software-engineering">
                     Software Engineering
                   </option>
@@ -98,16 +280,12 @@
                   <option value="data-analytics">Data & Analytics</option>
                   <option value="cloud">Cloud</option>
                   <option value="security">Security</option>
-                  <option value="sales">Sales</option>
-                  <option value="marketing">Marketing</option>
-                  <option value="project-management">Project Management</option>
-                  <option value="ai-ml">AI & Machine Learning</option>
                 </select>
               </div>
-              <div class="input-group">
-                <i class="fas fa-user-tie"></i>
-                <select name="experience-level">
-                  <option value="">All Experience Levels</option>
+              <div class="form-group">
+                <label for="experience">Experience Level *</label>
+                <select id="experience" name="experience" required>
+                  <option value="">Select experience level</option>
                   <option value="entry">Entry Level (0-2 years)</option>
                   <option value="mid">Mid Level (3-5 years)</option>
                   <option value="senior">Senior Level (6-10 years)</option>
@@ -115,355 +293,206 @@
                 </select>
               </div>
             </div>
-            <button type="submit" class="search-btn">
-              <i class="fas fa-search"></i>
-              Search Jobs
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+            <div class="form-group">
+              <label for="skills">Key Skills</label>
+              <input type="text" id="skills" name="skills" placeholder="e.g., JavaScript, Python, React, Node.js" />
+            </div>
+          </div> -->
 
-    <!-- departments section -->
-    <section class="departments-section">
-      <div class="departments-container">
-        <h2>Explore our departments</h2>
-        <div class="departments-grid">
-          <div class="department-card" data-department="software-engineering">
-            <div class="department-icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3>Software Engineering</h3>
-            
-            <div class="department-roles">
-              <span class="role-tag">Full Stack Developer</span>
-              <span class="role-tag">Frontend Developer</span>
-              <span class="role-tag">Backend Developer</span>
-              <span class="role-tag">DevOps Engineer</span>
-            </div>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-
-          <div class="department-card" data-department="consulting">
-            <div class="department-icon">
-              <i class="fas fa-handshake"></i>
-            </div>
-            <h3>Consulting</h3>
-            
-            <div class="department-roles">
-              <span class="role-tag">Business Consultant</span>
-              <span class="role-tag">Technical Consultant</span>
-              <span class="role-tag">Digital Transformation</span>
-              <span class="role-tag">Strategy Consultant</span>
-            </div>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-
-          <div class="department-card" data-department="design-ux">
-            <div class="department-icon">
-              <i class="fas fa-palette"></i>
-            </div>
-            <h3>Design & UX</h3>
-           
-            <div class="department-roles">
-              <span class="role-tag">UX Designer</span>
-              <span class="role-tag">UI Designer</span>
-              <span class="role-tag">Visual Designer</span>
-              <span class="role-tag">User Researcher</span>
-            </div>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-
-          <div class="department-card" data-department="data-analytics">
-            <div class="department-icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3>Data & Analytics</h3>
-           
-            <div class="department-roles">
-              <span class="role-tag">Data Scientist</span>
-              <span class="role-tag">Data Analyst</span>
-              <span class="role-tag">Data Engineer</span>
-              <span class="role-tag">Business Intelligence</span>
-            </div>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-
-          <div class="department-card" data-department="cloud">
-            <div class="department-icon">
-              <i class="fas fa-cloud"></i>
-            </div>
-            <h3>Cloud</h3>
-           
-            <div class="department-roles">
-              <span class="role-tag">Cloud Architect</span>
-              <span class="role-tag">Cloud Engineer</span>
-              <span class="role-tag">Site Reliability Engineer</span>
-              <span class="role-tag">Cloud Security</span>
-            </div>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-
-          <div class="department-card" data-department="security">
-            <div class="department-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h3>Security</h3>
-           
-            <div class="department-roles">
-              <span class="role-tag">Security Engineer</span>
-              <span class="role-tag">Security Architect</span>
-              <span class="role-tag">Penetration Tester</span>
-              <span class="role-tag">Security Analyst</span>
-            </div>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="featured-jobs-section">
-      <div class="featured-jobs-container">
-        <h2>Featured Opportunities</h2>
-        <div class="job-listings" id="job-listings">
-          <div
-            class="job-card"
-            data-department="software-engineering"
-            data-location="chennai"
-            data-experience="senior"
-          >
-            <div class="job-header">
-              <h3>Senior Full Stack Developer</h3>
-              <span class="job-badge">Featured</span>
-            </div>
-            <div class="job-details">
-              <span class="job-location"
-                ><i class="fas fa-map-marker-alt"></i> Chennai</span
-              >
-              <span class="job-type"
-                ><i class="fas fa-briefcase"></i> Full-time</span
-              >
-              <span class="job-experience"
-                ><i class="fas fa-user-tie"></i> 5+ years</span
-              >
-            </div>
-            <p>
-              Lead the development of scalable web applications using modern
-              technologies. Work with cross-functional teams to deliver
-              high-quality software solutions that impact millions of users.
-            </p>
-            <div class="job-skills">
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">AWS</span>
-            </div>
-            <div class="job-actions">
-              <button class="apply-btn">Apply Now</button>
-              <button class="save-btn"><i class="fas fa-heart"></i></button>
+          <!-- Resume Upload Section -->
+          <div class="form-section">
+            <h3><i class="fas fa-file-upload"></i> Upload Resume</h3>
+            <div class="form-group">
+              <label>Upload Resume/CV *</label>
+              <div class="file-upload-area" id="resumeUpload">
+                <input type="file" class="file-input" id="resumeFile" name="resume" accept=".pdf,.doc,.docx" required />
+                <div class="file-upload-content">
+                  <div class="file-upload-icon">
+                    <i class="fas fa-cloud-upload-alt text-white"></i>
+                  </div>
+                  <div class="file-upload-text">
+                    <strong>Click to upload</strong> or drag and drop your
+                    resume
+                  </div>
+                  <div class="file-upload-hint">PDF, DOC, DOCX (Max 5MB)</div>
+                </div>
+              </div>
+              <div class="uploaded-files" id="resumeFiles"></div>
             </div>
           </div>
 
-          <div
-            class="job-card"
-            data-department="design-ux"
-            data-location="bangalore"
-            data-experience="mid"
-          >
-            <div class="job-header">
-              <h3>Senior UX Designer</h3>
-              <span class="job-badge urgent">Urgent</span>
-            </div>
-            <div class="job-details">
-              <span class="job-location"
-                ><i class="fas fa-map-marker-alt"></i> Bangalore</span
-              >
-              <span class="job-type"
-                ><i class="fas fa-briefcase"></i> Full-time</span
-              >
-              <span class="job-experience"
-                ><i class="fas fa-user-tie"></i> 3-5 years</span
-              >
-            </div>
-            <p>
-              Design exceptional user experiences for our digital products.
-              Collaborate with product managers and developers to create
-              intuitive interfaces that delight our users.
-            </p>
-            <div class="job-skills">
-              <span class="skill-tag">Figma</span>
-              <span class="skill-tag">User Research</span>
-              <span class="skill-tag">Prototyping</span>
-              <span class="skill-tag">Design Systems</span>
-            </div>
-            <div class="job-actions">
-              <button class="apply-btn">Apply Now</button>
-              <button class="save-btn"><i class="fas fa-heart"></i></button>
-            </div>
-          </div>
+          <!-- Job Preferences Section -->
+          <!-- <div class="form-section">
+                      <h3><i class="fas fa-cog"></i> Job Preferences</h3>
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label for="location">Preferred Location</label>
+                              <select id="location" name="location">
+                                  <option value="">Select preferred location</option>
+                                  <option value="chennai">Chennai</option>
+                                  <option value="bangalore">Bangalore</option>
+                                  <option value="mumbai">Mumbai</option>
+                                  <option value="delhi">Delhi</option>
+                                  <option value="hyderabad">Hyderabad</option>
+                                  <option value="pune">Pune</option>
+                                  <option value="remote">Remote</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="salaryRange">Expected Salary Range</label>
+                              <select id="salaryRange" name="salaryRange">
+                                  <option value="">Select salary range</option>
+                                  <option value="3-6">₹3 - 6 Lakhs</option>
+                                  <option value="6-10">₹6 - 10 Lakhs</option>
+                                  <option value="10-15">₹10 - 15 Lakhs</option>
+                                  <option value="15-25">₹15 - 25 Lakhs</option>
+                                  <option value="25+">₹25+ Lakhs</option>
+                              </select>
+                          </div>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label>Work Preferences</label>
+                          <div class="availability-options">
+                              <div class="availability-option">
+                                  <input type="checkbox" id="remote" name="workPreferences" value="remote">
+                                  <label for="remote">Remote Work</label>
+                              </div>
+                              <div class="availability-option">
+                                  <input type="checkbox" id="hybrid" name="workPreferences" value="hybrid">
+                                  <label for="hybrid">Hybrid Work</label>
+                              </div>
+                              <div class="availability-option">
+                                  <input type="checkbox" id="onsite" name="workPreferences" value="onsite">
+                                  <label for="onsite">On-site Work</label>
+                              </div>
+                          </div>
+                      </div>
+                  </div> -->
 
-          <div
-            class="job-card"
-            data-department="data-analytics"
-            data-location="mumbai"
-            data-experience="mid"
-          >
-            <div class="job-header">
-              <h3>Data Scientist</h3>
-              <span class="job-badge">New</span>
-            </div>
-            <div class="job-details">
-              <span class="job-location"
-                ><i class="fas fa-map-marker-alt"></i> Mumbai</span
-              >
-              <span class="job-type"
-                ><i class="fas fa-briefcase"></i> Full-time</span
-              >
-              <span class="job-experience"
-                ><i class="fas fa-user-tie"></i> 3-6 years</span
-              >
-            </div>
-            <p>
-              Extract insights from complex datasets to drive business
-              decisions. Build predictive models and work with stakeholders to
-              implement data-driven solutions.
-            </p>
-            <div class="job-skills">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Machine Learning</span>
-              <span class="skill-tag">SQL</span>
-              <span class="skill-tag">Tableau</span>
-            </div>
-            <div class="job-actions">
-              <button class="apply-btn">Apply Now</button>
-              <button class="save-btn"><i class="fas fa-heart"></i></button>
-            </div>
-          </div>
+          <!-- Communication Preferences -->
+          <!-- <div class="form-section">
+                      <h3><i class="fas fa-bell"></i> Stay Connected</h3>
+                      <div class="availability-options">
+                          <div class="availability-option">
+                              <input type="checkbox" id="emailUpdates" name="communications" value="email" checked>
+                              <label for="emailUpdates">Email job alerts</label>
+                          </div>
+                          <div class="availability-option">
+                              <input type="checkbox" id="newsletter" name="communications" value="newsletter">
+                              <label for="newsletter">Company newsletter</label>
+                          </div>
+                      </div>
+                  </div> -->
 
-          <div
-            class="job-card"
-            data-department="cloud"
-            data-location="hyderabad"
-            data-experience="senior"
-          >
-            <div class="job-header">
-              <h3>Cloud Solutions Architect</h3>
-              <span class="job-badge">Remote</span>
-            </div>
-            <div class="job-details">
-              <span class="job-location"
-                ><i class="fas fa-map-marker-alt"></i> Hyderabad</span
-              >
-              <span class="job-type"
-                ><i class="fas fa-briefcase"></i> Full-time</span
-              >
-              <span class="job-experience"
-                ><i class="fas fa-user-tie"></i> 7+ years</span
-              >
-            </div>
-            <p>
-              Design and implement cloud infrastructure solutions for enterprise
-              clients. Lead cloud migration projects and ensure scalability,
-              security, and cost optimization.
-            </p>
-            <div class="job-skills">
-              <span class="skill-tag">AWS</span>
-              <span class="skill-tag">Azure</span>
-              <span class="skill-tag">Kubernetes</span>
-              <span class="skill-tag">Terraform</span>
-            </div>
-            <div class="job-actions">
-              <button class="apply-btn">Apply Now</button>
-              <button class="save-btn"><i class="fas fa-heart"></i></button>
-            </div>
-          </div>
-
-          <div
-            class="job-card"
-            data-department="security"
-            data-location="pune"
-            data-experience="mid"
-          >
-            <div class="job-header">
-              <h3>Cybersecurity Analyst</h3>
-              <span class="job-badge">Featured</span>
-            </div>
-            <div class="job-details">
-              <span class="job-location"
-                ><i class="fas fa-map-marker-alt"></i> Pune</span
-              >
-              <span class="job-type"
-                ><i class="fas fa-briefcase"></i> Full-time</span
-              >
-              <span class="job-experience"
-                ><i class="fas fa-user-tie"></i> 4-6 years</span
-              >
-            </div>
-            <p>
-              Monitor and analyze security threats, implement security measures,
-              and respond to incidents. Help protect our clients' digital assets
-              and maintain their trust.
-            </p>
-            <div class="job-skills">
-              <span class="skill-tag">SIEM</span>
-              <span class="skill-tag">Incident Response</span>
-              <span class="skill-tag">Penetration Testing</span>
-              <span class="skill-tag">Risk Assessment</span>
-            </div>
-            <div class="job-actions">
-              <button class="apply-btn">Apply Now</button>
-              <button class="save-btn"><i class="fas fa-heart"></i></button>
-            </div>
-          </div>
-
-          <div
-            class="job-card"
-            data-department="consulting"
-            data-location="delhi"
-            data-experience="senior"
-          >
-            <div class="job-header">
-              <h3>Digital Transformation Consultant</h3>
-              <span class="job-badge">Hot</span>
-            </div>
-            <div class="job-details">
-              <span class="job-location"
-                ><i class="fas fa-map-marker-alt"></i> Delhi</span
-              >
-              <span class="job-type"
-                ><i class="fas fa-briefcase"></i> Full-time</span
-              >
-              <span class="job-experience"
-                ><i class="fas fa-user-tie"></i> 6+ years</span
-              >
-            </div>
-            <p>
-              Guide organizations through their digital transformation journey.
-              Analyze business processes, recommend technology solutions, and
-              lead implementation projects.
-            </p>
-            <div class="job-skills">
-              <span class="skill-tag">Strategy</span>
-              <span class="skill-tag">Process Optimization</span>
-              <span class="skill-tag">Change Management</span>
-              <span class="skill-tag">Stakeholder Management</span>
-            </div>
-            <div class="job-actions">
-              <button class="apply-btn">Apply Now</button>
-              <button class="save-btn"><i class="fas fa-heart"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="load-more-container">
-          <button class="load-more-btn" id="load-more-jobs">
-            Load More Jobs
+          <button type="submit" class="submit-btns" id="submitBtn">
+            <div class="loading-spinner"></div>
+            <span>Join Talent Network</span>
           </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- departments section -->
+  <section class="departments-section">
+    <div class="departments-container">
+      <h2>Explore our departments</h2>
+      <div class="departments-grid">
+        <div class="department-card" data-department="software-engineering">
+          <div class="department-icon">
+            <i class="fas fa-code text-white"></i>
+          </div>
+          <h3>Software Engineering</h3>
+
+          <div class="department-roles">
+            <span class="role-tag">Full Stack Developer</span>
+            <span class="role-tag">Frontend Developer</span>
+            <span class="role-tag">Backend Developer</span>
+            <span class="role-tag">DevOps Engineer</span>
+          </div>
+          <button class="learn-more-btn">Learn more</button>
+        </div>
+
+        <div class="department-card" data-department="consulting">
+          <div class="department-icon">
+            <i class="fas fa-handshake text-white"></i>
+          </div>
+          <h3>Consulting</h3>
+
+          <div class="department-roles">
+            <span class="role-tag">Business Consultant</span>
+            <span class="role-tag">Technical Consultant</span>
+            <span class="role-tag">Digital Transformation</span>
+            <span class="role-tag">Strategy Consultant</span>
+          </div>
+          <button class="learn-more-btn">Learn more</button>
+        </div>
+
+        <div class="department-card" data-department="design-ux">
+          <div class="department-icon">
+            <i class="fas fa-palette text-white"></i>
+          </div>
+          <h3>Design & UX</h3>
+
+          <div class="department-roles">
+            <span class="role-tag">UX Designer</span>
+            <span class="role-tag">UI Designer</span>
+            <span class="role-tag">Visual Designer</span>
+            <span class="role-tag">User Researcher</span>
+          </div>
+          <button class="learn-more-btn">Learn more</button>
+        </div>
+
+        <div class="department-card" data-department="data-analytics">
+          <div class="department-icon">
+            <i class="fas fa-chart-line text-white"></i>
+          </div>
+          <h3>Data & Analytics</h3>
+
+          <div class="department-roles">
+            <span class="role-tag">Data Scientist</span>
+            <span class="role-tag">Data Analyst</span>
+            <span class="role-tag">Data Engineer</span>
+            <span class="role-tag">Business Intelligence</span>
+          </div>
+          <button class="learn-more-btn">Learn more</button>
+        </div>
+
+        <div class="department-card" data-department="cloud">
+          <div class="department-icon">
+            <i class="fas fa-cloud text-white"></i>
+          </div>
+          <h3>Cloud</h3>
+
+          <div class="department-roles">
+            <span class="role-tag">Cloud Architect</span>
+            <span class="role-tag">Cloud Engineer</span>
+            <span class="role-tag">Site Reliability Engineer</span>
+            <span class="role-tag">Cloud Security</span>
+          </div>
+          <button class="learn-more-btn">Learn more</button>
+        </div>
+
+        <div class="department-card" data-department="security">
+          <div class="department-icon">
+            <i class="fas fa-shield-alt text-white"></i>
+          </div>
+          <h3>Security</h3>
+
+          <div class="department-roles">
+            <span class="role-tag">Security Engineer</span>
+            <span class="role-tag">Security Architect</span>
+            <span class="role-tag">Penetration Tester</span>
+            <span class="role-tag">Security Analyst</span>
+          </div>
+          <button class="learn-more-btn">Learn more</button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- <section class="company-culture-section">
+  <!-- <section class="company-culture-section">
     <div class="culture-container">
         <h2>Life @ Yoho Technologies</h2>
         <p>Exploring a Yoho Technologies career? You'd join a culture of growth and innovation that uses the application of science and technology for impact. See how our culture comes to life with these stories.</p>
@@ -499,279 +528,80 @@
     </div>
 </section> -->
 
-    <section class="benefits-section">
-      <div class="benefits-container">
-        <h2>Why choose Yoho Technologies?</h2>
-        <div class="benefits-grid">
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-heart"></i>
-            </div>
-            <h3>Health & Wellness</h3>
-            <p>
-              Comprehensive health insurance, mental health support, and
-              wellness programs
-            </p>
+  <section class="benefits-section">
+    <div class="benefits-container">
+      <h2>Why choose Yoho Technologies?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-heart"></i>
           </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <h3>Work-Life Balance</h3>
-            <p>
-              Flexible working hours, remote work options, and generous time-off
-              policies
-            </p>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <h3>Career Growth</h3>
-            <p>
-              Clear career progression paths, mentorship programs, and
-              leadership development
-            </p>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-book"></i>
-            </div>
-            <h3>Learning & Development</h3>
-            <p>
-              Training budgets, conference attendance, certification support,
-              and skill development
-            </p>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-dollar-sign"></i>
-            </div>
-            <h3>Competitive Compensation</h3>
-            <p>
-              Market-leading salaries, performance bonuses, and equity
-              participation
-            </p>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-globe"></i>
-            </div>
-            <h3>Global Opportunities</h3>
-            <p>
-              International projects, cross-cultural collaboration, and
-              relocation opportunities
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Simplified Talent Network Section -->
-    <section class="talent-network-section">
-      <div class="talent-network-container">
-        <div class="talent-network-content">
-          <h2>Join our talent network</h2>
+          <h3>Health & Wellness</h3>
           <p>
-            Stay up-to-date on Yoho Technologies career opportunities that match
-            your skills and interests. Upload your resume and let us find the
-            perfect match for you.
+            Comprehensive health insurance, mental health support, and
+            wellness programs
           </p>
+        </div>
 
-          <form class="talent-network-form" id="talent-network-form">
-            <!-- Personal Information Section -->
-            <div class="form-section">
-              <h3><i class="fas fa-user"></i> Personal Information</h3>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="firstName">First Name *</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="Enter your first name"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Last Name *</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="Enter your last name"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="email">Email Address *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your.email@example.com"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone Number</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="+91 98765 43210"
-                  />
-                </div>
-              </div>
-            </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Work-Life Balance</h3>
+          <p>
+            Flexible working hours, remote work options, and generous time-off
+            policies
+          </p>
+        </div>
 
-            <!-- Professional Information Section -->
-            <div class="form-section">
-              <h3><i class="fas fa-briefcase"></i> Professional Information</h3>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="interest">Area of Interest *</label>
-                  <select id="interest" name="interest" required>
-                    <option value="">Select your area of interest</option>
-                    <option value="software-engineering">
-                      Software Engineering
-                    </option>
-                    <option value="consulting">Consulting</option>
-                    <option value="design-ux">Design & UX</option>
-                    <option value="data-analytics">Data & Analytics</option>
-                    <option value="cloud">Cloud</option>
-                    <option value="security">Security</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="experience">Experience Level *</label>
-                  <select id="experience" name="experience" required>
-                    <option value="">Select experience level</option>
-                    <option value="entry">Entry Level (0-2 years)</option>
-                    <option value="mid">Mid Level (3-5 years)</option>
-                    <option value="senior">Senior Level (6-10 years)</option>
-                    <option value="lead">Lead Level (10+ years)</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="skills">Key Skills</label>
-                <input
-                  type="text"
-                  id="skills"
-                  name="skills"
-                  placeholder="e.g., JavaScript, Python, React, Node.js"
-                />
-              </div>
-            </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Career Growth</h3>
+          <p>
+            Clear career progression paths, mentorship programs, and
+            leadership development
+          </p>
+        </div>
 
-            <!-- Resume Upload Section -->
-            <div class="form-section">
-              <h3><i class="fas fa-file-upload"></i> Upload Resume</h3>
-              <div class="form-group">
-                <label>Upload Resume/CV *</label>
-                <div class="file-upload-area" id="resumeUpload">
-                  <input
-                    type="file"
-                    class="file-input"
-                    id="resumeFile"
-                    name="resume"
-                    accept=".pdf,.doc,.docx"
-                    required
-                  />
-                  <div class="file-upload-content">
-                    <div class="file-upload-icon">
-                      <i class="fas fa-cloud-upload-alt"></i>
-                    </div>
-                    <div class="file-upload-text">
-                      <strong>Click to upload</strong> or drag and drop your
-                      resume
-                    </div>
-                    <div class="file-upload-hint">PDF, DOC, DOCX (Max 5MB)</div>
-                  </div>
-                </div>
-                <div class="uploaded-files" id="resumeFiles"></div>
-              </div>
-            </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Learning & Development</h3>
+          <p>
+            Training budgets, conference attendance, certification support,
+            and skill development
+          </p>
+        </div>
 
-            <!-- Job Preferences Section -->
-            <!-- <div class="form-section">
-                    <h3><i class="fas fa-cog"></i> Job Preferences</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="location">Preferred Location</label>
-                            <select id="location" name="location">
-                                <option value="">Select preferred location</option>
-                                <option value="chennai">Chennai</option>
-                                <option value="bangalore">Bangalore</option>
-                                <option value="mumbai">Mumbai</option>
-                                <option value="delhi">Delhi</option>
-                                <option value="hyderabad">Hyderabad</option>
-                                <option value="pune">Pune</option>
-                                <option value="remote">Remote</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="salaryRange">Expected Salary Range</label>
-                            <select id="salaryRange" name="salaryRange">
-                                <option value="">Select salary range</option>
-                                <option value="3-6">₹3 - 6 Lakhs</option>
-                                <option value="6-10">₹6 - 10 Lakhs</option>
-                                <option value="10-15">₹10 - 15 Lakhs</option>
-                                <option value="15-25">₹15 - 25 Lakhs</option>
-                                <option value="25+">₹25+ Lakhs</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Work Preferences</label>
-                        <div class="availability-options">
-                            <div class="availability-option">
-                                <input type="checkbox" id="remote" name="workPreferences" value="remote">
-                                <label for="remote">Remote Work</label>
-                            </div>
-                            <div class="availability-option">
-                                <input type="checkbox" id="hybrid" name="workPreferences" value="hybrid">
-                                <label for="hybrid">Hybrid Work</label>
-                            </div>
-                            <div class="availability-option">
-                                <input type="checkbox" id="onsite" name="workPreferences" value="onsite">
-                                <label for="onsite">On-site Work</label>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h3>Competitive Compensation</h3>
+          <p>
+            Market-leading salaries, performance bonuses, and equity
+            participation
+          </p>
+        </div>
 
-            <!-- Communication Preferences -->
-            <!-- <div class="form-section">
-                    <h3><i class="fas fa-bell"></i> Stay Connected</h3>
-                    <div class="availability-options">
-                        <div class="availability-option">
-                            <input type="checkbox" id="emailUpdates" name="communications" value="email" checked>
-                            <label for="emailUpdates">Email job alerts</label>
-                        </div>
-                        <div class="availability-option">
-                            <input type="checkbox" id="newsletter" name="communications" value="newsletter">
-                            <label for="newsletter">Company newsletter</label>
-                        </div>
-                    </div>
-                </div> -->
-
-            <button type="submit" class="submit-btn" id="submitBtn">
-              <div class="loading-spinner"></div>
-              <span>Join Talent Network</span>
-            </button>
-          </form>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Global Opportunities</h3>
+          <p>
+            International projects, cross-cultural collaboration, and
+            relocation opportunities
+          </p>
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+
+
+</body>
+
 </html>
