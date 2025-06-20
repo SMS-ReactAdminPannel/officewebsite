@@ -535,6 +535,8 @@
 
 
 
+
+
 /* Section base */
 .companies-section {
   background-color: #000;
@@ -589,21 +591,31 @@
 .carousel-control-next {
   top: 50%;
   transform: translateY(-50%);
-  width: 5%;
-  opacity: 1;
-  background: none;
+  width: 40px;
+  height: 100%;
+  background: transparent;
   border: none;
   z-index: 10;
+  opacity: 1;
+  margin-top: 50px;
 }
 
-/* Remove Bootstrap default arrow image */
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+/* Remove Bootstrap default arrow images */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-image: none !important;
   display: none;
+  background-image: none !important;
 }
 
-/* Use custom white arrows via Font Awesome */
 .carousel-control-prev::after,
 .carousel-control-next::after {
   font-family: "Font Awesome 6 Free";
@@ -613,13 +625,19 @@
 }
 
 .carousel-control-prev::after {
-  content: "\f104"; /* Font Awesome left arrow */
+  content: "\f104"; /* left arrow */
 }
 
 .carousel-control-next::after {
-  content: "\f105"; /* Font Awesome right arrow */
+  content: "\f105"; /* right arrow */
 }
 
+/* Center logos inside row */
+.carousel-item .row {
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px; /* Optional spacing from arrows */
+}
 /* Indicators styling */
 .carousel-indicators {
   margin-bottom: -30px;
@@ -640,18 +658,18 @@
 
 
  .section-title1 {
-     font-family: "Inter", sans-serif;
-      font-weight: 100;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
   font-style: normal;
   color: #ffffff;
+  margin-bottom: 4.5rem;
+   line-height: 1.1;
+   font-size: 40px;
+   padding-left: 90px;
  }
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .section-title1 {
-     font-family: "Inter", sans-serif;
-      font-weight: 100;
-  font-style: normal;
-  color: #ffffff;
     margin-bottom: 40px;
   }
 
@@ -666,10 +684,6 @@
 
 @media (max-width: 576px) {
   .section-title1 {
-    font-family: "Inter", sans-serif;
-      font-weight: 100;
-  font-style: normal;
-  color: #ffffff;
     padding: 0 20px;
   }
 
@@ -684,7 +698,6 @@
 .full-black-section {
   background-color: #000;
   color: #fff;
-  padding: 100px 0;
 }
 
 /* White bordered hero box */
@@ -703,29 +716,30 @@
   font-style: normal;
   color: #ffffff;
   margin-bottom: 40px;
+  font-size: 40px;
 }
 
 /* Text content */
 .hero-text {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 200;
+  line-height: 1.5;
   margin-bottom: 25px;
 }
 
-.hero-text b {
-  font-weight: 600;
-}
 
-/* Corner graphic image */
+
 .corner-graphic {
   position: absolute;
   top: 0;
-  right: 0;
-  max-width: 300px;
-  z-index: 0;
-  opacity: 0.8;
-  pointer-events: none;
+  right: -40px; /* Adjust this to hide half the image */
+  width: 250px; /* Adjust size if needed */
+  max-width: none;
+  z-index: 1;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -738,7 +752,10 @@
   }
 
   .hero-text {
-    font-size: 16px;
+    font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 200;
+  line-height: 1.5;
     text-align: center;
   }
 
@@ -747,30 +764,32 @@
     top: 20px;
     right: 20px;
   }
-
-  .hero-box {
-    padding: 40px 30px;
-  }
 }
 
 
 
 .discover-section {
   background-color: #000;
-  padding: 100px 0;
+  padding: 60px 90px;
 }
 
-.section-heading {
-     font-family: "Inter", sans-serif;
-      font-weight: 100;
+.section-heading1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
   font-style: normal;
   color: #ffffff;
   margin-bottom: 15px;
   align-items: left;
+  font-size: 40px;
 }
 
 .sub-text {
-  color: #fff;
+  
+   font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 16px;
   opacity: 0.7;
   margin-bottom: 60px;
 }
@@ -830,6 +849,7 @@
   right: 25px;
   width: 70px;
   opacity: 0.8;
+  width:80px;
 }
 
 /* Column spacing */
@@ -839,7 +859,7 @@
 
 /* Responsive Tweaks */
 @media (max-width: 768px) {
-  .section-heading {
+  .section-heading1 {
     
      font-family: "Inter", sans-serif;
       font-weight: 100;
@@ -858,7 +878,7 @@
   }
 
   .service-icon {
-    width: 50px;
+    width: 80px;
   }
 }
 
@@ -866,7 +886,7 @@
         
         .tech-stack-section {
             background-color: #000;
-            padding: 80px 0;
+              padding: 60px 90px;
             min-height: 100vh;
         }
         
@@ -955,3 +975,81 @@
                 gap: 25px;
             }
         }
+
+        .value-section {
+  background-color: #000;
+}
+
+.section-heading {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.stat-icon {
+  width: 110px;   
+  height: 150px;  
+}
+
+.text-orange {
+  color: #78bd23;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+
+.custom-card h2 {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.custom-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.custom-btn {
+  padding: 10px 30px;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.card {
+  position: relative;
+  overflow: visible;
+}
+
+.decor-img {
+  position: absolute;
+  max-width: 130px;
+  max-height: 300px;
+  opacity: 0.6;
+}
+
+.top-right {
+  top: 5px;
+  right: 20px;
+  transform: translateX(40%);
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .custom-card h2 {
+    font-size: 28px;
+  }
+
+  .decor-img {
+    max-width: 80px;
+  }
+}
