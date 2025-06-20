@@ -652,10 +652,10 @@
 
   <!-- Scripts -->
   <script src="Src/JS/Careers.js"></script>
+  <script src="Src/JS/dropdown.js"></script>
   <script>
-    // Simple navbar functionality
+    // Loading screen
     document.addEventListener('DOMContentLoaded', function() {
-      // Hide loading screen
       const loadingScreen = document.getElementById('loading-screen');
       setTimeout(() => {
         loadingScreen.classList.add('hidden');
@@ -663,37 +663,6 @@
           loadingScreen.style.display = 'none';
         }, 500);
       }, 800);
-
-      // Navbar scroll effects
-      const navbar = document.getElementById('navbar');
-      const colorBar = document.querySelector('.color-bar');
-      
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-          colorBar.classList.add('hidden');
-        } else {
-          navbar.classList.remove('scrolled');
-          colorBar.classList.remove('hidden');
-        }
-      });
-
-      // Search functionality
-      const searchToggle = document.getElementById('search-toggle');
-      const searchDropdown = document.getElementById('search-dropdown');
-      const searchClose = document.getElementById('search-close');
-      
-      if (searchToggle) {
-        searchToggle.addEventListener('click', () => {
-          searchDropdown.classList.toggle('active');
-        });
-      }
-      
-      if (searchClose) {
-        searchClose.addEventListener('click', () => {
-          searchDropdown.classList.remove('active');
-        });
-      }
     });
   </script>
 </body>
