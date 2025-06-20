@@ -856,7 +856,7 @@
   padding: 40px 30px;
   position: relative;
   transition: all 0.3s ease;
-  min-height: 200px;
+  min-height: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
