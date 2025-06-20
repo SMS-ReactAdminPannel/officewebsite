@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Yoho Technologies</title>
-  <meta name="description" content="Get in touch with Yoho Technologies. Contact us for web design, development, and digital solutions.">
+  <meta name="description" content="Get in touch with Yoho Technologies for your digital transformation needs.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="Src/CSS/Navbar.css">
   <link rel="stylesheet" href="Src/CSS/Contact.css">
   <link rel="stylesheet" href="Src/CSS/Footer.css">
+  <link rel="stylesheet" href="Src/CSS/Mobile.css">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -43,7 +44,10 @@
           </div>
         </a>
       </div>
-      <ul class="nav-links">
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="about.html">Who We Are</a></li>
         <li class="dropdown-parent">
           <a href="#" class="dropdown-trigger">What We Do</a>
@@ -123,7 +127,7 @@
 
   <!-- Main Content -->
   <main>
-    <!-- Contact Page Content -->
+    <!-- Contact Hero Section -->
     <section class="contact-hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -209,7 +213,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Our Office</h4>
-                                <p>123 Tech Street, Chennai<br>Tamil Nadu, India 600001</p>
+                                <p>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117. (Near:ESAF BANK)</p>
                             </div>
                         </div>
                         
@@ -219,7 +223,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Phone</h4>
-                                <p>+91 1234567890</p>
+                                <p>+91 98844 92652</p>
                             </div>
                         </div>
                         
@@ -442,8 +446,6 @@
         </div>
       </div>
 
-    
-      
       <!-- Footer Bottom Section -->
       <div class="footer-bottom">
         <div class="footer-logo">
@@ -487,46 +489,17 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="Src/JS/dropdown.js"></script>
+  <script src="Src/JS/Navbar.js"></script>
   <script src="Src/JS/search.js"></script>
+  <script src="Src/JS/Mobile.js"></script>
   <script>
-    // Ensure navbar stays fixed
-    document.addEventListener('DOMContentLoaded', function() {
-      const navbar = document.getElementById('navbar');
-      const colorBar = document.querySelector('.color-bar');
-      if (navbar) {
-        navbar.style.position = 'fixed';
-        navbar.style.top = '4px';
-        navbar.style.zIndex = '1001';
-      }
-      if (colorBar) {
-        colorBar.style.position = 'fixed';
-        colorBar.style.top = '0';
-        colorBar.style.zIndex = '1002';
-        colorBar.style.opacity = '1';
-        colorBar.classList.remove('hidden');
-      }
-      
-      // Loading screen
-      const loadingScreen = document.getElementById('loading-screen');
-      setTimeout(() => {
-        loadingScreen.classList.add('hidden');
-        setTimeout(() => {
-          loadingScreen.style.display = 'none';
-        }, 500);
-      }, 800);
-      
-      // Dynamic copyright year
-      document.getElementById('copyright-year').textContent = new Date().getFullYear();
-    });
-
+    // Contact form functionality
     function showContactForm(type) {
         const formSection = document.getElementById('contact-form-section');
         const formTitle = document.getElementById('form-title');
         const formDescription = document.getElementById('form-description');
         const inquiryType = document.getElementById('inquiry-type');
         
-        // Set form title and description based on type
         const formConfig = {
             services: {
                 title: 'Request for Services',
@@ -563,7 +536,6 @@
         formDescription.textContent = config.description;
         inquiryType.value = type;
         
-        // Show form section with smooth scroll
         formSection.style.display = 'block';
         formSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -571,8 +543,6 @@
     function hideContactForm() {
         const formSection = document.getElementById('contact-form-section');
         formSection.style.display = 'none';
-        
-        // Scroll back to contact options
         document.querySelector('.contact-options').scrollIntoView({ behavior: 'smooth' });
     }
 
@@ -580,13 +550,11 @@
     document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Show loading state
         const submitBtn = this.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Simulate form submission (replace with actual form handling)
         setTimeout(() => {
             alert('Thank you for your message! We\'ll get back to you soon.');
             this.reset();
@@ -594,6 +562,20 @@
             submitBtn.disabled = false;
             hideContactForm();
         }, 2000);
+    });
+
+    // Loading screen and navbar
+    document.addEventListener('DOMContentLoaded', function() {
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 800);
+      
+      // Dynamic copyright year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
   </script>
 </body>
