@@ -547,7 +547,7 @@
             max-width: 450px;
         }
 
-        .cta-button {
+        .cts-button {
             background: transparent;
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
@@ -560,7 +560,7 @@
             backdrop-filter: blur(10px);
         }
 
-        .cta-button:hover {
+        .cts-button:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: rgba(255, 255, 255, 0.5);
             color: white;
@@ -896,7 +896,7 @@
         z-index: 1;
         background: #000
     }
-    
+/*     
     .flow-img-section img {
         width: 100%;
         height: auto;
@@ -905,7 +905,7 @@
         border: 1px solid #ffffff;
         transition: all 0.3s ease;
         padding: 50px
-    }
+    } */
     
     .flow-img-section:hover img {
         transform: scale(1.02);
@@ -951,9 +951,9 @@
         .flow-img-section {
             padding: 0 15px;
         }
-        .flow-img-section img {
+        /* .flow-img-section img {
           padding: 20px;
-        }
+        } */
     }
     
     @media (max-width: 576px) {
@@ -970,6 +970,28 @@
         }
     }   
 
+    .flow-image-container {
+        width: 100%;
+        height: 400px; /* Set appropriate height */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    
+    /* Desktop image */
+    .flow-image-container {
+        background-image: url('../Assets/interview\ flow.png');
+    }
+    
+    /* Mobile image */
+    @media (max-width: 576px) {
+        .flow-image-container {
+            background-image: url('../Assets/appInterviewFlow.png');
+            height: 500px; /* Adjust for mobile */  
+
+        }
+    }
     .section-divider {
           height: 1px;
           background: rgba(255, 255, 255, 0.2); 
