@@ -5,7 +5,7 @@
 }
 
 body {
-        font-family: EverydaySans, EverydaySans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        /* font-family: EverydaySans, EverydaySans, "Helvetica Neue", Helvetica, Arial, sans-serif; */
     /* background-color: #ffffff; */
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -46,5 +46,15 @@ body {
 }
 
 
+/* @font-face {
+  font-family: "Helvatica Neue";
+  src: url("Src/Assets/helvetica-25-ultra-light-extended.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+} */
+
+/* body {
+  font-family: "Helvatica Neue";
+} */
 
 
