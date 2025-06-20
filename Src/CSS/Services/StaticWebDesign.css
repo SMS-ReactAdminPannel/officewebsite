@@ -27,21 +27,31 @@ body {
   animation: fadeInLeft 1s ease;
 }
 
-.text-section h1 {
+.text-section h1, .text-content h1 {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
   font-size: 2.5rem;
-  font-weight: 100;
-  margin-bottom: 20px;
+  font-weight: 200;
 }
 
 .text-section p {
-  font-size: 1.25rem;
-  margin-bottom: 30px;
-  line-height: 1.8;
+  
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 200;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  line-height: 30px;
 }
 
 .buttons {
   display: flex;
   gap: 20px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
 }
 
 .buttons button {
@@ -79,8 +89,10 @@ body {
 }
 
 .section-1 h1 {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
   font-size: 2.5rem;
-  font-weight: 100;
+  font-weight: 200;
   margin-bottom: 80px;
 }
 
@@ -99,10 +111,12 @@ body {
   margin: 20px 0 10px;
 }
 
-.service p {
+.service p , .text-content p{
+  color: #ffffff;
   font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.8;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 200;
+  line-height: 30px;
 }
 
 .icon img {
@@ -126,12 +140,15 @@ body {
 }
 
 .text-content h1 {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
   font-size: 2.5rem;
+  font-weight: 200;
   margin-bottom: 20px;
 }
 
 .text-content p {
-  font-size: 1.25rem;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
@@ -264,10 +281,21 @@ body {
   .section-1 h1,
   .text-content h1 {
     font-size: 2rem;
+    
+  }
+  .text-content-para{
+    color: #ffffff;
+  font-size: 0.5rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 200;
+  }
+  .text-content h1{
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-bottom: 40px;
   }
 
   .text-section p,
-  .text-content p,
   .note {
     font-size: 1.1rem;
   }
@@ -278,3 +306,40 @@ body {
     align-items: center;
   }
 }
+
+h1.underline {
+  position: relative;
+  display: inline-block;
+}
+
+h1.underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50%;
+  height: 0.2px;
+  background-color: #ffffffa6;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineSlide 0.6s ease forwards;
+}
+
+h1.underline::after {
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+h1.underline:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes underlineSlide {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
