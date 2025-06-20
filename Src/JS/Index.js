@@ -152,4 +152,3 @@ function initPageScripts() {
 window.addEventListener("DOMContentLoaded", () => {
   loadPage("Home");
 });
-
