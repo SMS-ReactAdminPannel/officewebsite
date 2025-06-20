@@ -113,14 +113,14 @@
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(21, 222, 121, 0.5);
+    /* transform: translateY(-3px); */
+    /* box-shadow: 0 15px 30px rgba(21, 222, 121, 0.5); */
     background: linear-gradient(90deg, #13c76d, #2278c7);
 }
 

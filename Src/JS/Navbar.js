@@ -1,4 +1,4 @@
-// Navbar functionality - Comprehensive navigation system with improved dropdown toggle
+// Navbar functionality - Click-only dropdown system with hover for "What We Do"
 (function initNavbar() {
     console.log('Initializing Navbar...');
     
@@ -45,8 +45,8 @@ function initializeNavbarFunctionality() {
     let isSearchOpen = false;
     let ticking = false;
     let lastScrollY = 0;
-    let openDropdowns = new Set(); // Track multiple open dropdowns
-    let dropdownTransitions = new Map(); // Track transition states
+    let openDropdowns = new Set();
+    let dropdownStates = new Map(); // Track dropdown states more reliably
 
     // Enhanced scroll functionality with requestAnimationFrame and smooth logo transitions
     function handleScroll() {
@@ -115,7 +115,7 @@ function initializeNavbarFunctionality() {
         searchInput.value = '';
     }
 
-    // Enhanced dropdown show functionality with smooth transitions
+    // Optimized dropdown show functionality
     function showDropdown(parent) {
         const trigger = parent.querySelector('.dropdown-trigger');
         const triggerText = trigger ? trigger.textContent.trim() : 'Unknown dropdown';
@@ -130,41 +130,34 @@ function initializeNavbarFunctionality() {
             return false;
         }
         
-        // Check if already opening
-        if (dropdownTransitions.get(parent) === 'opening') {
+        // Prevent multiple rapid clicks
+        if (dropdownStates.get(parent) === 'opening') {
             console.log(`⏳ ${triggerText} is already opening`);
             return false;
         }
         
-        // Clear any previous transition states
-        dropdownTransitions.set(parent, 'opening');
-        
-        // Update global state immediately
+        // Set state immediately
+        dropdownStates.set(parent, 'opening');
         openDropdowns.add(parent);
         
-        // Add active class to parent immediately for visual feedback
+        // Add active class immediately
         parent.classList.add('active');
         trigger?.classList.add('active');
         
-        // Show backdrop with fade-in
+        // Show backdrop
         if (backdrop) {
             backdrop.style.display = 'block';
             backdrop.style.opacity = '0';
-            setTimeout(() => {
-                backdrop.style.opacity = '1';
-            }, 10);
+            setTimeout(() => backdrop.style.opacity = '1', 10);
         }
         
-        // Force reflow to ensure initial state
-        dropdown.offsetHeight;
-        
-        // Apply visible styles with smooth transition
+        // Show dropdown with smooth animation
         dropdown.style.visibility = 'visible';
         dropdown.style.opacity = '1';
         dropdown.style.transform = 'translateY(0) scale(1)';
         dropdown.style.pointerEvents = 'auto';
         
-        // Handle logo transition for dropdown state
+        // Handle navbar styling for dropdown state
         if (!navbar.classList.contains('scrolled')) {
             navbar.classList.add('scrolled-temp');
             const regularLogo = document.getElementById('navbar-logo');
@@ -174,16 +167,14 @@ function initializeNavbarFunctionality() {
                 regularLogo.style.transition = 'opacity 0.2s ease';
                 whiteLogo.style.transition = 'opacity 0.2s ease';
                 regularLogo.style.opacity = "0";
-                setTimeout(() => {
-                    whiteLogo.style.opacity = "1";
-                }, 50);
+                setTimeout(() => whiteLogo.style.opacity = "1", 50);
             }
         }
         
-        // Clear transition state after animation and mark as fully open
+        // Mark as fully open after animation
         setTimeout(() => {
-            dropdownTransitions.set(parent, 'open');
-            console.log(`✅ Dropdown opened successfully: ${triggerText}`);
+            dropdownStates.set(parent, 'open');
+            console.log(`✅ Dropdown opened: ${triggerText}`);
         }, 300);
         
         return true;
@@ -203,43 +194,39 @@ function initializeNavbarFunctionality() {
             return false;
         }
         
-        // Check if already closing
-        if (dropdownTransitions.get(parent) === 'closing') {
+        // Prevent multiple rapid clicks
+        if (dropdownStates.get(parent) === 'closing') {
             console.log(`⏳ ${triggerText} is already closing`);
             return false;
         }
         
-        // Set transition state immediately
-        dropdownTransitions.set(parent, 'closing');
-        
-        // Update global state immediately
+        // Set state immediately
+        dropdownStates.set(parent, 'closing');
         openDropdowns.delete(parent);
         
-        // Remove active classes immediately for visual feedback
+        // Remove active classes immediately
         parent.classList.remove('active');
         trigger?.classList.remove('active');
         
-        // Hide with smooth transition
+        // Hide dropdown with animation
         dropdown.style.opacity = '0';
         dropdown.style.transform = 'translateY(-20px) scale(0.98)';
         dropdown.style.pointerEvents = 'none';
         
-        // Hide backdrop with fade-out
+        // Hide backdrop
         if (backdrop) {
             backdrop.style.opacity = '0';
-            setTimeout(() => {
-                backdrop.style.display = 'none';
-            }, 200);
+            setTimeout(() => backdrop.style.display = 'none', 200);
         }
         
-        // Hide visibility after transition completes and reset state
+        // Complete hiding after animation
         setTimeout(() => {
             dropdown.style.visibility = 'hidden';
-            dropdownTransitions.set(parent, 'closed');
-            console.log(`✅ Dropdown closed successfully: ${triggerText}`);
-        }, 300); // Match CSS transition duration
+            dropdownStates.set(parent, 'closed');
+            console.log(`✅ Dropdown closed: ${triggerText}`);
+        }, 300);
         
-        // Handle logo transition back to normal state if no dropdowns are open
+        // Handle logo transition back to normal
         setTimeout(() => {
             if (lastScrollY <= 50 && openDropdowns.size === 0 && navbar.classList.contains('scrolled-temp')) {
                 navbar.classList.remove('scrolled-temp');
@@ -250,16 +237,15 @@ function initializeNavbarFunctionality() {
                     regularLogo.style.transition = 'opacity 0.2s ease';
                     whiteLogo.style.transition = 'opacity 0.2s ease';
                     whiteLogo.style.opacity = "0";
-                    setTimeout(() => {
-                        regularLogo.style.opacity = "1";
-                    }, 50);
+                    setTimeout(() => regularLogo.style.opacity = "1", 50);
                 }
             }
-        }, 50); // Check logo state sooner
+        }, 50);
         
         return true;
     }
 
+    // Category switching functionality
     function switchCategory(categoryId) {
         // Hide all service sections
         dropdownServices.forEach(service => {
@@ -306,37 +292,7 @@ function initializeNavbarFunctionality() {
         });
     }
 
-    // Enhanced Universal Dropdown Click Functionality
-    function setupUniversalDropdownClick() {
-        console.log('🔧 Setting up Universal Dropdown Click functionality...');
-        
-        // Setup click handlers for all dropdown triggers
-        dropdownParents.forEach((parent, index) => {
-            const trigger = parent.querySelector('.dropdown-trigger');
-            const dropdown = parent.querySelector('.mega-dropdown');
-            const triggerText = trigger ? trigger.textContent.trim() : `Dropdown ${index + 1}`;
-            
-            if (!trigger || !dropdown) {
-                console.warn(`❌ Missing elements for ${triggerText}:`, { trigger: !!trigger, dropdown: !!dropdown });
-                return;
-            }
-            
-            console.log(`✅ Setting up click handler for: ${triggerText}`);
-            
-            // Remove any existing click listeners to prevent duplicates
-            trigger.removeEventListener('click', handleDropdownClick);
-            
-            // Clear any existing transition states
-            dropdownTransitions.set(parent, 'closed');
-            
-            // Add unified dropdown click handler
-            trigger.addEventListener('click', handleDropdownClick);
-        });
-        
-        console.log('✅ Universal dropdown click setup complete');
-    }
-    
-    // Improved unified dropdown click handler for all dropdowns
+    // Main dropdown click handler - onclick open/close
     function handleDropdownClick(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -346,66 +302,42 @@ function initializeNavbarFunctionality() {
         const dropdown = parent ? parent.querySelector('.mega-dropdown') : null;
         const triggerText = trigger.textContent.trim();
         
-        console.log(`🖱️ === ${triggerText} Clicked ===`);
+        console.log(`🖱️ Dropdown clicked: ${triggerText}`);
         
-        // Validate required elements
+        // Validate elements
         if (!parent || !dropdown) {
-            console.error(`❌ Required elements not found for ${triggerText}:`, {
-                trigger: !!trigger,
-                parent: !!parent,
-                dropdown: !!dropdown
-            });
+            console.error(`❌ Missing elements for ${triggerText}`);
             return;
         }
         
-        // Check current state - use both class and transition state
-        const isCurrentlyActive = parent.classList.contains('active');
-        const transitionState = dropdownTransitions.get(parent);
+        const currentState = dropdownStates.get(parent);
+        const isVisuallyOpen = parent.classList.contains('active');
         
-        console.log(`📊 ${triggerText} current state:`, {
-            active: isCurrentlyActive ? 'OPEN' : 'CLOSED',
-            transition: transitionState || 'none'
-        });
+        console.log(`📊 ${triggerText} state: ${currentState}, visually: ${isVisuallyOpen ? 'OPEN' : 'CLOSED'}`);
         
-        // Prevent clicks during active transitions only
-        if (transitionState === 'opening') {
-            console.log(`⏳ ${triggerText} is opening, ignoring click`);
+        // Ignore clicks during transitions
+        if (currentState === 'opening' || currentState === 'closing') {
+            console.log(`⏳ ${triggerText} is transitioning, ignoring click`);
             return;
         }
         
-        // Allow clicks during closing to immediately reopen
-        if (transitionState === 'closing') {
-            console.log(`⚡ ${triggerText} is closing, allowing immediate reopen`);
-            // Clear the closing state and reset
-            dropdownTransitions.set(parent, 'closed');
-            openDropdowns.delete(parent);
-        }
-        
-        // Close all other dropdowns first (but don't wait for them)
-        console.log('🔒 Closing other dropdowns...');
+        // Close all other dropdowns first
         dropdownParents.forEach(otherParent => {
             if (otherParent !== parent && otherParent.classList.contains('active')) {
-                const otherTrigger = otherParent.querySelector('.dropdown-trigger');
-                const otherText = otherTrigger ? otherTrigger.textContent.trim() : 'Other dropdown';
-                console.log(`🔽 Closing ${otherText}`);
                 hideDropdown(otherParent);
             }
         });
         
-        // Toggle current dropdown based on visual state (active class)
-        if (isCurrentlyActive && transitionState !== 'closing') {
-            console.log(`🔽 CLOSING ${triggerText} dropdown`);
-            const success = hideDropdown(parent);
-            if (success) {
-                console.log(`✅ ${triggerText} close initiated`);
-            }
+        // Toggle current dropdown based on visual state
+        if (isVisuallyOpen) {
+            console.log(`🔽 CLOSING ${triggerText}`);
+            hideDropdown(parent);
         } else {
-            console.log(`🔼 OPENING ${triggerText} dropdown`);
+            console.log(`🔼 OPENING ${triggerText}`);
             const success = showDropdown(parent);
+            
             if (success) {
-                console.log(`✅ ${triggerText} open initiated`);
-                
-                // Initialize first category for dropdowns with categories
+                // Initialize first category after opening
                 setTimeout(() => {
                     const firstCategory = dropdown.querySelector('.category-item.active') || 
                                        dropdown.querySelector('.category-item:first-child');
@@ -414,30 +346,90 @@ function initializeNavbarFunctionality() {
                         const categoryId = firstCategory.getAttribute('data-category');
                         if (categoryId) {
                             switchCategory(categoryId);
-                            console.log(`✅ Activated category for ${triggerText}:`, categoryId);
+                            console.log(`✅ Initialized category: ${categoryId}`);
                         }
                     }
                 }, 100);
             }
         }
+    }
+
+    // Setup dropdown click functionality
+    function setupDropdownClick() {
+        console.log('🔧 Setting up dropdown click handlers...');
         
-        console.log(`✅ === ${triggerText} Click Complete ===`);
+        dropdownParents.forEach((parent, index) => {
+            const trigger = parent.querySelector('.dropdown-trigger');
+            const dropdown = parent.querySelector('.mega-dropdown');
+            const triggerText = trigger ? trigger.textContent.trim() : `Dropdown ${index + 1}`;
+            
+            if (!trigger || !dropdown) {
+                console.warn(`❌ Missing elements for ${triggerText}`);
+                return;
+            }
+            
+            // Initialize state
+            dropdownStates.set(parent, 'closed');
+            
+            // Remove existing listeners to prevent duplicates
+            trigger.removeEventListener('click', handleDropdownClick);
+            
+            // Add click handler
+            trigger.addEventListener('click', handleDropdownClick);
+            
+            // Modified: Only prevent dropdown from closing when clicking inside "What We Do"
+            dropdown.addEventListener('click', (e) => {
+                if (triggerText === 'What We Do') {
+                    e.stopPropagation();
+                }
+            });
+            
+            console.log(`✅ Click handler ready for: ${triggerText}`);
+        });
+        
+        console.log('✅ Dropdown click setup complete');
+    }
+
+    // Setup hover functionality for category items
+    function setupCategoryHover() {
+        console.log('🔧 Setting up category hover handlers...');
+        
+        categoryItems.forEach(item => {
+            // Add hover listeners
+            item.addEventListener('mouseenter', (e) => {
+                const categoryId = item.getAttribute('data-category');
+                if (categoryId) {
+                    console.log(`🖱️ Hovering over category: ${categoryId}`);
+                    switchCategory(categoryId);
+                }
+            });
+            
+            // Keep existing click handler for mobile/accessibility
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const categoryId = item.getAttribute('data-category');
+                if (categoryId) {
+                    switchCategory(categoryId);
+                }
+            });
+        });
+        
+        console.log('✅ Category hover setup complete');
     }
 
     // Page navigation functionality
     function setupPageNavigation() {
-        // Get the loadPage function from index.js if available
         const loadPage = window.loadPage;
-        
         const navLinks = document.querySelectorAll('[data-page]');
+        
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                // Skip if it's the Services dropdown trigger (handled separately)
+                // Skip dropdown triggers
                 if (link.classList.contains('dropdown-trigger') && link.getAttribute('data-page') === 'Services') {
-                    return; // Let the dropdown click handler manage this
+                    return;
                 }
                 
-                // Don't navigate for category items or service items within dropdowns  
+                // Skip category and service items
                 if (link.classList.contains('category-item') || 
                     link.classList.contains('service-item') ||
                     link.classList.contains('has-submenu')) {
@@ -447,31 +439,29 @@ function initializeNavbarFunctionality() {
                 e.preventDefault();
                 const page = this.getAttribute('data-page');
                 
-                // Update active state in navigation
+                // Update active state
                 navLinks.forEach(l => l.classList.remove('active'));
                 document.querySelectorAll(`[data-page="${page}"]`).forEach(l => l.classList.add('active'));
                 
-                // Close mobile menu if open
+                // Close mobile menu
                 if (mobileMenu && mobileMenu.classList.contains("active")) {
                     mobileMenu.classList.remove("active");
                     if (menuIcon) menuIcon.textContent = "☰";
                 }
                 
-                // Close any open dropdowns
+                // Close dropdowns
                 closeAllDropdowns();
                 
-                // Load the page if loadPage function is available
+                // Load page
                 if (loadPage && typeof loadPage === 'function') {
                     loadPage(page);
                     console.log('Navigating to page:', page);
-                } else {
-                    console.log('Page navigation requested:', page, 'but loadPage function not available');
                 }
             });
         });
     }
 
-    // Improved function to close all dropdowns
+    // Close all dropdowns
     function closeAllDropdowns() {
         console.log('🔒 Closing all dropdowns...');
         dropdownParents.forEach(parent => {
@@ -481,112 +471,7 @@ function initializeNavbarFunctionality() {
         });
     }
 
-    // Event listeners - using passive for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    // Search event listeners
-    if (searchToggle) {
-        searchToggle.addEventListener('click', toggleSearch);
-    }
-
-    if (searchClose) {
-        searchClose.addEventListener('click', closeSearch);
-    }
-
-    // Close search when clicking outside
-    document.addEventListener('click', function(e) {
-        if (isSearchOpen && !searchDropdown.contains(e.target) && !searchToggle.contains(e.target)) {
-            closeSearch();
-        }
-    });
-
-    // Improved: Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        // Only close if we have open dropdowns and the click is outside any dropdown
-        if (openDropdowns.size > 0 && !e.target.closest('.dropdown-parent')) {
-            console.log('🖱️ Click outside detected, closing dropdowns');
-            closeAllDropdowns();
-        }
-    });
-
-    // Close search and dropdowns on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            if (isSearchOpen) {
-                closeSearch();
-            }
-            if (openDropdowns.size > 0) {
-                closeAllDropdowns();
-            }
-        }
-    });
-
-    // Search input functionality
-    if (searchInput) {
-        searchInput.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const query = searchInput.value.trim();
-                if (query) {
-                    // Implement search functionality here
-                    console.log('Searching for:', query);
-                    // You can add your search logic here
-                    closeSearch();
-                }
-            }
-        });
-    }
-
-    // Click-only Dropdown functionality (Hover disabled)
-    function setupDropdownClickOnly() {
-        console.log('🖱️ Setting up Click-Only dropdown functionality...');
-        
-        dropdownParents.forEach((parent, index) => {
-            const trigger = parent.querySelector('.dropdown-trigger');
-            const dropdown = parent.querySelector('.mega-dropdown');
-            const triggerText = trigger ? trigger.textContent.trim() : `Dropdown ${index + 1}`;
-            
-            if (!trigger || !dropdown) {
-                console.log(`⚠️ Skipping click setup for ${triggerText} - missing elements`);
-                return;
-            }
-
-            // Prevent dropdown from closing when clicking inside
-            dropdown.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-            
-            console.log(`✅ Click-only functionality ready for: ${triggerText}`);
-        });
-    }
-
-
-    // Category switching - Click only (hover removed)
-    categoryItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const categoryId = item.getAttribute('data-category');
-            if (categoryId) {
-                switchCategory(categoryId);
-            }
-        });
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Logo loading verification and fallback
+    // Logo setup with error handling
     function setupLogos() {
         const greenLogo = document.getElementById('navbar-logo');
         const whiteLogo = document.getElementById('navbar-logo-white');
@@ -614,69 +499,147 @@ function initializeNavbarFunctionality() {
         }
     }
 
-    // Comprehensive test function to verify dropdown functionality
-    function testDropdownClick() {
-        console.log('🧪 === TESTING DROPDOWN FUNCTIONALITY ===');
+    // Event listeners setup
+    function setupEventListeners() {
+        // Scroll listener
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // Search listeners
+        if (searchToggle) {
+            searchToggle.addEventListener('click', toggleSearch);
+        }
+        if (searchClose) {
+            searchClose.addEventListener('click', closeSearch);
+        }
+
+        // Close search when clicking outside
+        document.addEventListener('click', function(e) {
+            if (isSearchOpen && !searchDropdown.contains(e.target) && !searchToggle.contains(e.target)) {
+                closeSearch();
+            }
+        });
+
+        // Modified: Close dropdowns when clicking outside, but only close "What We Do" if clicking completely outside navbar
+        document.addEventListener('click', function(e) {
+            if (openDropdowns.size > 0) {
+                const clickedDropdownParent = e.target.closest('.dropdown-parent');
+                
+                // If clicking completely outside navbar
+                if (!e.target.closest('.navbar')) {
+                    console.log('🖱️ Outside navbar click detected, closing all dropdowns');
+                    closeAllDropdowns();
+                }
+                // If clicking on a different dropdown trigger
+                else if (clickedDropdownParent && !clickedDropdownParent.classList.contains('active')) {
+                    console.log('🖱️ Different dropdown clicked, closing others');
+                    dropdownParents.forEach(parent => {
+                        if (parent !== clickedDropdownParent && parent.classList.contains('active')) {
+                            hideDropdown(parent);
+                        }
+                    });
+                }
+                // If clicking outside dropdown area but inside navbar (close non-"What We Do" dropdowns)
+                else if (!clickedDropdownParent) {
+                    dropdownParents.forEach(parent => {
+                        const trigger = parent.querySelector('.dropdown-trigger');
+                        const triggerText = trigger ? trigger.textContent.trim() : '';
+                        
+                        // Close all dropdowns except "What We Do"
+                        if (triggerText !== 'What We Do' && parent.classList.contains('active')) {
+                            hideDropdown(parent);
+                        }
+                    });
+                }
+            }
+        });
+
+        // Escape key handling
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (isSearchOpen) {
+                    closeSearch();
+                }
+                if (openDropdowns.size > 0) {
+                    closeAllDropdowns();
+                }
+            }
+        });
+
+        // Search input handling
+        if (searchInput) {
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        console.log('Searching for:', query);
+                        closeSearch();
+                    }
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    // Test function
+    function testDropdowns() {
+        console.log('🧪 Testing dropdown functionality...');
         
         const results = {
             total: dropdownParents.length,
-            success: 0,
+            ready: 0,
             failed: []
         };
-        
-        console.log(`📊 Found ${dropdownParents.length} dropdown parent(s)`);
         
         dropdownParents.forEach((parent, index) => {
             const trigger = parent.querySelector('.dropdown-trigger');
             const dropdown = parent.querySelector('.mega-dropdown');
             const triggerText = trigger ? trigger.textContent.trim() : `Dropdown ${index + 1}`;
             
-            console.log(`\n🔍 Testing: ${triggerText}`);
-            console.log(`  - Trigger found: ${!!trigger ? '✅' : '❌'}`);
-            console.log(`  - Dropdown found: ${!!dropdown ? '✅' : '❌'}`);
-            console.log(`  - Data-page attribute: ${trigger?.getAttribute('data-page') || 'None'}`);
-            
             if (trigger && dropdown) {
-                console.log(`  - Status: ✅ READY`);
-                results.success++;
+                results.ready++;
+                console.log(`✅ ${triggerText}: Ready`);
             } else {
-                console.log(`  - Status: ❌ MISSING ELEMENTS`);
                 results.failed.push(triggerText);
+                console.log(`❌ ${triggerText}: Missing elements`);
             }
         });
         
-        console.log(`\n📈 === TEST SUMMARY ===`);
-        console.log(`✅ Working dropdowns: ${results.success}/${results.total}`);
-        
+        console.log(`📊 Test Results: ${results.ready}/${results.total} dropdowns ready`);
         if (results.failed.length > 0) {
-            console.log(`❌ Failed dropdowns: ${results.failed.join(', ')}`);
+            console.log(`❌ Failed: ${results.failed.join(', ')}`);
         }
-        
-        // Specific checks for main dropdowns
-        const whatWeDoTrigger = document.querySelector('[data-page="Services"].dropdown-trigger');
-        const industriesTrigger = document.querySelector('[data-page="Industries"].dropdown-trigger');
-        
-        console.log(`\n🎯 Key Dropdowns Status:`);
-        console.log(`  - What We Do (Services): ${whatWeDoTrigger ? '✅ READY' : '❌ NOT FOUND'}`);
-        console.log(`  - Industries: ${industriesTrigger ? '✅ READY' : '❌ NOT FOUND'}`);
-        
-        console.log('🧪 === TESTING COMPLETE ===\n');
         
         return results;
     }
 
-    // Initialize all functionality
+    // Initialize everything
     function initialize() {
         updateNavbar();
         setupMobileMenu();
-        setupUniversalDropdownClick();
-        setupDropdownClickOnly();
+        setupDropdownClick();
+        setupCategoryHover(); // Add hover functionality
         setupPageNavigation();
         setupLogos();
-        testDropdownClick();
+        setupEventListeners();
+        testDropdowns();
         
         console.log('🎉 Navbar initialization complete!');
-        console.log('Features enabled: Universal dropdown CLICK-ONLY, Mobile menu, Search, Smooth scroll, Logo transitions');
+        console.log('✅ Click-only dropdown functionality enabled');
+        console.log('✅ Hover functionality enabled for "What We Do" categories');
         console.log(`📊 Tracking ${openDropdowns.size} open dropdowns`);
     }
 
@@ -684,39 +647,27 @@ function initializeNavbarFunctionality() {
     initialize();
 }
 
-// Export functions for external use and testing
+// Export utility functions
 window.NavbarUtils = {
-    // Function to programmatically open/close dropdowns with proper state management
     toggleDropdown: function(dropdownName) {
-        const dropdown = document.querySelector(`[data-page="${dropdownName}"]`);
-        if (dropdown) {
-            const parent = dropdown.closest('.dropdown-parent');
-            if (parent) {
-          // Simulate a click to use the proper toggle logic
-                dropdown.click();
-                return true;
-            }
-              }
+        const trigger = document.querySelector(`[data-page="${dropdownName}"].dropdown-trigger`);
+        if (trigger) {
+            trigger.click();
+            return true;
+        }
         console.warn(`Dropdown "${dropdownName}" not found`);
         return false;
     },
     
-    // Function to close all dropdowns
     closeAllDropdowns: function() {
-        const dropdownParents = document.querySelectorAll('.dropdown-parent.active');
-        console.log(`Closing ${dropdownParents.length} open dropdowns`);
-        
-          dropdownParents.forEach(parent => {
-          const trigger = parent.querySelector('.dropdown-trigger');
-            if (trigger) {
-                trigger.click(); // Use the proper toggle mechanism
-            }
+        const openDropdowns = document.querySelectorAll('.dropdown-parent.active');
+        openDropdowns.forEach(parent => {
+            const trigger = parent.querySelector('.dropdown-trigger');
+            if (trigger) trigger.click();
         });
-        
-        return dropdownParents.length;
+        return openDropdowns.length;
     },
     
-    // Function to open a specific dropdown
     openDropdown: function(dropdownName) {
         const trigger = document.querySelector(`[data-page="${dropdownName}"].dropdown-trigger`);
         const parent = trigger?.closest('.dropdown-parent');
@@ -728,7 +679,6 @@ window.NavbarUtils = {
         return false;
     },
     
-    // Function to close a specific dropdown
     closeDropdown: function(dropdownName) {
         const trigger = document.querySelector(`[data-page="${dropdownName}"].dropdown-trigger`);
         const parent = trigger?.closest('.dropdown-parent');
@@ -740,40 +690,7 @@ window.NavbarUtils = {
         return false;
     },
     
-    // Test function to manually trigger "What We Do" dropdown
-    testWhatWeDo: function() {
-        console.log('🧪 === TESTING WHAT WE DO DROPDOWN ===');
-        const whatWeDoTrigger = document.querySelector('[data-page="Services"].dropdown-trigger');
-        const whatWeDoParent = whatWeDoTrigger ? whatWeDoTrigger.closest('.dropdown-parent') : null;
-        const whatWeDoDropdown = whatWeDoParent ? whatWeDoParent.querySelector('.mega-dropdown') : null;
-        
-        console.log('Element Check:');
-        console.log(`  - Trigger: ${whatWeDoTrigger ? '✅ Found' : '❌ Not Found'}`);
-        console.log(`  - Parent: ${whatWeDoParent ? '✅ Found' : '❌ Not Found'}`);
-        console.log(`  - Dropdown: ${whatWeDoDropdown ? '✅ Found' : '❌ Not Found'}`);
-        
-        if (whatWeDoTrigger && whatWeDoParent && whatWeDoDropdown) {
-            console.log('🖱️ Simulating click on "What We Do"...');
-            const currentState = whatWeDoParent.classList.contains('active') ? 'OPEN' : 'CLOSED';
-            console.log(`  - Current state: ${currentState}`);
-            
-            whatWeDoTrigger.click();
-            
-            setTimeout(() => {
-                const newState = whatWeDoParent.classList.contains('active') ? 'OPEN' : 'CLOSED';
-                console.log(`  - New state: ${newState}`);
-                console.log(`✅ Test completed - State changed: ${currentState !== newState ? 'YES' : 'NO'}`);
-            }, 100);
-            
-            return true;
-        } else {
-            console.error('❌ Cannot test - missing required elements!');
-            return false;
-        }
-    },
-    
-    // Check dropdown status
-    checkDropdownStatus: function() {
+    getDropdownStatus: function() {
         const statuses = {};
         const dropdownParents = document.querySelectorAll('.dropdown-parent');
         
@@ -785,18 +702,31 @@ window.NavbarUtils = {
             }
         });
         
-        console.log('📊 Current Dropdown Status:');
-        Object.entries(statuses).forEach(([name, isOpen]) => {
-            console.log(`  - ${name}: ${isOpen ? 'OPEN' : 'CLOSED'}`);
-        });
-        
+        console.log('📊 Dropdown Status:', statuses);
         return statuses;
     },
     
-    // Get count of open dropdowns
-    getOpenDropdownCount: function() {
-        const openCount = document.querySelectorAll('.dropdown-parent.active').length;
-        console.log(`📊 Currently ${openCount} dropdown(s) open`);
-        return openCount;
+    testDropdown: function(dropdownName) {
+        console.log(`🧪 Testing ${dropdownName} dropdown...`);
+        const trigger = document.querySelector(`[data-page="${dropdownName}"].dropdown-trigger`);
+        const parent = trigger?.closest('.dropdown-parent');
+        
+        if (trigger && parent) {
+            const currentState = parent.classList.contains('active') ? 'OPEN' : 'CLOSED';
+            console.log(`Current state: ${currentState}`);
+            
+            trigger.click();
+            
+            setTimeout(() => {
+                const newState = parent.classList.contains('active') ? 'OPEN' : 'CLOSED';
+                console.log(`New state: ${newState}`);
+                console.log(`✅ Test complete - Changed: ${currentState !== newState}`);
+            }, 100);
+            
+            return true;
+        }
+        
+        console.error(`❌ ${dropdownName} dropdown not found`);
+        return false;
     }
 };

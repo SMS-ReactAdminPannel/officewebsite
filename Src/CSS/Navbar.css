@@ -463,7 +463,7 @@ html {
 
 .mega-dropdown {
   position: fixed;
-  top: 74px; /* Adjusted to account for navbar height */
+  top: 54px; /* Adjusted to account for navbar height */
   left: 0;
   width: 100vw; /* Full viewport width */
   max-width: 100vw; /* Force full width */
