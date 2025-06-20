@@ -2,8 +2,20 @@
  section {
   background-color: #000;
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+ font-family: "Inter", sans-serif;
 }
+
+.gradient-overlay {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    }
+    .card-img {
+      object-fit: cover;
+      height: 100%;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-size: 70% 70%;
+    }
 .leadership-section {
   background-color: #000;
 }
@@ -56,12 +68,12 @@
 }
 
 .stat-icon {
-  width: 60px;
-  height: auto;
+  width: 110px;   
+  height: 150px;  
 }
 
 .text-orange {
-  color: #ff4500;
+  color: #78bd23;
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -93,16 +105,26 @@
   color: #000;
 }
 
+
+.card {
+  position: relative;
+  overflow: visible;
+}
+
 .decor-img {
   position: absolute;
-  max-width: 120px;
+  max-width: 130px;
+  max-height: 300px;
   opacity: 0.6;
 }
 
 .top-right {
-  top: 20px;
+  top: 5px;
   right: 20px;
+  transform: translateX(40%);
 }
+
+
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
@@ -138,8 +160,9 @@
     }
 
     .video-content-inner h1 {
-      font-size: 36px;
-      font-weight: 600;
+      font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
       margin-bottom: 20px;
       line-height: 1.4;
     }
@@ -151,22 +174,23 @@
     }
 
     .cta-button {
-      padding: 12px 28px;
-      background-color: black;
-      color: white;
-      border-radius: 999px;
-      border: 1px solid white;
-      
-    
-      font-weight: 600;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      width: fit-content;
-    }
+  padding: 12px 28px;
+  background-color: black;
+  color: white;
+  border-radius: 999px;
+  border: 1px solid white;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: fit-content;
+  text-decoration: none; /* This removes the underline */
+}
+
 
     .cta-button:hover {
-      background-color: white;
-      color: black;
-    }
+  background-color: white;
+  color: black;
+  text-decoration: none; /* Ensures no underline on hover */
+}
 
     .video-wrapper video {
       width: 100%;
@@ -233,7 +257,7 @@
       }
 
       .video-content-inner h1 {
-        font-size: 28px;
+        font-size: 2.5rem;
       }
 
       .video-content-inner p {
