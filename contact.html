@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Yoho Technologies</title>
-  <meta name="description" content="Get in touch with Yoho Technologies. Contact us for your digital transformation needs.">
+  <meta name="description" content="Get in touch with Yoho Technologies. Contact us for web design, development, and digital solutions.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -503,8 +503,24 @@
   <!-- Scripts -->
   <script src="Src/JS/dropdown.js"></script>
   <script>
-    // Loading screen
+    // Ensure navbar stays fixed
     document.addEventListener('DOMContentLoaded', function() {
+      const navbar = document.getElementById('navbar');
+      const colorBar = document.querySelector('.color-bar');
+      if (navbar) {
+        navbar.style.position = 'fixed';
+        navbar.style.top = '4px';
+        navbar.style.zIndex = '1001';
+      }
+      if (colorBar) {
+        colorBar.style.position = 'fixed';
+        colorBar.style.top = '0';
+        colorBar.style.zIndex = '1002';
+        colorBar.style.opacity = '1';
+        colorBar.classList.remove('hidden');
+      }
+      
+      // Loading screen
       const loadingScreen = document.getElementById('loading-screen');
       setTimeout(() => {
         loadingScreen.classList.add('hidden');

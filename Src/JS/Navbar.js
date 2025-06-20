@@ -66,7 +66,8 @@ function initializeNavbarFunctionality() {
         if (scrolled) {
             if (!navbar.classList.contains('scrolled')) {
                 navbar.classList.add('scrolled');
-                colorBar.classList.add('hidden');
+                // Keep color-bar always visible
+                colorBar.classList.remove('hidden');
                 
                 // Smooth logo transition
                 if (regularLogo && whiteLogo) {
@@ -79,6 +80,7 @@ function initializeNavbarFunctionality() {
         } else {
             if (navbar.classList.contains('scrolled') && !navbar.classList.contains('scrolled-temp') && openDropdowns.size === 0) {
                 navbar.classList.remove('scrolled');
+                // Keep color-bar always visible
                 colorBar.classList.remove('hidden');
                 
                 // Reverse logo transition

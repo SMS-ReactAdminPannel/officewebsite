@@ -1,79 +1,20 @@
-/* Performance optimizations */
-html {
-  scroll-behavior: smooth;
+/* Fixed Black Navbar with Inter Font */
+body {
+  padding-top: 68px;
 }
 
-.navbar,
-.navbar *,
-.color-bar {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-}
-
-/* Hardware acceleration for navbar elements */
-.navbar,
-.color-bar,
-.logo-container,
-.logo-container img {
-  transform: translate3d(0, 0, 0);
-}
-
-.color-bar {
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    #15de79,
-    #2785dd,
-    #3aed6a,
-    #3aed6a,
-    #6ae9a9,
-    #3aed6a,
-    #15de79
-  );
-  background-size: 300% 100%;
-  animation: Lineflow 4s ease-in-out infinite;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1002;
-  opacity: 1;
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, opacity;
-  transform: translate3d(0, 0, 0);
-}
-
-.color-bar.hidden {
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-@keyframes Lineflow {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Navbar Styling */
 .navbar {
-  position: fixed;
+  position: fixed !important;
   top: 4px;
   left: 0;
   right: 0;
   z-index: 1001;
-  width: 100%;
+  width: 100vw;
   background: rgba(0, 0, 0, 0.95) !important;
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
 }
 
 .navbar.scrolled, .navbar.scrolled-temp {
@@ -86,70 +27,11 @@ html {
   max-width: 1400px;
   width: 90%;
   margin: 0 auto;
-  padding: 0.8rem 2rem;
+  padding: 0.6rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.logo img {
-  height: 45px;
-  width: auto;
-  transition: opacity 0.4s ease;
-}
-
-.logo-container:hover {
-  transform: scale(1.03) translate3d(0, 0, 0);
-}
-
-/* Logo container for positioning */
-.logo-container {
-  position: relative;
-  height: 45px;
-  width: 180px; /* Fixed width to prevent layout shifts */
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-
-/* Styles for both logos to ensure consistent sizing and perfect alignment */
-.logo-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 45px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity;
-  transform: translate3d(0, 0, 0);
-}
-
-/* Default state: show regular logo, hide white logo */
-#navbar-logo {
-  opacity: 1;
-  z-index: 2;
-}
-
-#navbar-logo-white {
-  opacity: 0;
-  z-index: 1;
-}
-
-/* When scrolled or dropdown is active, show white logo and hide regular logo */
-.navbar.scrolled #navbar-logo,
-.navbar.scrolled-temp #navbar-logo {
-  opacity: 0;
-}
-
-.navbar.scrolled #navbar-logo-white,
-.navbar.scrolled-temp #navbar-logo-white {
-  opacity: 1;
+  height: 60px;
 }
 
 .nav-links {
@@ -172,7 +54,6 @@ html {
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  will-change: color, transform;
 }
 
 .nav-links a:hover {
@@ -200,23 +81,16 @@ html {
   transform: scaleX(1);
 }
 
-/* Exception for dropdown trigger - prevent underline */
 .dropdown-trigger::after {
   display: none;
 }
 
-.nav-links a.active {
-  color: #ffffff;
-}
-
-/* Navbar Right Section */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-/* Search Functionality */
 .search-container {
   position: relative;
 }
@@ -232,20 +106,12 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: background-color, transform;
 }
 
 .search-toggle:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 4px 12px rgba(58, 237, 106, 0.2);
-}
-
-.search-toggle svg {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
-  transition: stroke 0.3s ease;
 }
 
 .search-dropdown {
@@ -273,18 +139,6 @@ html {
   transform: translateY(0) scale(1);
 }
 
-.search-dropdown::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  right: 30px;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid rgba(0, 24, 51, 0.95);
-}
-
 .search-input {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
@@ -296,7 +150,6 @@ html {
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   outline: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: border-color, box-shadow, transform;
 }
 
 .search-input:focus {
@@ -325,7 +178,6 @@ html {
   justify-content: center;
   border-radius: 50%;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: color, background-color, transform;
 }
 
 .search-close:hover {
@@ -334,7 +186,6 @@ html {
   transform: scale(1.1) rotate(90deg);
 }
 
-/* Get in Touch Button */
 .cta-button {
   background: linear-gradient(135deg, #3aed6a, #15de79);
   color: #001833;
@@ -349,23 +200,7 @@ html {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  will-change: transform, box-shadow, background;
   box-shadow: 0 4px 15px rgba(58, 237, 106, 0.2);
-}
-
-.cta-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cta-button:hover::before {
-  left: 100%;
 }
 
 .cta-button:hover {
@@ -374,104 +209,54 @@ html {
   background: linear-gradient(135deg, #45f475, #1ee684);
 }
 
-.cta-button:active {
-  transform: translateY(-1px) scale(1.01);
-  box-shadow: 0 6px 20px rgba(58, 237, 106, 0.3);
+.logo-container {
+  position: relative;
+  height: 45px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
-/* Mobile Navigation - Clean responsive design */
-.mobile-nav-overlay {
-  display: none;
-  position: fixed;
-  top: 74px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 74px);
-  background: rgba(0, 24, 51, 0.98);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  padding: 2rem;
-  overflow-y: auto;
-}
-
-.mobile-nav-overlay.active {
-  display: block;
-}
-
-.mobile-nav-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.mobile-nav-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-nav-links li {
-  margin-bottom: 1rem;
-}
-
-.mobile-nav-links a {
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 1rem 0;
-  font-size: 18px;
-  font-weight: 500;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: color 0.3s ease;
-}
-
-.mobile-nav-links a:hover {
-  color: #3aed6a;
-}
-
-.mobile-search {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-search input {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  padding: 1rem;
-  color: #ffffff;
-  font-size: 16px;
-  outline: none;
-}
-
-.mobile-search input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.mobile-cta {
-  margin-top: 2rem;
-}
-
-/* Mega Dropdown Menu Styles - TCS Style */
-.dropdown-backdrop {
-  display: none;
-  position: fixed;
+.logo-container img {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.03);
-  z-index: 1000;
+  height: 45px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+#navbar-logo {
+  opacity: 1;
+  z-index: 2;
+}
+
+#navbar-logo-white {
+  opacity: 0;
+  z-index: 1;
+}
+
+.navbar.scrolled #navbar-logo,
+.navbar.scrolled-temp #navbar-logo {
+  opacity: 0;
+}
+
+.navbar.scrolled #navbar-logo-white,
+.navbar.scrolled-temp #navbar-logo-white {
+  opacity: 1;
+}
+
+/* Dropdown Styles */
 .mega-dropdown {
-  position: fixed;
-  top: 54px;
+  position: fixed !important;
+  top: 68px;
   left: 0;
   width: 100vw;
-  max-width: 100vw;
-  margin: 0;
   background: rgba(0, 0, 0, 0.98);
   backdrop-filter: blur(20px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
@@ -481,13 +266,9 @@ html {
   transform: translateY(-20px) scale(0.98);
   transition: all 0.3s ease;
   padding: 40px 0;
-  border-radius: 0;
-  right: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  overflow-x: hidden;
-  box-sizing: border-box;
   pointer-events: none;
-  margin-top: 0;
+  transform: translateZ(0);
 }
 
 .dropdown-parent.active .mega-dropdown {
@@ -497,48 +278,22 @@ html {
   pointer-events: auto;
 }
 
-/* Enhanced active states for better visual feedback - moved to avoid duplication */
-
 .mega-dropdown-container {
   max-width: 1300px;
   margin: 0 auto;
   display: flex;
   width: 100%;
-  padding: 0 20px; /* Add some padding on very wide screens */
+  padding: 0 20px;
 }
 
-/* We no longer use the dropdown-hovered class since we want only the text to change */
-/* These styles are kept for reference but aren't actively used anymore */
-.navbar.dropdown-hovered {
-  /* Styles removed to prevent navbar background changes on hover */
-}
-
-/* Make sure scrolled state doesn't override dropdown hover */
-.navbar.scrolled.dropdown-hovered {
-  /* Styles removed to prevent navbar background changes on hover */
-}
-
-/* Dropdown trigger styles */
 .dropdown-trigger {
   position: relative;
-  padding-right: 22px !important; /* Make space for the arrow */
+  padding-right: 22px !important;
   cursor: pointer;
   transition: color 0.3s ease;
   display: inline-block;
 }
 
-/* Add a more generous click area */
-.dropdown-trigger::after {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  z-index: -1;
-}
-
-/* TCS-style dropdown arrow indicator */
 .dropdown-trigger::before {
   content: '';
   position: absolute;
@@ -551,18 +306,15 @@ html {
   transition: transform 0.25s ease, border-color 0.3s ease;
 }
 
-/* Only apply green color to active state, not hover */
 .dropdown-parent.active .dropdown-trigger {
-  color: #3aed6a !important; /* Change text color only on active state */
+  color: #3aed6a !important;
 }
 
-/* Only rotate and change color on active state, not hover */
 .dropdown-parent.active .dropdown-trigger::before {
   transform: translateY(-50%) rotate(180deg);
-  border-color: #3aed6a transparent transparent transparent; /* Change arrow color only on active state */
+  border-color: #3aed6a transparent transparent transparent;
 }
 
-/* Dropdown Categories (Left Side) */
 .dropdown-categories {
   width: 25%;
   padding: 20px;
@@ -571,7 +323,7 @@ html {
   flex-direction: column;
   transform: translateX(-20px);
   opacity: 0;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.1s; /* Delayed animation */
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.1s;
 }
 
 .dropdown-parent.active .dropdown-categories {
@@ -586,32 +338,12 @@ html {
   text-decoration: none;
   margin-bottom: 10px;
   border-radius: 4px;
-  transition: all 0.25s ease, background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: all 0.25s ease;
   font-weight: 500;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   position: relative;
   background: rgba(255, 255, 255, 0.03);
-  overflow: hidden;
   cursor: pointer;
-}
-
-.category-item::after {
-  content: '';
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-  border-right: 2px solid rgba(255, 255, 255, 0.5);
-  transform: translateY(-50%) rotate(45deg);
-  transition: all 0.3s ease;
-}
-
-.category-item.active::after {
-  border-color: #3aed6a;
-  transform: translateY(-50%) rotate(45deg) scale(1.2);
 }
 
 .category-item.active {
@@ -631,47 +363,19 @@ html {
   border-radius: 0 2px 2px 0;
 }
 
-.category-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 0;
-  width: 4px;
-  background: #3aed6a;
-  border-radius: 0 2px 2px 0;
-  transition: height 0.3s ease;
-}
-
-/* Hover effect removed - click-only behavior */
-
-/* Dropdown Services (Right Side) */
 .dropdown-services {
   width: 75%;
   padding: 20px 30px;
   display: none;
   opacity: 0;
   transform: translateX(20px) translateY(10px);
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.2s; /* Delayed animation */
-  will-change: opacity, transform;
-}
-
-@keyframes fadeInServices {
-  from { 
-    opacity: 0; 
-    transform: translateX(20px) translateY(10px);
-  }
-  to { 
-    opacity: 1; 
-    transform: translateX(0) translateY(0);
-  }
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
 }
 
 .dropdown-services.active {
   display: block;
   opacity: 1;
   transform: translateX(0) translateY(0);
-  animation: fadeInServices 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 .services-title {
@@ -715,113 +419,49 @@ html {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.service-item::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
+.color-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #15de79, #2785dd, #3aed6a, #3aed6a, #6ae9a9, #3aed6a, #15de79);
+  background-size: 300% 100%;
+  animation: Lineflow 4s ease-in-out infinite;
+  position: fixed !important;
+  top: 0;
   left: 0;
-  width: 0;
-  height: 2px;
-  background: #3aed6a;
-  transition: width 0.3s ease;
+  right: 0;
+  width: 100vw;
+  z-index: 1002;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
 }
 
-/* Service item hover effects removed - click-only behavior */
-
-/* Responsive Dropdown */
-@media screen and (max-width: 1024px) {
-  .mega-dropdown-container {
-    flex-direction: column;
-  }
-  
-  .dropdown-categories,
-  .dropdown-services {
-    width: 100%;
-    border-right: none;
-  }
-  
-  .dropdown-categories {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .category-item {
-    width: 48%;
-    margin-bottom: 10px;
-  }
-  
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .nav-links {
-    gap: 2rem;
-  }
+.color-bar.hidden {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
+@keyframes Lineflow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .nav-container {
-    padding: 1rem;
-  }
-  
-  .nav-links {
-    display: none;
-  }
-  
-  .navbar-right {
-    gap: 1rem;
-  }
-  
-  .search-dropdown {
-    width: 250px;
-    right: -10px;
-  }
-  
-  .cta-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 13px;
-  }
-  
-  .mega-dropdown {
-    display: none;
-  }
-  
-  .logo-container {
-    width: 150px;
-  }
-  
-  .logo-container img {
-    height: 35px;
-  }
+  .nav-container { padding: 1rem; }
+  .nav-links { display: none; }
+  .navbar-right { gap: 1rem; }
+  .search-dropdown { width: 250px; right: -10px; }
+  .cta-button { padding: 0.6rem 1.2rem; font-size: 13px; }
+  .mega-dropdown { display: none; }
+  .logo-container { width: 150px; }
+  .logo-container img { height: 35px; }
 }
 
 @media screen and (max-width: 480px) {
-  .nav-container {
-    padding: 0.5rem;
-  }
-  
-  .navbar-right {
-    gap: 0.5rem;
-  }
-  
-  .search-dropdown {
-    width: 200px;
-    right: 0;
-  }
-  
-  .cta-button {
-    padding: 0.5rem 1rem;
-    font-size: 12px;
-  }
-  
-  .logo-container {
-    width: 120px;
-  }
-  
-  .logo-container img {
-    height: 30px;
-  }
+  .nav-container { padding: 0.5rem; }
+  .navbar-right { gap: 0.5rem; }
+  .search-dropdown { width: 200px; right: 0; }
+  .cta-button { padding: 0.5rem 1rem; font-size: 12px; }
+  .logo-container { width: 120px; }
+  .logo-container img { height: 30px; }
 }
