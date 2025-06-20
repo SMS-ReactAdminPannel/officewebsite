@@ -1,38 +1,21 @@
 // Mobile Navigation Toggle
-const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav-menu');
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    
-    // Animate hamburger menu
-    const spans = navToggle.querySelectorAll('span');
-    spans.forEach((span, index) => {
-        if (navMenu.classList.contains('active')) {
-            if (index === 0) span.style.transform = 'rotate(45deg) translate(5px, 5px)';
-            if (index === 1) span.style.opacity = '0';
-            if (index === 2) span.style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-            span.style.transform = 'none';
-            span.style.opacity = '1';
-        }
-    });
+    navToggle.classList.toggle('active');
 });
 
 // Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-menu a');
-navLinks.forEach(link => {
+document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
-        const spans = navToggle.querySelectorAll('span');
-        spans.forEach(span => {
-            span.style.transform = 'none';
-            span.style.opacity = '1';
-        });
+        navToggle.classList.remove('active');
     });
 });
 
-// Smooth scrolling for anchor links
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -46,13 +29,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header background on scroll
+// Navbar background on scroll
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
+    const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        header.style.backgroundColor = 'rgba(10, 10, 10, 0.98)';
+        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
     } else {
-        header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
     }
 });
 
@@ -71,32 +54,130 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for animation
-const animatedElements = document.querySelectorAll('.service-card, .team-member, .section-content');
-animatedElements.forEach(el => {
+// Observe elements for scroll animations
+document.querySelectorAll('.service-card, .team-member, .stat-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
-// CTA Button interactions
-const ctaButtons = document.querySelectorAll('.cta-button');
-ctaButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        // Add ripple effect
+// Counter animation for stats
+const animateCounters = () => {
+    const counters = document.querySelectorAll('.stat-number');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.textContent.replace(/\D/g, ''));
+        const suffix = counter.textContent.replace(/\d/g, '');
+        let current = 0;
+        const increment = target / 100;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                counter.textContent = target + suffix;
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(current) + suffix;
+            }
+        }, 20);
+    });
+};
+
+// Trigger counter animation when stats section is visible
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const statsSection = document.querySelector('.stats-section');
+if (statsSection) {
+    statsObserver.observe(statsSection);
+}
+
+// Parallax effect for hero cards
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero-card');
+    
+    parallaxElements.forEach((element, index) => {
+        const speed = 0.5 + (index * 0.1);
+        const yPos = -(scrolled * speed);
+        element.style.transform = `translateY(${yPos}px)`;
+    });
+});
+
+// Hover effects for service cards
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Dynamic background gradient animation
+const createFloatingElements = () => {
+    const container = document.body;
+    
+    for (let i = 0; i < 5; i++) {
+        const element = document.createElement('div');
+        element.className = 'floating-element';
+        element.style.cssText = `
+            position: fixed;
+            width: ${Math.random() * 100 + 50}px;
+            height: ${Math.random() * 100 + 50}px;
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.1), rgba(0, 184, 148, 0.1));
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            animation: float ${Math.random() * 10 + 10}s ease-in-out infinite;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+        `;
+        container.appendChild(element);
+    }
+};
+
+// Initialize floating elements
+createFloatingElements();
+
+// Form validation (if forms are added)
+const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+};
+
+// Button click animations
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function(e) {
         const ripple = document.createElement('span');
-        const rect = button.getBoundingClientRect();
+        const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
         
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.classList.add('ripple');
+        ripple.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        `;
         
-        button.appendChild(ripple);
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
         
         setTimeout(() => {
             ripple.remove();
@@ -104,24 +185,10 @@ ctaButtons.forEach(button => {
     });
 });
 
-// Add ripple effect styles
+// Add ripple animation CSS
 const style = document.createElement('style');
 style.textContent = `
-    .cta-button {
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .ripple {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        transform: scale(0);
-        animation: ripple-animation 0.6s linear;
-        pointer-events: none;
-    }
-    
-    @keyframes ripple-animation {
+    @keyframes ripple {
         to {
             transform: scale(4);
             opacity: 0;
@@ -130,54 +197,39 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Form validation (if forms are added)
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
 // Lazy loading for images
-const images = document.querySelectorAll('img');
 const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const img = entry.target;
-            img.src = img.src; // Trigger loading
-            img.classList.add('loaded');
-            observer.unobserve(img);
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
         }
     });
 });
 
-images.forEach(img => {
+document.querySelectorAll('img[data-src]').forEach(img => {
     imageObserver.observe(img);
 });
 
-// Performance optimization: Debounce scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Optimized scroll handler
-const handleScroll = debounce(() => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.backgroundColor = 'rgba(10, 10, 10, 0.98)';
-    } else {
-        header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+// Performance optimization: Throttle scroll events
+const throttle = (func, limit) => {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
     }
-}, 10);
+};
 
-window.addEventListener('scroll', handleScroll);
+// Apply throttling to scroll events
+window.addEventListener('scroll', throttle(() => {
+    // Scroll-based animations here
+}, 16)); // ~60fps
 
-// Console welcome message
-console.log('%c🚀 Welcome to VegaIT Fintech Solutions!', 'color: #00d4aa; font-size: 16px; font-weight: bold;');
-console.log('%cInterested in our development services? Contact us at info@vegait.com', 'color: #cccccc; font-size: 12px;');
+console.log('Fintech landing page loaded successfully!');

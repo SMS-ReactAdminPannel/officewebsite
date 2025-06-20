@@ -1,278 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoho Technologies</title>
-    <link rel="stylesheet" href="../../CSS/Services/StaticWebDesign.css">
-    <link rel="stylesheet" href="../../CSS/fonts.css">
-    <link rel="stylesheet" href="/officewebsite/Src/CSS/Navbar.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI UX Design Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/officewebsite/Src/CSS/Services/StaticWebDesign.css" rel="stylesheet">
+
+  <link href="/officewebsite/Src/CSS/fonts.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-  <div class="container d-flex justify-content-between align-items-center nav-container">
-    <!-- Logo -->
-    <a href="#" data-page="Home" class="navbar-brand d-flex align-items-center">
-      <div class="logo-container position-relative">
-        <img 
-          src="Src/Assets/Green-logo.png" 
-          alt="Yoho Technologies" 
-          id="navbar-logo" 
-          class="img-fluid d-block"
-        >
-        <img 
-          src="Src/Assets/White-logo.png" 
-          alt="Yoho Technologies" 
-          id="navbar-logo-white" 
-          class="img-fluid d-none"
-        >
+  <div class="container1">
+    <div class="text-section">
+      <h1 class="heading">Static Website Designing</h1>
+      <p>Transform your idea into digital products your users will love. Our team of experienced UX/UI designers brings brains and passion to help you achieve your business goals by creating <b>user-centered UX/UI design</b>.</p>
+      <div class="buttons">
+        <button>Our work</button>
+        <button>Get in touch</button>
       </div>
-    </a>
-
-    <!-- Mobile toggle button -->
-    <button class="navbar-toggler" type="button" id="mobile-menu-btn">
-      <span class="navbar-toggler-icon" id="menu-icon">☰</span>
-    </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto nav-links">
-        <li class="nav-item"><a class="nav-link" href="#" data-page="About">Who We Are</a></li>
-
-        <li class="nav-item dropdown dropdown-parent">
-          <a href="#" class="nav-link dropdown-toggle dropdown-trigger" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            What We Do
-          </a>
-
-          <!-- Mega Dropdown -->
-          <div class="dropdown-menu mega-dropdown">
-            <div class="mega-dropdown-contain er d-flex">
-              <!-- Left Categories -->
-              <div class="dropdown-categories">
-                <a href="/officewebsite/Src/HTML/Overview.html" class="category-item" data-category="website-design">Overview</a>
-                <a href="#" class="category-item active" data-category="website-design">Website Design</a>
-                <a href="#" class="category-item" data-category="website-development">Website Development</a>
-                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
-                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
-              </div>
-
-              <!-- Right Services (default: website-design visible) -->
-              <div class="dropdown-services active" id="website-design">
-                <div class="services-title">Website Design</div>
-                <div class="services-grid">
-                  <a href="/officewebsite/Src/HTML/Services/StaticWebDesign.html" class="service-item">Static Website Designing</a>
-                  <a href="#" class="service-item">Dynamic Website Designing</a>
-                  <!-- ...more items -->
-                </div>
-              </div>
-
-              <div class="dropdown-services" id="website-development">
-                <div class="services-title">Website Development</div>
-                <div class="services-grid">
-                  <a href="#" class="service-item">React JS Development</a>
-                  <!-- ... -->
-                </div>
-              </div>
-
-              <!-- Add mobile-solutions & digital-marketing similarly -->
-            </div>
-          </div>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="#" data-page="Careers">Careers</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" data-page="Contact">Contact</a></li>
-      </ul>
+    </div>
+    <div class="image-section">
+      <img src="/officewebsite/Src/Assets/WebStatic/Service3.jpg" alt="UI UX Design Mockup" />
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu d-lg-none" id="mobile-menu">
-    <a href="#" data-page="Home" class="active">Home</a>
-    <a href="#" data-page="About">Who We Are</a>
-    <div class="mobile-submenu-parent">
-      <a href="#" class="has-submenu dropdown-trigger">What We Do</a>
-      <div class="mobile-submenu">
-        <a href="#" class="mobile-category" data-category="website-design">Website Design</a>
-        <a href="#" class="mobile-category" data-category="website-development">Website Development</a>
-        <a href="#" class="mobile-category" data-category="mobile-solutions">Mobile Solutions</a>
-        <a href="#" class="mobile-category" data-category="digital-marketing">Digital Marketing</a>
+  <!-- SECTION 2: Services -->
+  <div class="section-1">
+    <h1>UX/UI services we offer</h1>
+    <div class="services">
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/officewebsite/Src/Assets/star.png" alt=""></div>
+        <h2>UX design</h2>
+        <p><b>Wireframes, mockups, prototypes</b> paired with user research, user flows, and journey maps to improve experiences and define product structure.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/officewebsite/Src/Assets/WebStatic/Service6.png" alt=""></div>
+        <h2>UI design</h2>
+        <p>UI designers work closely with UX to define color, texture, typography, and interface elements that are intuitive and visually stunning.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/officewebsite/Src/Assets/WebStatic/Service7.png" alt=""></div>
+        <h2>Visual identity</h2>
+        <p>Build a powerful, consistent brand image that enhances recognition and connects emotionally with users.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/officewebsite/Src/Assets/WebStatic/Service8.png" alt=""></div>
+        <h2>Motion design</h2>
+        <p>Enhance user experience with custom animations that bring life and fluidity to digital interfaces.</p>
       </div>
     </div>
-    <a href="#" data-page="Careers">Careers</a>
-    <a href="#" data-page="Contact">Contact</a>
   </div>
-</nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="heading">Static Website Designing</h1>
-                    <p>We develop cutting-edge fintech solutions that transform financial services and drive digital innovation in the banking and finance industry.</p>
-                    <button class="cta-button">Get Started</button>
-                </div>
-                <div class="hero-image">
-                    <img src="/placeholder.svg?height=400&width=600" alt="Fintech Development" class="hero-img">
-                </div>
-            </div>
+  <!-- SECTION 3: Embracing Design Systems -->
+  <section class="container">
+    <div class="text-content">
+      <h1>Embracing design systems</h1>
+      <p>
+        Integrating design systems into your project offers numerous advantages
+        that make digital products not only user-friendly and visually cohesive
+        but also easily maintainable.
+      </p>
+      <div class="tags">
+        <span>Increased UX design quality</span>
+        <span>Improved design consistency</span>
+        <span>Faster iteration and updates</span>
+        <span>Scalability and maintainability</span>
+        <span>Streamlined collaboration</span>
+      </div>
+    </div>
+    <div class="visual-card">
+      <div class="icon-circle">
+        <div class="center-dot"></div>
+        <div class="orbit">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
         </div>
-    </section>
-
-    <!-- Custom Development Section -->
-    <section class="custom-development">
-        <div class="container">
-            <div class="section-content">
-                <div class="text-content">
-                    <h2>Custom fintech software development</h2>
-                    <p>Our expert team delivers tailored fintech solutions that meet your specific business requirements. From payment processing to blockchain integration, we build scalable and secure financial technology platforms.</p>
-                    <ul class="features-list">
-                        <li>Payment gateway integration</li>
-                        <li>Blockchain and cryptocurrency solutions</li>
-                        <li>Digital banking platforms</li>
-                        <li>Investment management systems</li>
-                    </ul>
-                </div>
-                <div class="image-content">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Custom Development" class="section-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section class="services-grid">
-        <div class="container">
-            <h2>Expert fintech software development company</h2>
-            <div class="grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="/placeholder.svg?height=60&width=60" alt="Full Stack Development">
-                    </div>
-                    <h3>Full Stack Development</h3>
-                    <p>End-to-end development solutions for comprehensive fintech applications.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="/placeholder.svg?height=60&width=60" alt="API Integration">
-                    </div>
-                    <h3>API Integration</h3>
-                    <p>Seamless integration with third-party financial services and APIs.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="/placeholder.svg?height=60&width=60" alt="Security Solutions">
-                    </div>
-                    <h3>Security Solutions</h3>
-                    <p>Advanced security measures to protect financial data and transactions.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="/placeholder.svg?height=60&width=60" alt="Mobile Development">
-                    </div>
-                    <h3>Mobile Development</h3>
-                    <p>Native and cross-platform mobile applications for fintech services.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Stack -->
-    <section class="tech-stack">
-        <div class="container">
-            <div class="section-content">
-                <div class="text-content">
-                    <h2>We leverage cutting-edge technologies</h2>
-                    <p>Our development team utilizes the latest technologies and frameworks to build robust, scalable fintech solutions that meet industry standards and regulatory requirements.</p>
-                    <div class="tech-logos">
-                        <img src="/placeholder.svg?height=40&width=80" alt="React" class="tech-logo">
-                        <img src="/placeholder.svg?height=40&width=80" alt="Node.js" class="tech-logo">
-                        <img src="/placeholder.svg?height=40&width=80" alt="Python" class="tech-logo">
-                        <img src="/placeholder.svg?height=40&width=80" alt="AWS" class="tech-logo">
-                    </div>
-                </div>
-                <div class="image-content">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Technology Stack" class="section-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <h2>Meet our fintech experts</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Team Member" class="member-photo">
-                    <h3>John Smith</h3>
-                    <p>Lead Fintech Developer</p>
-                    <p>10+ years of experience in financial software development and blockchain technology.</p>
-                </div>
-                <div class="team-member">
-                    <img src="/placeholder.svg?height=200&width=200" alt="Team Member" class="member-photo">
-                    <h3>Sarah Johnson</h3>
-                    <p>Senior Software Architect</p>
-                    <p>Expert in designing scalable fintech architectures and payment systems.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to transform your financial services?</h2>
-                <p>Let's discuss how we can help you build innovative fintech solutions that drive growth and enhance customer experience.</p>
-                <button class="cta-button">Start Your Project</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>VegaIT</h3>
-                    <p>Leading fintech software development company delivering innovative solutions for the financial industry.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Custom Development</a></li>
-                        <li><a href="#">API Integration</a></li>
-                        <li><a href="#">Mobile Apps</a></li>
-                        <li><a href="#">Consulting</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Industries</h4>
-                    <ul>
-                        <li><a href="#">Banking</a></li>
-                        <li><a href="#">Insurance</a></li>
-                        <li><a href="#">Investment</a></li>
-                        <li><a href="#">Payments</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Email: info@vegait.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 VegaIT. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../../JS/Services/StaticWebDesign.js"></script>
-    <script src="../../JS/Navbar.js"></script>
+      </div>
+      <p class="note">
+        As we will work in iterations, when design elements are managed in a library,
+        making updates or iterating on designs becomes much more manageable.
+        This agility is invaluable in an ever-evolving digital landscape.
+      </p>
+    </div>
+  </section>
+  
 </body>
 </html>
