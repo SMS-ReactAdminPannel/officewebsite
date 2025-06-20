@@ -232,18 +232,7 @@
     width: 10px;
 }
 
-/* Newsletter Section */
-.footer-newsletter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 113, 206, 0.05);
-    margin: 0 -2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
+
 
 .newsletter-content h3 {
     color: #ffffff;
