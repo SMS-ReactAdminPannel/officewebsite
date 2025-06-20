@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Overview.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        /* Service Cards Styles */
+
+        .tech-item {
+              transition: all 0.2s ease;
+            }
+            .tech-item:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+        .service-card {
+            background-color: #000;
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 2rem;
+            height: 280px;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card:hover {
+            border-color: #555;
+            transform: translateY(-5px);
+        }
+        
+        .service-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: auto;
+        }
+        
+        .card-icon {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .read-more {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: auto;
+            padding-bottom: 1rem;
+        }
+        
+        .read-more:hover {
+            color: #ccc;
+            text-decoration: none;
+        }
+        
+        .read-more::after {
+            content: '→';
+            font-size: 1.2rem;
+        }
+        
+        /* Custom SVG Icons */
+        .icon-starburst, .icon-atom, .icon-arrow-corner, .icon-circles {
+            stroke: #fff;
+            stroke-width: 2;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- First Section -->
+        <div class="row align-items-center my-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img class="img-fluid rounded" src="../Assets/Img-1.jpg" alt="Description">
+            </div>
+            
+            <div class="col-md-6">
+                <h1 class="mb-4">First Heading</h1>
+                <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia culpa repellendus, fuga in laboriosam harum sit velit aperiam esse perferendis doloremque non voluptate quia asperiores provident dolorum perspiciatis odio hic obcaecati! Incidunt alias maiores porro, id aliquam repudiandae dolores magnam eveniet expedita velit, temporibus, sit voluptates. Quia perspiciatis laboriosam eius!</p>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi iusto qui eos ducimus at deleniti corrupti dolorem voluptatem ex deserunt, aperiam reiciendis in. Ullam, eaque?</p>
+                <button class="btn btn-primary rounded-pill px-4 py-2">Get Know US</button>
+            </div>
+        </div>
+
+        <hr class="my-5 bg-dark">
+
+        <!-- Second Section -->
+        <div class="row my-5">
+            <div class="col-12">
+                <h1 class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, beatae.</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ducimus totam voluptate officia minima reiciendis blanditiis corporis maiores. Neque error cumque veniam, asperiores velit quod quo eaque earum ducimus magni.</p>
+            </div>
+        </div>
+
+        <!-- Service Cards Section -->
+        <div class="row my-5">
+            <!-- Digital Product Development Card -->
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <h3>Digital product<br>development</h3>
+                    <a href="#" class="read-more">Read more</a>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 60 60" class="icon-starburst">
+                            <g transform="translate(30,30)">
+                                <line x1="0" y1="-25" x2="0" y2="25"/>
+                                <line x1="-25" y1="0" x2="25" y2="0"/>
+                                <line x1="-17.7" y1="-17.7" x2="17.7" y2="17.7"/>
+                                <line x1="17.7" y1="-17.7" x2="-17.7" y2="17.7"/>
+                                <line x1="0" y1="-25" x2="5" y2="-20"/>
+                                <line x1="0" y1="-25" x2="-5" y2="-20"/>
+                                <line x1="25" y1="0" x2="20" y2="5"/>
+                                <line x1="25" y1="0" x2="20" y2="-5"/>
+                                <line x1="0" y1="25" x2="5" y2="20"/>
+                                <line x1="0" y1="25" x2="-5" y2="20"/>
+                                <line x1="-25" y1="0" x2="-20" y2="5"/>
+                                <line x1="-25" y1="0" x2="-20" y2="-5"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- UI UX Design Services Card -->
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <h3>UI UX design services</h3>
+                    <a href="#" class="read-more">UI UX design services</a>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 60 60" class="icon-atom">
+                            <g transform="translate(30,30)">
+                                <ellipse cx="0" cy="0" rx="20" ry="8" transform="rotate(0)"/>
+                                <ellipse cx="0" cy="0" rx="20" ry="8" transform="rotate(60)"/>
+                                <ellipse cx="0" cy="0" rx="20" ry="8" transform="rotate(120)"/>
+                                <circle cx="0" cy="0" r="3" fill="#fff"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Discovery Card -->
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <h3>Product discovery</h3>
+                    <a href="#" class="read-more">Read more</a>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 60 60" class="icon-arrow-corner">
+                            <g transform="translate(30,30)">
+                                <rect x="-15" y="-10" width="20" height="15" rx="2"/>
+                                <line x1="5" y1="-2.5" x2="15" y2="-2.5"/>
+                                <line x1="15" y1="-2.5" x2="10" y2="-7.5"/>
+                                <line x1="15" y1="-2.5" x2="10" y2="2.5"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Software Architecture Services Card -->
+            <div class="col-md-6 mb-4">
+                <div class="service-card">
+                    <h3>Software architecture<br>services</h3>
+                    <a href="#" class="read-more">Read more</a>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 60 60" class="icon-circles">
+                            <g transform="translate(30,30)">
+                                <circle cx="0" cy="0" r="20"/>
+                                <circle cx="0" cy="0" r="15"/>
+                                <circle cx="0" cy="0" r="10"/>
+                                <circle cx="0" cy="0" r="5"/>
+                                <circle cx="0" cy="0" r="2" fill="#fff"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        <!-- Third Section -->
+        <div class="row align-items-center my-5">
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                <img class="img-fluid rounded" src="../Assets/Img-1.jpg" alt="Description">
+            </div>
+
+            <div class="col-md-6 order-md-1">
+                <h1 class="mb-4">First Heading</h1>
+                <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia culpa repellendus, fuga in laboriosam harum sit velit aperiam esse perferendis doloremque non voluptate quia asperiores provident dolorum perspiciatis odio hic obcaecati! Incidunt alias maiores porro, id aliquam repudiandae dolores magnam eveniet expedita velit, temporibus, sit voluptates. Quia perspiciatis laboriosam eius!</p>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi iusto qui eos ducimus at deleniti corrupti dolorem voluptatem ex deserunt, aperiam reiciendis in. Ullam, eaque?</p>
+                <button class="btn btn-primary rounded-pill px-4 py-2">Get Know US</button>
+            </div>
+        </div>
+        
+        <!-- Fourth Section -->
+        <div class="row my-5">
+            <div class="col-12">
+                <h1 class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, beatae.</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ducimus totam voluptate officia minima reiciendis blanditiis corporis maiores. Neque error cumque veniam, asperiores velit quod quo eaque earum ducimus magni.</p>
+                    </div>
+                </div>
+            
+                <!-- Fifth Section -->
+                 <div>
+                    <h1>What our clients say about us</h1>
+                    <p>Passionate. Proactive. Expert. We enjoy co-creating innovative products with the world's most innovative businesses and helping them realize their vision. Watch how our clients describe our partnership.</p>
+                    <div>
+
+                    </div>
+                 </div>
+             
+                 <!-- Sixth Section - tech Stack -->
+                  <div>
+                    <h1>Our tech stack. Tailored to yours.</h1>
+                    <div class="container py-4">
+                    <div class="row g-4">
+                      <!-- First Column -->
+                      <div class="col-md-4">
+                        <div class="d-flex flex-column gap-3">
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Microsoft .NET</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">.NET</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Java</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Python</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Node.js</h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Second Column -->
+                      <div class="col-md-4">
+                        <div class="d-flex flex-column gap-3">
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">HTML</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">CSS</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">React</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Angular</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Vue.js</h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Third Column -->
+                      <div class="col-md-4">
+                        <div class="d-flex flex-column gap-3">
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">React Native</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Flutter</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Android</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">iOS</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Kotlin</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Swift</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">Azure</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">AWS</h4>
+                          </div>
+                          <div class="tech-item p-3 bg-light rounded text-center">
+                            <h4 class="mb-0">GCP</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                 </div>
+
+
+          </div>
+
+          <!-- Seventh Section - Our Products -->
+          <div class="container">
+            <h1>Our products</h1>
+            <p>With years of hands-on experience, we know what works, and what doesn't. We not only understand your unique challenges, we anticipate them and deliver innovative solutions to speed up your digital development and time to market, keeping you ahead of the curve.</p>
+            <p>Our pre-built solutions are here to save time, cut complexities, and help you deliver great digital products that will give your business a competitive edge.</p>
+           
+            <!-- Card -->
+             <div class="d-flex flex-column" >
+           <!-- 1st Card -->
+            <div class="card border-0 shadow p-4" style="max-width: 500px; background-color: #f8f9fa;">
+                <div class="card-body">
+                    <h2 class="card-title fw-bold mb-3">Vega Flywheel</h2>
+                    <p class="card-text fw-bold mb-3">Re.inventing product discovery.</p>
+                    <p class="card-text fw-bold mb-3">Innovative. Efficient. Strategic. Validate your solutions in just four weeks.</p>
+                    <p class="card-text mb-3">Vega Flywheel is engineered to set your ideas into motion, aligning them precisely with market demands.</p>
+                    <p class="card-text mb-4">We ensure your products achieve your business goals and resonate deeply with your target audience, catalyzing swift movement from concept to market-validated solutions. <span class="fw-bold">Fast. Structured. Goal-oriented.</span></p>
+                    <button class="btn btn-dark rounded-pill px-4 py-2">Discover more</button>
+                </div>
+            </div>
+
+            <!-- 2nd Card -->
+            <div class="card border-0 shadow p-4" style="max-width: 500px; background-color: #f8f9fa;">
+                <div class="card-body">
+                    <h2 class="card-title fw-bold mb-3">Vega Flywheel</h2>
+                    <p class="card-text fw-bold mb-3">Re.inventing product discovery.</p>
+                    <p class="card-text fw-bold mb-3">Innovative. Efficient. Strategic. Validate your solutions in just four weeks.</p>
+                    <p class="card-text mb-3">Vega Flywheel is engineered to set your ideas into motion, aligning them precisely with market demands.</p>
+                    <p class="card-text mb-4">We ensure your products achieve your business goals and resonate deeply with your target audience, catalyzing swift movement from concept to market-validated solutions. <span class="fw-bold">Fast. Structured. Goal-oriented.</span></p>
+                    <button class="btn btn-dark rounded-pill px-4 py-2">Discover more</button>
+                </div>
+            </div>
+
+            <!-- 3rd Card -->
+            <div class="card border-0 shadow p-4" style="max-width: 500px; background-color: #f8f9fa;">
+                <div class="card-body">
+                    <h2 class="card-title fw-bold mb-3">Vega Flywheel</h2>
+                    <p class="card-text fw-bold mb-3">Re.inventing product discovery.</p>
+                    <p class="card-text fw-bold mb-3">Innovative. Efficient. Strategic. Validate your solutions in just four weeks.</p>
+                    <p class="card-text mb-3">Vega Flywheel is engineered to set your ideas into motion, aligning them precisely with market demands.</p>
+                    <p class="card-text mb-4">We ensure your products achieve your business goals and resonate deeply with your target audience, catalyzing swift movement from concept to market-validated solutions. <span class="fw-bold">Fast. Structured. Goal-oriented.</span></p>
+                    <button class="btn btn-dark rounded-pill px-4 py-2">Discover more</button>
+                </div>
+            </div>
+
+            </div>
+          </div>
+
+          <!-- 8th Section -->
+           <div>
+                <img src="" alt="">
+           </div>
+
+    </div>
+
+    <script src="../JS/Overview.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
