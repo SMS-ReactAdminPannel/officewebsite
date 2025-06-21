@@ -798,6 +798,18 @@
   }
 }
 
+.slide-section {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.slide-section.visible {           
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
  .section-title1 {
   font-family: "Inter", sans-serif;
   font-weight: 100;
@@ -834,9 +846,9 @@
 
 @media (max-width: 576px) {
   .section-title1 {
-    padding: 0 20px;
     font-size: 32px;
     line-height: 2.3rem;
+    padding: 0px 20px;
   }
 
   .company-logo {
@@ -848,7 +860,10 @@
   }
   .hero-code-text{
     margin-left: -50px;
-    padding-top: 205px;
+    padding-top: 105px;
+  }
+  .service-link{
+    margin-left: 22px;
   }
   .hero-title{
     margin-left: -50px;
@@ -891,7 +906,7 @@
 /* Main heading */
 .section-title2 {
   font-family: "Inter", sans-serif;
-  font-weight: 200;
+  font-weight: 100;
   font-style: normal;
   color: #ffffff;
   margin-bottom: 40px;
@@ -945,12 +960,6 @@
     text-align: justify;
   }
 
-  .corner-graphic {
-    width: 90px;
-    top: 120px;
-    right: 130px;
-  }
-
   .hero-box{
     padding: 50px 30px;
   }
@@ -989,11 +998,11 @@
 .service-card {
   background-color: transparent;
   border: 1px solid #fff;
-  border-radius: 20px;
-  padding: 40px 30px;
+  border-radius: 8px;
+  padding: 20px 30px;
   position: relative;
   transition: all 0.3s ease;
-  min-height: 270px;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1001,14 +1010,15 @@
 
 .service-card:hover {
   transform: translateY(-4px);
+  /* border: 1px solid #06f27b; */
 }
 
 .card-title {
-  font-size: 1.3rem;
+  font-size: 1.rem;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 200;
-  margin-bottom: 40px;
-  max-width: 80%;
+  font-weight: 100;
+  /* margin-left: 10px; */
+  text-align: center;
 }
 
 .read-more-text {
@@ -1025,7 +1035,7 @@
   bottom: 0;
   width: 0%;
   height: 1px;
-  background-color: currentColor;
+  background-color: #06f27b;
   transition: width 0.3s ease;
 }
 
@@ -1074,7 +1084,7 @@
 
   .card-title {
     max-width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .service-card {
@@ -1191,7 +1201,6 @@
               padding: 90px 40px;
             }
             .section-description{
-              padding: 0px 15px;
               font-size: 15px;
               text-align: justify;
             }
@@ -1201,8 +1210,8 @@
               color: white;
             }
             .product-card{
-              margin: 0px 15px;
-              height: 520px;
+              /* margin: 0px 15px; */
+              height: 445px;
             }
             .product-title{
               font-weight: 200;
@@ -1212,7 +1221,7 @@
               margin-top: -20px;
             }
             .discover-btn{
-              margin-left: 40px;
+              margin-left: 55px;
             }
             .sub-text{
               padding: 0px 10px;
@@ -1223,6 +1232,11 @@
             .section2{
               padding-top: 80px;
             }
+              .corner-graphic {
+    width: 90px;
+    top: 115px;
+    right: 130px;
+  }
         }
 
         .value-section {
@@ -1241,19 +1255,39 @@
 
 }
 
+.service-link{
+  color: rgb(255, 255, 255);
+  padding: 50px 0px;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-decoration: none;
+
+}
+
+.card-conatiner{
+  margin-top: 25px;
+}
+
+.service-link:hover{
+  color:  #06f27b;
+  text-decoration: underline;
+}
+
 .stat-icon {
   width: 130px;   
   height: 130px; 
-  object-fit: cover; 
+  object-fit: cover;
+  margin-left: 55px; 
 
 }
 
 .text-orange {
-  color: #78bd23;
-  font-weight: 600;
+  color: white;
+  font-weight: 500;
   margin-bottom: 5px;
   margin-top: 35px;
- margin-left: 40px;
+  text-align: center;
 }
 
 
@@ -1300,6 +1334,158 @@
   top: 5px;
   right: 20px;
   transform: translateX(40%);
+}
+
+
+.collage-container::-webkit-scrollbar {
+  display: none;
+}
+
+.collage-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 20px;
+  background-color: #000;
+}
+
+/* Changed from grid to columns for masonry layout */
+.testimonials-container {
+  columns: 3;
+  column-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+}
+
+.testimonial-card {
+  break-inside: avoid;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: #ffffff;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #ffd93d,
+    #6bcf7f,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  margin-bottom: 20px;
+  text-justify: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-name {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.user-title {
+  color: #cccccc;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  background-color: #000;
+}
+
+.header h1 {
+    font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
+   line-height: 1;
+   font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    columns: 2;
+    column-gap: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-container {
+    columns: 1;
+    padding: 10px;
+  }
 }
 
 /* Tech Stack Section Styles */
@@ -1410,7 +1596,7 @@
 
 @media (max-width: 576px) {
   .tech-stack-section {
-    padding: 30px 25px;
+    padding: 30px 0px;
   }
 
   .tech-heading {
@@ -1431,6 +1617,21 @@
   .tech-label {
     font-size: 0.8rem;
   }
+    .stat-icon{
+   width: 55px;
+   height: 55px;
+   object-fit: cover;
+  }
+
+  
+  .text-orange{
+    text-align: center;
+    font-size: 16px;
+  }
+  .card-title{
+    text-align: center;
+    font-size: 12px;
+  }
 }
 
 
@@ -1448,16 +1649,6 @@
 
   .decor-img {
     max-width: 80px;
-  }
-
-  .stat-icon{
-    margin-left: 20px;
-  }
-
-  .text-orange{
-    padding-left: 10px;
-    padding-top: 20px;
-    text-align: center;
   }
 
   .card-title{
