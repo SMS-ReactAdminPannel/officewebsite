@@ -23,6 +23,7 @@ body {
 }
 
 .text-section {
+  margin-top: 40px;
   flex: 1 1 500px;
   animation: fadeInLeft 1s ease;
 }
@@ -71,6 +72,7 @@ body {
 }
 
 .image-section {
+  padding-top: 40px;
   flex: 1 1 500px;
   text-align: center;
   animation: fadeInRight 1s ease;
