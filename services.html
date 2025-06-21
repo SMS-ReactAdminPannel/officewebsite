@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Yoho Technologies</title>
+  <meta name="description" content="Comprehensive digital services including web development, mobile apps, UI/UX design, and digital marketing.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="Src/CSS/Index.css">
+  <link rel="stylesheet" href="Src/CSS/Navbar.css">
+  <link rel="stylesheet" href="Src/CSS/Overview.css">
+  <link rel="stylesheet" href="Src/CSS/Footer.css">
+  
+  <!-- Bootstrap + Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Src/Assets/yohologo.png" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <img src="Src/Assets/Loaded.png" alt="Yoho Technologies Loading" class="rotating-logo">
+  </div>
+
+  <!-- Navbar -->
+  <div class="color-bar"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-container">
+            <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+            <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">Who We Are</a></li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger active">What We Do</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="Overview.html" class="category-item active" data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Website Design</a>
+                <a href="#" class="category-item" data-category="website-development">Website Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <div class="dropdown-services active" id="overview">
+                <div class="#">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Website Design & Development</a>
+                  <a href="services.html" class="service-item">Mobile App Development</a>
+                  <a href="services.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="services.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="services.html" class="service-item">Custom Software Development</a>
+                  <a href="services.html" class="service-item">UI/UX Design Services</a>
+                  <a href="services.html" class="service-item">Cloud Solutions</a>
+                  <a href="services.html" class="service-item">SEO & Analytics</a>
+                  <a href="services.html" class="service-item">Consulting Services</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">Industries</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                <a href="#" class="category-item" data-category="education">EdTech</a>
+              </div>
+              <div class="dropdown-services active" id="fintech">
+                <div class="services-title">FinTech Solutions</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Banking Solutions</a>
+                  <a href="services.html" class="service-item">Payment Gateways</a>
+                  <a href="services.html" class="service-item">Digital Wallets</a>
+                  <a href="services.html" class="service-item">Investment Platforms</a>
+                  <a href="services.html" class="service-item">Insurance Tech</a>
+                  <a href="services.html" class="service-item">Blockchain Solutions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+            <button class="search-close" id="search-close">×</button>
+          </div>
+        </div>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="container">
+        <div class="row align-items-center min-vh-100 g-0">
+          <div class="col-lg-6 d-flex justify-content-end p-0">
+            <div class="video-container">
+              <video class="video-element" id="mainVideo" autoplay muted loop>
+                <source src="Src/Assets/Career.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 d-flex align-items-center p-0">
+            <div class="content-section">
+              <h1 class="main-heading">
+                Big enough to deliver.
+                Small enough to care.
+              </h1>
+              
+              <p>
+                We're more than just hands on keyboards. We take time to learn everything about your business: your dreams, hopes, fears, challenges. And together, we find new and inventive ways to grow your revenue, delight your customers, and solve the problems you face.
+              </p>
+              
+              <p>
+                We're not too big that you'll just be a number, and not too small that we can't scale with you.
+              </p>
+              
+              <a href="contact.html" class="cts-button">Get to know us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- Services Section -->
+    <div class="services-section">
+      <div class="container px-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="services-heading">
+              By your side, every step the<br>
+              product lifecycle
+            </h2>
+            <p class="services-description">
+              From concept to validation. Prototyping to strategy. Acceleration to delivery. We are 
+              your hands-on digital product development and system integration services partner. 
+              We transform your dreams into tailored digital experiences your users will love.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 100 100" class="icon-starburst">
+                  <g stroke="currentColor" stroke-width="2" fill="none">
+                    <line x1="50" y1="10" x2="50" y2="90"/>
+                    <line x1="10" y1="50" x2="90" y2="50"/>
+                    <line x1="21.7" y1="21.7" x2="78.3" y2="78.3"/>
+                    <line x1="78.3" y1="21.7" x2="21.7" y2="78.3"/>
+                    <line x1="35" y1="15" x2="65" y2="85"/>
+                    <line x1="85" y1="35" x2="15" y2="65"/>
+                    <line x1="65" y1="15" x2="35" y2="85"/>
+                    <line x1="15" y1="35" x2="85" y2="65"/>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="service-title">Digital Marketing</h3>
+              <a href="contact.html" class="service-link">
+                Read more <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 100 100" class="icon-atom">
+                  <g stroke="currentColor" stroke-width="2" fill="none">
+                    <circle cx="50" cy="50" r="5"/>
+                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(60 50 50)"/>
+                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(120 50 50)"/>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="service-title">UI UX design services</h3>
+              <a href="contact.html" class="service-link">
+                Read more<i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 100 100" class="icon-refresh">
+                  <g stroke="currentColor" stroke-width="2" fill="none">
+                    <circle cx="50" cy="50" r="30"/>
+                    <circle cx="50" cy="50" r="20"/>
+                    <circle cx="50" cy="50" r="10"/>
+                    <circle cx="50" cy="50" r="35"/>
+                    <path d="M50,15 L55,25 L45,25 Z"/>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="service-title">Mobile App Development</h3>
+              <a href="contact.html" class="service-link">
+                Read more <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 100 100" class="icon-monitor">
+                  <g stroke="currentColor" stroke-width="2" fill="none">
+                    <rect x="20" y="25" width="60" height="40" rx="3"/>
+                    <line x1="20" y1="75" x2="80" y2="75"/>
+                    <line x1="35" y1="65" x2="35" y2="75"/>
+                    <line x1="65" y1="65" x2="65" y2="75"/>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="service-title">Website Development</h3>
+              <a href="contact.html" class="service-link">
+                Read more <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 100 100" class="icon-circles">
+                  <g stroke="currentColor" stroke-width="2" fill="none">
+                    <circle cx="50" cy="50" r="8"/>
+                    <circle cx="50" cy="50" r="16"/>
+                    <circle cx="50" cy="50" r="24"/>
+                    <circle cx="50" cy="50" r="32"/>
+                    <circle cx="50" cy="50" r="40"/>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="service-title">Software architecture services</h3>
+              <a href="contact.html" class="service-link">
+                Read more <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 100 100" class="icon-network">
+                  <g stroke="currentColor" stroke-width="2" fill="none">
+                    <circle cx="50" cy="30" r="8"/>
+                    <circle cx="25" cy="60" r="8"/>
+                    <circle cx="75" cy="60" r="8"/>
+                    <circle cx="50" cy="80" r="8"/>
+                    <line x1="50" y1="38" x2="32" y2="52"/>
+                    <line x1="50" y1="38" x2="68" y2="52"/>
+                    <line x1="33" y1="60" x2="42" y2="72"/>
+                    <line x1="67" y1="60" x2="58" y2="72"/>
+                    <line x1="50" y1="15" x2="50" y2="5"/>
+                    <line x1="45" y1="20" x2="35" y2="10"/>
+                    <line x1="55" y1="20" x2="65" y2="10"/>
+                    <line x1="40" y1="25" x2="25" y2="15"/>
+                    <line x1="60" y1="25" x2="75" y2="15"/>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="service-title">Data science and AI</h3>
+              <a href="contact.html" class="service-link">
+                Read more <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- Testimonials Section -->
+    <div class="header">
+      <h1>What Our Users Say</h1>
+      <p>Real testimonials from real people</p>
+    </div>
+    
+    <div class="collage-container">
+      <div class="testimonials-container">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Yoho Technologies developed our complete e-commerce platform from scratch, and we couldn't be more satisfied with the outcome. From the initial consultation to the final deployment, their team was professional, communicative, and focused on delivering high-quality work. They took the time to understand our business model, customer base, and design preferences, which reflected in the final product.
+
+            The user interface is smooth, intuitive, and visually appealing, while the backend is robust and highly scalable. Features like real-time order tracking, secure payment integration, and a custom admin dashboard were all implemented flawlessly. Even when we made a few last-minute changes, the team adapted quickly without compromising delivery timelines."
+          </p>
+          <div class="user-info">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
+                 class="user-avatar" alt="Sarah Thompson">
+            <div>
+              <p class="user-name">Sarah Thompson</p>
+              <p class="user-title">Project Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We approached Yoho Technologies for a cross-platform mobile app. They handled everything from design to deployment professionally. Their regular updates and transparent process made us feel confident throughout."</p>
+          <div class="user-info">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
+                 class="user-avatar" alt="Michael Chen">
+            <div>
+              <p class="user-name">Michael Chen</p>
+              <p class="user-title">Software Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"As a startup, we needed a tech partner who could understand our vision and work closely with us. Yoho Technologies delivered a scalable MVP within our budget and offered continued support post-launch."</p>
+          <div class="user-info">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" 
+                 class="user-avatar" alt="Emily Rodriguez">
+            <div>
+              <p class="user-name">Emily Rodriguez</p>
+              <p class="user-title">Data Analyst</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Yoho Technologies built a custom booking system for my business. Their team listened carefully to our needs and translated them into a user-friendly application. We've seen a 40% increase in customer engagement."</p>
+          <div class="user-info">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
+                 class="user-avatar" alt="Ryan Sullivan">
+            <div>
+              <p class="user-name">Ryan Sullivan</p>
+              <p class="user-title">Business Owner</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Despite being in different time zones, Yoho's communication was consistent and effective. They managed our project remotely with professionalism and precision. I would recommend them to anyone looking for remote tech services."</p>
+          <div class="user-info">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" 
+                 class="user-avatar" alt="David Patel">
+            <div>
+              <p class="user-name">David Patel</p>
+              <p class="user-title">IT Consultant</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Yoho Technologies helped us digitize patient record management. The team followed strict data privacy protocols and built a secure system. We're impressed with their domain understanding and execution."</p>
+          <div class="user-info">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" 
+                 class="user-avatar" alt="Olivia Harper">
+            <div>
+              <p class="user-name">Olivia Harper</p>
+              <p class="user-title">Marketing Specialist</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 7 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I've worked with several development teams, and Yoho stands out for their structured workflow and on-time delivery. They're efficient, technically strong, and committed to quality."</p>
+          <div class="user-info">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face" 
+                 class="user-avatar" alt="James Carter">
+            <div>
+              <p class="user-name">James Carter</p>
+              <p class="user-title">Operations Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 8 -->
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We hired Yoho Technologies to develop an online learning portal. They included features like live classes, assessments, and student tracking. The final product was clean, fast, and well-optimized for mobile use."</p>
+          <div class="user-info">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" 
+                 class="user-avatar" alt="Dr. Lisa Wang">
+            <div>
+              <p class="user-name">Dr. Lisa Wang</p>
+              <p class="user-title">Research Scientist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Top Section -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 98844 92652</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@yohotechnologies.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117. (Near:ESAF BANK)</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html">News & Events</a></li>
+              <li><a href="about.html">Awards & Recognition</a></li>
+              <li><a href="about.html">Investor Relations</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html">E-Commerce Solutions</a></li>
+              <li><a href="services.html">Supply Chain Management</a></li>
+              <li><a href="services.html">Data Analytics</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">AI & Machine Learning</a></li>
+              <li><a href="services.html">Digital Consulting</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h3>Industries</h3>
+            <ul>
+              <li><a href="services.html">Retail & Consumer</a></li>
+              <li><a href="services.html">Healthcare</a></li>
+              <li><a href="services.html">Financial Services</a></li>
+              <li><a href="services.html">Manufacturing</a></li>
+              <li><a href="services.html">Government</a></li>
+              <li><a href="services.html">Education</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="about.html">Blog</a></li>
+              <li><a href="about.html">Case Studies</a></li>
+              <li><a href="about.html">Whitepapers</a></li>
+              <li><a href="about.html">Documentation</a></li>
+              <li><a href="contact.html">Support Center</a></li>
+              <li><a href="about.html">Training & Certification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+        </div>
+        <div class="footer-bottom-left">
+          <div class="copyright">
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookies.html">Cookie Policy</a>
+            <a href="security.html">Security</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+        
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Src/JS/Navbar.js"></script>
+  <script src="Src/JS/Overview.js"></script>
+  <script src="Src/JS/search.js"></script>
+  <script>
+    // Simple navbar functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Hide loading screen
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 800);
+
+      // Navbar scroll effects
+      const navbar = document.getElementById('navbar');
+      const colorBar = document.querySelector('.color-bar');
+      
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+          colorBar.classList.add('hidden');
+        } else {
+          navbar.classList.remove('scrolled');
+          colorBar.classList.remove('hidden');
+        }
+      });
+
+      // Search functionality is now handled by search.js
+      
+      // Dynamic copyright year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

@@ -60,12 +60,26 @@ fetch("Src/Component/Footer.html")
     }
   });
 
-// Function to load a page into the main content area - Made global for Navbar.js access
+// Legacy function for backward compatibility - now uses router
 window.loadPage = function loadPage(pageName) {
-  // Show loading screen during navigation
+  console.log('📄 Legacy loadPage called, redirecting to router');
+  
+  if (window.router) {
+    const path = pageName.toLowerCase() === 'home' ? '/' : `/${pageName.toLowerCase()}`;
+    window.router.navigate(path);
+  } else {
+    console.warn('⚠️ Router not available, loading page directly');
+    loadPageDirect(pageName);
+  }
+};
+
+// Direct page loading function (fallback)
+function loadPageDirect(pageName) {
   const loadingScreen = document.getElementById('loading-screen');
-  loadingScreen.style.display = 'flex';
-  loadingScreen.classList.remove('hidden');
+  if (loadingScreen) {
+    loadingScreen.style.display = 'flex';
+    loadingScreen.classList.remove('hidden');
+  }
   
   fetch(`Src/HTML/${pageName}.html`)
     .then(response => {
@@ -77,37 +91,39 @@ window.loadPage = function loadPage(pageName) {
     .then(data => {
       document.getElementById("main-content").innerHTML = data;
       
-      // Hide loading screen
-      setTimeout(function() {
-        loadingScreen.classList.add('hidden');
+      if (loadingScreen) {
         setTimeout(function() {
-          loadingScreen.style.display = 'none';
-        }, 500);
-      }, 300);
+          loadingScreen.classList.add('hidden');
+          setTimeout(function() {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }, 300);
+      }
       
-      // Scroll to top when loading a new page
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      
-      // Initialize any page-specific scripts
       initPageScripts();
     })
     .catch(error => {
       console.error('Error loading page:', error);
       document.getElementById("main-content").innerHTML = `
-        <div class="error-container">
+        <div class="error-container" style="text-align: center; padding: 50px; background: #000; color: #fff;">
           <h2>Page Not Found</h2>
           <p>Sorry, the requested page could not be loaded.</p>
-          <button onclick="loadPage('Home')">Return to Home</button>
+          <button onclick="window.router ? window.router.navigate('/') : loadPageDirect('Home')" 
+                  style="padding: 10px 20px; background: #15de79; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Return to Home
+          </button>
         </div>
       `;
       
-      // Hide loading screen on error
-      setTimeout(function() {
-        loadingScreen.classList.add('hidden');
+      if (loadingScreen) {
         setTimeout(function() {
-          loadingScreen.style.display = 'none';
-        }, 500);
-      }, 300);
+          loadingScreen.classList.add('hidden');
+          setTimeout(function() {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }, 300);
+      }
     });
 }
 
@@ -148,7 +164,8 @@ function initPageScripts() {
   }
 }
 
-// Load home page on initial load
+// Initialize router on DOM load - router will handle initial page load
 window.addEventListener("DOMContentLoaded", () => {
-  loadPage("Home");
+  console.log('🚀 DOM loaded, router will handle initial navigation');
+  // Router initialization is handled in Router.js
 });
