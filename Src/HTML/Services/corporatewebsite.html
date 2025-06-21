@@ -2,28 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static Website Design Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
     rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/Src/CSS/Services/StaticWebDesign.css" rel="stylesheet">
+  <link href="/Src/CSS/Navbar.css" rel="stylesheet">
+  <link href="/Src/CSS/fonts.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="color-bar"></div>
-
-  <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="logo">
-        <a href="#" data-page="Home">
+        <a href="index.html">
           <div class="logo-container">
             <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
             <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
@@ -31,40 +34,38 @@
         </a>
       </div>
       <ul class="nav-links">
-        <li><a href="#" data-page="About">Who We Are</a></li>
+        <li><a href="about.html">Who We Are</a></li>
         <li class="dropdown-parent">
-          <a href="#" data-page="Services" class="dropdown-trigger">What We Do</a>
+          <a href="#" class="dropdown-trigger">What We Do</a>
           <div class="dropdown-backdrop"></div>
           <div class="mega-dropdown">
             <div class="mega-dropdown-container">
-              <!-- Left Categories -->
               <div class="dropdown-categories">
-                <a href="#" class="category-item active" data-category="overview">Overview</a>
+                <a href="services.html" class="category-item active" data-category="overview">Overview</a>
                 <a href="#" class="category-item" data-category="website-design">Website Design</a>
                 <a href="#" class="category-item" data-category="website-development">Website Development</a>
                 <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
                 <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
               </div>
-              <!-- Right Services -->
               <div class="dropdown-services active" id="overview">
                 <div class="services-title">Our Services Overview</div>
                 <div class="services-grid">
-                  <a href="#" class="service-item">Website Design & Development</a>
-                  <a href="#" class="service-item">Mobile App Development</a>
-                  <a href="#" class="service-item">Digital Marketing Solutions</a>
-                  <a href="#" class="service-item">E-Commerce Solutions</a>
-                  <a href="#" class="service-item">Custom Software Development</a>
-                  <a href="#" class="service-item">UI/UX Design Services</a>
-                  <a href="#" class="service-item">Cloud Solutions</a>
-                  <a href="#" class="service-item">SEO & Analytics</a>
-                  <a href="#" class="service-item">Consulting Services</a>
+                  <a href="services.html" class="service-item">Website Design & Development</a>
+                  <a href="services.html" class="service-item">Mobile App Development</a>
+                  <a href="services.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="services.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="services.html" class="service-item">Custom Software Development</a>
+                  <a href="services.html" class="service-item">UI/UX Design Services</a>
+                  <a href="services.html" class="service-item">Cloud Solutions</a>
+                  <a href="services.html" class="service-item">SEO & Analytics</a>
+                  <a href="services.html" class="service-item">Consulting Services</a>
                 </div>
               </div>
               <div class="dropdown-services" id="website-design">
                 <div class="services-title">Website Design</div>
                 <div class="services-grid">
-                  <a href="/officewebsite/" class="service-item">Static Website Designing</a>
-                  <a href="#" class="service-item">Dynamic Website Designing</a>
+                  <a href="staticwebdesign.html" class="service-item">Static Website Designing</a>
+                  <a href="/Src/HTML/Services/dynamicwebsite.html" class="service-item">Dynamic Website Designing</a>
                   <a href="#" class="service-item">Corporate Website Designing</a>
                   <a href="#" class="service-item">Professional Website Designing</a>
                   <a href="#" class="service-item">Customized Website Designing</a>
@@ -117,7 +118,7 @@
           </div>
         </li>
         <li class="dropdown-parent">
-          <a href="#" data-page="Industries" class="dropdown-trigger">Industries</a>
+          <a href="services.html" class="dropdown-trigger">Industries</a>
           <div class="dropdown-backdrop"></div>
           <div class="mega-dropdown">
             <div class="mega-dropdown-container">
@@ -130,12 +131,12 @@
               <div class="dropdown-services active" id="fintech">
                 <div class="services-title">FinTech Solutions</div>
                 <div class="services-grid">
-                  <a href="#" class="service-item">Banking Solutions</a>
-                  <a href="#" class="service-item">Payment Gateways</a>
-                  <a href="#" class="service-item">Digital Wallets</a>
-                  <a href="#" class="service-item">Investment Platforms</a>
-                  <a href="#" class="service-item">Insurance Tech</a>
-                  <a href="#" class="service-item">Blockchain Solutions</a>
+                  <a href="services.html" class="service-item">Banking Solutions</a>
+                  <a href="services.html" class="service-item">Payment Gateways</a>
+                  <a href="services.html" class="service-item">Digital Wallets</a>
+                  <a href="services.html" class="service-item">Investment Platforms</a>
+                  <a href="services.html" class="service-item">Insurance Tech</a>
+                  <a href="services.html" class="service-item">Blockchain Solutions</a>
                 </div>
               </div>
               <div class="dropdown-services" id="healthcare">
@@ -174,12 +175,10 @@
             </div>
           </div>
         </li>
-        <li><a href="#" data-page="Careers">Careers</a></li>
-        <li><a href="#" data-page="Contact">Contact Us</a></li>
-
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
 
-      <!-- Right side: Search and CTA -->
       <div class="navbar-right">
         <div class="search-container">
           <button class="search-toggle" id="search-toggle">
@@ -193,10 +192,87 @@
             <button class="search-close" id="search-close">×</button>
           </div>
         </div>
-        <a href="#contact" class="cta-button">Get in Touch</a>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
       </div>
     </div>
   </nav>
+
+  <div class="container1">
+    <div class="text-section">
+      <h1 class="heading underline">Component-Based UI Libraries</h1>
+      <p>Component-Based UI Libraries are modern front-end development tools that enable developers to build user interfaces using modular, reusable building blocks called components.</b>.</p>
+      <div class="buttons">
+        <button>Our work</button>
+        <button>Get in touch</button>
+      </div>
+    </div>
+    <div class="image-section">
+      <img src="/Src/Assets/WebStatic/dynamic3.jpg" alt="Dynamic Web Design Mockup" />
+    </div>
+  </div>
+
+  <!-- SECTION 2: Services -->
+  <div class="section-1">
+    <h1 class="underline">We offer</h1>
+    <div class="services">
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/star.png" alt=""></div>
+        <h2>Reusable Components</h2>
+        <p> UI elements are built as independent, self-contained components (e.g., buttons, forms, modals) that can be reused across the application—reducing duplication and improving maintainability.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service6.png" alt=""></div>
+        <h2>Modular Architecture</h2>
+        <p>Each component manages its own structure, style, and logic, making the UI more modular, easier to debug, and scalable as the project grows.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service7.png" alt=""></div>
+        <h2>State Management Integration</h2>
+        <p>Components can maintain and share internal state, enabling dynamic interactions (like toggles, form inputs, dropdowns) and smooth user experiences.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service8.png" alt=""></div>
+        <h2>Encapsulation & Isolation</h2>
+        <p>Styles, logic, and markup are scoped within components, preventing conflicts and ensuring changes in one part don’t affect others.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Embracing Design Systems -->
+  <section class="container">
+    <div class="text-content">
+      <h1 class="underline">Better Code Reusability & Testing</h1>
+      <p class="text-content-para">
+          Since components are isolated units, they can be independently tested, documented, and reused across different projects or teams.
+
+ Component libraries align well with design systems, allowing teams to build UI that’s consistent with branding and easier to manage at scale.
+      </p>
+      <div class="tags">
+        <span>Design System Integration</span>
+        <span> Ecosystem & Tooling Support</span>
+        <span>Consistency across the UI</span>
+        <span>Enhanced User Experience</span>
+        <span>Improved testing and debugging</span>
+      </div>
+    </div>
+    <div class="visual-card">
+      <div class="icon-circle">
+        <div class="center-dot"></div>
+        <div class="orbit">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      <p class="note">
+        We guide you in the planning, design, and development of your personal or corporate websites, where the
+        information or content once written does not change very often.<b><i>Yoho Technologies is one of the top web
+        developers in Chennai.</i></b>
+      </p>
+    </div>
+  </section>
+  <script src="/officewebsite/Navbar.js"></script>
 </body>
 
 </html>

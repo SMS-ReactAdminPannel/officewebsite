@@ -192,26 +192,27 @@ body {
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #3aed6a, #15de79);
-  color: #001833;
+  background: #3aed6a;
+  color: #ffffff;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-weight: 600;
   font-size: 14px;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
   border: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(58, 237, 106, 0.2);
+  /* box-shadow: 0 4px 15px rgba(58, 237, 106, 0.2); */
 }
 
 .cta-button:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(58, 237, 106, 0.4);
-  background: linear-gradient(135deg, #45f475, #1ee684);
+  color: #ffffff;
+  /* transform: translateY(-3px) scale(1.02); */
+  /* box-shadow: 0 12px 35px rgba(58, 237, 106, 0.4); */
+  /* background: linear-gradient(135deg, #45f475, #1ee684); */
 }
 
 .logo-container {
