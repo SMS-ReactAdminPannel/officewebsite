@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI in Web Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/Src/CSS/Services/StaticWebDesign.css" rel="stylesheet">
+  <link href="Src/CSS/Navbar.css" rel="stylesheet">
+  <link rel="stylesheet" href="Src/CSS/Footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <link href="/Src/CSS/fonts.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="color-bar"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-container">
+            <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+            <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">Who We Are</a></li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">What We Do</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="services.html" class="category-item active" data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Web Design</a>
+                <a href="#" class="category-item" data-category="website-development">Web Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <div class="dropdown-services active" id="overview">
+                <div class="services-title">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="Overview.html" class="service-item">Website Design & Development</a>
+                  <a href="Overview.html" class="service-item">Mobile App Development</a>
+                  <a href="Overview.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="Overview.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="Overview.html" class="service-item">Custom Software Development</a>
+                  <a href="Overview.html" class="service-item">UI/UX Design Services</a>
+                  <a href="Overview.html" class="service-item">Cloud Solutions</a>
+                  <a href="Overview.html" class="service-item">SEO & Analytics</a>
+                  <a href="Overview.html" class="service-item">Consulting Services</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="website-design">
+                <div class="services-title">Web Design</div>
+                <div class="services-grid">
+                  <a href="staticwebdesign.html" class="service-item">Responsive Design 3.0</a>
+                  <a href="#" class="service-item">CSS Frameworks & Utilities</a>
+                  <a href="#" class="service-item">Component-Based UI Libraries</a>
+                  <a href="#" class="service-item">Next-Gen JavaScript Tooling</a>
+                  <a href="#" class="service-item">Headless CMS</a>
+                  <a href="#" class="service-item">API-First Development</a>
+                  <a href="#" class="service-item">AI in Web Design</a>
+                  <a href="#" class="service-item">Design Systems & Tokens</a>
+                  <a href="#" class="service-item">Animation & Interactivity</a>
+                  <a href="#" class="service-item">Accessibility & Inclusive Design</a>
+                  <a href="#" class="service-item">Performance-First Mindset</a>
+                  <a href="#" class="service-item">Web 3D and Immersive Design</a>
+                  <a href="#" class="service-item">Static Site Generators & JAMstack</a>
+                  <a href="#" class="service-item">Cloud & Edge Deployment</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="website-development">
+                <div class="services-title">Web Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item"> Frontend Frameworks & Libraries</a>
+                  <a href="#" class="service-item">JavaScript & TypeScript</a>
+                  <a href="#" class="service-item">Build Tools & Bundlers</a>
+                  <a href="#" class="service-item">Backend Frameworks & Runtimes</a>
+                  <a href="#" class="service-item">Full-Stack Frameworks</a>
+                  <a href="#" class="service-item">API Technologies</a>
+                  <a href="#" class="service-item">Database & ORM Tools</a>
+                  <a href="#" class="service-item"> Authentication & Security</a>
+                  <a href="#" class="service-item">DevOps & Deployment</a>
+                  <a href="#" class="service-item"> Hosting & Edge Platforms</a>
+                  <a href="#" class="service-item">Realtime & Messaging</a>
+                  <a href="#" class="service-item"> AI Integration in Development</a>
+                  <a href="#" class="service-item"> Package Managers & Monorepos</a>
+                  <a href="#" class="service-item"> Progressive Web Apps (PWA)</a>
+                  <a href="#" class="service-item"> WebAssembly (WASM)</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="mobile-solutions">
+                <div class="services-title">Mobile App Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Cross-Platform Frameworks</a>
+                  <a href="#" class="service-item">Native Development Technologies</a>
+                  <a href="#" class="service-item">Hybrid App Technologies</a>
+                  <a href="#" class="service-item">Backend-as-a-Service (BaaS)</a>
+                  <a href="#" class="service-item">State Management & Architecture</a>
+                  <a href="#" class="service-item">UI/UX & Animation Libraries</a>
+                  <a href="#" class="service-item">Testing & CI/CD Tools</a>
+                  <a href="#" class="service-item">Push Notifications & Messaging</a>
+                  <a href="#" class="service-item">Offline & Sync Support</a>
+                  <a href="#" class="service-item">Mobile App Deployment</a>
+                  <a href="#" class="service-item">Security & Authentication</a>
+                  <a href="#" class="service-item">AI & ML in Mobile Apps</a>
+                  <a href="#" class="service-item">AR/VR Technologies</a>
+                  <a href="#" class="service-item">Super & Mini-Apps Architecture</a>
+                  <a href="#" class="service-item">Monetization & Analytics</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="digital-marketing">
+                <div class="services-title">Digital Marketing</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">AI-Powered Marketing</a>
+                  <a href="#" class="service-item">Marketing Automation Platforms</a>
+                  <a href="#" class="service-item">Search Engine Optimization Tools</a>
+                  <a href="#" class="service-item">Social Media Marketing Platforms</a>
+                  <a href="#" class="service-item">Performance Analytics & Data</a>
+                  <a href="#" class="service-item">Content Management & Blogging</a>
+                  <a href="#" class="service-item">Email Marketing & Retargeting</a>
+                  <a href="#" class="service-item">Search Engine Marketing (SEM)</a>
+                  <a href="#" class="service-item">Influencer & Affiliate Marketing Tools</a>
+                  <a href="#" class="service-item">Customer Relationship Management</a>
+                  <a href="#" class="service-item">Voice & Visual Search Optimization</a>
+                  <a href="#" class="service-item">Web Push & SMS Marketing</a>
+                  <a href="#" class="service-item">Video & Short-Form Content Tools</a>
+                  <a href="#" class="service-item">eCommerce Marketing Tools</a>
+                  <a href="#" class="service-item">Privacy & Consent Management</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- <li class="dropdown-parent">
+          <a href="services.html" class="dropdown-trigger">Industries</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                <a href="#" class="category-item" data-category="education">EdTech</a>
+              </div>
+              <div class="dropdown-services active" id="fintech">
+                <div class="services-title">FinTech Solutions</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Banking Solutions</a>
+                  <a href="services.html" class="service-item">Payment Gateways</a>
+                  <a href="services.html" class="service-item">Digital Wallets</a>
+                  <a href="services.html" class="service-item">Investment Platforms</a>
+                  <a href="services.html" class="service-item">Insurance Tech</a>
+                  <a href="services.html" class="service-item">Blockchain Solutions</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="healthcare">
+                <div class="services-title">HealthTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Telemedicine Platforms</a>
+                  <a href="#" class="service-item">Health Management Systems</a>
+                  <a href="#" class="service-item">Medical Records</a>
+                  <a href="#" class="service-item">Fitness Apps</a>
+                  <a href="#" class="service-item">Healthcare Analytics</a>
+                  <a href="#" class="service-item">Medical IoT</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="ecommerce">
+                <div class="services-title">E-Commerce Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Online Marketplaces</a>
+                  <a href="#" class="service-item">B2B Platforms</a>
+                  <a href="#" class="service-item">Inventory Management</a>
+                  <a href="#" class="service-item">Order Management</a>
+                  <a href="#" class="service-item">Customer Analytics</a>
+                  <a href="#" class="service-item">Multi-vendor Systems</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="education">
+                <div class="services-title">EdTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Learning Management Systems</a>
+                  <a href="#" class="service-item">Online Course Platforms</a>
+                  <a href="#" class="service-item">Student Information Systems</a>
+                  <a href="#" class="service-item">Virtual Classrooms</a>
+                  <a href="#" class="service-item">Assessment Tools</a>
+                  <a href="#" class="service-item">Educational Apps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li> -->
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+            <button class="search-close" id="search-close">×</button>
+          </div>
+        </div>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container1">
+    <div class="text-section" data-aos="fade-right">
+      <h1 class="heading underline">Mobile Solutions</h1>
+      <p>At Yoho Technologies, we deliver custom mobile app solutions that blend intuitive design with powerful
+        performance. Our
+        skilled developers craft scalable, secure, and user-centric apps tailored to meet your unique business
+        goals—ensuring a
+        seamless experience across all devices and platforms.
+      </p>
+      <div class="buttons">
+        <button>Our work</button>
+        <button>Get in touch</button>
+      </div>
+    </div>
+    <div class="image-section" data-aos="fade-left">
+      <img src="/Src/Assets/mobileapp.jpg" alt="UI UX Design Mockup" />
+    </div>
+  </div>
+
+  <!-- SECTION 2: Services -->
+  <div class="section-1">
+    <h1 class="underline"> We offer</h1>
+    <div class="services">
+      <div class="service" data-aos="zoom-out-up">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/star.png" alt=""></div>
+        <h2>Custom Mobile App Development</h2>
+        <p>We build tailor-made mobile applications that align with your business objectives and deliver a seamless
+          experience to
+          your users. From concept to launch, every solution is designed for performance, scalability, and success.</p>
+      </div>
+      <div class="service" data-aos="zoom-out-up">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service6.png" alt=""></div>
+        <h2>iOS & Android App Development</h2>
+        <p>Our team develops high-quality native apps for iOS and Android using Swift, Kotlin, and platform-specific
+          best
+          practices. We ensure optimal performance and full access to native device capabilities.</p>
+      </div>
+      <div class="service" data-aos="zoom-out-up">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service7.png" alt=""></div>
+        <h2>Maintenance & Upgrades</h2>
+        <p>We offer long-term support, feature enhancements, and version upgrades to keep your mobile apps secure,
+          up-to-date, and
+          aligned with your evolving business needs.
+        </p>
+      </div>
+      <div class="service" data-aos="zoom-out-up">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service8.png" alt=""></div>
+        <h2>App Testing & Quality Assurance</h2>
+        <p>We follow rigorous testing practices including functional, performance, and security testing to ensure your
+          app works
+          flawlessly across all scenarios and devices.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="header">
+    <h1>Our features</h1>
+  </div>
+
+  <div class="collage-container">
+    <div class="testimonials-container">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="stars">Cross-Platform Frameworks</div>
+        <p class="testimonial-text">
+          At Yoho Technologies, we leverage cross-platform frameworks like React Native, Flutter, and Xamarin to build
+          mobile
+          applications that run smoothly on both iOS and Android devices from a single codebase. This approach
+          significantly
+          reduces development time and costs while maintaining a near-native user experience and performance. Our team
+          carefully
+          selects the right framework based on your project’s requirements to balance speed, functionality, and
+          scalability.
+          Cross-platform development enables faster updates and easier maintenance, allowing your app to evolve quickly
+          alongside
+          user needs. We focus on creating intuitive, responsive interfaces that adapt seamlessly across different
+          screen sizes
+          and operating systems. By combining the efficiency of cross-platform tools with best coding practices, we
+          deliver
+          reliable and high-quality apps. This method is perfect for startups and businesses looking to reach a broad
+          audience
+          without duplicating effort. Ultimately, our goal is to provide scalable, cost-effective solutions that don’t
+          compromise
+          on quality.
+        </p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="stars">Native Development Technologies</div>
+        <p class="testimonial-text">We specialize in native app development using platform-specific languages like Swift
+          for iOS and Kotlin for Android to
+          deliver highly optimized and responsive applications. Native development ensures full access to device
+          features,
+          superior performance, and a seamless user experience. Our experts build scalable, secure apps tailored to your
+          business
+          requirements. This approach is ideal for projects demanding maximum reliability and platform integration.</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="stars">Hybrid App Technologies</div>
+        <p class="testimonial-text">We develop versatile hybrid apps that combine the best of web and native
+          technologies for fast, cost-effective
+          deployment across multiple platforms. Using frameworks like React Native and Flutter, our solutions deliver
+          native-like
+          performance with a single codebase. This approach ensures quicker updates and broad device compatibility
+          without
+          sacrificing user experience.
+        </p>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial-card">
+        <div class="stars">Backend-as-a-Service (BaaS)</div>
+        <p class="testimonial-text">At Yoho Technologies, we leverage Backend-as-a-Service (BaaS) platforms to
+          accelerate app development by providing
+          ready-made backend solutions. BaaS handles server management, database integration, user authentication, and
+          cloud
+          storage, allowing developers to focus on building engaging front-end experiences. Our team customizes these
+          services to
+          fit your specific project needs, ensuring scalability and security. With BaaS, apps can rapidly deploy
+          features like
+          push notifications, real-time data sync, and user management without extensive backend coding. This approach
+          reduces
+          development time and costs while maintaining flexibility. Whether you're building a startup MVP or a complex
+          enterprise
+          solution, BaaS offers a reliable foundation. We guide you through seamless integration and ongoing support to
+          keep your
+          app running smoothly.</p>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="testimonial-card">
+        <div class="stars">State Management & Architecture</div>
+        <p class="testimonial-text">We implement robust state management solutions to ensure consistent data flow and
+          seamless user experiences across your
+          app. Our architecture designs prioritize scalability, maintainability, and performance, using tools like
+          Redux, MobX, or
+          Vuex. This approach enables efficient development and smooth interaction even in complex applications.
+        </p>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="testimonial-card">
+        <div class="stars">UI/UX & Animation Libraries</div>
+        <p class="testimonial-text">We create intuitive and engaging user interfaces by leveraging the latest UI/UX
+          principles combined with powerful
+          animation libraries. Our designs focus on seamless user journeys and visual appeal to boost interaction and
+          satisfaction. Using tools like React Spring, GSAP, and Lottie, we add smooth, dynamic animations that enhance
+          storytelling without sacrificing performance. The result is a polished, responsive experience that keeps users
+          coming
+          back.</p>
+      </div>
+
+      <!-- Testimonial 7 -->
+      <div class="testimonial-card">
+        <div class="stars">Testing & CI/CD Tools</div>
+        <p class="testimonial-text">At Yoho Technologies, we integrate comprehensive testing and continuous
+          integration/continuous deployment (CI/CD) tools
+          to streamline development and ensure high-quality releases. Automated testing catches bugs early, while CI/CD
+          pipelines
+          enable fast, reliable builds and deployments. This approach reduces manual errors, accelerates feedback loops,
+          and
+          supports seamless collaboration across teams. Our solutions are customized to fit your project’s tech stack
+          and
+          workflow. The result is a robust development cycle that delivers stable, scalable applications faster and more
+          efficiently.
+
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">AI & ML in Mobile Apps</div>
+        <p class="testimonial-text">At Yoho Technologies, we integrate Artificial Intelligence (AI) and Machine Learning
+          (ML) into mobile apps to deliver
+          smarter, more personalized user experiences. From predictive analytics to intelligent recommendations, we
+          empower your
+          app to learn from user behavior and adapt in real-time. Our AI-driven solutions enhance user engagement
+          through features
+          like voice recognition, image processing, and natural language understanding. We also implement chatbots and
+          virtual
+          assistants for seamless customer support. Machine learning models are trained on relevant data to ensure
+          accuracy and
+          relevance. Whether it's automating tasks or uncovering user insights, we make your app more efficient and
+          user-centric.
+          All solutions are built with scalability and security in mind. With AI and ML, your app evolves with every
+          interaction—creating lasting value for your business.
+        </p>
+      </div>
+
+      <!-- Testimonial 8 -->
+      <div class="testimonial-card">
+        <div class="stars">Push Notifications & Messaging</div>
+        <p class="testimonial-text">We deliver reliable push notification and messaging solutions to keep your users
+          engaged and informed in real-time. Our
+          systems support personalized, targeted communication across multiple devices and platforms.
+        </p>
+      </div>
+
+      <!-- Testimonial 9 -->
+      <div class="testimonial-card">
+        <div class="stars">Offline & Sync Support</div>
+        <p class="testimonial-text">We build mobile and web apps with robust offline functionality, allowing users to
+          access key features without an
+          internet connection. Data is securely stored locally and automatically synced when connectivity is restored.
+          This
+          ensures a seamless user experience, even in low or no-network environments.</p>
+      </div>
+
+
+
+
+      <!-- Testimonial 10 -->
+      <div class="testimonial-card">
+        <div class="stars">Mobile App Deployment</div>
+        <p class="testimonial-text">At Yoho Technologies, we ensure smooth and efficient deployment of mobile apps
+          across both iOS and Android platforms.
+          Our team handles everything from app store compliance and build optimization to release management and version
+          control.
+          We streamline the entire launch process to reduce time-to-market and avoid common publishing roadblocks.
+          Post-deployment, we support app monitoring, crash reporting, and updates to keep your app running flawlessly.
+          Whether
+          it's a native, hybrid, or cross-platform app, we tailor the deployment process to your tech stack and business
+          goals.
+          With our end-to-end deployment support, your app reaches users faster—fully tested and ready for scale.</p>
+      </div>
+
+      <!-- Testimonial 11 -->
+      <div class="testimonial-card">
+        <div class="stars">Security & Authentication</div>
+        <p class="testimonial-text">We implement robust security protocols and modern authentication methods to protect
+          your apps and user data. From
+          encrypted communications to multi-factor authentication, our solutions are built to prevent breaches and
+          ensure
+          compliance. With Yoho Technologies, your platform stays secure, reliable, and user-trustworthy.</p>
+      </div>
+
+      <!-- Testimonial 13 -->
+      <div class="testimonial-card">
+        <div class="stars">AR/VR Technologies</div>
+        <p class="testimonial-text">We build immersive AR/VR experiences that blend the digital and physical worlds for
+          enhanced user interaction. From
+          virtual product demos to interactive training modules, our solutions are tailored for impact and engagement.
+        </p>
+      </div>
+
+      <!-- Testimonial 12 -->
+
+
+
+      <!-- Testimonial 14 -->
+      <div class="testimonial-card">
+        <div class="stars">Super & Mini-Apps Architecture</div>
+        <p class="testimonial-text">We design and develop scalable architectures for Super Apps and Mini-Apps that
+          support multiple services under one
+          unified platform. Our modular approach enables seamless integration of features like payments, chat, booking,
+          and
+          more—without performance loss. Each mini-app is independently deployable, ensuring flexibility and faster
+          updates. This
+          structure boosts user engagement while keeping your ecosystem agile and future-ready.</p>
+      </div>
+
+      <!-- Testimonial 15 -->
+      <div class="testimonial-card">
+        <div class="stars">Monetization & Analytics</div>
+        <p class="testimonial-text">We integrate powerful analytics tools to give you real-time insights into user
+          behavior and site performance. Our team
+          helps you implement effective monetization strategies like ads, subscriptions, or affiliate systems. With
+          clear data,
+          you can make smarter decisions that boost engagement and revenue. Everything is optimized for scalability,
+          security, and
+          long-term growth.</p>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- SECTION 3: Embracing Design Systems -->
+  <section class="container">
+    <div class="text-content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+      <h1 class="underline"> Why Choose Yoho Technologies</h1>
+      <p class="text-content-para">We combine strong technical expertise with industry insight to deliver mobile apps
+        that are secure, scalable, and
+        future-ready. Our commitment to quality, communication, and innovation sets us apart in every project we take
+        on.
+      </p>
+      <div class="tags">
+        <span>End-to-End Development</span>
+        <span>Scalable Architecture</span>
+        <span>Flexible Engagement Models</span>
+        <span>Security-First Development</span>
+      </div>
+    </div>
+    <div class="visual-card" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+      <div class="icon-circle">
+        <div class="center-dot"></div>
+        <div class="orbit">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      <p class="note">
+        From native and cross-platform development to backend systems and cloud integration, our team covers the full
+        mobile app
+        development lifecycle. We design and build apps that are fast, reliable, and optimized for real-world use.
+        </b>
+      </p>
+    </div>
+
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Top Section -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 98844 92652</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@yohotechnologies.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117.
+                (Near:ESAF BANK)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html">News & Events</a></li>
+              <li><a href="about.html">Awards & Recognition</a></li>
+              <li><a href="about.html">Investor Relations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html">E-Commerce Solutions</a></li>
+              <li><a href="services.html">Supply Chain Management</a></li>
+              <li><a href="services.html">Data Analytics</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">AI & Machine Learning</a></li>
+              <li><a href="services.html">Digital Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Industries</h3>
+            <ul>
+              <li><a href="services.html">Retail & Consumer</a></li>
+              <li><a href="services.html">Healthcare</a></li>
+              <li><a href="services.html">Financial Services</a></li>
+              <li><a href="services.html">Manufacturing</a></li>
+              <li><a href="services.html">Government</a></li>
+              <li><a href="services.html">Education</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="about.html">Blog</a></li>
+              <li><a href="about.html">Case Studies</a></li>
+              <li><a href="about.html">Whitepapers</a></li>
+              <li><a href="about.html">Documentation</a></li>
+              <li><a href="contact.html">Support Center</a></li>
+              <li><a href="about.html">Training & Certification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Newsletter Subscription -->
+      <!-- <div class="footer-newsletter">
+        <div class="newsletter-content">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest insights and technology trends</p>
+        </div>
+        <div class="newsletter-form">
+          <form id="newsletter-form">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" required>
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div> -->
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+        </div>
+        <div class="footer-bottom-left">
+          <div class="copyright">
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookies.html">Cookie Policy</a>
+            <a href="security.html">Security</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/officewebsite/Navbar.js"></script>
+  <script src="Src/JS/Mobile.js"></script>
+  <script src="Src/JS/dropdown.js"></script>
+  <script src="Src/JS/search.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
