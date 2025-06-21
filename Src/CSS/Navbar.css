@@ -302,7 +302,7 @@ body {
 }
 
 .dropdown-trigger::before {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 50%;
@@ -360,7 +360,7 @@ body {
 }
 
 .category-item.active::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -397,7 +397,7 @@ body {
 }
 
 .services-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -452,10 +452,62 @@ body {
   50% { background-position: 100% 50%; }
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
   .nav-container { padding: 1rem; }
-  .nav-links { display: none; }
+  
+  .mobile-menu-toggle { display: block; }
+  
+  .nav-links {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 68px);
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 0;
+    gap: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+  
+  .nav-links.active {
+    transform: translateX(0);
+  }
+  
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 18px;
+    width: 100%;
+  }
+  
   .navbar-right { gap: 1rem; }
   .search-dropdown { width: 250px; right: -10px; }
   .cta-button { padding: 0.6rem 1.2rem; font-size: 13px; }
@@ -474,17 +526,8 @@ body {
   .logo-container { width: 120px; }
   .logo-container img { height: 30px; }
   
-  .search-overlay .search-input {
-    font-size: 24px;
-    padding: 15px 0;
-  }
-  
-  .search-content {
-    padding: 40px 15px 30px;
-  }
-  
-  .search-suggestion {
+  .nav-links a {
     font-size: 16px;
-    padding: 12px 0;
+    padding: 0.8rem 1.5rem;
   }
 }

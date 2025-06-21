@@ -523,10 +523,16 @@
     
     .footer-top {
         padding: 3rem 0 2rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-brand {
+        text-align: center;
     }
     
     .footer-links {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
     
@@ -558,14 +564,21 @@
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-logo {
+        order: 1;
     }
     
     .footer-bottom-left {
         order: 2;
+        text-align: center;
     }
     
     .footer-bottom-right {
-        order: 1;
+        order: 3;
         flex-direction: column;
         gap: 1.5rem;
     }
@@ -573,10 +586,58 @@
     .footer-bottom-links {
         justify-content: center;
         gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .copyright {
+        text-align: center;
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width: 480px) {
+    .footer-container {
+        padding: 2rem 1rem;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-links-column h3 {
+        font-size: 16px;
+    }
+    
+    .footer-links-column ul li a {
+        font-size: 14px;
+    }
+    
+    .footer-bottom-links a {
+        font-size: 12px;
+    }
+    
+    .social-links {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .footer-contact .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .footer-tagline {
+        font-size: 14px;
+    }
+    
     .cert-logos {
         flex-direction: column;
         align-items: center;
@@ -589,9 +650,5 @@
     
     .location:not(:last-child)::after {
         display: none;
-    }
-    
-    .social-links {
-        justify-content: center;
     }
 }
