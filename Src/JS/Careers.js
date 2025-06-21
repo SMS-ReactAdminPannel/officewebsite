@@ -269,37 +269,37 @@ class CareersManager {
         this.updateLoadMoreButton();
     }
 
-    createJobCard(job) {
-        const isSaved = this.savedJobs.includes(job.id);
-        const badgeClass = job.badge.toLowerCase().replace(' ', '-');
+    // createJobCard(job) {
+    //     const isSaved = this.savedJobs.includes(job.id);
+    //     const badgeClass = job.badge.toLowerCase().replace(' ', '-');
         
-        return `
-            <div class="job-card fade-in-up" data-department="${job.department}" data-location="${job.location}" data-experience="${job.experience}">
-                <div class="job-header">
-                    <h3>${job.title}</h3>
-                    <span class="job-badge ${badgeClass}">${job.badge}</span>
-                </div>
-                <div class="job-details">
-                    <span class="job-location"><i class="fas fa-map-marker-alt"></i> ${this.formatLocation(job.location)}</span>
-                    <span class="job-type"><i class="fas fa-briefcase"></i> ${job.type}</span>
-                    <span class="job-experience"><i class="fas fa-user-tie"></i> ${this.formatExperience(job.experience)}</span>
-                </div>
-                <p>${job.description}</p>
-                <div class="job-skills">
-                    ${job.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
-                </div>
-                <div class="job-meta">
-                    <span class="job-posted"><i class="fas fa-clock"></i> Posted ${job.posted}</span>
-                </div>
-                <div class="job-actions">
-                    <button class="apply-btn" data-job-id="${job.id}">Apply Now</button>
-                    <button class="save-btn ${isSaved ? 'saved' : ''}" data-job-id="${job.id}">
-                        <i class="fas fa-heart"></i>
-                    </button>
-                </div>
-            </div>
-        `;
-    }
+    //     return `
+    //         <div class="job-card fade-in-up" data-department="${job.department}" data-location="${job.location}" data-experience="${job.experience}">
+    //             <div class="job-header">
+    //                 <h3>${job.title}</h3>
+    //                 <span class="job-badge ${badgeClass}">${job.badge}</span>
+    //             </div>
+    //             <div class="job-details">
+    //                 <span class="job-location"><i class="fas fa-map-marker-alt"></i> ${this.formatLocation(job.location)}</span>
+    //                 <span class="job-type"><i class="fas fa-briefcase"></i> ${job.type}</span>
+    //                 <span class="job-experience"><i class="fas fa-user-tie"></i> ${this.formatExperience(job.experience)}</span>
+    //             </div>
+    //             <p>${job.description}</p>
+    //             <div class="job-skills">
+    //                 ${job.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+    //             </div>
+    //             <div class="job-meta">
+    //                 <span class="job-posted"><i class="fas fa-clock"></i> Posted ${job.posted}</span>
+    //             </div>
+    //             <div class="job-actions">
+    //                 <button class="apply-btn" data-job-id="${job.id}">Apply Now</button>
+    //                 <button class="save-btn ${isSaved ? 'saved' : ''}" data-job-id="${job.id}">
+    //                     <i class="fas fa-heart"></i>
+    //                 </button>
+    //             </div>
+    //         </div>
+    //     `;
+    // }
 
     bindJobCardEvents() {
         // Apply buttons

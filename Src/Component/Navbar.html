@@ -1,197 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet" />
 
 </head>
+
 <body>
-    
-<div class="color-bar"></div>
 
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
+  <div class="color-bar"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
-        <div class="logo">
-            <a href="#" data-page="Home">
-                <div class="logo-container">
-                    <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
-                    <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+      <div class="logo">
+        <a href="#" data-page="Home">
+          <div class="logo-container">
+            <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+            <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" data-page="About">Who We Are</a></li>
+        <li class="dropdown-parent">
+          <a href="#" data-page="Services" class="dropdown-trigger">What We Do</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <!-- Left Categories -->
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Website Design</a>
+                <a href="#" class="category-item" data-category="website-development">Website Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <!-- Right Services -->
+              <div class="dropdown-services active" id="overview">
+                <div class="services-title">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Website Design & Development</a>
+                  <a href="#" class="service-item">Mobile App Development</a>
+                  <a href="#" class="service-item">Digital Marketing Solutions</a>
+                  <a href="#" class="service-item">E-Commerce Solutions</a>
+                  <a href="#" class="service-item">Custom Software Development</a>
+                  <a href="#" class="service-item">UI/UX Design Services</a>
+                  <a href="#" class="service-item">Cloud Solutions</a>
+                  <a href="#" class="service-item">SEO & Analytics</a>
+                  <a href="#" class="service-item">Consulting Services</a>
                 </div>
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#" data-page="About">Who We Are</a></li>
-            <li class="dropdown-parent">
-                <a href="#" data-page="Services" class="dropdown-trigger">What We Do</a>
-                <div class="dropdown-backdrop"></div>
-                <div class="mega-dropdown">
-                    <div class="mega-dropdown-container">
-                        <!-- Left Categories -->
-                        <div class="dropdown-categories">
-                            <a href="../HTML/Overview.html" class="category-item active" data-category="overview">Overview</a>
-                            <a href="#" class="category-item" data-category="website-design">Website Design</a>
-                            <a href="#" class="category-item" data-category="website-development">Website Development</a>
-                            <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
-                            <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
-                        </div>
-                        <!-- Right Services -->
-                        <div class="dropdown-services active" id="overview">
-                            <div class="services-title">Our Services Overview</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Website Design & Development</a>
-                                <a href="#" class="service-item">Mobile App Development</a>
-                                <a href="#" class="service-item">Digital Marketing Solutions</a>
-                                <a href="#" class="service-item">E-Commerce Solutions</a>
-                                <a href="#" class="service-item">Custom Software Development</a>
-                                <a href="#" class="service-item">UI/UX Design Services</a>
-                                <a href="#" class="service-item">Cloud Solutions</a>
-                                <a href="#" class="service-item">SEO & Analytics</a>
-                                <a href="#" class="service-item">Consulting Services</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="website-design">
-                            <div class="services-title">Website Design</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Static Website Designing</a>
-                                <a href="#" class="service-item">Dynamic Website Designing</a>
-                                <a href="#" class="service-item">Corporate Website Designing</a>
-                                <a href="#" class="service-item">Professional Website Designing</a>
-                                <a href="#" class="service-item">Customized Website Designing</a>
-                                <a href="#" class="service-item">Website Re-Designing</a>
-                                <a href="#" class="service-item">Responsive Website Designing</a>
-                                <a href="#" class="service-item">Angular JS Website Designing</a>
-                                <a href="#" class="service-item">Landing Page Designing</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="website-development">
-                            <div class="services-title">Website Development</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Web Application Development</a>
-                                <a href="#" class="service-item">PHP Website Development</a>
-                                <a href="#" class="service-item">Web Portal Development</a>
-                                <a href="#" class="service-item">E-Commerce Website Development</a>
-                                <a href="#" class="service-item">React JS Development</a>
-                                <a href="#" class="service-item">WordPress Development</a>
-                                <a href="#" class="service-item">PHP Application Development</a>
-                                <a href="#" class="service-item">OpenSource Framework</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="mobile-solutions">
-                            <div class="services-title">Mobile App Development</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Hybrid Apps Development</a>
-                                <a href="#" class="service-item">Android Apps Development</a>
-                                <a href="#" class="service-item">iPhone Apps Development</a>
-                                <a href="#" class="service-item">Cross Platform Apps Development</a>
-                                <a href="#" class="service-item">Mobile Apps Upgradation</a>
-                                <a href="#" class="service-item">Mobile Apps Re-Design</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="digital-marketing">
-                            <div class="services-title">Digital Marketing</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Market Research and Analysis</a>
-                                <a href="#" class="service-item">Content Writing Services</a>
-                                <a href="#" class="service-item">Search Engine Optimization</a>
-                                <a href="#" class="service-item">Search Engine Marketing</a>
-                                <a href="#" class="service-item">Social Media Optimization</a>
-                                <a href="#" class="service-item">Social Media Marketing</a>
-                                <a href="#" class="service-item">E-Mail Marketing</a>
-                                <a href="#" class="service-item">SMS Marketing</a>
-                                <a href="#" class="service-item">Lead Generation</a>
-                                <a href="#" class="service-item">Google PPC</a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="dropdown-services" id="website-design">
+                <div class="services-title">Website Design</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Static Website Designing</a>
+                  <a href="#" class="service-item">Dynamic Website Designing</a>
+                  <a href="#" class="service-item">Corporate Website Designing</a>
+                  <a href="#" class="service-item">Professional Website Designing</a>
+                  <a href="#" class="service-item">Customized Website Designing</a>
+                  <a href="#" class="service-item">Website Re-Designing</a>
+                  <a href="#" class="service-item">Responsive Website Designing</a>
+                  <a href="#" class="service-item">Angular JS Website Designing</a>
+                  <a href="#" class="service-item">Landing Page Designing</a>
                 </div>
-            </li>
-            <li class="dropdown-parent">
-                <a href="#" data-page="Industries" class="dropdown-trigger">Industries</a>
-                <div class="dropdown-backdrop"></div>
-                <div class="mega-dropdown">
-                    <div class="mega-dropdown-container">
-                        <div class="dropdown-categories">
-                            <a href="#" class="category-item active" data-category="fintech">FinTech</a>
-                            <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
-                            <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
-                            <a href="#" class="category-item" data-category="education">EdTech</a>
-                        </div>
-                        <div class="dropdown-services active" id="fintech">
-                            <div class="services-title">FinTech Solutions</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Banking Solutions</a>
-                                <a href="#" class="service-item">Payment Gateways</a>
-                                <a href="#" class="service-item">Digital Wallets</a>
-                                <a href="#" class="service-item">Investment Platforms</a>
-                                <a href="#" class="service-item">Insurance Tech</a>
-                                <a href="#" class="service-item">Blockchain Solutions</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="healthcare">
-                            <div class="services-title">HealthTech Solutions</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Telemedicine Platforms</a>
-                                <a href="#" class="service-item">Health Management Systems</a>
-                                <a href="#" class="service-item">Medical Records</a>
-                                <a href="#" class="service-item">Fitness Apps</a>
-                                <a href="#" class="service-item">Healthcare Analytics</a>
-                                <a href="#" class="service-item">Medical IoT</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="ecommerce">
-                            <div class="services-title">E-Commerce Solutions</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Online Marketplaces</a>
-                                <a href="#" class="service-item">B2B Platforms</a>
-                                <a href="#" class="service-item">Inventory Management</a>
-                                <a href="#" class="service-item">Order Management</a>
-                                <a href="#" class="service-item">Customer Analytics</a>
-                                <a href="#" class="service-item">Multi-vendor Systems</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="education">
-                            <div class="services-title">EdTech Solutions</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Learning Management Systems</a>
-                                <a href="#" class="service-item">Online Course Platforms</a>
-                                <a href="#" class="service-item">Student Information Systems</a>
-                                <a href="#" class="service-item">Virtual Classrooms</a>
-                                <a href="#" class="service-item">Assessment Tools</a>
-                                <a href="#" class="service-item">Educational Apps</a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="dropdown-services" id="website-development">
+                <div class="services-title">Website Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Web Application Development</a>
+                  <a href="#" class="service-item">PHP Website Development</a>
+                  <a href="#" class="service-item">Web Portal Development</a>
+                  <a href="#" class="service-item">E-Commerce Website Development</a>
+                  <a href="#" class="service-item">React JS Development</a>
+                  <a href="#" class="service-item">WordPress Development</a>
+                  <a href="#" class="service-item">PHP Application Development</a>
+                  <a href="#" class="service-item">OpenSource Framework</a>
                 </div>
-            </li>
-            <li><a href="#" data-page="Careers">Careers</a></li>
-            <li><a href="#" data-page="Contact">Contact Us</a></li>
-
-        </ul>
-
-        <!-- Right side: Search and CTA -->
-        <div class="navbar-right">
-            <div class="search-container">
-                <button class="search-toggle" id="search-toggle">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                </button>
-                <div class="search-dropdown" id="search-dropdown">
-                    <input type="text" placeholder="Search..." class="search-input" id="search-input">
-                    <button class="search-close" id="search-close">×</button>
+              </div>
+              <div class="dropdown-services" id="mobile-solutions">
+                <div class="services-title">Mobile App Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Hybrid Apps Development</a>
+                  <a href="#" class="service-item">Android Apps Development</a>
+                  <a href="#" class="service-item">iPhone Apps Development</a>
+                  <a href="#" class="service-item">Cross Platform Apps Development</a>
+                  <a href="#" class="service-item">Mobile Apps Upgradation</a>
+                  <a href="#" class="service-item">Mobile Apps Re-Design</a>
                 </div>
+              </div>
+              <div class="dropdown-services" id="digital-marketing">
+                <div class="services-title">Digital Marketing</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Market Research and Analysis</a>
+                  <a href="#" class="service-item">Content Writing Services</a>
+                  <a href="#" class="service-item">Search Engine Optimization</a>
+                  <a href="#" class="service-item">Search Engine Marketing</a>
+                  <a href="#" class="service-item">Social Media Optimization</a>
+                  <a href="#" class="service-item">Social Media Marketing</a>
+                  <a href="#" class="service-item">E-Mail Marketing</a>
+                  <a href="#" class="service-item">SMS Marketing</a>
+                  <a href="#" class="service-item">Lead Generation</a>
+                  <a href="#" class="service-item">Google PPC</a>
+                </div>
+              </div>
             </div>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+          </div>
+        </li>
+        <li class="dropdown-parent">
+          <a href="#" data-page="Industries" class="dropdown-trigger">Industries</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                <a href="#" class="category-item" data-category="education">EdTech</a>
+              </div>
+              <div class="dropdown-services active" id="fintech">
+                <div class="services-title">FinTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Banking Solutions</a>
+                  <a href="#" class="service-item">Payment Gateways</a>
+                  <a href="#" class="service-item">Digital Wallets</a>
+                  <a href="#" class="service-item">Investment Platforms</a>
+                  <a href="#" class="service-item">Insurance Tech</a>
+                  <a href="#" class="service-item">Blockchain Solutions</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="healthcare">
+                <div class="services-title">HealthTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Telemedicine Platforms</a>
+                  <a href="#" class="service-item">Health Management Systems</a>
+                  <a href="#" class="service-item">Medical Records</a>
+                  <a href="#" class="service-item">Fitness Apps</a>
+                  <a href="#" class="service-item">Healthcare Analytics</a>
+                  <a href="#" class="service-item">Medical IoT</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="ecommerce">
+                <div class="services-title">E-Commerce Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Online Marketplaces</a>
+                  <a href="#" class="service-item">B2B Platforms</a>
+                  <a href="#" class="service-item">Inventory Management</a>
+                  <a href="#" class="service-item">Order Management</a>
+                  <a href="#" class="service-item">Customer Analytics</a>
+                  <a href="#" class="service-item">Multi-vendor Systems</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="education">
+                <div class="services-title">EdTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Learning Management Systems</a>
+                  <a href="#" class="service-item">Online Course Platforms</a>
+                  <a href="#" class="service-item">Student Information Systems</a>
+                  <a href="#" class="service-item">Virtual Classrooms</a>
+                  <a href="#" class="service-item">Assessment Tools</a>
+                  <a href="#" class="service-item">Educational Apps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#" data-page="Careers">Careers</a></li>
+        <li><a href="#" data-page="Contact">Contact Us</a></li>
+
+      </ul>
+
+      <!-- Right side: Search and CTA -->
+      <div class="navbar-right">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+            <button class="search-close" id="search-close">×</button>
+          </div>
         </div>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+      </div>
     </div>
-</nav>
+  </nav>
 </body>
+
 </html>

@@ -1,72 +1,767 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yoho Technologies</title>
-    <meta name="description" content="Yoho Technologies provides innovative retail technology solutions inspired by Walmart Global Tech's approach to reimagining retail for the future.">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
 
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoho Technologies - Best Web Design and Development Company in Chennai</title>
+  <meta name="description"
+    content="Yoho Technologies provides innovative retail technology solutions inspired by Walmart Global Tech's approach to reimagining retail for the future.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet" />
 
-<!-- Apply in CSS -->
-<style>
-  body {
-    font-family: 'Inter', Helvetica, Arial, sans-serif;
-    font-weight: 100; 
-  }
-</style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="Src/CSS/Index.css">
+  <link rel="stylesheet" href="Src/CSS/Navbar.css">
+  <link rel="stylesheet" href="Src/CSS/Home.css">
+  <link rel="stylesheet" href="Src/CSS/Footer.css">
 
-    <link rel="stylesheet" href="Src/CSS/Index.css">
-    <link rel="stylesheet" href="Src/CSS/Navbar.css">
-    <link rel="stylesheet" href="Src/CSS/Home.css">
-    <link rel="stylesheet" href="Src/CSS/About.css">
-    <link rel="stylesheet" href="Src/CSS/Contact.css">
-    <link rel="stylesheet" href="Src/CSS/Careers.css">
-    <link rel="stylesheet" href="Src/CSS/Footer.css">
+  <!-- Bootstrap + Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Src/Assets/yohologo.png" />
-  </head>
-  <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-      <img src="Src/Assets/Loaded.png" alt="Yoho Technologies Loading" class="rotating-logo">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Src/Assets/yohologo.png" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <img src="Src/Assets/Loaded.png" alt="Yoho Technologies Loading" class="rotating-logo">
+  </div>
+
+  <!-- Navbar -->
+  <div class="color-bar"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-container">
+            <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+            <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">Who We Are</a></li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">What We Do</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="services.html" class="category-item active" data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Website Design</a>
+                <a href="#" class="category-item" data-category="website-development">Website Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <div class="dropdown-services active" id="overview">
+                <div class="services-title">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Website Design & Development</a>
+                  <a href="services.html" class="service-item">Mobile App Development</a>
+                  <a href="services.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="services.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="services.html" class="service-item">Custom Software Development</a>
+                  <a href="services.html" class="service-item">UI/UX Design Services</a>
+                  <a href="services.html" class="service-item">Cloud Solutions</a>
+                  <a href="services.html" class="service-item">SEO & Analytics</a>
+                  <a href="services.html" class="service-item">Consulting Services</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">Industries</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                <a href="#" class="category-item" data-category="education">EdTech</a>
+              </div>
+              <div class="dropdown-services active" id="fintech">
+                <div class="services-title">FinTech Solutions</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Banking Solutions</a>
+                  <a href="services.html" class="service-item">Payment Gateways</a>
+                  <a href="services.html" class="service-item">Digital Wallets</a>
+                  <a href="services.html" class="service-item">Investment Platforms</a>
+                  <a href="services.html" class="service-item">Insurance Tech</a>
+                  <a href="services.html" class="service-item">Blockchain Solutions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+            <button class="search-close" id="search-close">×</button>
+          </div>
+        </div>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+      </div>
     </div>
-    
-    <!-- Logo preload for faster loading -->
-    <img src="Src/Assets/yohologo.png" alt="" style="display: none" />
+  </nav>
 
-    <!-- Color transition bar -->
-    <div class="color-bar"></div>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section container-fluid">
+      <div class="container" style="margin-left: 15%;">
+        <div class="row align-items-centerjustify-content-between">
+          <!-- Left Text Content -->
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="hero-code-text">
+              We.Are(<span class="highlight">Yoho Technologies</span>);
+            </div>
+            <h1 class="hero-title">Reimagining Digital Solutions</h1>
+            <p class="hero-description">
+              Yoho Technologies associates are leaders in web technology, powering
+              businesses across Chennai with innovative digital solutions for the
+              past 7 years.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="contact.html" class="hero-cta">Get in touch</a>
+              <a href="services.html" class="hero-cta2">Our work</a>
+            </div>
+          </div>
 
-    <!-- Navbar will be loaded here -->
-    <div id="navbar-placeholder"></div>
+          <!-- Right Video Content -->
+          <div class="col-lg-6">
+            <div class="hero-video-container mx-auto">
+              <video src="Src/Assets/SSYouTube.online_Developer Coding Background_1080p.mp4" autoplay loop muted
+                playsinline class="hero-video" id="hero-video"></video>
+              <div class="video-content" id="video-content">
+                <div class="video-content-inner">
+                  <h3>//Epic digital solutions start here</h3>
+                  <div class="code-block">
+                    <pre>{
+  Innovation.Digital(<span class="highlight">human</span>);
+}</pre>
+                  </div>
+                  <div class="services-list">
+                    <h4>Our Digital Solutions</h4>
+                    <ul>
+                      <li><span class="checkmark">✓</span> Custom Website Design & Development</li>
+                      <li><span class="checkmark">✓</span> E-Commerce Solutions</li>
+                      <li><span class="checkmark">✓</span> Mobile App Development</li>
+                      <li><span class="checkmark">✓</span> Digital Marketing & SEO</li>
+                      <li><span class="checkmark">✓</span> UI/UX Design Services</li>
+                    </ul>
+                  </div>
+                  <p>7+ years of excellence in delivering cutting-edge digital solutions for businesses in Chennai and
+                    beyond.</p>
+                  <button class="return-to-video-btn" id="return-to-video-btn">
+                    <span>Return to Video</span>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-    <!-- Main content will be loaded here -->
-    <div id="main-content"></div>
+            <div class="video-toggle text-center mt-3">
+              <a class="video-toggle-btn" id="video-toggle-btn">
+                <!-- <img
+                  src="https://tech.walmart.com/content/dam/walmart-global-tech/images/global-tech/iconography/ld-icon-transcript.svg"
+                  alt="Toggle transcript" />
+                <span>Toggle transcript</span> -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Footer will be loaded here -->
-    <div id="footer-placeholder"></div>
+    <!-- Companies Section -->
+    <section class="companies-section">
+      <div class="container-fluid">
+        <h2 class="section-title1" style="margin-top: -20px; margin-left: 4%;">World-class companies that trust us:
+        </h2>
 
-    <script src="Src/JS/Index.js"></script>
-    <script src="Src/JS/Home.js"></script>
-    <script src="Src/JS/About.js"></script>
+        <div id="companiesCarousel" class="carousel slide">
+          <!-- Company Trust Carousel -->
+          <div class="container py-4 " style="background-color: black; overflow-x: hidden;">
+            <div class="logos position-relative overflow-hidden">
+              <div class="logo-items d-flex align-items-center animate-scroll">
+                <img src="Src/Assets/company list/Amazon 4 On.png" alt="Amazon" />
+                <img src="Src/Assets/company list/IIFL 1 On (1).png" alt="IIFL" />
+                <img src="Src/Assets/company list/Loreal 3 On (1).png" alt="Loreal" />
+                <img src="Src/Assets/company list/Spicejet 2 On (1).png" alt="SpiceJet" />
+                <img src="Src/Assets/company list/Tata play 5 On (1).png" alt="Tata Play" />
+                <img src="Src/Assets/company list/Toyoto 9 On.png" alt="Toyota" />
+                <img src="Src/Assets/company list/Zomato 6 On (1).png" alt="Zomato" />
+                <!-- Repeat for infinite scroll illusion -->
+                <img src="Src/Assets/company list/Amazon 4 On.png" alt="Amazon" />
+                <img src="Src/Assets/company list/IIFL 1 On (1).png" alt="IIFL" />
+                <img src="Src/Assets/company list/Loreal 3 On (1).png" alt="Loreal" />
+                <img src="Src/Assets/company list/Spicejet 2 On (1).png" alt="SpiceJet" />
+                <img src="Src/Assets/company list/Tata play 5 On (1).png" alt="Tata Play" />
+                <img src="Src/Assets/company list/Toyoto 9 On.png" alt="Toyota" />
+                <img src="Src/Assets/company list/Zomato 6 On (1).png" alt="Zomato" />
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Full Black Section -->
+    <section class="full-black-section">
+      <div class="container">
+        <div class="hero-box text-white">
+          <h1 class="section-title2">Just the right partner in pushing <br> boundaries</h1>
+          <p class="hero-text1">
+            We don't just adapt to change — we drive it. As your innovation partner, we empower organizations to
+            challenge
+            limits, embrace emerging technologies, and redefine what's possible. Together, we push boundaries to shape
+            the
+            future of digital transformation.
+          </p>
+          <p class="hero-text1">
+            Your ideal partner in innovation, pushing limits and turning bold ideas into reality.
+          </p>
+          <p class="hero-text1">
+            Digital product consultancy. Digital product development. System integrations.
+            We continue to find fast, elegant solutions to our clients' trickiest problems. But, don't just trust us,
+            read
+            our numerous Clutch reviews.
+          </p>
+          <img src="Src/Assets/cards image/130x300 (8).png" alt="Design Graphic" class="corner-graphic" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Discover Services Section -->
+    <section class="discover-section text-white">
+      <div class="container">
+        <h2 class="section-heading1">Discover our services</h2>
+        <p class="sub-text"><b>Check all our services<i class="fa-solid fa-arrow-right"
+              style="margin-left: 10px;"></i></b></p>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Software Development</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/110x150 (10).png" class="service-icon" alt="icon1" />
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Software architecture services</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/130x300 (6).png" class="service-icon" alt="icon2" />
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Data science and AI</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets//cards image/130x300 (8).png" class="service-icon" alt="icon3" />
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">UI UX design services</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/150x150 (1).png" class="service-icon" alt="icon4" />
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Data engineering services</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/interview flow.png" class="service-icon" alt="icon5" />
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Delivery and operations</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/130x300 (8).png" class="service-icon" alt="icon6" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="main-title text-left">Our tech stack. Tailored to yours.</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="tech-grid">
+              <!-- Row 1 -->
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/android.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Android</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/angular.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Angular</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/aws-2.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">AWS</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/css.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">CSS</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/azure-2.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Azure</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/flutter.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Flutter</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/google-cloud-1.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Google Cloud</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/html.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">HTML</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/ios.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">iOS</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/java.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Java</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/kotlin.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Kotlin</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/microsoft-net.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">.NET</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/nodejs.svg" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Nodejs</span>
+              </div>
+
+              <div class="tech-item">
+                <img src="Src/Assets/tech icons/react.png" class="tech-icon" alt="icon1" />
+                <span class="tech-name">Reactjs</span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <p class="specialty-text text-start">
+                  <span class="specialty-label">Our speciality?</span>
+                  High-performing, semantically-rich and accessible markup – perfectly paired with a meticulously
+                  organised CSS/SCSS architecture.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Section -->
+    <section class="value-section text-white py-5">
+      <div class="container text-left" style="margin-top: -100px;">
+        <h2 class="section-heading2 text-left">Engineering real value since 2008</h2>
+        <div class="row justify-content-center">
+          <div class="col-6 col-md-3 mb-4">
+            <img src="Src/Assets/cards image/110x150 (10).png" alt="Years" class="stat-icon mb-3">
+            <h4 class="text-orange">12+</h4>
+            <p class="card-title">Years strong</p>
+          </div>
+
+          <div class="col-6 col-md-3 mb-4">
+            <img src="Src/Assets/cards image/130x300 (6).png" alt="Engineers" class="stat-icon mb-3">
+            <h4 class="text-orange">900+</h4>
+            <p class="card-title">Projects launched</p>
+          </div>
+
+          <div class="col-6 col-md-3 mb-4">
+            <img src="Src/Assets/cards image/130x300 (8).png" alt="Engineers" class="stat-icon mb-3">
+            <h4 class="text-orange">900+</h4>
+            <p class="card-title">Projects launched</p>
+          </div>
+
+          <div class="col-6 col-md-3 mb-4">
+            <img src="Src/Assets/cards image/interview flow.png" alt="Clients" class="stat-icon mb-3">
+            <h4 class="text-orange">200+</h4>
+            <p class="card-title">Global clients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Experts Section -->
+    <section class="discover-section text-white">
+      <div class="container">
+        <h2 class="section-heading1">Industry experts in your sector</h2>
+        <p class="sub-text"><b>Delve into deep industry knowledge with us</b></p>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Digital product development</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/110x150 (10).png" class="service-icon" alt="icon1" />
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Software architecture services</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/130x300 (6).png" class="service-icon" alt="icon2" />
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Data science and AI</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets//cards image/130x300 (8).png" class="service-icon" alt="icon3" />
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">UI UX design services</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/150x150 (1).png" class="service-icon" alt="icon4" />
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Data engineering services</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/interview flow.png" class="service-icon" alt="icon5" />
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Delivery and operations</h5>
+              <div class="my-3">
+                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/130x300 (8).png" class="service-icon" alt="icon6" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Top Section -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 98844 92652</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@yohotechnologies.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117.
+                (Near:ESAF BANK)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html">News & Events</a></li>
+              <li><a href="about.html">Awards & Recognition</a></li>
+              <li><a href="about.html">Investor Relations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html">E-Commerce Solutions</a></li>
+              <li><a href="services.html">Supply Chain Management</a></li>
+              <li><a href="services.html">Data Analytics</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">AI & Machine Learning</a></li>
+              <li><a href="services.html">Digital Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Industries</h3>
+            <ul>
+              <li><a href="services.html">Retail & Consumer</a></li>
+              <li><a href="services.html">Healthcare</a></li>
+              <li><a href="services.html">Financial Services</a></li>
+              <li><a href="services.html">Manufacturing</a></li>
+              <li><a href="services.html">Government</a></li>
+              <li><a href="services.html">Education</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="about.html">Blog</a></li>
+              <li><a href="about.html">Case Studies</a></li>
+              <li><a href="about.html">Whitepapers</a></li>
+              <li><a href="about.html">Documentation</a></li>
+              <li><a href="contact.html">Support Center</a></li>
+              <li><a href="about.html">Training & Certification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <!-- <div class="footer-newsletter">
+        <div class="newsletter-content">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest insights and technology trends</p>
+        </div>
+        <div class="newsletter-form">
+          <form id="newsletter-form">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" required>
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div> -->
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+        </div>
+        <div class="footer-bottom-left">
+          <div class="copyright">
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookies.html">Cookie Policy</a>
+            <a href="security.html">Security</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Src/JS/Home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Src/JS/dropdown.js"></script>
+  <script src="Src/JS/search.js"></script>
+  <script>
+    // Ensure navbar stays fixed
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbar = document.getElementById('navbar');
+      const colorBar = document.querySelector('.color-bar');
+      if (navbar) {
+        navbar.style.position = 'fixed';
+        navbar.style.top = '4px';
+        navbar.style.zIndex = '1001';
+      }
+      if (colorBar) {
+        colorBar.style.position = 'fixed';
+        colorBar.style.top = '0';
+        colorBar.style.zIndex = '1002';
+        colorBar.style.opacity = '1';
+        colorBar.classList.remove('hidden');
+      }
+    });
+  </script>
+  <script>
+    // Loading screen
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 800);
+
+      // Dynamic copyright year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
+
 </html>

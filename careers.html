@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers - Join Yoho Technologies</title>
+  <meta name="description"
+    content="Join our team of innovative professionals. Explore career opportunities at Yoho Technologies.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Src/CSS/Index.css">
+  <link rel="stylesheet" href="Src/CSS/Navbar.css">
+  <link rel="stylesheet" href="Src/CSS/Careers.css">
+  <link rel="stylesheet" href="Src/CSS/Footer.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Src/Assets/yohologo.png" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <img src="Src/Assets/Loaded.png" alt="Yoho Technologies Loading" class="rotating-logo">
+  </div>
+
+  <!-- Navbar -->
+  <div class="color-bar"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-container">
+            <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+            <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">Who We Are</a></li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">What We Do</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Website Design</a>
+                <a href="#" class="category-item" data-category="website-development">Website Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <div class="dropdown-services active" id="overview">
+                <div class="services-title">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Website Design & Development</a>
+                  <a href="services.html" class="service-item">Mobile App Development</a>
+                  <a href="services.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="services.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="services.html" class="service-item">Custom Software Development</a>
+                  <a href="services.html" class="service-item">UI/UX Design Services</a>
+                  <a href="services.html" class="service-item">Cloud Solutions</a>
+                  <a href="services.html" class="service-item">SEO & Analytics</a>
+                  <a href="services.html" class="service-item">Consulting Services</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">Industries</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                <a href="#" class="category-item" data-category="education">EdTech</a>
+              </div>
+              <div class="dropdown-services active" id="fintech">
+                <div class="services-title">FinTech Solutions</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Banking Solutions</a>
+                  <a href="services.html" class="service-item">Payment Gateways</a>
+                  <a href="services.html" class="service-item">Digital Wallets</a>
+                  <a href="services.html" class="service-item">Investment Platforms</a>
+                  <a href="services.html" class="service-item">Insurance Tech</a>
+                  <a href="services.html" class="service-item">Blockchain Solutions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="careers.html" class="active">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+            <button class="search-close" id="search-close">×</button>
+          </div>
+        </div>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Careers Hero Section -->
+    <section class="careers-hero">
+      <div class="careers-hero-container">
+        <div class="career-left">
+          <h1 class="career-title">
+            Define your career with Yoho Technologies
+          </h1>
+          <p class="career-subtitle">Find a career that makes a difference.</p>
+          <p class="career-description">
+            Discover job opportunities tailored to your passions. Search by
+            skill, location, or experience. Dive into our teams and hiring
+            process or join our talent network to stay connected.
+          </p>
+          <div class="career-actions">
+            <button class="career-btn"
+              onclick="document.querySelector('.featured-jobs-section').scrollIntoView({behavior: 'smooth'})">Explore
+              All Roles</button>
+            <button class="career-btn2"
+              onclick="document.querySelector('.talent-network-section').scrollIntoView({behavior: 'smooth'})">Join
+              Talent Network</button>
+          </div>
+        </div>
+
+        <div class="career-right">
+          <div class="career-stats">
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Openings</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Countries</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">35%</span>
+              <span class="stat-label">Wage Growth</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">95%</span>
+              <span class="stat-label">Career Growth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Search Section -->
+    <section class="job-search-section">
+      <div class="search-container">
+        <h2>Find your next role</h2>
+        <p>
+          We think big and set the pace in this industry. We empower outcomes.
+          We forge partnerships and bring people and technology together— and
+          here's where your skills could define a better world.
+        </p>
+
+        <div class="search-form-wrapper">
+          <form id="careers-search-form" class="advanced-search-form">
+            <div class="search-inputs">
+              <div class="input-group">
+                <i class="fas fa-search"></i>
+                <input type="text" name="job-keyword" placeholder="Job title, keyword, or company" />
+              </div>
+              <div class="input-group">
+                <i class="fas fa-map-marker-alt"></i>
+                <select name="job-location">
+                  <option value="">All Locations</option>
+                  <option value="chennai">Chennai</option>
+                  <option value="bangalore">Bangalore</option>
+                  <option value="mumbai">Mumbai</option>
+                  <option value="delhi">Delhi</option>
+                  <option value="hyderabad">Hyderabad</option>
+                  <option value="pune">Pune</option>
+                  <option value="remote">Remote</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <i class="fas fa-briefcase"></i>
+                <select name="job-department">
+                  <option value="">All Departments</option>
+                  <option value="software-engineering">Software Engineering</option>
+                  <option value="consulting">Consulting</option>
+                  <option value="design-ux">Design & UX</option>
+                  <option value="data-analytics">Data & Analytics</option>
+                  <option value="cloud">Cloud</option>
+                  <option value="security">Security</option>
+                  <option value="sales">Sales</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="project-management">Project Management</option>
+                  <option value="ai-ml">AI & Machine Learning</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <i class="fas fa-user-tie"></i>
+                <select name="experience-level">
+                  <option value="">All Experience Levels</option>
+                  <option value="entry">Entry Level (0-2 years)</option>
+                  <option value="mid">Mid Level (3-5 years)</option>
+                  <option value="senior">Senior Level (6-10 years)</option>
+                  <option value="lead">Lead Level (10+ years)</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="search-btn">
+              <i class="fas fa-search"></i>
+              Search Jobs
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Jobs Section -->
+    <section class="featured-jobs-section">
+      <div class="featured-jobs-container">
+        <h2 style="color: white;">Featured Opportunities</h2>
+        <div class="job-listings" id="job-listings">
+          <div class="job-card" data-department="software-engineering" data-location="chennai" data-experience="senior">
+            <div class="job-header">
+              <h3>Senior Full Stack Developer</h3>
+            </div>
+            <div class="job-details">
+              <span class="job-location"><i class="ion-ios-location-outline text-white" style="color: white;"></i>
+                Chennai</span>
+              <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
+                Full-time</span>
+              <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 5+
+                years</span>
+            </div>
+
+            <div class="job-actions">
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <div class="job-card" data-department="design-ux" data-location="bangalore" data-experience="mid">
+            <div class="job-header">
+              <h3>Senior UX Designer</h3>
+            </div>
+            <div class="job-details">
+              <span class="job-location"><i class="ion-ios-location-outline  text-white" style="color: white;"></i>
+                Bangalore</span>
+              <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
+                Full-time</span>
+              <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 3-5
+                years</span>
+            </div>
+
+            <div class="job-actions">
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <div class="job-card" data-department="data-analytics" data-location="mumbai" data-experience="mid">
+            <div class="job-header">
+              <h3>Data Scientist</h3>
+            </div>
+            <div class="job-details">
+              <span class="job-location"><i class="ion-ios-location-outline text-white" style="color: white;"></i>
+                Mumbai</span>
+              <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
+                Full-time</span>
+              <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 3-6
+                years</span>
+            </div>
+
+            <div class="job-actions">
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <div class="job-card" data-department="cloud" data-location="hyderabad" data-experience="senior">
+            <div class="job-header">
+              <h3>Cloud Solutions Architect</h3>
+            </div>
+            <div class="job-details">
+              <span class="job-location"><i class="ion-ios-location-outline text-white" style="color: white;"></i>
+                Hyderabad</span>
+              <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
+                Full-time</span>
+              <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 7+
+                years</span>
+            </div>
+
+            <div class="job-actions">
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <div class="job-card" data-department="security" data-location="pune" data-experience="mid">
+            <div class="job-header">
+              <h3>Cybersecurity Analyst</h3>
+            </div>
+            <div class="job-details">
+              <span class="job-location"><i class="ion-ios-location-outline text-white" style="color: white;"></i>
+                Pune</span>
+              <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
+                Full-time</span>
+              <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 4-6
+                years</span>
+            </div>
+
+            <div class="job-actions">
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+
+          <div class="job-card" data-department="consulting" data-location="delhi" data-experience="senior">
+            <div class="job-header">
+              <h3>Digital Transformation Consultant</h3>
+            </div>
+            <div class="job-details">
+              <span class="job-location"><i class="ion-ios-location-outline text-white" style="color: white;"></i>
+                Delhi</span>
+              <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
+                Full-time</span>
+              <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 6+
+                years</span>
+            </div>
+
+            <div class="job-actions">
+              <button class="apply-btn">Apply Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="load-more-container">
+          <button class="load-more-btn" id="load-more-jobs">
+            Load More Jobs
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Talent Network Section -->
+    <section class="talent-network-section">
+      <div class="talent-network-container">
+        <div class="talent-network-content">
+          <h2>Still not found your jobs?</h2>
+          <p>
+            Stay up-to-date on Yoho Technologies career opportunities that match
+            your skills and interests. Upload your resume and let us find the
+            perfect match for you.
+          </p>
+
+          <form class="talent-network-form" id="talent-network-form">
+            <div class="form-section">
+              <h3><i class="fas fa-file-upload"></i> Upload Resume</h3>
+              <div class="form-group">
+                <label>Upload Resume/CV *</label>
+                <div class="file-upload-area" id="resumeUpload">
+                  <input type="file" class="file-input" id="resumeFile" name="resume" accept=".pdf,.doc,.docx"
+                    required />
+                  <div class="file-upload-content">
+                    <div class="file-upload-icon">
+                      <i class="fas fa-cloud-upload-alt text-white"></i>
+                    </div>
+                    <div class="file-upload-text">
+                      <strong>Click to upload</strong> or drag and drop your resume
+                    </div>
+                    <div class="file-upload-hint">PDF, DOC, DOCX (Max 5MB)</div>
+                  </div>
+                </div>
+                <div class="uploaded-files" id="resumeFiles"></div>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btns" id="submitBtn">
+              <div class="loading-spinner"></div>
+              <span>Join Talent Network</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="departments-section">
+      <div class="departments-container">
+        <h2>Explore our departments</h2>
+        <div class="departments-grid">
+          <div class="department-card" data-department="software-engineering">
+            <div class="department-icon">
+              <i class="fas fa-code text-white" style="color: white;"></i>
+            </div>
+            <h3>Software Engineering</h3>
+            <div class="department-roles">
+              <span class="role-tag">Full Stack Developer</span>
+              <span class="role-tag">Frontend Developer</span>
+              <span class="role-tag">Backend Developer</span>
+              <span class="role-tag">DevOps Engineer</span>
+            </div>
+            <button class="learn-more-btn">Learn more</button>
+          </div>
+
+          <div class="department-card" data-department="consulting">
+            <div class="department-icon">
+              <i class="fas fa-handshake text-white" style="color: white;"></i>
+            </div>
+            <h3>Consulting</h3>
+            <div class="department-roles">
+              <span class="role-tag">Business Consultant</span>
+              <span class="role-tag">Technical Consultant</span>
+              <span class="role-tag">Digital Transformation</span>
+              <span class="role-tag">Strategy Consultant</span>
+            </div>
+            <button class="learn-more-btn">Learn more</button>
+          </div>
+
+          <div class="department-card" data-department="design-ux">
+            <div class="department-icon">
+              <i class="fas fa-palette text-white" style="color: white;"></i>
+            </div>
+            <h3>Design & UX</h3>
+            <div class="department-roles">
+              <span class="role-tag">UX Designer</span>
+              <span class="role-tag">UI Designer</span>
+              <span class="role-tag">Visual Designer</span>
+              <span class="role-tag">User Researcher</span>
+            </div>
+            <button class="learn-more-btn">Learn more</button>
+          </div>
+
+          <div class="department-card" data-department="data-analytics">
+            <div class="department-icon">
+              <i class="fas fa-chart-line text-white" style="color: white;"></i>
+            </div>
+            <h3>Data & Analytics</h3>
+            <div class="department-roles">
+              <span class="role-tag">Data Scientist</span>
+              <span class="role-tag">Data Analyst</span>
+              <span class="role-tag">Data Engineer</span>
+              <span class="role-tag">Business Intelligence</span>
+            </div>
+            <button class="learn-more-btn">Learn more</button>
+          </div>
+
+          <div class="department-card" data-department="cloud">
+            <div class="department-icon">
+              <i class="fas fa-cloud text-white" style="color: white;"></i>
+            </div>
+            <h3>Cloud</h3>
+            <div class="department-roles">
+              <span class="role-tag">Cloud Architect</span>
+              <span class="role-tag">Cloud Engineer</span>
+              <span class="role-tag">Site Reliability Engineer</span>
+              <span class="role-tag">Cloud Security</span>
+            </div>
+            <button class="learn-more-btn">Learn more</button>
+          </div>
+
+          <div class="department-card" data-department="security">
+            <div class="department-icon">
+              <i class="fas fa-shield-alt text-white" style="color: white;"></i>
+            </div>
+            <h3>Security</h3>
+            <div class="department-roles">
+              <span class="role-tag">Security Engineer</span>
+              <span class="role-tag">Security Architect</span>
+              <span class="role-tag">Penetration Tester</span>
+              <span class="role-tag">Security Analyst</span>
+            </div>
+            <button class="learn-more-btn">Learn more</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="benefits-container">
+        <h2>Why choose Yoho Technologies?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Health & Wellness</h3>
+            <p>Comprehensive health insurance, mental health support, and wellness programs</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Work-Life Balance</h3>
+            <p>Flexible working hours, remote work options, and generous time-off policies</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Career Growth</h3>
+            <p>Clear career progression paths, mentorship programs, and leadership development</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <h3>Learning & Development</h3>
+            <p>Training budgets, conference attendance, certification support, and skill development</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-code-fork"></i>
+            </div>
+            <h3>Competitive Compensation</h3>
+            <p>Market-leading salaries, performance bonuses, and equity participation</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Global Opportunities</h3>
+            <p>International projects, cross-cultural collaboration, and relocation opportunities</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Top Section -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+           <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 98844 92652</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@yohotechnologies.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117. (Near:ESAF BANK)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html">News & Events</a></li>
+              <li><a href="about.html">Awards & Recognition</a></li>
+              <li><a href="about.html">Investor Relations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html">E-Commerce Solutions</a></li>
+              <li><a href="services.html">Supply Chain Management</a></li>
+              <li><a href="services.html">Data Analytics</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">AI & Machine Learning</a></li>
+              <li><a href="services.html">Digital Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Industries</h3>
+            <ul>
+              <li><a href="services.html">Retail & Consumer</a></li>
+              <li><a href="services.html">Healthcare</a></li>
+              <li><a href="services.html">Financial Services</a></li>
+              <li><a href="services.html">Manufacturing</a></li>
+              <li><a href="services.html">Government</a></li>
+              <li><a href="services.html">Education</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="about.html">Blog</a></li>
+              <li><a href="about.html">Case Studies</a></li>
+              <li><a href="about.html">Whitepapers</a></li>
+              <li><a href="about.html">Documentation</a></li>
+              <li><a href="contact.html">Support Center</a></li>
+              <li><a href="about.html">Training & Certification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+     
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+        </div>
+        <div class="footer-bottom-left">
+          <div class="copyright">
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookies.html">Cookie Policy</a>
+            <a href="security.html">Security</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Src/JS/Careers.js"></script>
+  <script src="Src/JS/dropdown.js"></script>
+  <script src="Src/JS/search.js"></script>
+  <script>
+    // Ensure navbar stays fixed
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbar = document.getElementById('navbar');
+      const colorBar = document.querySelector('.color-bar');
+      if (navbar) {
+        navbar.style.position = 'fixed';
+        navbar.style.top = '4px';
+        navbar.style.zIndex = '1001';
+      }
+      if (colorBar) {
+        colorBar.style.position = 'fixed';
+        colorBar.style.top = '0';
+        colorBar.style.zIndex = '1002';
+        colorBar.style.opacity = '1';
+        colorBar.classList.remove('hidden');
+      }
+    });
+  </script>
+  <script>
+    // Loading screen
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 800);
+      
+      // Dynamic copyright year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>
