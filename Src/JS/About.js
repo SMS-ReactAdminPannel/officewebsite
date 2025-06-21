@@ -132,4 +132,5 @@ function setupVideoPlayers() {
             visionPlayBtn.style.pointerEvents = 'auto';
         });
     }
+    
 }
