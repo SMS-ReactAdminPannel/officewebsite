@@ -183,7 +183,7 @@ p {
     }
 }
 
-h2.underline  {
+/* h2.underline  {
   position: relative;
   display: inline-block;
 }
@@ -246,7 +246,7 @@ h1.underline:hover::after  {
   to {
     transform: scaleX(1);
   }
-}
+} */
 
 
 /* Stats Section Styles */
