@@ -302,7 +302,7 @@ body {
 }
 
 .dropdown-trigger::before {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 50%;
@@ -360,7 +360,7 @@ body {
 }
 
 .category-item.active::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -397,7 +397,7 @@ body {
 }
 
 .services-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
