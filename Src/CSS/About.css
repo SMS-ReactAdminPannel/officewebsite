@@ -5,6 +5,16 @@
  font-family: "Inter", sans-serif;
 }
 
+.decor-imgg {
+  
+  opacity: 0.6;
+  width: 208px;
+  height: 152px;
+  right: 618px;
+  top: 45px; /* Default: Desktop view */
+}
+
+
 .gradient-overlay {
       background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     }
@@ -39,8 +49,10 @@
 }
 
 .section-title {
-  font-size: 42px;
-  font-weight: 300;
+   font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 200;
 }
 
 .info-card {
@@ -48,6 +60,13 @@
   border: 1px solid #fff;
   border-radius: 40px;
   color: #fff;
+  margin-bottom: 30px;
+}
+.year{
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
 }
 
 
@@ -63,8 +82,10 @@
 }
 
 .section-heading {
-  font-size: 32px;
-  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 100;
 }
 
 .stat-icon {
@@ -80,13 +101,18 @@
 
 
 .custom-card h2 {
-  font-size: 38px;
-  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 100;
   line-height: 1.3;
 }
 
 .custom-card p {
-  font-size: 16px;
+   color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
   line-height: 1.6;
 }
 
@@ -95,13 +121,99 @@
   border: 1px solid #fff;
   border-radius: 999px;
   background: transparent;
-  color: #fff;
-  font-weight: 500;
+color: #ffffff;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+ 
   transition: 0.3s ease-in-out;
 }
+.get { 
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+/* Apply margin-left: 56px only on mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .get {
+    margin-left: 56px;
+  }
+  .custom-btn{
+    margin-top:15px;
+    
+  }
+}
+.pet { 
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+/* Apply margin-left: 56px only on mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .pet {
+    margin-left: 46px;
+  }
+}
+.cut { 
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    width: 198px;
+
+}
+
+/* Apply margin-left: 56px only on mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .cut {
+    margin-left: 5px;
+    margin-bottom: 39px
+  }
+}
+.mut { 
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* Apply margin-left: 56px only on mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .mut {
+    margin-left: 60px;
+  }
+}
+
+
 
 .custom-btn:hover {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #000;
 }
 
@@ -119,9 +231,15 @@
 }
 
 .top-right {
-  top: 5px;
-  right: 20px;
+  top: -24px;
+  right: -17px;
   transform: translateX(40%);
+}
+.our{
+   font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 200;
 }
 
 
@@ -133,7 +251,7 @@
   }
 
   .decor-img {
-    max-width: 80px;
+    max-width: 158px;
   }
 }
 
@@ -161,25 +279,32 @@
 
     .video-content-inner h1 {
       font-family: "Inter", sans-serif;
+  color: #ffffff;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 100;
       margin-bottom: 20px;
       line-height: 1.4;
     }
 
     .video-content-inner p {
-      font-size: 18px;
+      color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
       margin-bottom: 30px;
       max-width: 600px;
+      text-align:left
     }
 
     .cta-button {
   padding: 12px 28px;
   background-color: black;
-  color: white;
+   color: white;
   border-radius: 999px;
   border: 1px solid white;
-  font-weight: 600;
+ font-size: 16px;
+  font-weight: 200;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   width: fit-content;
   text-decoration: none; /* This removes the underline */
@@ -187,10 +312,12 @@
 
 
     .cta-button:hover {
-  background-color: white;
+  background-color: #ffffff;
   color: black;
   text-decoration: none; /* Ensures no underline on hover */
 }
+
+
 
     .video-wrapper video {
       width: 100%;
@@ -198,6 +325,13 @@
       border-radius: 30px;
       object-fit: cover;
     }
+    .heading {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
 
     /* Hero Box */
     .hero-box {
@@ -212,18 +346,102 @@
     }
 
     .section-title {
-      font-size: 60px;
-      font-weight: 400;
+       font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 100;
       margin-bottom: 40px;
     }
+    .heading {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 100;
+  
+}
+@media (max-width: 768px) {
+  .heading {
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+}
+
 
     .hero-text {
-      font-size: 20px;
+      color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 200;
       max-width: 800px;
     }
 
     .hero-text b {
-      font-weight: 700;
+      color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+    }
+    .hero-text p{
+       color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+
+    }
+    @media (max-width: 768px) {
+  .year {
+    text-align: left !important;
+  }
+}
+@media (max-width: 768px) {
+  .year {
+    text-align: left !important;
+  }
+}
+.left-align {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .left-align {
+    text-align: left !important;
+  }
+}
+.left-align {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .left-align {
+    text-align: left !important;
+  }
+}
+
+     .badge-pill {
+      padding: 10px 30px;
+      border: 1px solid #000000;
+      border-radius: 999px;
+      background: black;
+      color: white;
+      font-size: 1rem;
+      font-weight: 200;
+      font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+      transition: all 0.3s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      border: 1px solid #ffffff;
+      width: 198px;
+      text-align:center
+    }
+
+    .badge-pill:hover {
+      background-color: white;
+      color: rgb(0, 0, 0);
+      border-color: white;
     }
 
     .get-in-touch-btn {
@@ -257,7 +475,7 @@
       }
 
       .video-content-inner h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
       }
 
       .video-content-inner p {
@@ -272,4 +490,251 @@
         margin-top: 30px;
       }
       
+
+      
     }
+   
+@media (max-width: 576px) {
+  .decor-imgg {
+    position: relative;
+  top: -1px;
+        left: 101px;
+  }
+  .badge-pill{
+    width: 100%;
+    text-align: center;
+   
+   
+  }
+  .badge-pill span{
+    text-align:center;
+    left:20px
+  }
+  .mor{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.collage-container::-webkit-scrollbar {
+  display: none;
+}
+.mor {
+      padding: 10px 15px;
+      border: 1px solid #000000;
+      border-radius: 999px;
+      background: black;
+      color: white;
+      font-size: 1rem;
+      font-weight: 200;
+      font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+      transition: all 0.3s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      border: 1px solid #ffffff;
+
+    }
+
+
+    .mor:hover {
+      background-color: #39d139;
+      color: #ffffff;
+      border-color: #39d139;
+    }
+    /* Mobile View (≤768px): Center the heading */
+@media (max-width: 768px) {
+  .section-header-heading {
+    text-align: center;
+    margin-top: -52px;
+  }
+}
+
+    
+    .pay {
+  position: absolute;
+  bottom: -50px;  /* pushes part of the image out of the box */
+  right: -86px;   /* adjusts how much it overflows horizontally */
+  width: 180px;   /* control size */
+  height: auto;
+  opacity: 0.6;
+  z-index: 1;
+}
+.hero-box {
+  position: relative;
+}
+
+
+.collage-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 20px;
+  background-color: #000;
+}
+
+/* Changed from grid to columns for masonry layout */
+.testimonials-container {
+  columns: 3;
+  column-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+}
+
+.testimonial-card {
+  break-inside: avoid;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: #ffffff;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #ffd93d,
+    #6bcf7f,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  color: #ffffff;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-justify: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-name {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.user-title {
+  color: #cccccc;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 0;
+  color: white;
+  background-color: #000;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    columns: 2;
+    column-gap: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-container {
+    columns: 1;
+    padding: 10px;
+  }
+}
+.yoho {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+/* Media Query: Reduce font-size to 1.5rem on screens ≤ 768px */
+@media (max-width: 768px) {
+  .yoho {
+    font-size: 1.5rem;
+  }
+}
+/* Start slightly lower and invisible */
+.slide-section {
+  transform: translateY(60px);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* When JS adds .visible, the section animates into place */
+.slide-section.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+@media (max-width:768px){
+.social{
+  position: relative;
+    /* bottom: -24px; */
+    top: 25px;
+}
+}

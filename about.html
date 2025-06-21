@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Yoho Technologies</title>
-  <meta name="description"
-    content="Learn about Yoho Technologies - our story, mission, and the team behind innovative digital solutions.">
-
   <meta name="description"
     content="Learn about Yoho Technologies - our story, mission, and the team behind innovative digital solutions.">
 
@@ -19,22 +15,19 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
     rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet">
-
   <!-- CSS -->
   <link rel="stylesheet" href="Src/CSS/Index.css">
   <link rel="stylesheet" href="Src/CSS/Navbar.css">
   <link rel="stylesheet" href="Src/CSS/About.css">
   <link rel="stylesheet" href="Src/CSS/Footer.css">
   <link rel="stylesheet" href="Src/CSS/Responsive.css">
+  
 
   <!-- Bootstrap + Font Awesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
 
 
 
@@ -235,36 +228,36 @@
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
 
-        <div class="navbar-right">
-          <div class="search-container">
-            <button class="search-toggle" id="search-toggle">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-            <div class="search-dropdown" id="search-dropdown">
-              <input type="text" placeholder="Search..." class="search-input" id="search-input">
-              <button class="search-close" id="search-close">×</button>
-            </div>
+      <div class="navbar-right">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+            <button class="search-close" id="search-close">×</button>
           </div>
-          <a href="contact.html" class="cta-button">Get in Touch</a>
         </div>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
   <!-- Main Content -->
   <main>
     <!-- Who We Are Section -->
-    <section>
-      <div class="container">
+    <section class="slide-section">
+      <div class="container ">
         <div class="row align-items-center">
           <!-- Left Column: Text -->
           <div class="col-md-6">
             <div class="video-content-inner">
-              <h1>Who We Are: Empowering Digital Growth with Innovation and Expertise</h1>
+              <h1 >Who We Are: Empowering Digital Growth with Innovation and Expertise</h1>
               <p>With over 7 years of excellence, Yoho Technologies is at the forefront of delivering cutting-edge digital solutions.</p>
-              <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+              <a href="#our-story" class=" cut">Discover Our Story</a>
             </div>
           </div>
 
@@ -280,25 +273,41 @@
     </section>
 
     <!-- Passionate Hero Box Section -->
-    <section>
-      <div class="container">
-        <div class="hero-box text-white">
-         <h1 class="section-title">Driven. Dynamic. Dependable.</h1>
-<p class="hero-text">
-  At Yoho Technologies, innovation isn't just a goal — it's our mindset. We combine deep technical knowledge with a collaborative spirit to accelerate digital growth.  
-  From concept to code, we're committed to delivering solutions that transform businesses and inspire progress.  
-  <b>Together, we build the future — one intelligent product at a time.</b>  
-  Focused minds. Purposeful tech.
-</p>
+    <section class="py-5 slide-section">
+  <div class="container">
 
-          <button class="badge-pill">Get in touch</button>
-<img src="Src/Assets/Frame 284.png" alt="Circles" class="decor-imgg top-right">
-        </div>
-      </div>
-    </section>
-   <section class="py-5">
+    <!-- External Section Heading -->
+   <h2 class="yoho mb-4 section-header-heading slide-section">
+  About Yoho Technologies
+</h2>
+
+
+    <!-- Hero Box -->
+    <div class="hero-box text-white p-4 rounded-4 border border-white">
+      <h1 class="section-title">Driven. Dynamic. Dependable.</h1>
+
+      <p class="hero-text">
+        At Yoho Technologies, innovation isn't just a goal — it's our mindset. We combine deep technical knowledge with a collaborative spirit to accelerate digital growth.  
+        From concept to code, we're committed to delivering solutions that transform businesses and inspire progress.  
+        <b>Together, we build the future — one intelligent product at a time.</b><br />
+        Focused minds. Purposeful tech.
+      </p>
+
+      <button class="custom-btn">Get in touch</button>
+      <img src="Src/Assets/Frame 284.png" alt="Circles" class="pay">
+    </div>
+
+  </div>
+</section>
+
+   <section class="py-5 slide-section">
     <div class="container">
       <div class="row g-4">
+        <div class=" yoho section-header-heading">
+  <h2 class="section-title yoho">Inside Yoho Technologies</h2>
+  
+</div>
+
 
         <!-- Card 1 -->
         <div class="col-md-4">
@@ -308,7 +317,7 @@
 <p class="year"><strong class="year">Developers. Designers. Thinkers.<br>Strategists. Leaders.</strong></p>
 <p class="year">We're a 900+ strong team of passionate professionals, united by curiosity and purpose. Together, we shape ideas into powerful digital products and elevate businesses through bold thinking and technology.</p>
 
-            <button class="custom-btn mt-4">Get to know us</button>
+            <button class="get mt-4">Get to know us</button>
             <img src="Src/Assets/yohot8.png" class="decor-img top-right" alt="Design" />
           </div>
         </div>
@@ -322,7 +331,7 @@
 <p class="year">What started in a small workspace in Chennai has evolved into a global digital force. <br>
 <strong class="year">Driven by ambition, fueled by passion, and built on trust — our growth is a story of resilience, innovation, and enduring partnerships.</strong></p>
 
-            <button class="custom-btn mt-4">Read our story</button>
+            <button class="get mt-4">Read our story</button>
             <img src="Src/Assets/Frame 290.png" class="decor-img top-right" alt="Design"/>
           </div>
         </div>
@@ -337,7 +346,7 @@
 <p class="year">We foster an environment where every voice matters, creativity is encouraged, and growth is continuous.</p>
 
 
-            <button class="custom-btn mt-4">Get our culture book</button>
+            <button class="pet mt-4">Get our culture book</button>
             <img src="Src/Assets/Frame 291.png" class="decor-img top-right" alt="Design"/>
           </div>
         </div>
@@ -346,7 +355,7 @@
     </div>
   </section>
    <!-- Who We Are Section -->
-    <section class="who-we-are py-5">
+    <section class="who-we-are py-5 slide-section">
     <div class="container">
       <div class="row align-items-center">
         
@@ -363,10 +372,13 @@
         <!-- Right Column: Text -->
         <div class="col-md-6">
           <div class="video-content-inner">
-            <h1 class="mb-4 ">Who We Are: Pioneering Digital Innovation with Purpose</h1>
-<p class="mb-4 year">At Yoho Technologies, we've been shaping the future of businesses for over 7 years through cutting-edge digital solutions. From our roots in Chennai to clients worldwide, we deliver technology that drives real impact.</p>
+            <h1 class="mb-4 section-header-heading">Who We Are: Pioneering Digital Innovation with Purpose</h1>
+<p class="mb-4 year left-align">
+  At Yoho Technologies, we've been shaping the future of businesses for over 7 years through cutting-edge digital solutions. 
+  From our roots in Chennai to clients worldwide, we deliver technology that drives real impact.
+</p>
 
-            <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+            <a href="#our-story" class="cut">Discover Our Story</a>
           </div>
         </div>
 
@@ -382,7 +394,7 @@
     <div class="video-content-inner">
     <h1 class="mb-4">Who We Are: Powering Progress Through Digital Innovation</h1>
     <p class="mb-4">For over 7 years, Yoho Technologies has been delivering transformative digital solutions—empowering businesses across Chennai and beyond.</p>
-    <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+    <a href="#our-story" class="cut">Discover Our Story</a>
   </div>
 
 </div>
@@ -390,7 +402,7 @@
 <!-- Right Column: Image -->
 <div class="col-md-6 mb-4 mb-md-0">
     <div class="image-wrapper">
-      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg" alt="About Us" class="w-100 rounded-4 shadow" />
+      <img src="Src/Assets/WebStatic/WebStatic1.jpg" alt="About Us" class="w-100 rounded-4 shadow" />
     </div>
   </div>
 
@@ -398,7 +410,7 @@
       </div>
     </div>
   </section>
-<section class="value-section  py-5">
+<section class="value-section  py-5 slide-section">
     <div class="container text-center">
       <h2 class="section-heading mb-5">Engineering real value since 2012</h2>
       <div class="row justify-content-center">
@@ -434,12 +446,12 @@
       </div>
     </div>
   </section>
-<section class="sustainability-section text-white py-5">
+<section class="sustainability-section text-white py-5 slide-section">
     <div class="container">
       <div class="row align-items-start">
         <!-- Left Column -->
         <div class="col-lg-6 mb-4 mb-lg-0">
-    <h2 class="section-title mb-4">Our Sustainable Journey</h2>
+    <h2 class="section-header-heading heading mb-4">Our Sustainable Journey</h2>
     <p class="year">
       <strong class="year">Purpose. Responsibility. Progress.</strong> At Yoho Technologies, delivering cutting-edge digital solutions goes hand in hand with our commitment to building a more sustainable future. We embed sustainability into our strategy, operations, and culture.
     </p>
@@ -447,33 +459,38 @@
       <strong class="year">Integrity. Partnership. Impact.</strong> We actively collaborate with clients, communities, and partners to drive meaningful change—working together to create a greener, more equitable future for all.
     </p>
 
-    <div class="d-flex gap-3 mt-4 flex-wrap ">
-      <a href="#our-story" class="cta-button badge-pill">Environmental</a>
-      <a href="#our-story" class="cta-button badge-pill">Social</a>
-      <a href="#our-story" class="cta-button badge-pill">Governance</a>
+    <!-- <div class="d-flex gap-3 mt-4 flex-wrap ">
+      <a href="#our-story" class=" badge-pill social"><span>Environmental</span></a>
+      <a href="#our-story" class=" badge-pill social">Social</a>
+      <a href="#our-story" class=" badge-pill social">Governance</a>
       
-    </div>
+    </div> -->
+     <div class="d-flex flex-wrap gap-3 mb-4">
+            <span class="mor">Environmental</span>
+            <span class="mor ">Social</span>
+            <span class="mor ">Governance</span>
+          </div>
   </div>
 
 
         <!-- Right Column -->
         <div class="col-lg-6">
-    <div class="info-card p-4 p-md-5 ">
-      <img src="Src/Assets/Frame 287.png" alt="Icon" class="mb-4" style="width: 100px;">
+    <div class="info-card p-4 p-md-5 relative">
+      <img src="Src/Assets/110x150 (3).png" alt="Icon" class="mb-4 decor-imgg" style="width: 100px;">
       <p class="year"><strong class="year">Our Planet. Our Responsibility.</strong> At Yoho Technologies, we understand the urgency of tackling climate change, pollution, and environmental degradation. We're committed to sustainable practices that reduce our ecological footprint and protect the planet for future generations.</p>
       <p class="year">Through tree plantation drives and strong community engagement, we've <strong class="year">successfully planted over 700 trees</strong>—contributing to a healthier, greener tomorrow.</p>
-      <a href="#our-story" class="cta-button badge-pill">Discover More</a>
+      <a href="#our-story" class="mut">Discover More</a>
     </div>
   </div>
 
 <br>
 <hr>
 
-<div class="leadership-section py-5 text-white">
+<div class="leadership-section py-5 text-white slide-section">
     <div class="container">
 
       <!-- Heading -->
-      <div class="text-center mb-5">
+      <div class="section-header-heading mb-5">
        <h2 class="heading">Our leadership team</h2>
 
         <p class="year">
@@ -489,16 +506,17 @@
         <!-- Left Column: Image -->
         <div class="col-md-6 mb-4 mb-md-0 order-md-1">
           <div class="image-wrapper">
-            <img src="Src/Assets/yohoboy.jpg" alt="About Us" class="w-100 rounded-4 shadow" />
+            <img src="Src/Assets/unnamed.png" alt="About Us" class="w-100 rounded-4 shadow" />
           </div>
         </div>
 
         <!-- Right Column: Text -->
-        <div class="col-md-6 order-md-2">
+        <div class="col-md-6 order-md-2 slide-section">
           <div class="video-content-inner text-white">
-            <h1 class="mb-4 ">Who We Are: Building greater futures through innovation and digital excellence</h1>
-            <p class="mb-4">Leading the way in digital solutions for over 7 years, we transform businesses across Chennai and beyond.</p>
-            <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+            <h1 class="mb-4 left-align">Who We Are: Building greater futures through innovation and digital excellence</h1>
+<p class="mb-4 left-align">Leading the way in digital solutions for over 7 years, we transform businesses across Chennai and beyond.</p>
+
+            <a href="#our-story" class="cut">Discover Our Story</a>
           </div>
         </div>
       </div>
@@ -508,13 +526,318 @@
 
     </div>
   </section>
+  <div class="header slide-section">
+        <h1>What Our Users Say</h1>
+        <p>Real testimonials from real people</p>
+    </div>
+    
+     <div class="collage-container">
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+"Yoho Technologies developed our complete e-commerce platform from scratch, and we couldn't be more satisfied with the outcome. From the initial consultation to the final deployment, their team was professional, communicative, and focused on delivering high-quality work. They took the time to understand our business model, customer base, and design preferences, which reflected in the final product.
+
+The user interface is smooth, intuitive, and visually appealing, while the backend is robust and highly scalable. Features like real-time order tracking, secure payment integration, and a custom admin dashboard were all implemented flawlessly. Even when we made a few last-minute changes, the team adapted quickly without compromising delivery timelines.
+</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Sarah Thompson">
+                    <div>
+                        <p class="user-name">Sarah Thompson</p>
+                        <p class="user-title">Project Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We approached Yoho Technologies for a cross-platform mobile app. They handled everything from design to deployment professionally. Their regular updates and transparent process made us feel confident throughout."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Michael Chen">
+                    <div>
+                        <p class="user-name">Michael Chen</p>
+                        <p class="user-title">Software Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"As a startup, we needed a tech partner who could understand our vision and work closely with us. Yoho Technologies delivered a scalable MVP within our budget and offered continued support post-launch."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Emily Rodriguez">
+                    <div>
+                        <p class="user-name">Emily Rodriguez</p>
+                        <p class="user-title">Data Analyst</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Yoho Technologies built a custom booking system for my business. Their team listened carefully to our needs and translated them into a user-friendly application. We've seen a 40% increase in customer engagement."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Ryan Sullivan">
+                    <div>
+                        <p class="user-name">Ryan Sullivan</p>
+                        <p class="user-title">Business Owner</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Despite being in different time zones, Yoho's communication was consistent and effective. They managed our project remotely with professionalism and precision. I would recommend them to anyone looking for remote tech services."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="David Patel">
+                    <div>
+                        <p class="user-name">David Patel</p>
+                        <p class="user-title">IT Consultant</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Yoho Technologies helped us digitize patient record management. The team followed strict data privacy protocols and built a secure system. We're impressed with their domain understanding and execution."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Olivia Harper">
+                    <div>
+                        <p class="user-name">Olivia Harper</p>
+                        <p class="user-title">Marketing Specialist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I've worked with several development teams, and Yoho stands out for their structured workflow and on-time delivery. They're efficient, technically strong, and committed to quality."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="James Carter">
+                    <div>
+                        <p class="user-name">James Carter</p>
+                        <p class="user-title">Operations Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We hired Yoho Technologies to develop an online learning portal. They included features like live classes, assessments, and student tracking. The final product was clean, fast, and well-optimized for mobile use."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Dr. Lisa Wang">
+                    <div>
+                        <p class="user-name">Dr. Lisa Wang</p>
+                        <p class="user-title">Research Scientist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Being from a non-tech background, I was worried about app development. But Yoho Technologies patiently explained each step and guided me through the entire process. I'm very happy with their service and clarity."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Alex Johnson">
+                    <div>
+                        <p class="user-name">Alex Johnson</p>
+                        <p class="user-title">Data Scientist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"This is our second time working with Yoho Technologies, and the experience was just as smooth as the first. They maintained code quality, provided timely updates, and handled last-minute changes professionally."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Maria Garcia">
+                    <div>
+                        <p class="user-name">Maria Garcia</p>
+                        <p class="user-title">Financial Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 11 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The natural language processing is phenomenal. It understands complex queries perfectly."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Jennifer Lee">
+                    <div>
+                        <p class="user-name">Jennifer Lee</p>
+                        <p class="user-title">Content Creator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 12 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"This AI platform has revolutionized our entire workflow. The integration capabilities are seamless, and the learning curve is practically non-existent. Our team's productivity has increased by 300%!"</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Robert Kim">
+                    <div>
+                        <p class="user-name">Robert Kim</p>
+                        <p class="user-title">CTO</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 13 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The real-time analytics feature has transformed how we make business decisions. Absolutely brilliant!"</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Amanda Wilson">
+                    <div>
+                        <p class="user-name">Amanda Wilson</p>
+                        <p class="user-title">Business Analyst</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 14 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Security and privacy are top-notch. I feel completely confident using this AI for sensitive business operations."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Thomas Brown">
+                    <div>
+                        <p class="user-name">Thomas Brown</p>
+                        <p class="user-title">Security Officer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 15 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The customization options are endless. It adapts perfectly to our unique business requirements."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Rachel Davis">
+                    <div>
+                        <p class="user-name">Rachel Davis</p>
+                        <p class="user-title">UX Designer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 16 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The collaborative features make team projects so much more efficient. Everyone can work together seamlessly."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Kevin Martinez">
+                    <div>
+                        <p class="user-name">Kevin Martinez</p>
+                        <p class="user-title">Team Lead</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 17 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Mobile integration works flawlessly. I can access everything I need from anywhere."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Sophie Turner">
+                    <div>
+                        <p class="user-name">Sophie Turner</p>
+                        <p class="user-title">Mobile Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 18 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The learning algorithms are incredibly sophisticated. It gets smarter with every interaction."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Daniel Clark">
+                    <div>
+                        <p class="user-name">Daniel Clark</p>
+                        <p class="user-title">AI Researcher</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 19 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Exceptional performance under high loads. This AI handles our enterprise needs perfectly."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Grace Liu">
+                    <div>
+                        <p class="user-name">Grace Liu</p>
+                        <p class="user-title">Systems Administrator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 20 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"After trying dozens of AI solutions, this is the only one that truly delivers on its promises. The innovation and attention to detail are extraordinary. It's not just a tool—it's a game-changer for our entire industry."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Marcus Johnson">
+                    <div>
+                        <p class="user-name">Marcus Johnson</p>
+                        <p class="user-title">CEO & Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="Src/JS/About.js"></script>
+    <script>
+  const observer = new IntersectionObserver(
+    (entries, obs) => entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');   // ⚡ fire animation
+        obs.unobserve(entry.target);             // stop watching (optional)
+      }
+    }),
+    { threshold: 0.1 }  // trigger when 10 % becomes visible
+  );
+
+  document.querySelectorAll('.slide-section').forEach(el => observer.observe(el));
+</script>
 
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer ">
     <div class="footer-container">
       <!-- Footer Top Section -->
       <div class="footer-top">
@@ -640,7 +963,7 @@
   <script src="Src/JS/search.js"></script>
   <script>
     // Ensure navbar stays fixed
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const navbar = document.getElementById('navbar');
       const colorBar = document.querySelector('.color-bar');
       if (navbar) {
@@ -659,7 +982,7 @@
   </script>
   <script>
     // Loading screen
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const loadingScreen = document.getElementById('loading-screen');
       setTimeout(() => {
         loadingScreen.classList.add('hidden');
@@ -667,7 +990,7 @@
           loadingScreen.style.display = 'none';
         }, 500);
       }, 800);
-      
+
       // Dynamic copyright year
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
