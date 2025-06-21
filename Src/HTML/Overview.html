@@ -6,361 +6,1075 @@
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/Overview.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-        /* Service Cards Styles */
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS/Navbar.css">
 
-        .tech-item {
-              transition: all 0.2s ease;
-            }
-            .tech-item:hover {
-              transform: translateY(-2px);
-              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            }
-        .service-card {
-            background-color: #000;
-            border: 2px solid #333;
-            border-radius: 20px;
-            padding: 2rem;
-            height: 280px;
-            position: relative;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-        
-        .service-card:hover {
-            border-color: #555;
-            transform: translateY(-5px);
-        }
-        
-        .service-card h3 {
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 300;
-            line-height: 1.4;
-            margin-bottom: auto;
-        }
-        
-        .card-icon {
-            position: absolute;
-            bottom: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-        }
-        
-        .read-more {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: auto;
-            padding-bottom: 1rem;
-        }
-        
-        .read-more:hover {
-            color: #ccc;
-            text-decoration: none;
-        }
-        
-        .read-more::after {
-            content: '→';
-            font-size: 1.2rem;
-        }
-        
-        /* Custom SVG Icons */
-        .icon-starburst, .icon-atom, .icon-arrow-corner, .icon-circles {
-            stroke: #fff;
-            stroke-width: 2;
-            fill: none;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
 </head>
+ 
 <body>
-    <div class="container">
-        <!-- First Section -->
-        <div class="row align-items-center my-5">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <img class="img-fluid rounded" src="../Assets/Img-1.jpg" alt="Description">
-            </div>
-            
-            <div class="col-md-6">
-                <h1 class="mb-4">First Heading</h1>
-                <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia culpa repellendus, fuga in laboriosam harum sit velit aperiam esse perferendis doloremque non voluptate quia asperiores provident dolorum perspiciatis odio hic obcaecati! Incidunt alias maiores porro, id aliquam repudiandae dolores magnam eveniet expedita velit, temporibus, sit voluptates. Quia perspiciatis laboriosam eius!</p>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi iusto qui eos ducimus at deleniti corrupti dolorem voluptatem ex deserunt, aperiam reiciendis in. Ullam, eaque?</p>
-                <button class="btn btn-primary rounded-pill px-4 py-2">Get Know US</button>
-            </div>
+
+<div class="color-bar"></div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="#" data-page="Home">
+                <div class="logo-container">
+                    <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+                    <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+                </div>
+            </a>
         </div>
+        <ul class="nav-links">
+            <li><a href="Src/HTML/About.html" data-page="About">Who We Are</a></li>
+            <li class="dropdown-parent">
+                <a href="#" data-page="Services" class="dropdown-trigger">What We Do</a>
+                <div class="dropdown-backdrop"></div>
+                <div class="mega-dropdown">
+                    <div class="mega-dropdown-container">
+                        <!-- Left Categories -->
+                        <div class="dropdown-categories">
+                            <a href="#" class="category-item active" data-category="overview">Overview</a>
+                            <a href="#" class="category-item" data-category="website-design">Website Design</a>
+                            <a href="#" class="category-item" data-category="website-development">Website Development</a>
+                            <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                            <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+                        </div>
+                        <!-- Right Services -->
+                        <div class="dropdown-services active" id="overview">
+                            <div class="services-title">Our Services Overview</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Website Design & Development</a>
+                                <a href="#" class="service-item">Mobile App Development</a>
+                                <a href="#" class="service-item">Digital Marketing Solutions</a>
+                                <a href="#" class="service-item">E-Commerce Solutions</a>
+                                <a href="#" class="service-item">Custom Software Development</a>
+                                <a href="#" class="service-item">UI/UX Design Services</a>
+                                <a href="#" class="service-item">Cloud Solutions</a>
+                                <a href="#" class="service-item">SEO & Analytics</a>
+                                <a href="#" class="service-item">Consulting Services</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-services" id="website-design">
+                            <div class="services-title">Website Design</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Static Website Designing</a>
+                                <a href="#" class="service-item">Dynamic Website Designing</a>
+                                <a href="#" class="service-item">Corporate Website Designing</a>
+                                <a href="#" class="service-item">Professional Website Designing</a>
+                                <a href="#" class="service-item">Customized Website Designing</a>
+                                <a href="#" class="service-item">Website Re-Designing</a>
+                                <a href="#" class="service-item">Responsive Website Designing</a>
+                                <a href="#" class="service-item">Angular JS Website Designing</a>
+                                <a href="#" class="service-item">Landing Page Designing</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-services" id="website-development">
+                            <div class="services-title">Website Development</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Web Application Development</a>
+                                <a href="#" class="service-item">PHP Website Development</a>
+                                <a href="#" class="service-item">Web Portal Development</a>
+                                <a href="#" class="service-item">E-Commerce Website Development</a>
+                                <a href="#" class="service-item">React JS Development</a>
+                                <a href="#" class="service-item">WordPress Development</a>
+                                <a href="#" class="service-item">PHP Application Development</a>
+                                <a href="#" class="service-item">OpenSource Framework</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-services" id="mobile-solutions">
+                            <div class="services-title">Mobile App Development</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Hybrid Apps Development</a>
+                                <a href="#" class="service-item">Android Apps Development</a>
+                                <a href="#" class="service-item">iPhone Apps Development</a>
+                                <a href="#" class="service-item">Cross Platform Apps Development</a>
+                                <a href="#" class="service-item">Mobile Apps Upgradation</a>
+                                <a href="#" class="service-item">Mobile Apps Re-Design</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-services" id="digital-marketing">
+                            <div class="services-title">Digital Marketing</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Market Research and Analysis</a>
+                                <a href="#" class="service-item">Content Writing Services</a>
+                                <a href="#" class="service-item">Search Engine Optimization</a>
+                                <a href="#" class="service-item">Search Engine Marketing</a>
+                                <a href="#" class="service-item">Social Media Optimization</a>
+                                <a href="#" class="service-item">Social Media Marketing</a>
+                                <a href="#" class="service-item">E-Mail Marketing</a>
+                                <a href="#" class="service-item">SMS Marketing</a>
+                                <a href="#" class="service-item">Lead Generation</a>
+                                <a href="#" class="service-item">Google PPC</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-parent">
+                <a href="#" data-page="Industries" class="dropdown-trigger">Industries</a>
+                <div class="dropdown-backdrop"></div>
+                <div class="mega-dropdown">
+                    <div class="mega-dropdown-container">
+                        <div class="dropdown-categories">
+                            <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                            <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                            <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                            <a href="#" class="category-item" data-category="education">EdTech</a>
+                        </div>
+                        <div class="dropdown-services active" id="fintech">
+                            <div class="services-title">FinTech Solutions</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Banking Solutions</a>
+                                <a href="#" class="service-item">Payment Gateways</a>
+                                <a href="#" class="service-item">Digital Wallets</a>
+                                <a href="#" class="service-item">Investment Platforms</a>
+                                <a href="#" class="service-item">Insurance Tech</a>
+                                <a href="#" class="service-item">Blockchain Solutions</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-services" id="healthcare">
+                            <div class="services-title">HealthTech Solutions</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Telemedicine Platforms</a>
+                                <a href="#" class="service-item">Health Management Systems</a>
+                                <a href="#" class="service-item">Medical Records</a>
+                                <a href="#" class="service-item">Fitness Apps</a>
+                                <a href="#" class="service-item">Healthcare Analytics</a>
+                                <a href="#" class="service-item">Medical IoT</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-services" id="ecommerce">
+                            <div class="services-title">E-Commerce Solutions</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Online Marketplaces</a>
+                                <a href="#" class="service-item">B2B Platforms</a>
+                                <a href="#" class="service-item">Inventory Management</a>
+                                <a href="#" class="service-item">Order Management</a>
+                                <a href="#" class="service-item">Customer Analytics</a>
+                                <a href="#" class="service-item">Multi-vendor Systems</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-services" id="education">
+                            <div class="services-title">EdTech Solutions</div>
+                            <div class="services-grid">
+                                <a href="#" class="service-item">Learning Management Systems</a>
+                                <a href="#" class="service-item">Online Course Platforms</a>
+                                <a href="#" class="service-item">Student Information Systems</a>
+                                <a href="#" class="service-item">Virtual Classrooms</a>
+                                <a href="#" class="service-item">Assessment Tools</a>
+                                <a href="#" class="service-item">Educational Apps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#" data-page="Careers">Careers</a></li>
+            <li><a href="#" data-page="Contact">Contact Us</a></li>
 
-        <hr class="my-5 bg-dark">
+        </ul>
 
-        <!-- Second Section -->
-        <div class="row my-5">
-            <div class="col-12">
-                <h1 class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, beatae.</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ducimus totam voluptate officia minima reiciendis blanditiis corporis maiores. Neque error cumque veniam, asperiores velit quod quo eaque earum ducimus magni.</p>
+        <!-- Right side: Search and CTA -->
+        <div class="navbar-right">
+            <div class="search-container">
+                <button class="search-toggle" id="search-toggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <div class="search-dropdown" id="search-dropdown">
+                    <input type="text" placeholder="Search..." class="search-input" id="search-input">
+                    <button class="search-close" id="search-close">×</button>
+                </div>
             </div>
+            <a href="#contact" class="cta-button">Get in Touch</a>
         </div>
+    </div>
+</nav>
 
-        <!-- Service Cards Section -->
-        <div class="row my-5">
-            <!-- Digital Product Development Card -->
-            <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <h3>Digital product<br>development</h3>
-                    <a href="#" class="read-more">Read more</a>
-                    <div class="card-icon">
-                        <svg viewBox="0 0 60 60" class="icon-starburst">
-                            <g transform="translate(30,30)">
-                                <line x1="0" y1="-25" x2="0" y2="25"/>
-                                <line x1="-25" y1="0" x2="25" y2="0"/>
-                                <line x1="-17.7" y1="-17.7" x2="17.7" y2="17.7"/>
-                                <line x1="17.7" y1="-17.7" x2="-17.7" y2="17.7"/>
-                                <line x1="0" y1="-25" x2="5" y2="-20"/>
-                                <line x1="0" y1="-25" x2="-5" y2="-20"/>
-                                <line x1="25" y1="0" x2="20" y2="5"/>
-                                <line x1="25" y1="0" x2="20" y2="-5"/>
-                                <line x1="0" y1="25" x2="5" y2="20"/>
-                                <line x1="0" y1="25" x2="-5" y2="20"/>
-                                <line x1="-25" y1="0" x2="-20" y2="5"/>
-                                <line x1="-25" y1="0" x2="-20" y2="-5"/>
-                            </g>
-                        </svg>
+        <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 g-0">
+                <div class="col-lg-6 d-flex justify-content-end p-0">
+                    <div class="video-container">
+                        <video class="video-element" id="mainVideo" autoplay muted loop>
+                            <source src="../Assets/Career.mp4" type="video/mp4">
+                            <source src="../Assets/Career.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- <div class="controls">
+                            <div class="play-pause-btn" onclick="togglePlay()">
+                                <i class="fas fa-pause" id="playIcon"></i>
+                            </div>
+                            <div class="sound-btn" onclick="toggleSound()">
+                                <i class="fas fa-volume-mute" id="soundIcon"></i>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
-            </div>
-            
-            <!-- UI UX Design Services Card -->
-            <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <h3>UI UX design services</h3>
-                    <a href="#" class="read-more">UI UX design services</a>
-                    <div class="card-icon">
-                        <svg viewBox="0 0 60 60" class="icon-atom">
-                            <g transform="translate(30,30)">
-                                <ellipse cx="0" cy="0" rx="20" ry="8" transform="rotate(0)"/>
-                                <ellipse cx="0" cy="0" rx="20" ry="8" transform="rotate(60)"/>
-                                <ellipse cx="0" cy="0" rx="20" ry="8" transform="rotate(120)"/>
-                                <circle cx="0" cy="0" r="3" fill="#fff"/>
-                            </g>
-                        </svg>
+                
+                <div class="col-lg-6 d-flex align-items-center p-0">
+                    <div class="content-section">
+                        <h1 class="main-heading">
+                            Big enough to deliver.
+                            Small enough to care.
+                        </h1>
+                        
+                        <p >
+                            We're more than just hands on keyboards. We take time to learn everything about your business: your dreams, hopes, fears, challenges. And together, we find new and inventive ways to grow your revenue, delight your customers, and solve the problems you face.
+                        </p>
+                        
+                        <p >
+                            We're not too big that you'll just be a number, and not too small that we can't scale with you.
+                        </p>
+                        
+                        <a href="#" class="cts-button">Get to know us</a>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Product Discovery Card -->
-            <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <h3>Product discovery</h3>
-                    <a href="#" class="read-more">Read more</a>
-                    <div class="card-icon">
-                        <svg viewBox="0 0 60 60" class="icon-arrow-corner">
-                            <g transform="translate(30,30)">
-                                <rect x="-15" y="-10" width="20" height="15" rx="2"/>
-                                <line x1="5" y1="-2.5" x2="15" y2="-2.5"/>
-                                <line x1="15" y1="-2.5" x2="10" y2="-7.5"/>
-                                <line x1="15" y1="-2.5" x2="10" y2="2.5"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Software Architecture Services Card -->
-            <div class="col-md-6 mb-4">
-                <div class="service-card">
-                    <h3>Software architecture<br>services</h3>
-                    <a href="#" class="read-more">Read more</a>
-                    <div class="card-icon">
-                        <svg viewBox="0 0 60 60" class="icon-circles">
-                            <g transform="translate(30,30)">
-                                <circle cx="0" cy="0" r="20"/>
-                                <circle cx="0" cy="0" r="15"/>
-                                <circle cx="0" cy="0" r="10"/>
-                                <circle cx="0" cy="0" r="5"/>
-                                <circle cx="0" cy="0" r="2" fill="#fff"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-         
-        <!-- Third Section -->
-        <div class="row align-items-center my-5">
-            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                <img class="img-fluid rounded" src="../Assets/Img-1.jpg" alt="Description">
-            </div>
-
-            <div class="col-md-6 order-md-1">
-                <h1 class="mb-4">First Heading</h1>
-                <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia culpa repellendus, fuga in laboriosam harum sit velit aperiam esse perferendis doloremque non voluptate quia asperiores provident dolorum perspiciatis odio hic obcaecati! Incidunt alias maiores porro, id aliquam repudiandae dolores magnam eveniet expedita velit, temporibus, sit voluptates. Quia perspiciatis laboriosam eius!</p>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi iusto qui eos ducimus at deleniti corrupti dolorem voluptatem ex deserunt, aperiam reiciendis in. Ullam, eaque?</p>
-                <button class="btn btn-primary rounded-pill px-4 py-2">Get Know US</button>
             </div>
         </div>
         
-        <!-- Fourth Section -->
-        <div class="row my-5">
-            <div class="col-12">
-                <h1 class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, beatae.</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ducimus totam voluptate officia minima reiciendis blanditiis corporis maiores. Neque error cumque veniam, asperiores velit quod quo eaque earum ducimus magni.</p>
-                    </div>
-                </div>
-            
-                <!-- Fifth Section -->
-                 <div>
-                    <h1>What our clients say about us</h1>
-                    <p>Passionate. Proactive. Expert. We enjoy co-creating innovative products with the world's most innovative businesses and helping them realize their vision. Watch how our clients describe our partnership.</p>
-                    <div>
-
-                    </div>
-                 </div>
-             
-                 <!-- Sixth Section - tech Stack -->
-                  <div>
-                    <h1>Our tech stack. Tailored to yours.</h1>
-                    <div class="container py-4">
-                    <div class="row g-4">
-                      <!-- First Column -->
-                      <div class="col-md-4">
-                        <div class="d-flex flex-column gap-3">
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Microsoft .NET</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">.NET</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Java</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Python</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Node.js</h4>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Second Column -->
-                      <div class="col-md-4">
-                        <div class="d-flex flex-column gap-3">
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">HTML</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">CSS</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">React</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Angular</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Vue.js</h4>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Third Column -->
-                      <div class="col-md-4">
-                        <div class="d-flex flex-column gap-3">
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">React Native</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Flutter</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Android</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">iOS</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Kotlin</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Swift</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">Azure</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">AWS</h4>
-                          </div>
-                          <div class="tech-item p-3 bg-light rounded text-center">
-                            <h4 class="mb-0">GCP</h4>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                 </div>
-
-
-          </div>
-
-          <!-- Seventh Section - Our Products -->
-          <div class="container">
-            <h1>Our products</h1>
-            <p>With years of hands-on experience, we know what works, and what doesn't. We not only understand your unique challenges, we anticipate them and deliver innovative solutions to speed up your digital development and time to market, keeping you ahead of the curve.</p>
-            <p>Our pre-built solutions are here to save time, cut complexities, and help you deliver great digital products that will give your business a competitive edge.</p>
-           
-            <!-- Card -->
-             <div class="d-flex flex-column" >
-           <!-- 1st Card -->
-            <div class="card border-0 shadow p-4" style="max-width: 500px; background-color: #f8f9fa;">
-                <div class="card-body">
-                    <h2 class="card-title fw-bold mb-3">Vega Flywheel</h2>
-                    <p class="card-text fw-bold mb-3">Re.inventing product discovery.</p>
-                    <p class="card-text fw-bold mb-3">Innovative. Efficient. Strategic. Validate your solutions in just four weeks.</p>
-                    <p class="card-text mb-3">Vega Flywheel is engineered to set your ideas into motion, aligning them precisely with market demands.</p>
-                    <p class="card-text mb-4">We ensure your products achieve your business goals and resonate deeply with your target audience, catalyzing swift movement from concept to market-validated solutions. <span class="fw-bold">Fast. Structured. Goal-oriented.</span></p>
-                    <button class="btn btn-dark rounded-pill px-4 py-2">Discover more</button>
-                </div>
-            </div>
-
-            <!-- 2nd Card -->
-            <div class="card border-0 shadow p-4" style="max-width: 500px; background-color: #f8f9fa;">
-                <div class="card-body">
-                    <h2 class="card-title fw-bold mb-3">Vega Flywheel</h2>
-                    <p class="card-text fw-bold mb-3">Re.inventing product discovery.</p>
-                    <p class="card-text fw-bold mb-3">Innovative. Efficient. Strategic. Validate your solutions in just four weeks.</p>
-                    <p class="card-text mb-3">Vega Flywheel is engineered to set your ideas into motion, aligning them precisely with market demands.</p>
-                    <p class="card-text mb-4">We ensure your products achieve your business goals and resonate deeply with your target audience, catalyzing swift movement from concept to market-validated solutions. <span class="fw-bold">Fast. Structured. Goal-oriented.</span></p>
-                    <button class="btn btn-dark rounded-pill px-4 py-2">Discover more</button>
-                </div>
-            </div>
-
-            <!-- 3rd Card -->
-            <div class="card border-0 shadow p-4" style="max-width: 500px; background-color: #f8f9fa;">
-                <div class="card-body">
-                    <h2 class="card-title fw-bold mb-3">Vega Flywheel</h2>
-                    <p class="card-text fw-bold mb-3">Re.inventing product discovery.</p>
-                    <p class="card-text fw-bold mb-3">Innovative. Efficient. Strategic. Validate your solutions in just four weeks.</p>
-                    <p class="card-text mb-3">Vega Flywheel is engineered to set your ideas into motion, aligning them precisely with market demands.</p>
-                    <p class="card-text mb-4">We ensure your products achieve your business goals and resonate deeply with your target audience, catalyzing swift movement from concept to market-validated solutions. <span class="fw-bold">Fast. Structured. Goal-oriented.</span></p>
-                    <button class="btn btn-dark rounded-pill px-4 py-2">Discover more</button>
-                </div>
-            </div>
-
-            </div>
-          </div>
-
-          <!-- 8th Section -->
-           <div>
-                <img src="" alt="">
-           </div>
-
     </div>
 
+    <hr class="section-divider">
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <div class="container px-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="services-heading">
+                        By your side, every step the<br>
+                        product lifecycle
+                    </h2>
+                    <p class="services-description">
+                        From concept to validation. Prototyping to strategy. Acceleration to delivery. We are 
+                        your hands-on digital product development and system integration services partner. 
+                        We transform your dreams into tailored digital experiences your users will love.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-starburst">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <line x1="50" y1="10" x2="50" y2="90"/>
+                                    <line x1="10" y1="50" x2="90" y2="50"/>
+                                    <line x1="21.7" y1="21.7" x2="78.3" y2="78.3"/>
+                                    <line x1="78.3" y1="21.7" x2="21.7" y2="78.3"/>
+                                    <line x1="35" y1="15" x2="65" y2="85"/>
+                                    <line x1="85" y1="35" x2="15" y2="65"/>
+                                    <line x1="65" y1="15" x2="35" y2="85"/>
+                                    <line x1="15" y1="35" x2="85" y2="65"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Digital Marketing</h3>
+                        <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-atom">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="5"/>
+                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(0 50 50)"/>
+                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(60 50 50)"/>
+                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(120 50 50)"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">UI UX design services</h3>
+                        <a href="#" class="service-link">
+                           Read more<i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-refresh">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="30"/>
+                                    <circle cx="50" cy="50" r="20"/>
+                                    <circle cx="50" cy="50" r="10"/>
+                                    <circle cx="50" cy="50" r="35"/>
+                                    <path d="M50,15 L55,25 L45,25 Z"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Mobile App Development</h3>
+                        <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-monitor">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <rect x="20" y="25" width="60" height="40" rx="3"/>
+                                    <line x1="20" y1="75" x2="80" y2="75"/>
+                                    <line x1="35" y1="65" x2="35" y2="75"/>
+                                    <line x1="65" y1="65" x2="65" y2="75"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Website Development</h3>
+                        <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-circles">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="8"/>
+                                    <circle cx="50" cy="50" r="16"/>
+                                    <circle cx="50" cy="50" r="24"/>
+                                    <circle cx="50" cy="50" r="32"/>
+                                    <circle cx="50" cy="50" r="40"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Software architecture services</h3>
+                        <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-network">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="30" r="8"/>
+                                    <circle cx="25" cy="60" r="8"/>
+                                    <circle cx="75" cy="60" r="8"/>
+                                    <circle cx="50" cy="80" r="8"/>
+                                    <line x1="50" y1="38" x2="32" y2="52"/>
+                                    <line x1="50" y1="38" x2="68" y2="52"/>
+                                    <line x1="33" y1="60" x2="42" y2="72"/>
+                                    <line x1="67" y1="60" x2="58" y2="72"/>
+                                    <line x1="50" y1="15" x2="50" y2="5"/>
+                                    <line x1="45" y1="20" x2="35" y2="10"/>
+                                    <line x1="55" y1="20" x2="65" y2="10"/>
+                                    <line x1="40" y1="25" x2="25" y2="15"/>
+                                    <line x1="60" y1="25" x2="75" y2="15"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Data science and AI</h3>
+                        <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <div class="header">
+        <h1>What Our Users Say</h1>
+        <p>Real testimonials from real people</p>
+    </div>
+    
+     <div class="collage-container">
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+"Yoho Technologies developed our complete e-commerce platform from scratch, and we couldn't be more satisfied with the outcome. From the initial consultation to the final deployment, their team was professional, communicative, and focused on delivering high-quality work. They took the time to understand our business model, customer base, and design preferences, which reflected in the final product.
+
+The user interface is smooth, intuitive, and visually appealing, while the backend is robust and highly scalable. Features like real-time order tracking, secure payment integration, and a custom admin dashboard were all implemented flawlessly. Even when we made a few last-minute changes, the team adapted quickly without compromising delivery timelines.
+</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Sarah Thompson">
+                    <div>
+                        <p class="user-name">Sarah Thompson</p>
+                        <p class="user-title">Project Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We approached Yoho Technologies for a cross-platform mobile app. They handled everything from design to deployment professionally. Their regular updates and transparent process made us feel confident throughout."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Michael Chen">
+                    <div>
+                        <p class="user-name">Michael Chen</p>
+                        <p class="user-title">Software Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"As a startup, we needed a tech partner who could understand our vision and work closely with us. Yoho Technologies delivered a scalable MVP within our budget and offered continued support post-launch."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Emily Rodriguez">
+                    <div>
+                        <p class="user-name">Emily Rodriguez</p>
+                        <p class="user-title">Data Analyst</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Yoho Technologies built a custom booking system for my business. Their team listened carefully to our needs and translated them into a user-friendly application. We've seen a 40% increase in customer engagement."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Ryan Sullivan">
+                    <div>
+                        <p class="user-name">Ryan Sullivan</p>
+                        <p class="user-title">Business Owner</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Despite being in different time zones, Yoho's communication was consistent and effective. They managed our project remotely with professionalism and precision. I would recommend them to anyone looking for remote tech services."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="David Patel">
+                    <div>
+                        <p class="user-name">David Patel</p>
+                        <p class="user-title">IT Consultant</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Yoho Technologies helped us digitize patient record management. The team followed strict data privacy protocols and built a secure system. We're impressed with their domain understanding and execution."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Olivia Harper">
+                    <div>
+                        <p class="user-name">Olivia Harper</p>
+                        <p class="user-title">Marketing Specialist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I've worked with several development teams, and Yoho stands out for their structured workflow and on-time delivery. They're efficient, technically strong, and committed to quality."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="James Carter">
+                    <div>
+                        <p class="user-name">James Carter</p>
+                        <p class="user-title">Operations Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We hired Yoho Technologies to develop an online learning portal. They included features like live classes, assessments, and student tracking. The final product was clean, fast, and well-optimized for mobile use."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Dr. Lisa Wang">
+                    <div>
+                        <p class="user-name">Dr. Lisa Wang</p>
+                        <p class="user-title">Research Scientist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Being from a non-tech background, I was worried about app development. But Yoho Technologies patiently explained each step and guided me through the entire process. I'm very happy with their service and clarity."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Alex Johnson">
+                    <div>
+                        <p class="user-name">Alex Johnson</p>
+                        <p class="user-title">Data Scientist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"This is our second time working with Yoho Technologies, and the experience was just as smooth as the first. They maintained code quality, provided timely updates, and handled last-minute changes professionally."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Maria Garcia">
+                    <div>
+                        <p class="user-name">Maria Garcia</p>
+                        <p class="user-title">Financial Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 11 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The natural language processing is phenomenal. It understands complex queries perfectly."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Jennifer Lee">
+                    <div>
+                        <p class="user-name">Jennifer Lee</p>
+                        <p class="user-title">Content Creator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 12 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"This AI platform has revolutionized our entire workflow. The integration capabilities are seamless, and the learning curve is practically non-existent. Our team's productivity has increased by 300%!"</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Robert Kim">
+                    <div>
+                        <p class="user-name">Robert Kim</p>
+                        <p class="user-title">CTO</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 13 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The real-time analytics feature has transformed how we make business decisions. Absolutely brilliant!"</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Amanda Wilson">
+                    <div>
+                        <p class="user-name">Amanda Wilson</p>
+                        <p class="user-title">Business Analyst</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 14 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Security and privacy are top-notch. I feel completely confident using this AI for sensitive business operations."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Thomas Brown">
+                    <div>
+                        <p class="user-name">Thomas Brown</p>
+                        <p class="user-title">Security Officer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 15 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The customization options are endless. It adapts perfectly to our unique business requirements."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Rachel Davis">
+                    <div>
+                        <p class="user-name">Rachel Davis</p>
+                        <p class="user-title">UX Designer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 16 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The collaborative features make team projects so much more efficient. Everyone can work together seamlessly."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Kevin Martinez">
+                    <div>
+                        <p class="user-name">Kevin Martinez</p>
+                        <p class="user-title">Team Lead</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 17 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Mobile integration works flawlessly. I can access everything I need from anywhere."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Sophie Turner">
+                    <div>
+                        <p class="user-name">Sophie Turner</p>
+                        <p class="user-title">Mobile Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 18 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The learning algorithms are incredibly sophisticated. It gets smarter with every interaction."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Daniel Clark">
+                    <div>
+                        <p class="user-name">Daniel Clark</p>
+                        <p class="user-title">AI Researcher</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 19 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Exceptional performance under high loads. This AI handles our enterprise needs perfectly."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Grace Liu">
+                    <div>
+                        <p class="user-name">Grace Liu</p>
+                        <p class="user-title">Systems Administrator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 20 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"After trying dozens of AI solutions, this is the only one that truly delivers on its promises. The innovation and attention to detail are extraordinary. It's not just a tool—it's a game-changer for our entire industry."</p>
+                <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
+                         class="user-avatar" alt="Marcus Johnson">
+                    <div>
+                        <p class="user-name">Marcus Johnson</p>
+                        <p class="user-title">CEO & Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        
+        <div class="container">
+        <h2 class="stats-heading text-center t mt-5"> Strength in numbers </h2>
+            <div class="row stats-strength">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 100 100" class="icon-star">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <line x1="50" y1="15" x2="50" y2="85"/>
+                                    <line x1="15" y1="50" x2="85" y2="50"/>
+                                    <line x1="25.8" y1="25.8" x2="74.2" y2="74.2"/>
+                                    <line x1="74.2" y1="25.8" x2="25.8" y2="74.2"/>
+                                    <line x1="37.5" y1="18.3" x2="62.5" y2="81.7"/>
+                                    <line x1="81.7" y1="37.5" x2="18.3" y2="62.5"/>
+                                    <line x1="62.5" y1="18.3" x2="37.5" y2="81.7"/>
+                                    <line x1="18.3" y1="37.5" x2="81.7" y2="62.5"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Projects launched</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 100 100" class="icon-building">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M25 75 L25 25 Q25 20 30 20 L70 20 Q75 20 75 25 L75 75"/>
+                                    <line x1="15" y1="75" x2="85" y2="75"/>
+                                    <line x1="15" y1="80" x2="85" y2="80"/>
+                                    <rect x="35" y="35" width="8" height="8"/>
+                                    <rect x="57" y="35" width="8" height="8"/>
+                                    <rect x="35" y="50" width="8" height="8"/>
+                                    <rect x="57" y="50" width="8" height="8"/>
+                                    <rect x="46" y="60" width="8" height="15"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-number">80+</div>
+                        <div class="stat-label">Clients trusting us</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 100 100" class="icon-atom-alt">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="6"/>
+                                    <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(0 50 50)"/>
+                                    <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(60 50 50)"/>
+                                    <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(120 50 50)"/>
+                                    <circle cx="35" cy="35" r="3"/>
+                                    <circle cx="65" cy="35" r="3"/>
+                                    <circle cx="65" cy="65" r="3"/>
+                                    <circle cx="35" cy="65" r="3"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-number">90+</div>
+                        <div class="stat-label">Expert software engineers</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 100 100" class="icon-sun">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="15"/>
+                                    <line x1="50" y1="15" x2="50" y2="25"/>
+                                    <line x1="50" y1="75" x2="50" y2="85"/>
+                                    <line x1="85" y1="50" x2="75" y2="50"/>
+                                    <line x1="25" y1="50" x2="15" y2="50"/>
+                                    <line x1="73.5" y1="26.5" x2="67.1" y2="32.9"/>
+                                    <line x1="32.9" y1="67.1" x2="26.5" y2="73.5"/>
+                                    <line x1="73.5" y1="73.5" x2="67.1" y2="67.1"/>
+                                    <line x1="32.9" y1="32.9" x2="26.5" y2="26.5"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years in the market</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- Tech Stack Section -->
+    <div class="tech-stack-section">
+        <div class="container">
+            <h2 class="tech-heading">Our tech stack. Tailored to yours.</h2>
+            
+            <div class="tech-grid">
+                <!-- Row 1 -->
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/net-core.png" alt=".net-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">.NET</div>
+                </div>
+                
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/java.png" alt=".net-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-java">
+                            <path d="M30 40 Q30 30 40 30 L60 30 Q70 30 70 40 L70 60 Q70 70 60 70 L40 70 Q30 70 30 60 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M45 20 Q50 15 55 20 L55 35" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="45" cy="45" r="2" fill="currentColor"/>
+                            <circle cx="55" cy="45" r="2" fill="currentColor"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Java</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/python-icon.png" alt=".net-image" class="tech-img">                        
+                        <!-- <svg viewBox="0 0 100 100" class="icon-python">
+                            <path d="M30 30 Q30 20 40 20 L60 20 Q70 20 70 30 L70 50 Q70 60 60 60 L50 60 L50 70 Q50 80 40 80 L30 80 Q20 80 20 70 L20 50 Q20 40 30 40 L40 40 L40 30 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="35" cy="35" r="2" fill="currentColor"/>
+                            <circle cx="55" cy="55" r="2" fill="currentColor"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Python</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/node-js.png" alt=".net-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-nodejs">
+                            <path d="M50 20 L70 35 L70 65 L50 80 L30 65 L30 35 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">node</text>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Node.js</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/html.png" alt="html-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-html">
+                            <path d="M20 20 L25 75 L50 80 L75 75 L80 20 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="45" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">HTML</text>
+                            <text x="50" y="55" text-anchor="middle" font-size="8" fill="currentColor">5</text>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">HTML</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/css.png" alt="css-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-css">
+                            <path d="M20 20 L25 75 L50 80 L75 75 L80 20 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">CSS</text>
+                            <text x="50" y="55" text-anchor="middle" font-size="8" fill="currentColor">3</text>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">CSS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/react.png" alt="react-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-react">
+                            <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                            <ellipse cx="50" cy="50" rx="25" ry="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <ellipse cx="50" cy="50" rx="25" ry="10" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(60 50 50)"/>
+                            <ellipse cx="50" cy="50" rx="25" ry="10" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(120 50 50)"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">React</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/angular.png" alt="angular-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-angular">
+                            <path d="M50 15 L75 30 L70 70 L50 85 L30 70 L25 30 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="55" text-anchor="middle" font-size="18" font-weight="bold" fill="currentColor">A</text>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Angular</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/vue-js.png" alt="vue-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-vue">
+                            <path d="M50 20 L70 50 L50 80 L30 50 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor">V</text>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Vue.js</div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/php 1.png" alt="php-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-react-native">
+                            <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                            <ellipse cx="50" cy="50" rx="20" ry="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <ellipse cx="50" cy="50" rx="20" ry="8" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(60 50 50)"/>
+                            <ellipse cx="50" cy="50" rx="20" ry="8" stroke="currentColor" stroke-width="2" fill="none" transform="rotate(120 50 50)"/>
+                            <circle cx="30" cy="30" r="2" fill="currentColor"/>
+                            <circle cx="70" cy="30" r="2" fill="currentColor"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Php</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/flutter.png" alt="flutter-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-flutter">
+                            <path d="M30 30 L50 50 L70 30 L70 45 L50 65 L30 45 Z" fill="currentColor"/>
+                            <path d="M50 50 L70 70 L50 90 L30 70 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Flutter</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/android.png" alt="android-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-android">
+                            <path d="M30 40 Q30 30 40 30 L60 30 Q70 30 70 40 L70 70 Q70 80 60 80 L40 80 Q30 80 30 70 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <line x1="35" y1="25" x2="35" y2="35" stroke="currentColor" stroke-width="2"/>
+                            <line x1="65" y1="25" x2="65" y2="35" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="42" cy="45" r="2" fill="currentColor"/>
+                            <circle cx="58" cy="45" r="2" fill="currentColor"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Android</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/ios.png" alt="ios-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-ios">
+                            <circle cx="50" cy="50" r="25" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M45 35 Q50 30 55 35 L55 45 Q50 50 45 45 Z" fill="currentColor"/>
+                            <circle cx="50" cy="60" r="3" fill="currentColor"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">iOS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/kotlin.png" alt="kotlin-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-kotlin">
+                            <path d="M20 20 L50 20 L20 50 L50 50 L80 20 L80 50 L50 80 L20 80 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">K</text>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Kotlin</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/swift.png" alt="swift-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-swift">
+                            <path d="M20 40 Q20 30 30 30 L70 30 Q80 30 80 40 Q80 50 70 50 L50 50 Q40 50 40 60 Q40 70 50 70 L70 70 Q80 70 80 60" stroke="currentColor" stroke-width="3" fill="none"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Swift</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/azure-2.png" alt="azure-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-azure">
+                            <path d="M30 30 L70 30 Q80 30 80 40 L80 60 Q80 70 70 70 L30 70 Q20 70 20 60 L20 40 Q20 30 30 30 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor">A</text>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Azure</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/aws-2.png" alt="aws-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-aws">
+                            <path d="M20 50 Q20 40 30 40 L70 40 Q80 40 80 50 L75 60 L70 50 L30 50 L25 60 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="35" text-anchor="middle" font-size="10" font-weight="bold" fill="currentColor">AWS</text>
+                            <path d="M25 65 Q50 70 75 65" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">AWS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="../Assets/tech icons/google-cloud-1.png" alt="google-image" class="tech-img">
+                        <!-- <svg viewBox="0 0 100 100" class="icon-gcp">
+                            <circle cx="50" cy="40" r="15" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M35 55 L50 70 L65 55" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="50" y="45" text-anchor="middle" font-size="8" font-weight="bold" fill="currentColor">GCP</text>
+                        </svg> -->
+                    </div>
+                    <div class="tech-label">Google Cloud</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our products</h2>
+            
+            <p class="section-description">
+                With years of hands-on experience, we know what works, and what doesn't. We not only understand your unique challenges, we anticipate them and deliver <span class="highlight">innovative solutions to speed up your digital development and time to market</span>, keeping you ahead of the curve.
+            </p>
+            
+            <div class=" products row g-4">
+                <!-- Vega Flywheel -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Pharmacy Billing Software</h3>
+                        <div class="product-subtitle">Reinventing product discovery.</div>
+                        <div class="product-description">
+                            <strong>Innovative. Efficient. Strategic.</strong> YOHO very proudly presenting Medical store billing software or Pharmacy billing software in chennai the modern technology. Medical store billing software in chennai is specially developed for Medical, Pharma and Drug Shops. It covers all aspects involved in running a day to day medical retail business.
+                           
+                        </div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+                
+                <!-- Vega GuardIAM -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Job Portal Development</h3>
+                        <div class="product-subtitle">Ultimate Identity Access Management.</div>
+                        <div class="product-description">
+                          Looking for Job Portal Development / online recruitment software in chennai, then we can provide best job portal development with extra feature. YOHO provide job portal with excellent feature as per client requirements. Job Portals provide an ideal platform for the employers to reach their vision employees.                        </div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+                
+                <!-- Chatbot Accelerator -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Forex Trading</h3>
+                        <div class="product-subtitle">Fast-developed. Intuitive. Human-like.</div>
+                        <div class="product-description">
+                           We provide a new trading system for beginners. Our Robot analyze the market as every second. Thats automatically take the desition Buy or Sell. Our automated system provide BUY and sell signals to the robot. Just install this application to get a successful forex trading experience.  </div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+        
+
+        <div class="flow-section">
+            <div class="flow-img-section">
+                <h1 class="services-heading">Process to join our team</h1>
+                <div class="flow-image-container"></div>
+            </div>
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="../JS/Overview.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../JS/Navbar.js"></script>
+    
 </body>
 </html>

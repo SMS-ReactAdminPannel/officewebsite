@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Yoho Technologies</title>
+  <meta name="description" content="Get in touch with Yoho Technologies for your digital transformation needs.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/officewebsite/Src/CSS/Index.css">
+  <link rel="stylesheet" href="/officewebsite/Src/CSS/Navbar.css">
+  <link rel="stylesheet" href="/officewebsite/Src/CSS/Footer.css">
+  <link rel="stylesheet" href="../officewebsite/Src/CSS/Contact.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Src/Assets/yohologo.png" />
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <img src="Src/Assets/Loaded.png" alt="Yoho Technologies Loading" class="rotating-logo">
+  </div>
+
+  <!-- Navbar -->
+  <div class="color-bar"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-container">
+            <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+            <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">Who We Are</a></li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">What We Do</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Website Design</a>
+                <a href="#" class="category-item" data-category="website-development">Website Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <div class="dropdown-services active" id="overview">
+                <div class="services-title">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Website Design & Development</a>
+                  <a href="services.html" class="service-item">Mobile App Development</a>
+                  <a href="services.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="services.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="services.html" class="service-item">Custom Software Development</a>
+                  <a href="services.html" class="service-item">UI/UX Design Services</a>
+                  <a href="services.html" class="service-item">Cloud Solutions</a>
+                  <a href="services.html" class="service-item">SEO & Analytics</a>
+                  <a href="services.html" class="service-item">Consulting Services</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">Industries</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                <a href="#" class="category-item" data-category="education">EdTech</a>
+              </div>
+              <div class="dropdown-services active" id="fintech">
+                <div class="services-title">FinTech Solutions</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Banking Solutions</a>
+                  <a href="services.html" class="service-item">Payment Gateways</a>
+                  <a href="services.html" class="service-item">Digital Wallets</a>
+                  <a href="services.html" class="service-item">Investment Platforms</a>
+                  <a href="services.html" class="service-item">Insurance Tech</a>
+                  <a href="services.html" class="service-item">Blockchain Solutions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="#" class="active">Contact Us</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+            <button class="search-close" id="search-close">×</button>
+          </div>
+        </div>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Contact Hero Section -->
+ <section class="py-5 contact-section text-white">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Left -->
+      <div class="col-lg-6">
+        <h2 class=" mb-3 heading">Let’s Solve Your IT Challenges<br>Start Today!</h2>
+        <p class="mb-4 description">
+          Fill out the form below, and one of our experts will contact you within 24 hours to discuss your needs.
+          Whether it’s cybersecurity, cloud solutions, or tech support, we’re here to tailor a plan that works for you.
+        </p>
+
+        <!-- Badges -->
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <span class="badge-pill description">✔ 24/7 Online Support</span>
+          <span class="badge-pill description">✔ Free Consultation</span>
+          <span class="badge-pill description">✔ Multilingual Support</span>
+        </div>
+        <div >
+            <img src="/officewebsite/Src/Assets/map-ct.webp">
+            
+        </div>
+
+      </div>
+
+      <!-- Right: Form -->
+      <div class="col-lg-6">
+        <div class="form-box p-4 p-md-5 text-dark rounded-4 shadow">
+          <form class="custom-form">
+            <div class="row g-3">
+              <div class="col-md-6 ">
+                <input type="text" class="form-control description" placeholder="Name*" required />
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control description" placeholder="Phone number" />
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control description" placeholder="Email*" required />
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control description" placeholder="Company Name" />
+              </div>
+              <div class="col-12">
+                <textarea class="form-control description" rows="4" placeholder="Briefly describe your challenge or goals..."></textarea>
+              </div>
+            </div>
+            
+            <button type="submit" class="custom-outline-btn mt-3 description">
+              Get Your Free Consultation <span>→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Offices Section -->
+<section class="py-5 bg-black text-white">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-5">
+      <div>
+        <h2 class=" heading">Our Offices</h2>
+        <p class="text-light mb-0 description">
+          Explore our state-of-the-art offices around the world, where innovation meets
+          collaboration and expert support is just a call away.
+        </p>
+      </div>
+    <div class="mt-3 mt-md-0">
+  <select class="form-select custom-select-dark rounded-pill px-4 py-2 description" style="width: 200px;">
+    <option selected>Location</option>
+   
+    <option value="2">Chennai</option>
+    
+  </select>
+</div>
+
+    </div>
+
+    <!-- Office Info -->
+    <section class="py-5 bg-black text-white">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start g-4 border border-white rounded-4 p-4">
+      
+      <!-- Column 1: Location & Link -->
+     <div class="col-md-4 border-white pe-md-4">
+  <h3 class=" mb-2 heading">Chennai</h3>
+  <a target="_blank"
+     href="https://www.google.com/maps/@12.9564672,80.183296,12z?entry=ttu&g_ep=EgoyMDI1MDYxNi4wIKXMDSoASAFQAw%3D%3D"
+     class="custom-map-link description">Open in Google Maps →</a>
+</div>
+
+
+      <!-- Column 2: Address -->
+     <div class="col-md-4 px-md-4">
+  <ul class="list-unstyled mb-0 text-white">
+    <li class="d-flex align-items-start mb-2">
+      <i class="far fa-map me-2 outline-icon text-white "></i>
+      <span class="description">SF1, Second Floor, Plot No.29, Sri Ambal Nagar Main Road, Keelkatalai,<br>Chennai-600117</span>
+    </li>
+    
+   <ul class="list-unstyled contact-list">
+  <li class="d-flex align-items-start mb-2">
+    <i class="fas fa-phone me-2 text-white icon-hover"></i>
+    <span></span>
+    <a href="tel:+919884492652" class="contact-link description">+91 9884 49 26 52</a>
+  </li>
+  <li class="d-flex align-items-start mb-2">
+    <i class="far fa-envelope me-2 text-white icon-hover"></i>
+    <span></span>
+    <a href="mailto:hr@yohotechnologies.com" class="contact-link description">hr@yohotechnologies.com</a>
+  </li>
+ <ul class="list-unstyled mb-0 text-white">
+  <!-- Email -->
+  <li class="d-flex align-items-start mb-2">
+    <i class="far fa-envelope me-2 text-white icon-hover pt-1"></i>
+    <a href="mailto:info@yohotechnologies.com" class="contact-link description">info@yohotechnologies.com</a>
+  </li>
+
+  <!-- Working Hours -->
+  <li class="d-flex align-items-start">
+    <i class="far fa-clock me-2 text-white pt-1"></i>
+    <span class="description">Working Hours: 09:30am to 06:30pm</span>
+  </li>
+</ul>
+
+</div>
+
+
+      <!-- Column 3: Image -->
+      <div class="col-md-4 ps-md-4">
+        <img src="https://images.adsttc.com/media/images/51d4/84a8/b3fc/4bea/e100/01d6/large_jpg/Portada.jpg?1372882078"
+             class="img-fluid rounded-3 border border-white"
+             alt="Office"
+             style="max-width: 100%; height: auto;" />
+      </div>
+
+    </div>
+  </div>
+</section>  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Top Section -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 98844 92652</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@yohotechnologies.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117. (Near:ESAF BANK)</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html">News & Events</a></li>
+              <li><a href="about.html">Awards & Recognition</a></li>
+              <li><a href="about.html">Investor Relations</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html">E-Commerce Solutions</a></li>
+              <li><a href="services.html">Supply Chain Management</a></li>
+              <li><a href="services.html">Data Analytics</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">AI & Machine Learning</a></li>
+              <li><a href="services.html">Digital Consulting</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h3>Industries</h3>
+            <ul>
+              <li><a href="services.html">Retail & Consumer</a></li>
+              <li><a href="services.html">Healthcare</a></li>
+              <li><a href="services.html">Financial Services</a></li>
+              <li><a href="services.html">Manufacturing</a></li>
+              <li><a href="services.html">Government</a></li>
+              <li><a href="services.html">Education</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="about.html">Blog</a></li>
+              <li><a href="about.html">Case Studies</a></li>
+              <li><a href="about.html">Whitepapers</a></li>
+              <li><a href="about.html">Documentation</a></li>
+              <li><a href="contact.html">Support Center</a></li>
+              <li><a href="about.html">Training & Certification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+        </div>
+        <div class="footer-bottom-left">
+          <div class="copyright">
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookies.html">Cookie Policy</a>
+            <a href="security.html">Security</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+        
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Src/JS/Navbar.js"></script>
+  <script src="Src/JS/search.js"></script>
+  <script src="Src/JS/Mobile.js"></script>
+  <script>
+    // Contact form functionality
+    // function showContactForm(type) {
+    //     const formSection = document.getElementById('contact-form-section');
+    //     const formTitle = document.getElementById('form-title');
+    //     const formDescription = document.getElementById('form-description');
+    //     const inquiryType = document.getElementById('inquiry-type');
+        
+    //     const formConfig = {
+    //         services: {
+    //             title: 'Request for Services',
+    //             description: 'Tell us about your project requirements and how we can help transform your business with our technology solutions.'
+    //         },
+    //         careers: {
+    //             title: 'Career Opportunities',
+    //             description: 'Interested in joining our team? Share your background and the position you\'re interested in.'
+    //         },
+    //         media: {
+    //             title: 'Media Contacts',
+    //             description: 'For press inquiries, media kits, and partnership opportunities, please provide your details.'
+    //         },
+    //         support: {
+    //             title: 'Technical Support',
+    //             description: 'Need help with our services? Describe your issue and our support team will assist you.'
+    //         },
+    //         partnership: {
+    //             title: 'Partnership Opportunities',
+    //             description: 'Interested in partnering with us? Let\'s discuss how we can work together.'
+    //         },
+    //         feedback: {
+    //             title: 'Website Feedback',
+    //             description: 'Help us improve! Share your feedback about our website and user experience.'
+    //         },
+    //         general: {
+    //             title: 'General Inquiry',
+    //             description: 'Have a question or need information? We\'re here to help with any inquiry.'
+    //         }
+    //     };
+        
+    //     const config = formConfig[type] || formConfig.general;
+    //     formTitle.textContent = config.title;
+    //     formDescription.textContent = config.description;
+    //     inquiryType.value = type;
+        
+    //     formSection.style.display = 'block';
+    //     formSection.scrollIntoView({ behavior: 'smooth' });
+    // }
+
+    // function hideContactForm() {
+    //     const formSection = document.getElementById('contact-form-section');
+    //     formSection.style.display = 'none';
+    //     document.querySelector('.contact-options').scrollIntoView({ behavior: 'smooth' });
+    // }
+
+    // // Form submission handler
+    // document.getElementById('contact-form').addEventListener('submit', function(e) {
+    //     e.preventDefault();
+        
+    //     const submitBtn = this.querySelector('.submit-btn');
+    //     const originalText = submitBtn.innerHTML;
+    //     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    //     submitBtn.disabled = true;
+        
+    //     setTimeout(() => {
+    //         alert('Thank you for your message! We\'ll get back to you soon.');
+    //         this.reset();
+    //         submitBtn.innerHTML = originalText;
+    //         submitBtn.disabled = false;
+    //         hideContactForm();
+    //     }, 2000);
+    // });
+
+    // Loading screen and navbar
+    document.addEventListener('DOMContentLoaded', function() {
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 800);
+      
+      // Dynamic copyright year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
