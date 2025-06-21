@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI in Web Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/Src/CSS/Services/StaticWebDesign.css" rel="stylesheet">
+  <link href="Src/CSS/Navbar.css" rel="stylesheet">
+    <link rel="stylesheet" href="Src/CSS/Footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+
+  <link href="/Src/CSS/fonts.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="color-bar"></div>
+  <nav class="navbar" id="navbar">
+     <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-container">
+            <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+            <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">Who We Are</a></li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">What We Do</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="services.html" class="category-item active" data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Web Design</a>
+                <a href="#" class="category-item" data-category="website-development">Web Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <div class="dropdown-services active" id="overview">
+                <div class="services-title">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="Overview.html" class="service-item">Website Design & Development</a>
+                  <a href="Overview.html" class="service-item">Mobile App Development</a>
+                  <a href="Overview.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="Overview.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="Overview.html" class="service-item">Custom Software Development</a>
+                  <a href="Overview.html" class="service-item">UI/UX Design Services</a>
+                  <a href="Overview.html" class="service-item">Cloud Solutions</a>
+                  <a href="Overview.html" class="service-item">SEO & Analytics</a>
+                  <a href="Overview.html" class="service-item">Consulting Services</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="website-design">
+                <div class="services-title">Web Design</div>
+                <div class="services-grid">
+                  <a href="staticwebdesign.html" class="service-item">Responsive Design 3.0</a>
+                  <a href="#" class="service-item">CSS Frameworks & Utilities</a>
+                  <a href="#" class="service-item">Component-Based UI Libraries</a>
+                  <a href="#" class="service-item">Next-Gen JavaScript Tooling</a>
+                  <a href="#" class="service-item">Headless CMS</a>
+                  <a href="#" class="service-item">API-First Development</a>
+                  <a href="#" class="service-item">AI in Web Design</a>
+                  <a href="#" class="service-item">Design Systems & Tokens</a>
+                  <a href="#" class="service-item">Animation & Interactivity</a>
+                  <a href="#" class="service-item">Accessibility & Inclusive Design</a>
+                  <a href="#" class="service-item">Performance-First Mindset</a>
+                  <a href="#" class="service-item">Web 3D and Immersive Design</a>
+                  <a href="#" class="service-item">Static Site Generators & JAMstack</a>
+                  <a href="#" class="service-item">Cloud & Edge Deployment</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="website-development">
+                <div class="services-title">Web Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item"> Frontend Frameworks & Libraries</a>
+                  <a href="#" class="service-item">JavaScript & TypeScript</a>
+                  <a href="#" class="service-item">Build Tools & Bundlers</a>
+                  <a href="#" class="service-item">Backend Frameworks & Runtimes</a>
+                  <a href="#" class="service-item">Full-Stack Frameworks</a>
+                  <a href="#" class="service-item">API Technologies</a>
+                  <a href="#" class="service-item">Database & ORM Tools</a>
+                  <a href="#" class="service-item"> Authentication & Security</a>
+                  <a href="#" class="service-item">DevOps & Deployment</a>
+                  <a href="#" class="service-item"> Hosting & Edge Platforms</a>
+                  <a href="#" class="service-item">Realtime & Messaging</a>
+                  <a href="#" class="service-item"> AI Integration in Development</a>
+                  <a href="#" class="service-item"> Package Managers & Monorepos</a>
+                  <a href="#" class="service-item"> Progressive Web Apps (PWA)</a>
+                  <a href="#" class="service-item"> WebAssembly (WASM)</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="mobile-solutions">
+                <div class="services-title">Mobile App Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Cross-Platform Frameworks</a>
+                  <a href="#" class="service-item">Native Development Technologies</a>
+                  <a href="#" class="service-item">Hybrid App Technologies</a>
+                  <a href="#" class="service-item">Backend-as-a-Service (BaaS)</a>
+                  <a href="#" class="service-item">State Management & Architecture</a>
+                  <a href="#" class="service-item">UI/UX & Animation Libraries</a>
+                  <a href="#" class="service-item">Testing & CI/CD Tools</a>
+                  <a href="#" class="service-item">Push Notifications & Messaging</a>
+                  <a href="#" class="service-item">Offline & Sync Support</a>
+                  <a href="#" class="service-item">Mobile App Deployment</a>
+                  <a href="#" class="service-item">Security & Authentication</a>
+                  <a href="#" class="service-item">AI & ML in Mobile Apps</a>
+                   <a href="#" class="service-item">AR/VR Technologies</a>
+                  <a href="#" class="service-item">Super & Mini-Apps Architecture</a>
+                  <a href="#" class="service-item">Monetization & Analytics</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="digital-marketing">
+                <div class="services-title">Digital Marketing</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">AI-Powered Marketing</a>
+                  <a href="#" class="service-item">Marketing Automation Platforms</a>
+                  <a href="#" class="service-item">Search Engine Optimization Tools</a>
+                  <a href="#" class="service-item">Social Media Marketing Platforms</a>
+                  <a href="#" class="service-item">Performance Analytics & Data</a>
+                  <a href="#" class="service-item">Content Management & Blogging</a>
+                  <a href="#" class="service-item">Email Marketing & Retargeting</a>
+                  <a href="#" class="service-item">Search Engine Marketing (SEM)</a>
+                  <a href="#" class="service-item">Influencer & Affiliate Marketing Tools</a>
+                  <a href="#" class="service-item">Customer Relationship Management</a>
+                  <a href="#" class="service-item">Voice & Visual Search Optimization</a>
+                  <a href="#" class="service-item">Web Push & SMS Marketing</a>
+                  <a href="#" class="service-item">Video & Short-Form Content Tools</a>
+                  <a href="#" class="service-item">eCommerce Marketing Tools</a>
+                  <a href="#" class="service-item">Privacy & Consent Management</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- <li class="dropdown-parent">
+          <a href="services.html" class="dropdown-trigger">Industries</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                <a href="#" class="category-item" data-category="education">EdTech</a>
+              </div>
+              <div class="dropdown-services active" id="fintech">
+                <div class="services-title">FinTech Solutions</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Banking Solutions</a>
+                  <a href="services.html" class="service-item">Payment Gateways</a>
+                  <a href="services.html" class="service-item">Digital Wallets</a>
+                  <a href="services.html" class="service-item">Investment Platforms</a>
+                  <a href="services.html" class="service-item">Insurance Tech</a>
+                  <a href="services.html" class="service-item">Blockchain Solutions</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="healthcare">
+                <div class="services-title">HealthTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Telemedicine Platforms</a>
+                  <a href="#" class="service-item">Health Management Systems</a>
+                  <a href="#" class="service-item">Medical Records</a>
+                  <a href="#" class="service-item">Fitness Apps</a>
+                  <a href="#" class="service-item">Healthcare Analytics</a>
+                  <a href="#" class="service-item">Medical IoT</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="ecommerce">
+                <div class="services-title">E-Commerce Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Online Marketplaces</a>
+                  <a href="#" class="service-item">B2B Platforms</a>
+                  <a href="#" class="service-item">Inventory Management</a>
+                  <a href="#" class="service-item">Order Management</a>
+                  <a href="#" class="service-item">Customer Analytics</a>
+                  <a href="#" class="service-item">Multi-vendor Systems</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="education">
+                <div class="services-title">EdTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Learning Management Systems</a>
+                  <a href="#" class="service-item">Online Course Platforms</a>
+                  <a href="#" class="service-item">Student Information Systems</a>
+                  <a href="#" class="service-item">Virtual Classrooms</a>
+                  <a href="#" class="service-item">Assessment Tools</a>
+                  <a href="#" class="service-item">Educational Apps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li> -->
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="navbar-right">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <div class="search-dropdown" id="search-dropdown">
+            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+            <button class="search-close" id="search-close">×</button>
+          </div>
+        </div>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container1">
+    <div class="text-section">
+      <h1 class="heading underline">Web Design</h1>
+      <p>Transform your idea into digital products your users will love. Our team of experienced Static Website designers brings brains and passion to help you achieve your business goals by creating <b>user-centered Static
+          Website design</b>.</p>
+      <div class="buttons">
+        <button>Our work</button>
+        <button>Get in touch</button>
+      </div>
+    </div>
+    <div class="image-section">
+      <img src="/Src/Assets/WebStatic/Service3.jpg" alt="UI UX Design Mockup" />
+    </div>
+  </div>
+
+  <!-- SECTION 2: Services -->
+  <div class="section-1">
+    <h1 class="underline"> We offer</h1>
+    <div class="services">
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/star.png" alt=""></div>
+        <h2>Context-Aware UI</h2>
+        <p> Interfaces adapt based not just on size but on user context—like location, network speed, device capabilities—offering tailored user experiences.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service6.png" alt=""></div>
+        <h2> Component-Based Design Systems</h2>
+        <p>Interfaces are built using reusable, modular components (often with frameworks like React or Vue), making the design scalable, consistent, and maintainable.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service7.png" alt=""></div>
+        <h2> Cross-Platform Consistency</h2>
+        <p>Whether viewed on mobile, tablet, desktop, or even smart TVs or kiosks, Responsive Design 3.0 ensures consistent brand experience across all platforms.</p>
+      </div>
+      <div class="service">
+        <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service8.png" alt=""></div>
+        <h2>Performance-First Approach</h2>
+        <p>It emphasizes optimized loading, lazy loading, image compression, and asset delivery to boost speed and reduce bounce rates, especially on mobile.
+        </p>
+      </div>
+    </div>
+  </div>
+
+            <div class="header">
+        <h1 class="underline">Our Features</h1>
+    </div>
+    
+     <div class="collage-container">
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="stars">Responsive Design 3.O</div>
+                <p class="testimonial-text">
+Responsive Design 3.0 enhances traditional responsiveness with fluid grids, container queries, and context-aware layouts. It adapts not just to screen size, but also user behavior, device capabilities, and environment—offering a seamless experience across all devices.</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="stars">CSS Frameworks & Utilities</div>
+                <p class="testimonial-text">Modern CSS frameworks like Tailwind CSS and Bootstrap provide ready-made UI components and utility-first classes, enabling fast, consistent, and responsive web development. They help create structured layouts, reduce custom CSS, and ensure cross-browser compatibility.
+
+</p>
+            
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="stars">Component-Based UI Libraries</div>
+                <p class="testimonial-text">Libraries such as React, Vue, and Svelte allow developers to build UIs using reusable, self-contained components. Each component manages its structure, styling, and behavior, promoting code reuse, modularity, and easier maintenance.</p>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div class="stars">Next-Gen JavaScript Tooling</div>
+                <p class="testimonial-text">Next-gen tooling includes modern build tools (Vite, esbuild), bundlers, transpilers (Babel), and package managers that speed up development, optimize code, support hot module replacement, and enable modern JS features with backward compatibility.</p>
+            
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <div class="stars"> Headless CMS</div>
+                <p class="testimonial-text">A Headless CMS decouples the content management backend from the frontend. Content is delivered via APIs, allowing developers to render it on any device or platform, including websites, mobile apps, or IoT interfaces.</p>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <div class="stars">API-First Development</div>
+                <p class="testimonial-text">In API-first development, APIs are planned and built before the frontend, enabling parallel development, better scalability, and easy integration. It ensures that content and services are available across multiple frontends and touchpoints.</p>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial-card">
+                <div class="stars"> Design Systems & Tokens
+Design</div>
+                <p class="testimonial-text">Systems provide a unified set of design standards, reusable components, and documentation. Design tokens are core variables like color, spacing, and typography that ensure consistency across platforms and enable scalable theming.</p>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial-card">
+                <div class="stars">Animation & Interactivity</div>
+                <p class="testimonial-text">Modern web design leverages CSS animations, JavaScript interactions, and libraries like GSAP and Framer Motion to create engaging, interactive experiences. Subtle motion and micro-interactions enhance usability and visual feedback.</p>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card">
+                <div class="stars">Accessibility & Inclusive Design</div>
+                <p class="testimonial-text">Accessibility ensures digital experiences are usable by all, including people with disabilities. Inclusive design considers diverse user needs from the start—supporting screen readers, keyboard navigation, color contrast, and readable content.</p>
+            
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial-card">
+                <div class="stars"> Performance-First Mindset</div>
+                <p class="testimonial-text">This approach prioritizes speed, load efficiency, and responsiveness. Techniques include lazy loading, code splitting, image optimization, prefetching, and Core Web Vitals tracking to ensure high-performance experiences.</p>
+            </div>
+
+            <!-- Testimonial 11 -->
+            <div class="testimonial-card">
+                <div class="stars">Web 3D and Immersive Design</div>
+                <p class="testimonial-text">Web 3D technologies like WebGL and Three.js enable immersive visuals and interactive environments directly in the browser. It's widely used in gaming, product showcases, and educational tools for enhanced user engagement.</p>
+            </div>
+
+            <!-- Testimonial 12 -->
+            <div class="testimonial-card">
+                <div class="stars">Static Site Generators & JAMstack</div>
+                <p class="testimonial-text">Static site generators (e.g., Next.js, Hugo, Eleventy) create fast, secure websites by generating HTML at build time. Combined with JAMstack architecture (JavaScript, APIs, Markup), they offer excellent performance and scalability.</p>
+            </div>
+
+            <!-- Testimonial 13 -->
+            <div class="testimonial-card">
+                <div class="stars">Cloud & Edge Deployment</div>
+                <p class="testimonial-text">Modern hosting platforms (like Vercel, Netlify, Cloudflare) support cloud and edge deployments, reducing latency and improving speed. They enable global delivery, continuous integration, and instant rollbacks with minimal configuration.</p>
+            </div>
+
+    
+        </div>
+    </div>
+    </div>
+    </div>
+
+  <!-- SECTION 3: Embracing Design Systems -->
+  <section class="container">
+    <div class="text-content">
+      <h1 class="underline"> Ethical Considerations in Web Design</h1>
+      <p class="text-content-para">Such websites do not depend on application servers or databases and can therefore work independently. And we
+          can handle it easily; it is a simple kind of website, and we offer it at a low cost. If you want to know more
+          about our static website.
+      </p>
+      <div class="tags">
+        <span>customization website design</span>
+        <span>Improved design consistency</span>
+        <span>customization interface design</span>
+        <span>Scalability and maintainability</span>
+        <span>website packages and themes</span>
+      </div>
+    </div>
+    <div class="visual-card">
+      <div class="icon-circle">
+        <div class="center-dot"></div>
+        <div class="orbit">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      <p class="note">
+        We guide you in the planning, design, and development of your personal or corporate websites, where the
+        information or content once written does not change very often.<b>Yoho Technologies is one of the top web
+            designers in Chennai.</b>
+      </p>
+    </div>
+    
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Top Section -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 98844 92652</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@yohotechnologies.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117.
+                (Near:ESAF BANK)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html">News & Events</a></li>
+              <li><a href="about.html">Awards & Recognition</a></li>
+              <li><a href="about.html">Investor Relations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html">E-Commerce Solutions</a></li>
+              <li><a href="services.html">Supply Chain Management</a></li>
+              <li><a href="services.html">Data Analytics</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">AI & Machine Learning</a></li>
+              <li><a href="services.html">Digital Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Industries</h3>
+            <ul>
+              <li><a href="services.html">Retail & Consumer</a></li>
+              <li><a href="services.html">Healthcare</a></li>
+              <li><a href="services.html">Financial Services</a></li>
+              <li><a href="services.html">Manufacturing</a></li>
+              <li><a href="services.html">Government</a></li>
+              <li><a href="services.html">Education</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="about.html">Blog</a></li>
+              <li><a href="about.html">Case Studies</a></li>
+              <li><a href="about.html">Whitepapers</a></li>
+              <li><a href="about.html">Documentation</a></li>
+              <li><a href="contact.html">Support Center</a></li>
+              <li><a href="about.html">Training & Certification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Newsletter Subscription -->
+      <!-- <div class="footer-newsletter">
+        <div class="newsletter-content">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest insights and technology trends</p>
+        </div>
+        <div class="newsletter-form">
+          <form id="newsletter-form">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" required>
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div> -->
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+        </div>
+        <div class="footer-bottom-left">
+          <div class="copyright">
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookies.html">Cookie Policy</a>
+            <a href="security.html">Security</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="/officewebsite/Navbar.js"></script>
+    <script src="Src/JS/Mobile.js"></script>
+  <script src="Src/JS/dropdown.js"></script>
+  <script src="Src/JS/search.js"></script>
+</body>
+
+</html>
