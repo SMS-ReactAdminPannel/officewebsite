@@ -148,5 +148,10 @@ body {
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 300;
 }
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
 

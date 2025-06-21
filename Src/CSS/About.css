@@ -5,19 +5,6 @@
  font-family: "Inter", sans-serif;
 }
 
-.decor-imgg {
-  position: absolute;
-  opacity: 0.6;
-  width: 200px;
-  height: 200px;
-}
-
-.top-right {
-  top: 10px;
-  right: 20px;
-}
-
-
 .gradient-overlay {
       background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
     }
@@ -52,10 +39,8 @@
 }
 
 .section-title {
-   font-family: "Inter", sans-serif;
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 200;
+  font-size: 42px;
+  font-weight: 300;
 }
 
 .info-card {
@@ -63,13 +48,6 @@
   border: 1px solid #fff;
   border-radius: 40px;
   color: #fff;
-  margin-bottom: 30px;
-}
-.year{
-  color: #ffffff;
-  font-size: 1rem;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
 }
 
 
@@ -85,10 +63,8 @@
 }
 
 .section-heading {
-  font-family: "Inter", sans-serif;
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 100;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 .stat-icon {
@@ -104,18 +80,13 @@
 
 
 .custom-card h2 {
-  font-family: "Inter", sans-serif;
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 100;
+  font-size: 38px;
+  font-weight: 400;
   line-height: 1.3;
 }
 
 .custom-card p {
-   color: #ffffff;
-  font-size: 1rem;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -124,16 +95,13 @@
   border: 1px solid #fff;
   border-radius: 999px;
   background: transparent;
-color: #ffffff;
-  font-size: 1rem;
-  font-weight: 200;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
- 
+  color: #fff;
+  font-weight: 500;
   transition: 0.3s ease-in-out;
 }
 
 .custom-btn:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #000;
 }
 
@@ -154,12 +122,6 @@ color: #ffffff;
   top: 5px;
   right: 20px;
   transform: translateX(40%);
-}
-.our{
-   font-family: "Inter", sans-serif;
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 200;
 }
 
 
@@ -199,18 +161,14 @@ color: #ffffff;
 
     .video-content-inner h1 {
       font-family: "Inter", sans-serif;
-  color: #ffffff;
   font-size: 2.5rem;
-  font-weight: 100;
+  font-weight: 300;
       margin-bottom: 20px;
       line-height: 1.4;
     }
 
     .video-content-inner p {
-      color: #ffffff;
-  font-size: 1rem;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
+      font-size: 18px;
       margin-bottom: 30px;
       max-width: 600px;
     }
@@ -218,12 +176,10 @@ color: #ffffff;
     .cta-button {
   padding: 12px 28px;
   background-color: black;
-   color: #ffffff;
+  color: white;
   border-radius: 999px;
   border: 1px solid white;
- font-size: 1rem;
-  font-weight: 200;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
   width: fit-content;
   text-decoration: none; /* This removes the underline */
@@ -231,7 +187,7 @@ color: #ffffff;
 
 
     .cta-button:hover {
-  background-color: #ffffff;
+  background-color: white;
   color: black;
   text-decoration: none; /* Ensures no underline on hover */
 }
@@ -242,13 +198,6 @@ color: #ffffff;
       border-radius: 30px;
       object-fit: cover;
     }
-    .heading {
-  font-family: "Inter", sans-serif;
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 100;
-}
-
 
     /* Hero Box */
     .hero-box {
@@ -263,55 +212,18 @@ color: #ffffff;
     }
 
     .section-title {
-       font-family: "Inter", sans-serif;
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 100;
+      font-size: 60px;
+      font-weight: 400;
       margin-bottom: 40px;
     }
 
     .hero-text {
-      color: #ffffff;
-  font-size: 1rem;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 200;
+      font-size: 20px;
       max-width: 800px;
     }
 
     .hero-text b {
-      color: #ffffff;
-  font-size: 1rem;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
-    }
-    .hero-text p{
-       color: #ffffff;
-  font-size: 1rem;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
-
-    }
-     .badge-pill {
-      padding: 10px 30px;
-      border: 1px solid #000000;
-      border-radius: 999px;
-      background: black;
-      color: white;
-      font-size: 1rem;
-      font-weight: 200;
-      font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-      transition: all 0.3s ease-in-out;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      border: 1px solid #ffffff;
-    }
-
-    .badge-pill:hover {
-      background-color: #39d139;
-      color: #ffffff;
-      border-color: #39d139;
+      font-weight: 700;
     }
 
     .get-in-touch-btn {
