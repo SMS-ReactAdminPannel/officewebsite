@@ -304,6 +304,7 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease forwards 0.8s;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .hero-cta:hover {
@@ -312,7 +313,7 @@
   background:transparent;
   text-decoration: none;
   color: white;
-  border: 1px solid white;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .hero-cta2 {
@@ -325,7 +326,7 @@
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif ;
   letter-spacing: -0.01em;
   padding: 0.7rem 2rem;
-  margin-left: 5%;
+  margin-left: 20px;
   border-radius: 20px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -845,11 +846,50 @@
   }
 }
 
+
+h2.underline {
+  position: relative;
+  display: inline-block;
+}
+
+h2.underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50%;
+  height: 0.2px;
+  background-color: #ffffffa6;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineSlide 0.6s ease forwards;
+}
+
+h2.underline::after {
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+h2.underline:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes underlineSlide {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
 @media (max-width: 576px) {
   .section-title1 {
     font-size: 32px;
     line-height: 2.3rem;
     padding: 0px 20px;
+    text-align: center;
   }
 
   .company-logo {
@@ -1450,8 +1490,7 @@
 }
 
 .header {
-  text-align: center;
-  padding: 10px 0;
+  padding: 0px 30px;
   color: white;
   background-color: #000;
 }
