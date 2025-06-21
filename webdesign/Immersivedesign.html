@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web 3D & Immersive Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/Src/CSS/Services/StaticWebDesign.css" rel="stylesheet">
+    <link href="/Src/CSS/Navbar.css" rel="stylesheet">
+    <link rel="stylesheet" href="Src/CSS/Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+
+    <link href="../Src/CSS/fonts.css" rel="stylesheet">
+    <link href="../Src/CSS/Footer.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="color-bar"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-container">
+                        <img src="../Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+                        <img src="../Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white"
+                            loading="eager">
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">Who We Are</a></li>
+                <li class="dropdown-parent">
+                    <a href="#" class="dropdown-trigger">What We Do</a>
+                    <div class="dropdown-backdrop"></div>
+                    <div class="mega-dropdown">
+                        <div class="mega-dropdown-container">
+                            <div class="dropdown-categories">
+                                <a href="services.html" class="category-item active"
+                                    data-category="overview">Overview</a>
+                                <a href="#" class="category-item" data-category="website-design">Website Design</a>
+                                <a href="#" class="category-item" data-category="website-development">Website
+                                    Development</a>
+                                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                                <a href="#" class="category-item" data-category="digital-marketing">Digital
+                                    Marketing</a>
+                            </div>
+                            <div class="dropdown-services active" id="overview">
+                                <div class="services-title">Our Services Overview</div>
+                                <div class="services-grid">
+                                    <a href="services.html" class="service-item">Website Design & Development</a>
+                                    <a href="services.html" class="service-item">Mobile App Development</a>
+                                    <a href="services.html" class="service-item">Digital Marketing Solutions</a>
+                                    <a href="services.html" class="service-item">E-Commerce Solutions</a>
+                                    <a href="services.html" class="service-item">Custom Software Development</a>
+                                    <a href="services.html" class="service-item">UI/UX Design Services</a>
+                                    <a href="services.html" class="service-item">Cloud Solutions</a>
+                                    <a href="services.html" class="service-item">SEO & Analytics</a>
+                                    <a href="services.html" class="service-item">Consulting Services</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-services" id="website-design">
+                                <div class="services-title">Website Design</div>
+                                <div class="services-grid">
+                                    <a href="staticwebdesign.html" class="service-item">Static Website Designing</a>
+                                    <a href="#" class="service-item">Dynamic Website Designing</a>
+                                    <a href="#" class="service-item">Corporate Website Designing</a>
+                                    <a href="#" class="service-item">Professional Website Designing</a>
+                                    <a href="#" class="service-item">Customized Website Designing</a>
+                                    <a href="#" class="service-item">Website Re-Designing</a>
+                                    <a href="#" class="service-item">Responsive Website Designing</a>
+                                    <a href="#" class="service-item">Angular JS Website Designing</a>
+                                    <a href="#" class="service-item">Landing Page Designing</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-services" id="website-development">
+                                <div class="services-title">Website Development</div>
+                                <div class="services-grid">
+                                    <a href="#" class="service-item">Web Application Development</a>
+                                    <a href="#" class="service-item">PHP Website Development</a>
+                                    <a href="#" class="service-item">Web Portal Development</a>
+                                    <a href="#" class="service-item">E-Commerce Website Development</a>
+                                    <a href="#" class="service-item">React JS Development</a>
+                                    <a href="#" class="service-item">WordPress Development</a>
+                                    <a href="#" class="service-item">PHP Application Development</a>
+                                    <a href="#" class="service-item">OpenSource Framework</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-services" id="mobile-solutions">
+                                <div class="services-title">Mobile App Development</div>
+                                <div class="services-grid">
+                                    <a href="#" class="service-item">Hybrid Apps Development</a>
+                                    <a href="#" class="service-item">Android Apps Development</a>
+                                    <a href="#" class="service-item">iPhone Apps Development</a>
+                                    <a href="#" class="service-item">Cross Platform Apps Development</a>
+                                    <a href="#" class="service-item">Mobile Apps Upgradation</a>
+                                    <a href="#" class="service-item">Mobile Apps Re-Design</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-services" id="digital-marketing">
+                                <div class="services-title">Digital Marketing</div>
+                                <div class="services-grid">
+                                    <a href="#" class="service-item">Market Research and Analysis</a>
+                                    <a href="#" class="service-item">Content Writing Services</a>
+                                    <a href="#" class="service-item">Search Engine Optimization</a>
+                                    <a href="#" class="service-item">Search Engine Marketing</a>
+                                    <a href="#" class="service-item">Social Media Optimization</a>
+                                    <a href="#" class="service-item">Social Media Marketing</a>
+                                    <a href="#" class="service-item">E-Mail Marketing</a>
+                                    <a href="#" class="service-item">SMS Marketing</a>
+                                    <a href="#" class="service-item">Lead Generation</a>
+                                    <a href="#" class="service-item">Google PPC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown-parent">
+                    <a href="services.html" class="dropdown-trigger">Industries</a>
+                    <div class="dropdown-backdrop"></div>
+                    <div class="mega-dropdown">
+                        <div class="mega-dropdown-container">
+                            <div class="dropdown-categories">
+                                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                                <a href="#" class="category-item" data-category="education">EdTech</a>
+                            </div>
+                            <div class="dropdown-services active" id="fintech">
+                                <div class="services-title">FinTech Solutions</div>
+                                <div class="services-grid">
+                                    <a href="services.html" class="service-item">Banking Solutions</a>
+                                    <a href="services.html" class="service-item">Payment Gateways</a>
+                                    <a href="services.html" class="service-item">Digital Wallets</a>
+                                    <a href="services.html" class="service-item">Investment Platforms</a>
+                                    <a href="services.html" class="service-item">Insurance Tech</a>
+                                    <a href="services.html" class="service-item">Blockchain Solutions</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-services" id="healthcare">
+                                <div class="services-title">HealthTech Solutions</div>
+                                <div class="services-grid">
+                                    <a href="#" class="service-item">Telemedicine Platforms</a>
+                                    <a href="#" class="service-item">Health Management Systems</a>
+                                    <a href="#" class="service-item">Medical Records</a>
+                                    <a href="#" class="service-item">Fitness Apps</a>
+                                    <a href="#" class="service-item">Healthcare Analytics</a>
+                                    <a href="#" class="service-item">Medical IoT</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-services" id="ecommerce">
+                                <div class="services-title">E-Commerce Solutions</div>
+                                <div class="services-grid">
+                                    <a href="#" class="service-item">Online Marketplaces</a>
+                                    <a href="#" class="service-item">B2B Platforms</a>
+                                    <a href="#" class="service-item">Inventory Management</a>
+                                    <a href="#" class="service-item">Order Management</a>
+                                    <a href="#" class="service-item">Customer Analytics</a>
+                                    <a href="#" class="service-item">Multi-vendor Systems</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-services" id="education">
+                                <div class="services-title">EdTech Solutions</div>
+                                <div class="services-grid">
+                                    <a href="#" class="service-item">Learning Management Systems</a>
+                                    <a href="#" class="service-item">Online Course Platforms</a>
+                                    <a href="#" class="service-item">Student Information Systems</a>
+                                    <a href="#" class="service-item">Virtual Classrooms</a>
+                                    <a href="#" class="service-item">Assessment Tools</a>
+                                    <a href="#" class="service-item">Educational Apps</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="navbar-right">
+                <div class="search-container">
+                    <button class="search-toggle" id="search-toggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <div class="search-dropdown" id="search-dropdown">
+                        <input type="text" placeholder="Search..." class="search-input" id="search-input">
+                        <button class="search-close" id="search-close">×</button>
+                    </div>
+                </div>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container1" style="margin-top: 50px;">
+        <div class="image-section">
+            <img src="../Src/Assets/webimg.jpg" alt="UI UX Design Mockup" />
+        </div>
+        <div class="text-section">
+            <h1 class="heading underline">Web 3D & Immersive Design</h1>
+            <p>At Yoho Technologies, we’re not just designers—we’re expert developers who build immersive, interactive
+                web experiences
+                powered by advanced 3D technologies. Using tools like WebGL, Three.js, and custom JavaScript frameworks,
+                we create
+                high-performance websites that go beyond flat design to deliver engaging, dynamic content.
+                <br />
+                Our team specializes in developing 3D interfaces, virtual environments, and real-time visualizations
+                that run smoothly
+                across modern browsers and devices. Whether you're showcasing a product in 3D, offering a virtual
+                walkthrough, or
+                building an interactive learning experience, we code powerful solutions that are fast, scalable, and
+                visually striking.</b>.
+            </p>
+            <div class="buttons">
+                <button>Our work</button>
+                <button>Get in touch</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: Services -->
+    <div class="section-1">
+        <h1 class="underline">We offer</h1>
+        <div class="services">
+            <div class="service">
+                <div class="icon"><img class="desc-img-1" src="/Src/Assets/star.png" alt=""></div>
+                <h2>Interactive Web Experiences</h2>
+                <p> We craft highly engaging websites with interactive elements and immersive 3D features that bring
+                    your content to life.
+                    Whether it's a product demo, virtual walkthrough, or interactive animation, we turn complex ideas
+                    into smooth,
+                    browser-based experiences.
+                </p>
+            </div>
+            <div class="service">
+                <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service6.png" alt=""></div>
+                <h2>Modern Front-End Development</h2>
+                <p>Using frameworks like React, Vue, and static site generators, we build fast, responsive interfaces
+                    optimized for all
+                    devices. Our code-first approach ensures clean structure, easy maintenance, and strong performance
+                    across every project.</p>
+            </div>
+            <div class="service">
+                <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service7.png" alt=""></div>
+                <h2>Custom Business Solutions</h2>
+                <p>From internal dashboards to dynamic content platforms, we create tailored web applications that solve
+                    real business
+                    challenges. Our development process focuses on usability, scalability, and smooth API integration to
+                    support long-term
+                    growth.
+                </p>
+            </div>
+            <div class="service">
+                <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service8.png" alt=""></div>
+                <h2>Digital Transformation Support</h2>
+                <p>We help modernize outdated websites and systems by migrating to JAMstack, integrating headless CMS
+                    platforms, and
+                    applying best practices in design, performance, and security. Our goal is to make your digital
+                    presence faster, leaner,
+                    and more effective.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: Embracing Design Systems -->
+    <section class="container">
+        <div class="text-content">
+            <h1 class="underline">Our Capabilities Include:</h1>
+            <p class="text-content-para"><i>
+                    Wespecialize in developing interactive and immersive web experiences using advanced 3D and modern
+                    web technologies. From
+                    product visualizations to virtual tours and real-time data displays, our team delivers
+                    high-performance, cross-platform
+                    solutions tailored to your goals.
+                </i>
+            </p>
+            <div class="tags">
+                <span>3D product viewers & configurators</span>
+                <span>real estate & architecture</span>
+                <span>Data-driven 3D</span>
+                <span>Interactive 3D storytelling</span>
+                <span>Lower operational costs</span>
+            </div>
+        </div>
+        <div class="visual-card">
+            <div class="icon-circle">
+                <div class="center-dot"></div>
+                <div class="orbit">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <p class="note">
+                We help you plan, design, and develop personal or corporate websites that feature mostly static
+                content—ideal for
+                businesses where updates are infrequent. As one of the leading web design companies in Chennai, Yoho
+                Technologies
+                delivers clean, professional, and high-performing websites tailored to your needs.
+                </i></b>
+            </p>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Top Section -->
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98844 92652</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@yohotechnologies.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai -
+                                600117.
+                                (Near:ESAF BANK)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">Leadership</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="about.html">News & Events</a></li>
+                            <li><a href="about.html">Awards & Recognition</a></li>
+                            <li><a href="about.html">Investor Relations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="services.html">E-Commerce Solutions</a></li>
+                            <li><a href="services.html">Supply Chain Management</a></li>
+                            <li><a href="services.html">Data Analytics</a></li>
+                            <li><a href="services.html">Cloud Services</a></li>
+                            <li><a href="services.html">AI & Machine Learning</a></li>
+                            <li><a href="services.html">Digital Consulting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h3>Industries</h3>
+                        <ul>
+                            <li><a href="services.html">Retail & Consumer</a></li>
+                            <li><a href="services.html">Healthcare</a></li>
+                            <li><a href="services.html">Financial Services</a></li>
+                            <li><a href="services.html">Manufacturing</a></li>
+                            <li><a href="services.html">Government</a></li>
+                            <li><a href="services.html">Education</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="about.html">Blog</a></li>
+                            <li><a href="about.html">Case Studies</a></li>
+                            <li><a href="about.html">Whitepapers</a></li>
+                            <li><a href="about.html">Documentation</a></li>
+                            <li><a href="contact.html">Support Center</a></li>
+                            <li><a href="about.html">Training & Certification</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <!-- <div class="footer-newsletter">
+        <div class="newsletter-content">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest insights and technology trends</p>
+        </div>
+        <div class="newsletter-form">
+          <form id="newsletter-form">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" required>
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div> -->
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+                </div>
+                <div class="footer-bottom-left">
+                    <div class="copyright">
+                        &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                        <a href="security.html">Security</a>
+                        <a href="accessibility.html">Accessibility</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-right">
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="social-youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/officewebsite/Navbar.js"></script>
+</body>
+
+</html>

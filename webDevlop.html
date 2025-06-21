@@ -21,7 +21,10 @@
     <link rel="stylesheet" href="Src/CSS/Footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 
 
     <link href="/Src/CSS/fonts.css" rel="stylesheet">
@@ -258,22 +261,22 @@
     <div class="section-1">
         <h1 class="underline"> We offer</h1>
         <div class="services">
-            <div class="service">
+            <div class="service" data-aos="zoom-out-up">
                 <div class="icon"><img class="desc-img-1" src="/Src/Assets/star.png" alt=""></div>
                 <h2>Build Tools & Bundlers</h2>
                 <p> Tools like Webpack, Vite, and Parcel bundle and optimize code for performance, enabling modern development workflows with hot reloading, tree-shaking, and asset management.</p>
             </div>
-            <div class="service">
+            <div class="service" data-aos="zoom-out-up">
                 <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service6.png" alt=""></div>
                 <h2>  Frontend Frameworks & Libraries</h2>
                 <p>Frameworks like React, Vue, and Svelte offer reusable components and efficient rendering, making it easier to build dynamic UIs.</p>
             </div>
-            <div class="service">
+            <div class="service" data-aos="zoom-out-up">
                 <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service7.png" alt=""></div>
                 <h2> Full-Stack Frameworks</h2>
                 <p>Frameworks like Next.js, Nuxt.js, and Remix offer both frontend and backend capabilities, supporting SSR, routing, and API handling in a single environment.</p>
             </div>
-            <div class="service">
+            <div class="service" data-aos="zoom-out-up">
                 <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service8.png" alt=""></div>
                 <h2>Authentication & Security</h2>
                 <p>Critical for protecting user data and app integrity. Involves password hashing, OAuth, JWT tokens, 2FA, and security headers.
@@ -559,7 +562,7 @@ It’s designed to work alongside JavaScript, giving web applications access to 
 
     <!-- SECTION 3: Embracing Design Systems -->
     <section class="container">
-        <div class="text-content">
+        <div class="text-content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="900"> 
             <h1 class="underline"> Areas of Web Development</h1>
             <p class="text-content-para">Powers nearly all websites and apps online,In-demand skill in tech, business, education, and startups,Enables you to create, launch, and grow digital products
             </p>
@@ -571,7 +574,7 @@ It’s designed to work alongside JavaScript, giving web applications access to 
                 <span>TypeScript</span>
             </div>
         </div>
-        <div class="visual-card">
+        <div class="visual-card" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="900">
             <div class="icon-circle">
                 <div class="center-dot"></div>
                 <div class="orbit">
@@ -729,6 +732,9 @@ It’s designed to work alongside JavaScript, giving web applications access to 
     <script src="Src/JS/Mobile.js"></script>
     <script src="Src/JS/dropdown.js"></script>
     <script src="Src/JS/search.js"></script>
+    <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

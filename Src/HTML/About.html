@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,13 +9,101 @@
   <!-- Bootstrap + Font Awesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  
+
   <!-- Custom CSS -->
+  <link rel="stylesheet" href="../CSS/Navbar.css">
   <link rel="stylesheet" href="../CSS/About.css" />
+  <link rel="stylesheet" href="../CSS/Footer.css" />
 </head>
 
 <body>
 
+  <div class="color-bar"></div>
+  <div class="nav-container">
+    <div class="logo">
+      <a href="index.html">
+        <div class="logo-container">
+          <img src="../Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+          <img src="../Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+        </div>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">Who We Are</a></li>
+      <li class="dropdown-parent">
+        <a href="services.html" class="dropdown-trigger">What We Do</a>
+        <div class="dropdown-backdrop"></div>
+        <div class="mega-dropdown">
+          <div class="mega-dropdown-container">
+            <div class="dropdown-categories">
+              <a href="#" class="category-item active" data-category="overview">Overview</a>
+              <a href="#" class="category-item" data-category="website-design">Website Design</a>
+              <a href="#" class="category-item" data-category="website-development">Website Development</a>
+              <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+              <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+            </div>
+            <div class="dropdown-services active" id="overview">
+              <div class="services-title">Our Services Overview</div>
+              <div class="services-grid">
+                <a href="services.html" class="service-item">Website Design & Development</a>
+                <a href="services.html" class="service-item">Mobile App Development</a>
+                <a href="services.html" class="service-item">Digital Marketing Solutions</a>
+                <a href="services.html" class="service-item">E-Commerce Solutions</a>
+                <a href="services.html" class="service-item">Custom Software Development</a>
+                <a href="services.html" class="service-item">UI/UX Design Services</a>
+                <a href="services.html" class="service-item">Cloud Solutions</a>
+                <a href="services.html" class="service-item">SEO & Analytics</a>
+                <a href="services.html" class="service-item">Consulting Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown-parent">
+        <a href="services.html" class="dropdown-trigger">Industries</a>
+        <div class="dropdown-backdrop"></div>
+        <div class="mega-dropdown">
+          <div class="mega-dropdown-container">
+            <div class="dropdown-categories">
+              <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+              <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+              <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+              <a href="#" class="category-item" data-category="education">EdTech</a>
+            </div>
+            <div class="dropdown-services active" id="fintech">
+              <div class="services-title">FinTech Solutions</div>
+              <div class="services-grid">
+                <a href="services.html" class="service-item">Banking Solutions</a>
+                <a href="services.html" class="service-item">Payment Gateways</a>
+                <a href="services.html" class="service-item">Digital Wallets</a>
+                <a href="services.html" class="service-item">Investment Platforms</a>
+                <a href="services.html" class="service-item">Insurance Tech</a>
+                <a href="services.html" class="service-item">Blockchain Solutions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="navbar-right">
+      <div class="search-container">
+        <button class="search-toggle" id="search-toggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+        <div class="search-dropdown" id="search-dropdown">
+          <input type="text" placeholder="Search..." class="search-input" id="search-input">
+          <button class="search-close" id="search-close">×</button>
+        </div>
+      </div>
+      <a href="contact.html" class="cta-button">Get in Touch</a>
+    </div>
+  </div>
   <!-- Who We Are Section -->
   <section>
     <div class="container">
@@ -23,7 +112,8 @@
         <div class="col-md-6">
           <div class="video-content-inner">
             <h1>Who We Are: Empowering Digital Growth with Innovation and Expertise</h1>
-            <p>With over 7 years of excellence, Yoho Technologies is at the forefront of delivering cutting-edge digital solutions.</p>
+            <p>With over 7 years of excellence, Yoho Technologies is at the forefront of delivering cutting-edge digital
+              solutions.</p>
             <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
           </div>
         </div>
@@ -43,240 +133,263 @@
   <section>
     <div class="container">
       <div class="hero-box text-white">
-       <h1 class="section-title">Driven. Dynamic. Dependable.</h1>
-<p class="hero-text">
-  At Yoho Technologies, innovation isn’t just a goal — it’s our mindset. We combine deep technical knowledge with a collaborative spirit to accelerate digital growth.  
-  From concept to code, we’re committed to delivering solutions that transform businesses and inspire progress.  
-  <b>Together, we build the future — one intelligent product at a time.</b>  
-  Focused minds. Purposeful tech.
-</p>
+        <h1 class="section-title">Driven. Dynamic. Dependable.</h1>
+        <p class="hero-text">
+          At Yoho Technologies, innovation isn’t just a goal — it’s our mindset. We combine deep technical knowledge
+          with a collaborative spirit to accelerate digital growth.
+          From concept to code, we’re committed to delivering solutions that transform businesses and inspire progress.
+          <b>Together, we build the future — one intelligent product at a time.</b>
+          Focused minds. Purposeful tech.
+        </p>
 
         <button class="badge-pill">Get in touch</button>
-<img src="/Src/Assets/Frame 284.png" alt="Circles" class="decor-imgg top-right">
+        <img src="/Src/Assets/Frame 284.png" alt="Circles" class="decor-imgg top-right">
       </div>
     </div>
   </section>
- <section class="py-5">
-  <div class="container">
-    <div class="row g-4">
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
 
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="custom-card p-4 h-100">
-         <h6 class="year">Life at Yoho</h6>
-<h2 class="mb-4">Our Innovators</h2>
-<p class="year"><strong class="year">Developers. Designers. Thinkers.<br>Strategists. Leaders.</strong></p>
-<p class="year">We’re a 900+ strong team of passionate professionals, united by curiosity and purpose. Together, we shape ideas into powerful digital products and elevate businesses through bold thinking and technology.</p>
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="custom-card p-4 h-100">
+            <h6 class="year">Life at Yoho</h6>
+            <h2 class="mb-4">Our Innovators</h2>
+            <p class="year"><strong class="year">Developers. Designers. Thinkers.<br>Strategists. Leaders.</strong></p>
+            <p class="year">We’re a 900+ strong team of passionate professionals, united by curiosity and purpose.
+              Together, we shape ideas into powerful digital products and elevate businesses through bold thinking and
+              technology.</p>
 
-          <button class="custom-btn mt-4">Get to know us</button>
-          <img src="/Src/Assets/yohot8.png" class="decor-img top-right" alt="Design" />
+            <button class="custom-btn mt-4">Get to know us</button>
+            <img src="/Src/Assets/yohot8.png" class="decor-img top-right" alt="Design" />
+          </div>
         </div>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="custom-card p-4 h-100">
-         <h6 class="year">Our Journey</h6>
-<h2 class="mb-4">The Yoho Story</h2>
-<p class="year">Trace our journey from bold beginnings to breakthrough innovation.</p>
-<p class="year">What started in a small workspace in Chennai has evolved into a global digital force. <br>
-<strong class="year">Driven by ambition, fueled by passion, and built on trust — our growth is a story of resilience, innovation, and enduring partnerships.</strong></p>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="custom-card p-4 h-100">
+            <h6 class="year">Our Journey</h6>
+            <h2 class="mb-4">The Yoho Story</h2>
+            <p class="year">Trace our journey from bold beginnings to breakthrough innovation.</p>
+            <p class="year">What started in a small workspace in Chennai has evolved into a global digital force. <br>
+              <strong class="year">Driven by ambition, fueled by passion, and built on trust — our growth is a story of
+                resilience, innovation, and enduring partnerships.</strong>
+            </p>
 
-          <button class="custom-btn mt-4">Read our story</button>
-          <img src="/Src/Assets/Frame 290.png" class="decor-img top-right" alt="Design"/>
+            <button class="custom-btn mt-4">Read our story</button>
+            <img src="/Src/Assets/Frame 290.png" class="decor-img top-right" alt="Design" />
+          </div>
         </div>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="custom-card p-4 h-100">
-          <h6 class="year">Culture at Yoho</h6>
-<h2 class="mb-4"> People & Values</h2>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="custom-card p-4 h-100">
+            <h6 class="year">Culture at Yoho</h6>
+            <h2 class="mb-4"> People & Values</h2>
 
-<p class="year">At Yoho Technologies, our culture thrives on innovation, inclusivity, and collaboration. <strong class="year">We believe in doing meaningful work—</strong> and enjoying every step of the journey.</p>
-<p class="year">We foster an environment where every voice matters, creativity is encouraged, and growth is continuous.</p>
+            <p class="year">At Yoho Technologies, our culture thrives on innovation, inclusivity, and collaboration.
+              <strong class="year">We believe in doing meaningful work—</strong> and enjoying every step of the journey.
+            </p>
+            <p class="year">We foster an environment where every voice matters, creativity is encouraged, and growth is
+              continuous.</p>
 
 
-          <button class="custom-btn mt-4">Get our culture book</button>
-          <img src="/officewebsite/Src/Assets/Frame 291.png" class="decor-img top-right" alt="Design"/>
+            <button class="custom-btn mt-4">Get our culture book</button>
+            <img src="/officewebsite/Src/Assets/Frame 291.png" class="decor-img top-right" alt="Design" />
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
- <!-- Who We Are Section -->
+  </section>
+  <!-- Who We Are Section -->
   <section class="who-we-are py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Left Column: Video -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <div class="video-wrapper">
-          <video autoplay muted loop playsinline class="w-100 rounded-4 shadow">
-            <source src="/officewebsite/Src/Assets/yoho.vdo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Left Column: Video -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline class="w-100 rounded-4 shadow">
+              <source src="/officewebsite/Src/Assets/yoho.vdo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-      </div>
 
-      <!-- Right Column: Text -->
-      <div class="col-md-6">
-        <div class="video-content-inner">
-          <h1 class="mb-4 ">Who We Are: Pioneering Digital Innovation with Purpose</h1>
-<p class="mb-4 year">At Yoho Technologies, we’ve been shaping the future of businesses for over 7 years through cutting-edge digital solutions. From our roots in Chennai to clients worldwide, we deliver technology that drives real impact.</p>
+        <!-- Right Column: Text -->
+        <div class="col-md-6">
+          <div class="video-content-inner">
+            <h1 class="mb-4 ">Who We Are: Pioneering Digital Innovation with Purpose</h1>
+            <p class="mb-4 year">At Yoho Technologies, we’ve been shaping the future of businesses for over 7 years
+              through cutting-edge digital solutions. From our roots in Chennai to clients worldwide, we deliver
+              technology that drives real impact.</p>
 
-          <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+            <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
-<section class="who-we-are py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Left Column: Text -->
-<div class="col-md-6">
-  <div class="video-content-inner">
-  <h1 class="mb-4">Who We Are: Powering Progress Through Digital Innovation</h1>
-  <p class="mb-4">For over 7 years, Yoho Technologies has been delivering transformative digital solutions—empowering businesses across Chennai and beyond.</p>
-  <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
-</div>
+  </section>
+  <section class="who-we-are py-5">
+    <div class="container">
+      <div class="row align-items-center">
 
-</div>
+        <!-- Left Column: Text -->
+        <div class="col-md-6">
+          <div class="video-content-inner">
+            <h1 class="mb-4">Who We Are: Powering Progress Through Digital Innovation</h1>
+            <p class="mb-4">For over 7 years, Yoho Technologies has been delivering transformative digital
+              solutions—empowering businesses across Chennai and beyond.</p>
+            <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+          </div>
 
-<!-- Right Column: Image -->
-<div class="col-md-6 mb-4 mb-md-0">
-  <div class="image-wrapper">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg" alt="About Us" class="w-100 rounded-4 shadow" />
-  </div>
-</div>
-
-
-    </div>
-  </div>
-</section>
-<section class="value-section  py-5">
-  <div class="container text-center">
-    <h2 class="section-heading mb-5">Engineering real value since 2012</h2>
-    <div class="row justify-content-center">
-      
-      <!-- Item 1 -->
-      <div class="col-6 col-md-3 mb-4">
-        <img src="/officewebsite/Src/Assets/yoho6.png" alt="Years" class="stat-icon mb-3">
-        <h4 class="text-orange">17+</h4>
-        <p class="year">Years strong</p>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="col-6 col-md-3 mb-4">
-        <img src="/officewebsite/Src/Assets/yoho2.png" alt="Engineers" class="stat-icon mb-3">
-        <h4 class="text-orange">900+</h4>
-        <p class="year">World class software engineers</p>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="col-6 col-md-3 mb-4">
-        <img src="/officewebsite/Src/Assets/yoho3.png" alt="Projects" class="stat-icon mb-3">
-        <h4 class="text-orange">1500+</h4>
-        <p class="year">Projects launched</p>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="col-6 col-md-3 mb-4">
-        <img src="/officewebsite/Src/Assets/yoho5.png" alt="Clients" class="stat-icon mb-3">
-        <h4 class="text-orange">200+</h4>
-        <p class="year">Global clients</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<section class="sustainability-section text-white py-5">
-  <div class="container">
-    <div class="row align-items-start">
-      <!-- Left Column -->
-      <div class="col-lg-6 mb-4 mb-lg-0">
-  <h2 class="section-title mb-4">Our Sustainable Journey</h2>
-  <p class="year">
-    <strong class="year">Purpose. Responsibility. Progress.</strong> At Yoho Technologies, delivering cutting-edge digital solutions goes hand in hand with our commitment to building a more sustainable future. We embed sustainability into our strategy, operations, and culture.
-  </p>
-  <p class="year">
-    <strong class="year">Integrity. Partnership. Impact.</strong> We actively collaborate with clients, communities, and partners to drive meaningful change—working together to create a greener, more equitable future for all.
-  </p>
-
-  <div class="d-flex gap-3 mt-4 flex-wrap ">
-    <a href="#our-story" class="cta-button badge-pill">Environmental</a>
-    <a href="#our-story" class="cta-button badge-pill">Social</a>
-    <a href="#our-story" class="cta-button badge-pill">Governance</a>
-    
-  </div>
-</div>
-
-
-      <!-- Right Column -->
-      <div class="col-lg-6">
-  <div class="info-card p-4 p-md-5 ">
-    <img src="/officewebsite/Src/Assets/Frame 287.png" alt="Icon" class="mb-4" style="width: 100px;">
-    <p class="year"><strong class="year">Our Planet. Our Responsibility.</strong> At Yoho Technologies, we understand the urgency of tackling climate change, pollution, and environmental degradation. We're committed to sustainable practices that reduce our ecological footprint and protect the planet for future generations.</p>
-    <p class="year">Through tree plantation drives and strong community engagement, we’ve <strong class="year">successfully planted over 700 trees</strong>—contributing to a healthier, greener tomorrow.</p>
-    <a href="#our-story" class="cta-button badge-pill">Discover More</a>
-  </div>
-</div>
-
-<br>
-<hr>
-
-<div class="leadership-section py-5 text-white">
-  <div class="container">
-
-    <!-- Heading -->
-    <div class="text-center mb-5">
-     <h2 class="heading">Our leadership team</h2>
-
-      <p class="year">
-        Behind every story, there is a team of visionaries who inspire us to dream big and push technological boundaries to create resilient solutions for the future.
-        <br />
-        Passionate. Proactive. Expert. Meet the people who turn your ideas into a reality.
-      </p>
-    </div>
-    
-
-    <!-- Who We Are Content -->
-    <div class="row align-items-center">
-      <!-- Left Column: Image -->
-      <div class="col-md-6 mb-4 mb-md-0 order-md-1">
-        <div class="image-wrapper">
-          <img src="/officewebsite/Src/Assets/yohoboy.jpg" alt="About Us" class="w-100 rounded-4 shadow" />
         </div>
-      </div>
 
-      <!-- Right Column: Text -->
-      <div class="col-md-6 order-md-2">
-        <div class="video-content-inner text-white">
-          <h1 class="mb-4 ">Who We Are: Building greater futures through innovation and digital excellence</h1>
-          <p class="mb-4">Leading the way in digital solutions for over 7 years, we transform businesses across Chennai and beyond.</p>
-          <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+        <!-- Right Column: Image -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-wrapper">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg"
+              alt="About Us" class="w-100 rounded-4 shadow" />
+          </div>
         </div>
+
+
       </div>
     </div>
+  </section>
+  <section class="value-section  py-5">
+    <div class="container text-center">
+      <h2 class="section-heading mb-5">Engineering real value since 2012</h2>
+      <div class="row justify-content-center">
 
-  </div>
-  <br>
-<!-- <hr>
+        <!-- Item 1 -->
+        <div class="col-6 col-md-3 mb-4">
+          <img src="/officewebsite/Src/Assets/yoho6.png" alt="Years" class="stat-icon mb-3">
+          <h4 class="text-orange">17+</h4>
+          <p class="year">Years strong</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-6 col-md-3 mb-4">
+          <img src="/officewebsite/Src/Assets/yoho2.png" alt="Engineers" class="stat-icon mb-3">
+          <h4 class="text-orange">900+</h4>
+          <p class="year">World class software engineers</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-6 col-md-3 mb-4">
+          <img src="/officewebsite/Src/Assets/yoho3.png" alt="Projects" class="stat-icon mb-3">
+          <h4 class="text-orange">1500+</h4>
+          <p class="year">Projects launched</p>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-6 col-md-3 mb-4">
+          <img src="/officewebsite/Src/Assets/yoho5.png" alt="Clients" class="stat-icon mb-3">
+          <h4 class="text-orange">200+</h4>
+          <p class="year">Global clients</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="sustainability-section text-white py-5">
+    <div class="container">
+      <div class="row align-items-start">
+        <!-- Left Column -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="section-title mb-4">Our Sustainable Journey</h2>
+          <p class="year">
+            <strong class="year">Purpose. Responsibility. Progress.</strong> At Yoho Technologies, delivering
+            cutting-edge digital solutions goes hand in hand with our commitment to building a more sustainable future.
+            We embed sustainability into our strategy, operations, and culture.
+          </p>
+          <p class="year">
+            <strong class="year">Integrity. Partnership. Impact.</strong> We actively collaborate with clients,
+            communities, and partners to drive meaningful change—working together to create a greener, more equitable
+            future for all.
+          </p>
+
+          <div class="d-flex gap-3 mt-4 flex-wrap ">
+            <a href="#our-story" class="cta-button badge-pill">Environmental</a>
+            <a href="#our-story" class="cta-button badge-pill">Social</a>
+            <a href="#our-story" class="cta-button badge-pill">Governance</a>
+
+          </div>
+        </div>
+
+
+        <!-- Right Column -->
+        <div class="col-lg-6">
+          <div class="info-card p-4 p-md-5 ">
+            <img src="/officewebsite/Src/Assets/Frame 287.png" alt="Icon" class="mb-4" style="width: 100px;">
+            <p class="year"><strong class="year">Our Planet. Our Responsibility.</strong> At Yoho Technologies, we
+              understand the urgency of tackling climate change, pollution, and environmental degradation. We're
+              committed to sustainable practices that reduce our ecological footprint and protect the planet for future
+              generations.</p>
+            <p class="year">Through tree plantation drives and strong community engagement, we’ve <strong
+                class="year">successfully planted over 700 trees</strong>—contributing to a healthier, greener tomorrow.
+            </p>
+            <a href="#our-story" class="cta-button badge-pill">Discover More</a>
+          </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div class="leadership-section py-5 text-white">
+          <div class="container">
+
+            <!-- Heading -->
+            <div class="text-center mb-5">
+              <h2 class="heading">Our leadership team</h2>
+
+              <p class="year">
+                Behind every story, there is a team of visionaries who inspire us to dream big and push technological
+                boundaries to create resilient solutions for the future.
+                <br />
+                Passionate. Proactive. Expert. Meet the people who turn your ideas into a reality.
+              </p>
+            </div>
+
+
+            <!-- Who We Are Content -->
+            <div class="row align-items-center">
+              <!-- Left Column: Image -->
+              <div class="col-md-6 mb-4 mb-md-0 order-md-1">
+                <div class="image-wrapper">
+                  <img src="/officewebsite/Src/Assets/yohoboy.jpg" alt="About Us" class="w-100 rounded-4 shadow" />
+                </div>
+              </div>
+
+              <!-- Right Column: Text -->
+              <div class="col-md-6 order-md-2">
+                <div class="video-content-inner text-white">
+                  <h1 class="mb-4 ">Who We Are: Building greater futures through innovation and digital excellence</h1>
+                  <p class="mb-4">Leading the way in digital solutions for over 7 years, we transform businesses across
+                    Chennai and beyond.</p>
+                  <a href="#our-story" class="cta-button badge-pill">Discover Our Story</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <br>
+          <!-- <hr>
 
 <section class="py-5 position-relative">
   <div class="container">
     <div id="leadershipCarousel" class="carousel slide position-relative">
       <div class="carousel-inner"> -->
 
-        <!-- Slide 1 -->
-        <!-- <div class="carousel-item active">
+          <!-- Slide 1 -->
+          <!-- <div class="carousel-item active">
           <div class="row g-4"> -->
-            <!-- Card 1 -->
-            <!-- <div class="col-md-4">
+          <!-- Card 1 -->
+          <!-- <div class="col-md-4">
               <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg" class="card-img" alt="Leader 1" />
                 <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
@@ -285,8 +398,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Card 2 -->
-            <!-- <div class="col-md-4">
+          <!-- Card 2 -->
+          <!-- <div class="col-md-4">
               <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg" class="card-img" alt="Leader 2" />
                 <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
@@ -295,8 +408,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Card 3 -->
-            <!-- <div class="col-md-4">
+          <!-- Card 3 -->
+          <!-- <div class="col-md-4">
               <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg" class="card-img" alt="Leader 3" />
                 <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
@@ -308,11 +421,11 @@
           </div>
         </div> -->
 
-        <!-- Slide 2 -->
-        <!-- <div class="carousel-item">
+          <!-- Slide 2 -->
+          <!-- <div class="carousel-item">
           <div class="row g-4"> -->
-            <!-- Card 4 -->
-            <!-- <div class="col-md-4">
+          <!-- Card 4 -->
+          <!-- <div class="col-md-4">
               <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
                 <img src="https://wallpaperaccess.com/full/3193266.jpg" class="card-img" alt="Leader 4" />
                 <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
@@ -321,8 +434,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Card 5 -->
-            <!-- <div class="col-md-4">
+          <!-- Card 5 -->
+          <!-- <div class="col-md-4">
               <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
                 <img src="https://wallpaperaccess.com/full/3193266.jpg" class="card-img" alt="Leader 5" />
                 <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
@@ -331,8 +444,8 @@
                 </div>
               </div>
             </div> -->
-            <!-- Card 6 -->
-            <!-- <div class="col-md-4">
+          <!-- Card 6 -->
+          <!-- <div class="col-md-4">
               <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
                 <img src="https://wallpaperaccess.com/full/3193266.jpg" class="card-img" alt="Leader 6" />
                 <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
@@ -346,22 +459,140 @@
 
       </div> -->
 
-      <!-- Custom Positioned Carousel Controls -->
-       <!-- <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#leadershipCarousel" data-bs-slide="prev">
+          <!-- Custom Positioned Carousel Controls -->
+          <!-- <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#leadershipCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button> -->
 
-  <!-- Right button -->
-  <!-- <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#leadershipCarousel" data-bs-slide="next">
+          <!-- Right button -->
+          <!-- <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#leadershipCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
     </div> -->
-  </div>
-</section>
+        </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Top Section -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 98844 92652</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@yohotechnologies.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai
+                - 600117.
+                (Near:ESAF BANK)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html">News & Events</a></li>
+              <li><a href="about.html">Awards & Recognition</a></li>
+              <li><a href="about.html">Investor Relations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html">E-Commerce Solutions</a></li>
+              <li><a href="services.html">Supply Chain Management</a></li>
+              <li><a href="services.html">Data Analytics</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">AI & Machine Learning</a></li>
+              <li><a href="services.html">Digital Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Industries</h3>
+            <ul>
+              <li><a href="services.html">Retail & Consumer</a></li>
+              <li><a href="services.html">Healthcare</a></li>
+              <li><a href="services.html">Financial Services</a></li>
+              <li><a href="services.html">Manufacturing</a></li>
+              <li><a href="services.html">Government</a></li>
+              <li><a href="services.html">Education</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="about.html">Blog</a></li>
+              <li><a href="about.html">Case Studies</a></li>
+              <li><a href="about.html">Whitepapers</a></li>
+              <li><a href="about.html">Documentation</a></li>
+              <li><a href="contact.html">Support Center</a></li>
+              <li><a href="about.html">Training & Certification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="../Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+        </div>
+        <div class="footer-bottom-left">
+          <div class="copyright">
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookies.html">Cookie Policy</a>
+            <a href="security.html">Security</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="../JS/About.js"></script>
 
 </body>
+
 </html>
