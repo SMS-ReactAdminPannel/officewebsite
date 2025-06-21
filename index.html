@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="Src/CSS/Navbar.css">
   <link rel="stylesheet" href="Src/CSS/Home.css">
   <link rel="stylesheet" href="Src/CSS/Footer.css">
-  <link rel="stylesheet" href="Src/CSS/Responsive.css">
+  <!-- <link rel="stylesheet" href="Src/CSS/Responsive.css"> -->
 
   <!-- Bootstrap + Font Awesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
@@ -54,18 +54,32 @@
         </a>
       </div>
       <ul class="nav-links">
-        <li><a href="./Src/HTML/About.html">Who We Are</a></li>
+        <li><a href="about.html">Who We Are</a></li>
         <li class="dropdown-parent">
           <a href="#" class="dropdown-trigger">What We Do</a>
           <div class="dropdown-backdrop"></div>
           <div class="mega-dropdown">
             <div class="mega-dropdown-container">
               <div class="dropdown-categories">
-                <a href="services.html" class="category-item active" data-category="overview">Overview</a>
-                <a href="Overview.html" class="category-item" data-category="website-design">Web Design</a>
+                <a href="#" class="category-item" data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Web Design</a>
                 <a href="#" class="category-item" data-category="website-development">Web Development</a>
                 <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
                 <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <div class="dropdown-services active" id="overview">
+                <div class="services-title">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="Overview.html" class="service-item">Website Design & Development</a>
+                  <a href="Overview.html" class="service-item">Mobile App Development</a>
+                  <a href="Overview.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="Overview.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="Overview.html" class="service-item">Custom Software Development</a>
+                  <a href="Overview.html" class="service-item">UI/UX Design Services</a>
+                  <a href="Overview.html" class="service-item">Cloud Solutions</a>
+                  <a href="Overview.html" class="service-item">SEO & Analytics</a>
+                  <a href="Overview.html" class="service-item">Consulting Services</a>
+                </div>
               </div>
               <div class="dropdown-services" id="website-design">
                 <div class="services-title">Web Design</div>
@@ -171,7 +185,7 @@
   <main>
     <!-- Hero Section -->
     <section class="hero-section container-fluid">
-      <div class="container" style="margin-left: 15%;">
+      <div class="container slide-section" style="margin-left: 15%;">
         <div class="row align-items-centerjustify-content-between">
           <!-- Left Text Content -->
           <div class="col-lg-6 mb-5 mb-lg-0">
@@ -184,9 +198,9 @@
               businesses across Chennai with innovative digital solutions for the
               past 7 years.
             </p>
-            <div class="d-flex flex-wrap gap-3">
+            <div class="d-flex flex-wrap gap-6 home-button">
               <a href="contact.html" class="hero-cta">Get in touch</a>
-              <a href="services.html" class="hero-cta2">Our work</a>
+              <a href="services.html" class="hero-cta2 ">Our work</a>
             </div>
           </div>
 
@@ -233,14 +247,14 @@
     </section>
 
     <!-- Companies Section -->
-    <section class="companies-section">
-      <div class="container-fluid">
-        <h2 class="section-title1" style="margin-top: -20px; margin-left: 4%;">World-class companies that trust us:
+    <section class="companies-section ">
+      <div class="container slide-section slide-section">
+        <h2 class="section-title1 underline">World-class companies that trust us:
         </h2>
 
         <div id="companiesCarousel" class="carousel slide">
           <!-- Company Trust Carousel -->
-          <div class="container py-4 " style="background-color: black; overflow-x: hidden;">
+          <div class="container py-4" style="background-color: black; overflow-x: hidden;">
             <div class="logos position-relative overflow-hidden">
               <div class="logo-items d-flex align-items-center animate-scroll">
                 <img src="Src/Assets/company list/Amazon 4 On.png" alt="Amazon" />
@@ -267,43 +281,47 @@
     <!-- Full Black Section -->
     <section class="full-black-section">
       <div class="container">
-        <div class="hero-box text-white">
-          <h1 class="section-title2">Just the right partner in pushing <br> boundaries</h1>
-          <p class="hero-text1">
-            We don't just adapt to change — we drive it. As your innovation partner, we empower organizations to
-            challenge
-            limits, embrace emerging technologies, and redefine what's possible. Together, we push boundaries to shape
-            the
-            future of digital transformation.
-          </p>
-          <p class="hero-text1">
-            Your ideal partner in innovation, pushing limits and turning bold ideas into reality.
-          </p>
-          <p class="hero-text1">
-            Digital product consultancy. Digital product development. System integrations.
-            We continue to find fast, elegant solutions to our clients' trickiest problems. But, don't just trust us,
-            read
-            our numerous Clutch reviews.
-          </p>
-          <img src="Src/Assets/cards image/130x300 (8).png" alt="Design Graphic" class="corner-graphic" />
+        <div class="hero-box text-white slide-section">
+          <h1 class="section-title1">Shaping the Future with Bold Digital Products</h1>
+          <div class="section2">
+            <p class="hero-text1">
+              We don't just adapt to change — we drive it. As your innovation partner, we empower organizations to
+              challenge
+              limits, embrace emerging technologies, and redefine what's possible. Together, we push boundaries to shape
+              the
+              future of digital transformation.
+            </p>
+            <p class="hero-text1">
+              Your ideal partner in innovation, pushing limits and turning bold ideas into reality.
+            </p>
+            <p class="hero-text1">
+              Digital product consultancy. Digital product development. System integrations.
+              We continue to find fast, elegant solutions to our clients' trickiest problems. But, don't just trust us,
+              read
+              our numerous Clutch reviews.
+            </p>
+            <img src="Src/Assets/cards image/130x300 (8).png" alt="Design Graphic" class="corner-graphic" />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Discover Services Section -->
     <section class="discover-section text-white">
-      <div class="container">
-        <h2 class="section-heading1">Discover our services</h2>
-        <p class="sub-text"><b>Check all our services<i class="fa-solid fa-arrow-right"
-              style="margin-left: 10px;"></i></b></p>
+      <div class="container slide-section">
+        <h2 class="section-title1 underline">Discover our services</h2>
+        <p>
+          <a href="./Src/HTML/Overview.html" class="service-link">Check all our services<i class="fa-solid fa-arrow-right"
+                style="margin-left: 10px;"></i></a>
+        </p>
 
-        <div class="row g-4">
+        <div class="row g-4 card-conatiner">
           <!-- Card 1 -->
           <div class="col-lg-4 col-md-6">
             <div class="service-card">
-              <h5 class="card-title">Software Development</h5>
-              <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+              <h5 class="card-title">Website & Design Development</h5>
+              <div class="">
+                <p class="textstyle">Creating visually appealing, user-friendly websites.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -316,9 +334,9 @@
           <!-- Card 2 -->
           <div class="col-lg-4 col-md-6">
             <div class="service-card">
-              <h5 class="card-title">Software architecture services</h5>
+              <h5 class="card-title">Mobile App Development</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Designing and building applications for smartphones and tablets.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -331,9 +349,9 @@
           <!-- Card 3 -->
           <div class="col-lg-4 col-md-6">
             <div class="service-card">
-              <h5 class="card-title">Data science and AI</h5>
+              <h5 class="card-title">Digital Marketing Solutions</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Online strategies like SEO, social media, email, and paid ads.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -346,24 +364,24 @@
           <!-- Card 4 -->
           <div class="col-lg-4 col-md-6">
             <div class="service-card">
-              <h5 class="card-title">UI UX design services</h5>
+              <h5 class="card-title">E-Commerce Solutions</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Design, development, and optimization.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
                 <span class="read-more-icon">→</span>
               </div>
-              <img src="Src/Assets/cards image/150x150 (1).png" class="service-icon" alt="icon4" />
+              <img src="Src/Assets/yoho1.png" class="service-icon" alt="icon4" />
             </div>
           </div>
 
           <!-- Card 5 -->
           <div class="col-lg-4 col-md-6">
             <div class="service-card">
-              <h5 class="card-title">Data engineering services</h5>
+              <h5 class="card-title">UI/UX Design services</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Creating intuitive, engaging, and user-friendly digital interfaces.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -376,9 +394,39 @@
           <!-- Card 6 -->
           <div class="col-lg-4 col-md-6">
             <div class="service-card">
-              <h5 class="card-title">Delivery and operations</h5>
+              <h5 class="card-title">Consulting Services</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Expert guidance and strategic insights to help businesses.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/yohot8.png" class="service-icon" alt="icon6" />
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Cloud Solutions</h5>
+              <div class="my-3">
+                <p class="textstyle">Scalable, secure, and on-demand computing resources.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/110x150 (10).png" class="service-icon" alt="icon6" />
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">SEO & Analytics</h5>
+              <div class="my-3">
+                <p class="textstyle">Improving website visibility in search engines and leveraging data insights.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -387,145 +435,253 @@
               <img src="Src/Assets/cards image/130x300 (8).png" class="service-icon" alt="icon6" />
             </div>
           </div>
+
+          <!-- Card 9 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <h5 class="card-title">Custom Software Development</h5>
+              <div class="my-3">
+                <p class="textstyle">Designing, building, and deploying tailored software solutions.</p>
+              </div>
+              <div class="read-more">
+                <span class="read-more-text">Read more</span>
+                <span class="read-more-icon">→</span>
+              </div>
+              <img src="Src/Assets/cards image/interview flow.png" class="service-icon" alt="icon6" />
+            </div>
+          </div>
+          
+
         </div>
       </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section class="tech-stack-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="main-title text-left">Our tech stack. Tailored to yours.</h1>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12">
+       <!-- Tech Stack Section -->
+    <div class="tech-stack-section">
+        <div class="container slide-section">
+            <h2 class="section-title1 underline">Our tech stack. Tailored to yours.</h2>
+            
             <div class="tech-grid">
-              <!-- Row 1 -->
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/android.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Android</span>
-              </div>
+                <!-- Row 1 -->
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/net-core.png" alt=".net-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">.NET</div>
+                </div>
+                
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/java.png" alt=".net-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Java</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/python-icon.png" alt=".net-image" class="tech-img">                        
+                    </div>
+                    <div class="tech-label">Python</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/node-js.png" alt=".net-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Node.js</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/html.png" alt="html-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">HTML</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/css.png" alt="css-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">CSS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/react.png" alt="react-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">React</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/angular.png" alt="angular-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Angular</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/vue-js.png" alt="vue-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/angular.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Angular</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Vue.js</div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/php 1.png" alt="php-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/aws-2.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">AWS</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Php</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/flutter.png" alt="flutter-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/css.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">CSS</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Flutter</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/android.png" alt="android-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/azure-2.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Azure</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Android</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/ios.png" alt="ios-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">iOS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/kotlin.png" alt="kotlin-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Kotlin</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/swift.png" alt="swift-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/flutter.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Flutter</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/google-cloud-1.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Google Cloud</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/html.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">HTML</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/ios.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">iOS</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/java.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Java</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/kotlin.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Kotlin</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/microsoft-net.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">.NET</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/nodejs.svg" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Nodejs</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/react.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Reactjs</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Swift</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/azure-2.png" alt="azure-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Azure</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/aws-2.png" alt="aws-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">AWS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/google-cloud-1.png" alt="google-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Google Cloud</div>
+                </div>
             </div>
-
-            <div class="row">
-              <div class="col-12">
-                <p class="specialty-text text-start">
-                  <span class="specialty-label">Our speciality?</span>
-                  High-performing, semantically-rich and accessible markup – perfectly paired with a meticulously
-                  organised CSS/SCSS architecture.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
 
     <!-- Value Section -->
-    <section class="value-section text-white py-5">
-      <div class="container text-left" style="margin-top: -100px;">
-        <h2 class="section-heading2 text-left">Engineering real value since 2008</h2>
-        <div class="row justify-content-center">
-          <div class="col-6 col-md-3 mb-4">
-            <img src="Src/Assets/cards image/110x150 (10).png" alt="Years" class="stat-icon mb-3">
+    <section class="value-section text-white py-2">
+      <div class="container slide-section" >
+        <h2 class="section-title3">Engineering real value since 2012</h2>
+        <div class="row justify-content-center py-4">
+          <div class="col-6 col-md-3 mb-2">
+            <img src="Src/Assets/cards image/110x150 (10).png" alt="Years" class="stat-icon">
             <h4 class="text-orange">12+</h4>
             <p class="card-title">Years strong</p>
           </div>
 
-          <div class="col-6 col-md-3 mb-4">
-            <img src="Src/Assets/cards image/130x300 (6).png" alt="Engineers" class="stat-icon mb-3">
-            <h4 class="text-orange">900+</h4>
+          <div class="col-6 col-md-3 mb-2">
+            <img src="Src/Assets/cards image/130x300 (6).png" alt="Engineers" class="stat-icon">
+            <h4 class="text-orange">780+</h4>
             <p class="card-title">Projects launched</p>
           </div>
 
-          <div class="col-6 col-md-3 mb-4">
-            <img src="Src/Assets/cards image/130x300 (8).png" alt="Engineers" class="stat-icon mb-3">
-            <h4 class="text-orange">900+</h4>
-            <p class="card-title">Projects launched</p>
+          <div class="col-6 col-md-3 mb-2">
+            <img src="Src/Assets/cards image/130x300 (8).png" alt="Engineers" class="stat-icon">
+            <h4 class="text-orange">130+</h4>
+            <p class="card-title">World class software engineers</p>
           </div>
 
-          <div class="col-6 col-md-3 mb-4">
-            <img src="Src/Assets/cards image/interview flow.png" alt="Clients" class="stat-icon mb-3">
-            <h4 class="text-orange">200+</h4>
+          <div class="col-6 col-md-3 mb-2">
+            <img src="Src/Assets/cards image/interview flow.png" alt="Clients" class="stat-icon">
+            <h4 class="text-orange">350+</h4>
             <p class="card-title">Global clients</p>
           </div>
         </div>
       </div>
     </section>
 
+     <section class="products-section">
+        <div class="container slide-section">
+            <h2 class="section-title1 pt-3 underline">Our products</h2>
+            
+            <p class="section-description">
+                With years of hands-on experience, we know what works, and what doesn't. We not only understand your unique challenges, we anticipate them and deliver <span class="highlight">innovative solutions to speed up your digital development and time to market</span>, keeping you ahead of the curve.
+            </p>
+            
+            <div class="products row g-4">
+                <!-- Vega Flywheel -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Pharmacy Billing Software</h3>
+                        <div class="product-subtitle">Reinventing product discovery.</div>
+                        <div class="product-description">
+                            <strong>Innovative. Efficient. Strategic.</strong> YOHO very proudly presenting Medical store billing software or Pharmacy billing software in chennai the modern technology. Medical store billing software in chennai is specially developed for Medical, Pharma and Drug Shops. It covers all aspects involved in running a day to day medical retail business.
+                           
+                        </div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+                
+                <!-- Vega GuardIAM -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Job Portal Development</h3>
+                        <div class="product-subtitle">Identity Access Management.</div>
+                        <div class="product-description">
+                          Looking for Job Portal Development / online recruitment software in chennai, then we can provide best job portal development with extra feature. YOHO provide job portal with excellent feature as per client requirements. Job Portals provide an ideal platform for the employers to reach their vision employees.</div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+                
+                <!-- Chatbot Accelerator -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Forex Trading</h3>
+                        <div class="product-subtitle">Fast-developed. Human-like.</div>
+                        <div class="product-description">
+                           We provide a new trading system for beginners. Our Robot analyze the market as every second. Thats automatically take the desition Buy or Sell. Our automated system provide BUY and sell signals to the robot. Just install this application to get a successful forex trading experience.  </div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Industry Experts Section -->
     <section class="discover-section text-white">
-      <div class="container">
-        <h2 class="section-heading1">Industry experts in your sector</h2>
-        <p class="sub-text"><b>Delve into deep industry knowledge with us</b></p>
+      <div class="container slide-section">
+        <h2 class="section-title1 underline">Industry experts in your sector</h2>
+        <p class="sub-text">Delve into deep industry knowledge with us</p>
 
         <div class="row g-4">
           <!-- Card 1 -->
@@ -533,7 +689,7 @@
             <div class="service-card">
               <h5 class="card-title">Digital product development</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Designing, building, and launching digital solutions-like apps, platforms, or tools.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -548,7 +704,7 @@
             <div class="service-card">
               <h5 class="card-title">Software architecture services</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Scalability, performance, security, and maintainability.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -563,7 +719,7 @@
             <div class="service-card">
               <h5 class="card-title">Data science and AI</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Automate processes, and drive smarter business decisions.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -578,13 +734,13 @@
             <div class="service-card">
               <h5 class="card-title">UI UX design services</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Crafting visually appealing and user-centric digital interfaces.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
                 <span class="read-more-icon">→</span>
               </div>
-              <img src="Src/Assets/cards image/150x150 (1).png" class="service-icon" alt="icon4" />
+              <img src="Src/Assets/yoho1.png" class="service-icon" alt="icon4" />
             </div>
           </div>
 
@@ -593,7 +749,7 @@
             <div class="service-card">
               <h5 class="card-title">Data engineering services</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Designing, building, and maintaining scalable data pipelines.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
@@ -608,18 +764,314 @@
             <div class="service-card">
               <h5 class="card-title">Delivery and operations</h5>
               <div class="my-3">
-                <p class="textstyle">We build intuitive, high-performance software tailored to your business needs.</p>
+                <p class="textstyle">Efficient deployment, monitoring, and maintenance of digital products.</p>
               </div>
               <div class="read-more">
                 <span class="read-more-text">Read more</span>
                 <span class="read-more-icon">→</span>
               </div>
-              <img src="Src/Assets/cards image/130x300 (8).png" class="service-icon" alt="icon6" />
+              <img src="Src/Assets/yohot8.png" class="service-icon" alt="icon6" />
             </div>
           </div>
         </div>
       </div>
     </section>
+
+        <!-- testimony -->
+    <div class="header slide-section container">
+        <h2 class="section-title1 underline mb-4">What Our Users Say</h2>
+        <p>Real testimonials from real people</p>
+    </div>
+    
+     <div class="collage-container">
+        <div class="testimonials-container slide-section">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+"Yoho Technologies developed our complete e-commerce platform from scratch, and we couldn't be more satisfied with the outcome. From the initial consultation to the final deployment, their team was professional, communicative, and focused on delivering high-quality work. They took the time to understand our business model, customer base, and design preferences, which reflected in the final product.
+
+The user interface is smooth, intuitive, and visually appealing, while the backend is robust and highly scalable. Features like real-time order tracking, secure payment integration, and a custom admin dashboard were all implemented flawlessly. Even when we made a few last-minute changes, the team adapted quickly without compromising delivery timelines.
+</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Sarah Thompson">
+                    <div>
+                        <p class="user-name">Sarah Thompson</p>
+                        <p class="user-title">Project Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We approached Yoho Technologies for a cross-platform mobile app. They handled everything from design to deployment professionally. Their regular updates and transparent process made us feel confident throughout."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Michael Chen">
+                    <div>
+                        <p class="user-name">Michael Chen</p>
+                        <p class="user-title">Software Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"As a startup, we needed a tech partner who could understand our vision and work closely with us. Yoho Technologies delivered a scalable MVP within our budget and offered continued support post-launch."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Emily Rodriguez">
+                    <div>
+                        <p class="user-name">Emily Rodriguez</p>
+                        <p class="user-title">Data Analyst</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Yoho Technologies built a custom booking system for my business. Their team listened carefully to our needs and translated them into a user-friendly application. We've seen a 40% increase in customer engagement."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Ryan Sullivan">
+                    <div>
+                        <p class="user-name">Ryan Sullivan</p>
+                        <p class="user-title">Business Owner</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Despite being in different time zones, Yoho's communication was consistent and effective. They managed our project remotely with professionalism and precision. I would recommend them to anyone looking for remote tech services."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="David Patel">
+                    <div>
+                        <p class="user-name">David Patel</p>
+                        <p class="user-title">IT Consultant</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Yoho Technologies helped us digitize patient record management. The team followed strict data privacy protocols and built a secure system. We're impressed with their domain understanding and execution."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Olivia Harper">
+                    <div>
+                        <p class="user-name">Olivia Harper</p>
+                        <p class="user-title">Marketing Specialist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I've worked with several development teams, and Yoho stands out for their structured workflow and on-time delivery. They're efficient, technically strong, and committed to quality."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="James Carter">
+                    <div>
+                        <p class="user-name">James Carter</p>
+                        <p class="user-title">Operations Manager</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We hired Yoho Technologies to develop an online learning portal. They included features like live classes, assessments, and student tracking. The final product was clean, fast, and well-optimized for mobile use."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Dr. Lisa Wang">
+                    <div>
+                        <p class="user-name">Dr. Lisa Wang</p>
+                        <p class="user-title">Research Scientist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Being from a non-tech background, I was worried about app development. But Yoho Technologies patiently explained each step and guided me through the entire process. I'm very happy with their service and clarity."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Alex Johnson">
+                    <div>
+                        <p class="user-name">Alex Johnson</p>
+                        <p class="user-title">Data Scientist</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"This is our second time working with Yoho Technologies, and the experience was just as smooth as the first. They maintained code quality, provided timely updates, and handled last-minute changes professionally."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Maria Garcia">
+                    <div>
+                        <p class="user-name">Maria Garcia</p>
+                        <p class="user-title">Financial Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 11 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The natural language processing is phenomenal. It understands complex queries perfectly."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Jennifer Lee">
+                    <div>
+                        <p class="user-name">Jennifer Lee</p>
+                        <p class="user-title">Content Creator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 12 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"This AI platform has revolutionized our entire workflow. The integration capabilities are seamless, and the learning curve is practically non-existent. Our team's productivity has increased by 300%!"</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Robert Kim">
+                    <div>
+                        <p class="user-name">Robert Kim</p>
+                        <p class="user-title">CTO</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 13 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The real-time analytics feature has transformed how we make business decisions. Absolutely brilliant!"</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Amanda Wilson">
+                    <div>
+                        <p class="user-name">Amanda Wilson</p>
+                        <p class="user-title">Business Analyst</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 14 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Security and privacy are top-notch. I feel completely confident using this AI for sensitive business operations."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Thomas Brown">
+                    <div>
+                        <p class="user-name">Thomas Brown</p>
+                        <p class="user-title">Security Officer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 15 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The customization options are endless. It adapts perfectly to our unique business requirements."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Rachel Davis">
+                    <div>
+                        <p class="user-name">Rachel Davis</p>
+                        <p class="user-title">UX Designer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 16 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The collaborative features make team projects so much more efficient. Everyone can work together seamlessly."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Kevin Martinez">
+                    <div>
+                        <p class="user-name">Kevin Martinez</p>
+                        <p class="user-title">Team Lead</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 17 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Mobile integration works flawlessly. I can access everything I need from anywhere."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Sophie Turner">
+                    <div>
+                        <p class="user-name">Sophie Turner</p>
+                        <p class="user-title">Mobile Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 18 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The learning algorithms are incredibly sophisticated. It gets smarter with every interaction."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Daniel Clark">
+                    <div>
+                        <p class="user-name">Daniel Clark</p>
+                        <p class="user-title">AI Researcher</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 19 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Exceptional performance under high loads. This AI handles our enterprise needs perfectly."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/female-icon-11.jpg" 
+                         class="user-avatar" alt="Grace Liu">
+                    <div>
+                        <p class="user-name">Grace Liu</p>
+                        <p class="user-title">Systems Administrator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 20 -->
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"After trying dozens of AI solutions, this is the only one that truly delivers on its promises. The innovation and attention to detail are extraordinary. It's not just a tool—it's a game-changer for our entire industry."</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg" 
+                         class="user-avatar" alt="Marcus Johnson">
+                    <div>
+                        <p class="user-name">Marcus Johnson</p>
+                        <p class="user-title">CEO & Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
   </main>
 
   <!-- Footer -->
@@ -782,6 +1234,25 @@
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
   </script>
+  <!-- ---------- JavaScript ---------- -->
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');   // fade / slide in
+        } else {
+          entry.target.classList.remove('visible'); // reset when it leaves
+        }
+      });
+    },
+    { threshold: 0.1 }  // fire when 10 % of the section is visible
+  );
+
+  document.querySelectorAll('.slide-section')
+          .forEach(el => observer.observe(el));
+</script>
+
 </body>
 
 </html>
