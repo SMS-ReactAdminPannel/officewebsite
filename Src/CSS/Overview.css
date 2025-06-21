@@ -166,6 +166,7 @@ p {
 @media (max-width: 576px) {
   .services-heading {
     font-size: 2rem;
+    padding-top:30px;
   }
 
   .services-section {
@@ -937,7 +938,7 @@ p {
 
 @media (max-width: 576px) {
   .flow-section {
-    padding: 10px 0;
+    padding: 10px 0 30px;
   }
 
   .flow-img-section {
