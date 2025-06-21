@@ -484,6 +484,11 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .footer-tagline{
+        text-align: left;
+        margin-left: 65px;
+    }
+
     .footer-top {
         grid-template-columns: 1fr;
         gap: 3rem;

@@ -62,7 +62,7 @@
             <div class="mega-dropdown-container">
               <div class="dropdown-categories">
                 <a href="services.html" class="category-item active" data-category="overview">Overview</a>
-                <a href="#" class="category-item" data-category="website-design">Website Design</a>
+                <a href="./Src/HTML/Overview.html" class="category-item" data-category="website-design">Website Design</a>
                 <a href="#" class="category-item" data-category="website-development">Website Development</a>
                 <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
                 <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
@@ -148,7 +148,7 @@
               businesses across Chennai with innovative digital solutions for the
               past 7 years.
             </p>
-            <div class="d-flex flex-wrap gap-3">
+            <div class="d-flex flex-wrap gap-3 home-button">
               <a href="contact.html" class="hero-cta">Get in touch</a>
               <a href="services.html" class="hero-cta2">Our work</a>
             </div>
@@ -201,13 +201,13 @@
 
     <!-- Companies Section -->
     <section class="companies-section">
-      <div class="container-fluid">
-        <h2 class="section-title1" style="margin-top: -20px; margin-left: 4%;">World-class companies that trust us:
+      <div class="container">
+        <h2 class="section-title1">World-class companies that trust us:
         </h2>
 
         <div id="companiesCarousel" class="carousel slide">
           <!-- Company Trust Carousel -->
-          <div class="container py-4 " style="background-color: black; overflow-x: hidden;">
+          <div class="container py-4" style="background-color: black; overflow-x: hidden;">
             <div class="logos position-relative overflow-hidden">
               <div class="logo-items d-flex align-items-center animate-scroll">
                 <img src="Src/Assets/company list/Amazon 4 On.png" alt="Amazon" />
@@ -235,24 +235,26 @@
     <section class="full-black-section">
       <div class="container">
         <div class="hero-box text-white">
-          <h1 class="section-title2">Just the right partner in pushing <br> boundaries</h1>
-          <p class="hero-text1">
-            We don't just adapt to change — we drive it. As your innovation partner, we empower organizations to
-            challenge
-            limits, embrace emerging technologies, and redefine what's possible. Together, we push boundaries to shape
-            the
-            future of digital transformation.
-          </p>
-          <p class="hero-text1">
-            Your ideal partner in innovation, pushing limits and turning bold ideas into reality.
-          </p>
-          <p class="hero-text1">
-            Digital product consultancy. Digital product development. System integrations.
-            We continue to find fast, elegant solutions to our clients' trickiest problems. But, don't just trust us,
-            read
-            our numerous Clutch reviews.
-          </p>
-          <img src="Src/Assets/cards image/130x300 (8).png" alt="Design Graphic" class="corner-graphic" />
+          <h1 class="section-title1">Just the right partner in pushing <br> boundaries</h1>
+          <div class="section2">
+            <p class="hero-text1">
+              We don't just adapt to change — we drive it. As your innovation partner, we empower organizations to
+              challenge
+              limits, embrace emerging technologies, and redefine what's possible. Together, we push boundaries to shape
+              the
+              future of digital transformation.
+            </p>
+            <p class="hero-text1">
+              Your ideal partner in innovation, pushing limits and turning bold ideas into reality.
+            </p>
+            <p class="hero-text1">
+              Digital product consultancy. Digital product development. System integrations.
+              We continue to find fast, elegant solutions to our clients' trickiest problems. But, don't just trust us,
+              read
+              our numerous Clutch reviews.
+            </p>
+            <img src="Src/Assets/cards image/130x300 (8).png" alt="Design Graphic" class="corner-graphic" />
+          </div>
         </div>
       </div>
     </section>
@@ -260,9 +262,9 @@
     <!-- Discover Services Section -->
     <section class="discover-section text-white">
       <div class="container">
-        <h2 class="section-heading1">Discover our services</h2>
-        <p class="sub-text"><b>Check all our services<i class="fa-solid fa-arrow-right"
-              style="margin-left: 10px;"></i></b></p>
+        <h2 class="section-title1">Discover our services</h2>
+        <p class="sub-text">Check all our services<i class="fa-solid fa-arrow-right"
+              style="margin-left: 10px;"></i></p>
 
         <div class="row g-4">
           <!-- Card 1 -->
@@ -358,109 +360,153 @@
       </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section class="tech-stack-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="main-title text-left">Our tech stack. Tailored to yours.</h1>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12">
+       <!-- Tech Stack Section -->
+    <div class="tech-stack-section">
+        <div class="container">
+            <h2 class="section-title1">Our tech stack. Tailored to yours.</h2>
+            
             <div class="tech-grid">
-              <!-- Row 1 -->
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/android.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Android</span>
-              </div>
+                <!-- Row 1 -->
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/net-core.png" alt=".net-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">.NET</div>
+                </div>
+                
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/java.png" alt=".net-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Java</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/python-icon.png" alt=".net-image" class="tech-img">                        
+                    </div>
+                    <div class="tech-label">Python</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/node-js.png" alt=".net-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Node.js</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/html.png" alt="html-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">HTML</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/css.png" alt="css-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">CSS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/react.png" alt="react-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">React</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/angular.png" alt="angular-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Angular</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/vue-js.png" alt="vue-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/angular.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Angular</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Vue.js</div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/php 1.png" alt="php-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/aws-2.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">AWS</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Php</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/flutter.png" alt="flutter-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/css.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">CSS</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Flutter</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/android.png" alt="android-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/azure-2.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Azure</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Android</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/ios.png" alt="ios-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">iOS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/kotlin.png" alt="kotlin-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Kotlin</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/swift.png" alt="swift-image" class="tech-img">
 
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/flutter.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Flutter</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/google-cloud-1.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Google Cloud</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/html.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">HTML</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/ios.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">iOS</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/java.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Java</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/kotlin.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Kotlin</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/microsoft-net.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">.NET</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/nodejs.svg" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Nodejs</span>
-              </div>
-
-              <div class="tech-item">
-                <img src="Src/Assets/tech icons/react.png" class="tech-icon" alt="icon1" />
-                <span class="tech-name">Reactjs</span>
-              </div>
+                    </div>
+                    <div class="tech-label">Swift</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/azure-2.png" alt="azure-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Azure</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/aws-2.png" alt="aws-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">AWS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="Src/Assets/tech icons/google-cloud-1.png" alt="google-image" class="tech-img">
+                    </div>
+                    <div class="tech-label">Google Cloud</div>
+                </div>
             </div>
-
-            <div class="row">
-              <div class="col-12">
-                <p class="specialty-text text-start">
-                  <span class="specialty-label">Our speciality?</span>
-                  High-performing, semantically-rich and accessible markup – perfectly paired with a meticulously
-                  organised CSS/SCSS architecture.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
 
     <!-- Value Section -->
     <section class="value-section text-white py-5">
-      <div class="container text-left" style="margin-top: -100px;">
-        <h2 class="section-heading2 text-left">Engineering real value since 2008</h2>
-        <div class="row justify-content-center">
+      <div class="container text-left" >
+        <h2 class="section-title1 text-left">Engineering real value since 2008</h2>
+        <div class="row justify-content-center py-4">
           <div class="col-6 col-md-3 mb-4">
             <img src="Src/Assets/cards image/110x150 (10).png" alt="Years" class="stat-icon mb-3">
             <h4 class="text-orange">12+</h4>
@@ -488,11 +534,58 @@
       </div>
     </section>
 
+     <section class="products-section">
+        <div class="container">
+            <h2 class="section-title1 pt-3">Our products</h2>
+            
+            <p class="section-description">
+                With years of hands-on experience, we know what works, and what doesn't. We not only understand your unique challenges, we anticipate them and deliver <span class="highlight">innovative solutions to speed up your digital development and time to market</span>, keeping you ahead of the curve.
+            </p>
+            
+            <div class="products row g-4">
+                <!-- Vega Flywheel -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Pharmacy Billing Software</h3>
+                        <div class="product-subtitle">Reinventing product discovery.</div>
+                        <div class="product-description">
+                            <strong>Innovative. Efficient. Strategic.</strong> YOHO very proudly presenting Medical store billing software or Pharmacy billing software in chennai the modern technology. Medical store billing software in chennai is specially developed for Medical, Pharma and Drug Shops. It covers all aspects involved in running a day to day medical retail business.
+                           
+                        </div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+                
+                <!-- Vega GuardIAM -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Job Portal Development</h3>
+                        <div class="product-subtitle">Identity Access Management.</div>
+                        <div class="product-description">
+                          Looking for Job Portal Development / online recruitment software in chennai, then we can provide best job portal development with extra feature. YOHO provide job portal with excellent feature as per client requirements. Job Portals provide an ideal platform for the employers to reach their vision employees.                        </div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+                
+                <!-- Chatbot Accelerator -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <h3 class="product-title">Forex Trading</h3>
+                        <div class="product-subtitle">Fast-developed. Human-like.</div>
+                        <div class="product-description">
+                           We provide a new trading system for beginners. Our Robot analyze the market as every second. Thats automatically take the desition Buy or Sell. Our automated system provide BUY and sell signals to the robot. Just install this application to get a successful forex trading experience.  </div>
+                        <a href="#" class="discover-btn">Discover more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Industry Experts Section -->
     <section class="discover-section text-white">
       <div class="container">
-        <h2 class="section-heading1">Industry experts in your sector</h2>
-        <p class="sub-text"><b>Delve into deep industry knowledge with us</b></p>
+        <h2 class="section-title1">Industry experts in your sector</h2>
+        <p class="sub-text">Delve into deep industry knowledge with us</p>
 
         <div class="row g-4">
           <!-- Card 1 -->
