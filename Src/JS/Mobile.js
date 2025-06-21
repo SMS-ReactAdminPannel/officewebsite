@@ -1,126 +1,100 @@
-// Mobile Navigation Toggle
+// Mobile Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const navLinks = document.getElementById('nav-links');
     const body = document.body;
-    
-    if (mobileToggle && navLinks) {
-        // Toggle mobile menu
-        mobileToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
+
+    // Toggle mobile menu
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
+            body.classList.toggle('menu-open');
             
-            // Toggle hamburger icon
-            const icon = mobileToggle.querySelector('i');
+            // Change hamburger to X
+            const icon = this.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
-                body.style.overflow = 'hidden'; // Prevent background scrolling
             } else {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
-                body.style.overflow = ''; // Restore scrolling
             }
         });
-        
-        // Handle dropdown menus in mobile
-        const dropdownParents = document.querySelectorAll('.dropdown-parent');
-        dropdownParents.forEach(parent => {
-            const trigger = parent.querySelector('.dropdown-trigger');
-            const dropdown = parent.querySelector('.mega-dropdown');
-            
-            if (trigger && dropdown) {
-                trigger.addEventListener('click', function(e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        // Close other dropdowns
-                        dropdownParents.forEach(otherParent => {
-                            if (otherParent !== parent) {
-                                otherParent.classList.remove('active');
-                            }
-                        });
-                        
-                        // Toggle current dropdown
-                        parent.classList.toggle('active');
-                    }
-                });
-            }
-        });
-        
-        // Close mobile menu when clicking on regular links (not dropdown triggers)
-        const navLinkItems = navLinks.querySelectorAll('a:not(.dropdown-trigger)');
+
+        // Close menu when clicking on a link
+        const navLinkItems = navLinks.querySelectorAll('a');
         navLinkItems.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                    const icon = mobileToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                    body.style.overflow = '';
-                    
-                    // Close all dropdowns
-                    dropdownParents.forEach(parent => {
-                        parent.classList.remove('active');
-                    });
-                }
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             });
         });
-        
-        // Close mobile menu when clicking outside
+
+        // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            if (!navLinks.contains(event.target) && !mobileToggle.contains(event.target)) {
+            if (!navLinks.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
                 navLinks.classList.remove('active');
-                const icon = mobileToggle.querySelector('i');
+                body.classList.remove('menu-open');
+                const icon = mobileMenuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
-                body.style.overflow = '';
-                
-                // Close all dropdowns
-                dropdownParents.forEach(parent => {
-                    parent.classList.remove('active');
-                });
-            }
-        });
-        
-        // Handle window resize
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navLinks.classList.remove('active');
-                const icon = mobileToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-                body.style.overflow = '';
-                
-                // Close all dropdowns
-                dropdownParents.forEach(parent => {
-                    parent.classList.remove('active');
-                });
-            }
-        });
-        
-        // Prevent scrolling issues on mobile
-        navLinks.addEventListener('touchmove', function(e) {
-            e.stopPropagation();
-        });
-        
-        // Handle escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                const icon = mobileToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-                body.style.overflow = '';
-                
-                // Close all dropdowns
-                dropdownParents.forEach(parent => {
-                    parent.classList.remove('active');
-                });
             }
         });
     }
+
+    // Handle dropdown menus on mobile
+    const dropdownParents = document.querySelectorAll('.dropdown-parent');
+    dropdownParents.forEach(parent => {
+        const trigger = parent.querySelector('.dropdown-trigger');
+        const dropdown = parent.querySelector('.mega-dropdown');
+        
+        if (trigger && dropdown) {
+            trigger.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navLinks.classList.remove('active');
+            body.classList.remove('menu-open');
+            const icon = mobileMenuToggle?.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+            
+            // Reset dropdown displays
+            const dropdowns = document.querySelectorAll('.mega-dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.style.display = '';
+            });
+        }
+    });
+});
+
+// Prevent body scroll when mobile menu is open
+document.addEventListener('DOMContentLoaded', function() {
+    const style = document.createElement('style');
+    style.textContent = `
+        body.menu-open {
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links.active {
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    `;
+    document.head.appendChild(style);
 });
