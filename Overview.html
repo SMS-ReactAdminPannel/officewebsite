@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Src/CSS/Overview.css">
+    <link rel="stylesheet" href="Src/CSS/Navbar.css">
+    <link rel="stylesheet" href="Src/CSS/Footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="Src/CSS/Navbar.css">
-      <link rel="stylesheet" href="Src/CSS/Footer.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,163 +34,189 @@
 <!-- Navbar -->
 <div class="color-bar"></div>
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <a href="#" data-page="Home">
-                <div class="logo-container">
-                    <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+     <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-container">
+            <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
             <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">Who We Are</a></li>
+        <li class="dropdown-parent">
+          <a href="#" class="dropdown-trigger">What We Do</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item"  data-category="overview">Overview</a>
+                <a href="#" class="category-item" data-category="website-design">Web Design</a>
+                <a href="#" class="category-item" data-category="website-development">Web Development</a>
+                <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+                <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+              </div>
+              <div class="dropdown-services active" id="overview">
+                <div class="services-title">Our Services Overview</div>
+                <div class="services-grid">
+                  <a href="Overview.html" class="service-item">Website Design & Development</a>
+                  <a href="Overview.html" class="service-item">Mobile App Development</a>
+                  <a href="Overview.html" class="service-item">Digital Marketing Solutions</a>
+                  <a href="Overview.html" class="service-item">E-Commerce Solutions</a>
+                  <a href="Overview.html" class="service-item">Custom Software Development</a>
+                  <a href="Overview.html" class="service-item">UI/UX Design Services</a>
+                  <a href="Overview.html" class="service-item">Cloud Solutions</a>
+                  <a href="Overview.html" class="service-item">SEO & Analytics</a>
+                  <a href="Overview.html" class="service-item">Consulting Services</a>
                 </div>
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="Src/HTML/About.html" data-page="About">Who We Are</a></li>
-            <li class="dropdown-parent">
-                <a href="#" data-page="Services" class="dropdown-trigger">What We Do</a>
-                <div class="dropdown-backdrop"></div>
-                <div class="mega-dropdown">
-                    <div class="mega-dropdown-container">
-                        <!-- Left Categories -->
-                        <div class="dropdown-categories">
-                            <a href="/Src/HTML/Overview.html" class="category-item active" data-category="overview">Overview</a>
-                            <a href="#" class="category-item" data-category="website-design">Website Design</a>
-                            <a href="#" class="category-item" data-category="website-development">Website Development</a>
-                            <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
-                            <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
-                        </div>
-                        <!-- Right Services -->
-                        <div class="dropdown-services active" id="overview">
-                            <div class="services-title">Our Services Overview</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Website Design & Development</a>
-                                <a href="#" class="service-item">Mobile App Development</a>
-                                <a href="#" class="service-item">Digital Marketing Solutions</a>
-                                <a href="#" class="service-item">E-Commerce Solutions</a>
-                                <a href="#" class="service-item">Custom Software Development</a>
-                                <a href="#" class="service-item">UI/UX Design Services</a>
-                                <a href="#" class="service-item">Cloud Solutions</a>
-                                <a href="#" class="service-item">SEO & Analytics</a>
-                                <a href="#" class="service-item">Consulting Services</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="website-design">
-                            <div class="services-title">Website Design</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Static Website Designing</a>
-                                <a href="#" class="service-item">Dynamic Website Designing</a>
-                                <a href="#" class="service-item">Corporate Website Designing</a>
-                                <a href="#" class="service-item">Professional Website Designing</a>
-                                <a href="#" class="service-item">Customized Website Designing</a>
-                                <a href="#" class="service-item">Website Re-Designing</a>
-                                <a href="#" class="service-item">Responsive Website Designing</a>
-                                <a href="#" class="service-item">Angular JS Website Designing</a>
-                                <a href="#" class="service-item">Landing Page Designing</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="website-development">
-                            <div class="services-title">Website Development</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Web Application Development</a>
-                                <a href="#" class="service-item">PHP Website Development</a>
-                                <a href="#" class="service-item">Web Portal Development</a>
-                                <a href="#" class="service-item">E-Commerce Website Development</a>
-                                <a href="#" class="service-item">React JS Development</a>
-                                <a href="#" class="service-item">WordPress Development</a>
-                                <a href="#" class="service-item">PHP Application Development</a>
-                                <a href="#" class="service-item">OpenSource Framework</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="mobile-solutions">
-                            <div class="services-title">Mobile App Development</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Hybrid Apps Development</a>
-                                <a href="#" class="service-item">Android Apps Development</a>
-                                <a href="#" class="service-item">iPhone Apps Development</a>
-                                <a href="#" class="service-item">Cross Platform Apps Development</a>
-                                <a href="#" class="service-item">Mobile Apps Upgradation</a>
-                                <a href="#" class="service-item">Mobile Apps Re-Design</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="digital-marketing">
-                            <div class="services-title">Digital Marketing</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Market Research and Analysis</a>
-                                <a href="#" class="service-item">Content Writing Services</a>
-                                <a href="#" class="service-item">Search Engine Optimization</a>
-                                <a href="#" class="service-item">Search Engine Marketing</a>
-                                <a href="#" class="service-item">Social Media Optimization</a>
-                                <a href="#" class="service-item">Social Media Marketing</a>
-                                <a href="#" class="service-item">E-Mail Marketing</a>
-                                <a href="#" class="service-item">SMS Marketing</a>
-                                <a href="#" class="service-item">Lead Generation</a>
-                                <a href="#" class="service-item">Google PPC</a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="dropdown-services" id="website-design">
+                <div class="services-title">Web Design</div>
+                <div class="services-grid">
+                  <a href="staticwebdesign.html" class="service-item">Responsive Design 3.0</a>
+                  <a href="#" class="service-item">CSS Frameworks & Utilities</a>
+                  <a href="#" class="service-item">Component-Based UI Libraries</a>
+                  <a href="#" class="service-item">Next-Gen JavaScript Tooling</a>
+                  <a href="#" class="service-item">Headless CMS</a>
+                  <a href="#" class="service-item">API-First Development</a>
+                  <a href="#" class="service-item">AI in Web Design</a>
+                  <a href="#" class="service-item">Design Systems & Tokens</a>
+                  <a href="#" class="service-item">Animation & Interactivity</a>
+                  <a href="#" class="service-item">Accessibility & Inclusive Design</a>
+                  <a href="#" class="service-item">Performance-First Mindset</a>
+                  <a href="#" class="service-item">Web 3D and Immersive Design</a>
+                  <a href="#" class="service-item">Static Site Generators & JAMstack</a>
+                  <a href="#" class="service-item">Cloud & Edge Deployment</a>
                 </div>
-            </li>
-            <li class="dropdown-parent">
-                <a href="#" data-page="Industries" class="dropdown-trigger">Industries</a>
-                <div class="dropdown-backdrop"></div>
-                <div class="mega-dropdown">
-                    <div class="mega-dropdown-container">
-                        <div class="dropdown-categories">
-                            <a href="#" class="category-item active" data-category="fintech">FinTech</a>
-                            <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
-                            <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
-                            <a href="#" class="category-item" data-category="education">EdTech</a>
-                        </div>
-                        <div class="dropdown-services active" id="fintech">
-                            <div class="services-title">FinTech Solutions</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Banking Solutions</a>
-                                <a href="#" class="service-item">Payment Gateways</a>
-                                <a href="#" class="service-item">Digital Wallets</a>
-                                <a href="#" class="service-item">Investment Platforms</a>
-                                <a href="#" class="service-item">Insurance Tech</a>
-                                <a href="#" class="service-item">Blockchain Solutions</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="healthcare">
-                            <div class="services-title">HealthTech Solutions</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Telemedicine Platforms</a>
-                                <a href="#" class="service-item">Health Management Systems</a>
-                                <a href="#" class="service-item">Medical Records</a>
-                                <a href="#" class="service-item">Fitness Apps</a>
-                                <a href="#" class="service-item">Healthcare Analytics</a>
-                                <a href="#" class="service-item">Medical IoT</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="ecommerce">
-                            <div class="services-title">E-Commerce Solutions</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Online Marketplaces</a>
-                                <a href="#" class="service-item">B2B Platforms</a>
-                                <a href="#" class="service-item">Inventory Management</a>
-                                <a href="#" class="service-item">Order Management</a>
-                                <a href="#" class="service-item">Customer Analytics</a>
-                                <a href="#" class="service-item">Multi-vendor Systems</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-services" id="education">
-                            <div class="services-title">EdTech Solutions</div>
-                            <div class="services-grid">
-                                <a href="#" class="service-item">Learning Management Systems</a>
-                                <a href="#" class="service-item">Online Course Platforms</a>
-                                <a href="#" class="service-item">Student Information Systems</a>
-                                <a href="#" class="service-item">Virtual Classrooms</a>
-                                <a href="#" class="service-item">Assessment Tools</a>
-                                <a href="#" class="service-item">Educational Apps</a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="dropdown-services" id="website-development">
+                <div class="services-title">Web Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item"> Frontend Frameworks & Libraries</a>
+                  <a href="#" class="service-item">JavaScript & TypeScript</a>
+                  <a href="#" class="service-item">Build Tools & Bundlers</a>
+                  <a href="#" class="service-item">Backend Frameworks & Runtimes</a>
+                  <a href="#" class="service-item">Full-Stack Frameworks</a>
+                  <a href="#" class="service-item">API Technologies</a>
+                  <a href="#" class="service-item">Database & ORM Tools</a>
+                  <a href="#" class="service-item"> Authentication & Security</a>
+                  <a href="#" class="service-item">DevOps & Deployment</a>
+                  <a href="#" class="service-item"> Hosting & Edge Platforms</a>
+                  <a href="#" class="service-item">Realtime & Messaging</a>
+                  <a href="#" class="service-item"> AI Integration in Development</a>
+                  <a href="#" class="service-item"> Package Managers & Monorepos</a>
+                  <a href="#" class="service-item"> Progressive Web Apps (PWA)</a>
+                  <a href="#" class="service-item"> WebAssembly (WASM)</a>
                 </div>
-            </li>
-            <li><a href="#" data-page="Careers">Careers</a></li>
-            <li><a href="#" data-page="Contact">Contact Us</a></li>
-
-        </ul>
+              </div>
+              <div class="dropdown-services" id="mobile-solutions">
+                <div class="services-title">Mobile App Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Cross-Platform Frameworks</a>
+                  <a href="#" class="service-item">Native Development Technologies</a>
+                  <a href="#" class="service-item">Hybrid App Technologies</a>
+                  <a href="#" class="service-item">Backend-as-a-Service (BaaS)</a>
+                  <a href="#" class="service-item">State Management & Architecture</a>
+                  <a href="#" class="service-item">UI/UX & Animation Libraries</a>
+                  <a href="#" class="service-item">Testing & CI/CD Tools</a>
+                  <a href="#" class="service-item">Push Notifications & Messaging</a>
+                  <a href="#" class="service-item">Offline & Sync Support</a>
+                  <a href="#" class="service-item">Mobile App Deployment</a>
+                  <a href="#" class="service-item">Security & Authentication</a>
+                  <a href="#" class="service-item">AI & ML in Mobile Apps</a>
+                   <a href="#" class="service-item">AR/VR Technologies</a>
+                  <a href="#" class="service-item">Super & Mini-Apps Architecture</a>
+                  <a href="#" class="service-item">Monetization & Analytics</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="digital-marketing">
+                <div class="services-title">Digital Marketing</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">AI-Powered Marketing</a>
+                  <a href="#" class="service-item">Marketing Automation Platforms</a>
+                  <a href="#" class="service-item">Search Engine Optimization Tools</a>
+                  <a href="#" class="service-item">Social Media Marketing Platforms</a>
+                  <a href="#" class="service-item">Performance Analytics & Data</a>
+                  <a href="#" class="service-item">Content Management & Blogging</a>
+                  <a href="#" class="service-item">Email Marketing & Retargeting</a>
+                  <a href="#" class="service-item">Search Engine Marketing (SEM)</a>
+                  <a href="#" class="service-item">Influencer & Affiliate Marketing Tools</a>
+                  <a href="#" class="service-item">Customer Relationship Management</a>
+                  <a href="#" class="service-item">Voice & Visual Search Optimization</a>
+                  <a href="#" class="service-item">Web Push & SMS Marketing</a>
+                  <a href="#" class="service-item">Video & Short-Form Content Tools</a>
+                  <a href="#" class="service-item">eCommerce Marketing Tools</a>
+                  <a href="#" class="service-item">Privacy & Consent Management</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- <li class="dropdown-parent">
+          <a href="services.html" class="dropdown-trigger">Industries</a>
+          <div class="dropdown-backdrop"></div>
+          <div class="mega-dropdown">
+            <div class="mega-dropdown-container">
+              <div class="dropdown-categories">
+                <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+                <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+                <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+                <a href="#" class="category-item" data-category="education">EdTech</a>
+              </div>
+              <div class="dropdown-services active" id="fintech">
+                <div class="services-title">FinTech Solutions</div>
+                <div class="services-grid">
+                  <a href="services.html" class="service-item">Banking Solutions</a>
+                  <a href="services.html" class="service-item">Payment Gateways</a>
+                  <a href="services.html" class="service-item">Digital Wallets</a>
+                  <a href="services.html" class="service-item">Investment Platforms</a>
+                  <a href="services.html" class="service-item">Insurance Tech</a>
+                  <a href="services.html" class="service-item">Blockchain Solutions</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="healthcare">
+                <div class="services-title">HealthTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Telemedicine Platforms</a>
+                  <a href="#" class="service-item">Health Management Systems</a>
+                  <a href="#" class="service-item">Medical Records</a>
+                  <a href="#" class="service-item">Fitness Apps</a>
+                  <a href="#" class="service-item">Healthcare Analytics</a>
+                  <a href="#" class="service-item">Medical IoT</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="ecommerce">
+                <div class="services-title">E-Commerce Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Online Marketplaces</a>
+                  <a href="#" class="service-item">B2B Platforms</a>
+                  <a href="#" class="service-item">Inventory Management</a>
+                  <a href="#" class="service-item">Order Management</a>
+                  <a href="#" class="service-item">Customer Analytics</a>
+                  <a href="#" class="service-item">Multi-vendor Systems</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="education">
+                <div class="services-title">EdTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Learning Management Systems</a>
+                  <a href="#" class="service-item">Online Course Platforms</a>
+                  <a href="#" class="service-item">Student Information Systems</a>
+                  <a href="#" class="service-item">Virtual Classrooms</a>
+                  <a href="#" class="service-item">Assessment Tools</a>
+                  <a href="#" class="service-item">Educational Apps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li> -->
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
 
       <div class="navbar-right">
         <div class="search-container">
@@ -280,7 +306,7 @@
             <div class="row mt-5">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-card">
-                        <div class="service-icon">
+                        <!-- <div class="service-icon">
                             <svg viewBox="0 0 100 100" class="icon-starburst">
                                 <g stroke="currentColor" stroke-width="2" fill="none">
                                     <line x1="50" y1="10" x2="50" y2="90"/>
@@ -293,17 +319,17 @@
                                     <line x1="15" y1="35" x2="85" y2="65"/>
                                 </g>
                             </svg>
-                        </div>
-                        <h3 class="service-title">Digital Marketing</h3>
-                        <a href="#" class="service-link">
+                        </div> -->
+                        <h3 class="service-title"> Programming Languages</h3>
+                        <!-- <a href="#" class="service-link">
                             Read more <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-card">
-                        <div class="service-icon">
+                        <!-- <div class="service-icon">
                             <svg viewBox="0 0 100 100" class="icon-atom">
                                 <g stroke="currentColor" stroke-width="2" fill="none">
                                     <circle cx="50" cy="50" r="5"/>
@@ -312,17 +338,17 @@
                                     <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(120 50 50)"/>
                                 </g>
                             </svg>
-                        </div>
-                        <h3 class="service-title">UI UX design services</h3>
-                        <a href="#" class="service-link">
+                        </div> -->
+                        <h3 class="service-title">Web Development </h3>
+                        <!-- <a href="#" class="service-link">
                            Read more<i class="fas fa-arrow-right"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-card">
-                        <div class="service-icon">
+                        <!-- <div class="service-icon">
                             <svg viewBox="0 0 100 100" class="icon-refresh">
                                 <g stroke="currentColor" stroke-width="2" fill="none">
                                     <circle cx="50" cy="50" r="30"/>
@@ -332,17 +358,17 @@
                                     <path d="M50,15 L55,25 L45,25 Z"/>
                                 </g>
                             </svg>
-                        </div>
-                        <h3 class="service-title">Mobile App Development</h3>
-                        <a href="#" class="service-link">
+                        </div> -->
+                        <h3 class="service-title">Databases Technologies</h3>
+                        <!-- <a href="#" class="service-link">
                             Read more <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-card">
-                        <div class="service-icon">
+                        <!-- <div class="service-icon">
                             <svg viewBox="0 0 100 100" class="icon-monitor">
                                 <g stroke="currentColor" stroke-width="2" fill="none">
                                     <rect x="20" y="25" width="60" height="40" rx="3"/>
@@ -351,17 +377,17 @@
                                     <line x1="65" y1="65" x2="65" y2="75"/>
                                 </g>
                             </svg>
-                        </div>
-                        <h3 class="service-title">Website Development</h3>
-                        <a href="#" class="service-link">
+                        </div> -->
+                        <h3 class="service-title">Cloud Computing Platforms</h3>
+                        <!-- <a href="#" class="service-link">
                             Read more <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-card">
-                        <div class="service-icon">
+                        <!-- <div class="service-icon">
                             <svg viewBox="0 0 100 100" class="icon-circles">
                                 <g stroke="currentColor" stroke-width="2" fill="none">
                                     <circle cx="50" cy="50" r="8"/>
@@ -371,17 +397,17 @@
                                     <circle cx="50" cy="50" r="40"/>
                                 </g>
                             </svg>
-                        </div>
-                        <h3 class="service-title">Software architecture services</h3>
-                        <a href="#" class="service-link">
+                        </div> -->
+                        <h3 class="service-title">DevOps Tools </h3>
+                        <!-- <a href="#" class="service-link">
                             Read more <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-card">
-                        <div class="service-icon">
+                        <!-- <div class="service-icon">
                             <svg viewBox="0 0 100 100" class="icon-network">
                                 <g stroke="currentColor" stroke-width="2" fill="none">
                                     <circle cx="50" cy="30" r="8"/>
@@ -399,313 +425,179 @@
                                     <line x1="60" y1="25" x2="75" y2="15"/>
                                 </g>
                             </svg>
-                        </div>
-                        <h3 class="service-title">Data science and AI</h3>
-                        <a href="#" class="service-link">
+                        </div> -->
+                        <h3 class="service-title">Mobile App Development</h3>
+                        <!-- <a href="#" class="service-link">
                             Read more <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <!-- <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-starburst">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <line x1="50" y1="10" x2="50" y2="90"/>
+                                    <line x1="10" y1="50" x2="90" y2="50"/>
+                                    <line x1="21.7" y1="21.7" x2="78.3" y2="78.3"/>
+                                    <line x1="78.3" y1="21.7" x2="21.7" y2="78.3"/>
+                                    <line x1="35" y1="15" x2="65" y2="85"/>
+                                    <line x1="85" y1="35" x2="15" y2="65"/>
+                                    <line x1="65" y1="15" x2="35" y2="85"/>
+                                    <line x1="15" y1="35" x2="85" y2="65"/>
+                                </g>
+                            </svg>
+                        </div> -->
+                        <h3 class="service-title">Cybersecurity Technologies</h3>
+                        <!-- <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a> -->
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <!-- <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-atom">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="5"/>
+                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(0 50 50)"/>
+                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(60 50 50)"/>
+                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(120 50 50)"/>
+                                </g>
+                            </svg>
+                        </div> -->
+                        <h3 class="service-title"> E R P Softwares </h3>
+                        <!-- <a href="#" class="service-link">
+                           Read more<i class="fas fa-arrow-right"></i>
+                        </a> -->
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <!-- <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-refresh">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="30"/>
+                                    <circle cx="50" cy="50" r="20"/>
+                                    <circle cx="50" cy="50" r="10"/>
+                                    <circle cx="50" cy="50" r="35"/>
+                                    <path d="M50,15 L55,25 L45,25 Z"/>
+                                </g>
+                            </svg>
+                        </div> -->
+                        <h3 class="service-title"> Data Analytics </h3>
+                        <!-- <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a> -->
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <!-- <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-monitor">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <rect x="20" y="25" width="60" height="40" rx="3"/>
+                                    <line x1="20" y1="75" x2="80" y2="75"/>
+                                    <line x1="35" y1="65" x2="35" y2="75"/>
+                                    <line x1="65" y1="65" x2="65" y2="75"/>
+                                </g>
+                            </svg>
+                        </div> -->
+                        <h3 class="service-title">UI/UX Development</h3>
+
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <!-- <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-circles">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="8"/>
+                                    <circle cx="50" cy="50" r="16"/>
+                                    <circle cx="50" cy="50" r="24"/>
+                                    <circle cx="50" cy="50" r="32"/>
+                                    <circle cx="50" cy="50" r="40"/>
+                                </g>
+                            </svg>
+                        </div> -->
+                        <h3 class="service-title">Development Frameworks</h3>
+                        <!-- <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a> -->
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <!-- <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-network">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="30" r="8"/>
+                                    <circle cx="25" cy="60" r="8"/>
+                                    <circle cx="75" cy="60" r="8"/>
+                                    <circle cx="50" cy="80" r="8"/>
+                                    <line x1="50" y1="38" x2="32" y2="52"/>
+                                    <line x1="50" y1="38" x2="68" y2="52"/>
+                                    <line x1="33" y1="60" x2="42" y2="72"/>
+                                    <line x1="67" y1="60" x2="58" y2="72"/>
+                                    <line x1="50" y1="15" x2="50" y2="5"/>
+                                    <line x1="45" y1="20" x2="35" y2="10"/>
+                                    <line x1="55" y1="20" x2="65" y2="10"/>
+                                    <line x1="40" y1="25" x2="25" y2="15"/>
+                                    <line x1="60" y1="25" x2="75" y2="15"/>
+                                </g>
+                            </svg>
+                        </div> -->
+                        <h3 class="service-title">Backend Frameworks </h3>
+                        <!-- <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <!-- <div class="service-icon">
+                            <svg viewBox="0 0 100 100" class="icon-circles">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="8"/>
+                                    <circle cx="50" cy="50" r="16"/>
+                                    <circle cx="50" cy="50" r="24"/>
+                                    <circle cx="50" cy="50" r="32"/>
+                                    <circle cx="50" cy="50" r="40"/>
+                                </g>
+                            </svg>
+                        </div> -->
+                        <h3 class="service-title">WebAssembly</h3>
+                        <!-- <a href="#" class="service-link">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                    
+                      <h3 class="service-title">Testing & Automation Tools</h3>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Database & ORM Tools</h3>
+                        
+                    </div>
+                </div>
+                
+            
             </div>
         </div>
     </div>
 
     <hr class="section-divider" />
-
-    <div class="header">
-        <h1>What Our Users Say</h1>
-        <p>Real testimonials from real people</p>
-    </div>
-    
-     <div class="collage-container">
-        <div class="testimonials-container">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">
-"Yoho Technologies developed our complete e-commerce platform from scratch, and we couldn't be more satisfied with the outcome. From the initial consultation to the final deployment, their team was professional, communicative, and focused on delivering high-quality work. They took the time to understand our business model, customer base, and design preferences, which reflected in the final product.
-
-The user interface is smooth, intuitive, and visually appealing, while the backend is robust and highly scalable. Features like real-time order tracking, secure payment integration, and a custom admin dashboard were all implemented flawlessly. Even when we made a few last-minute changes, the team adapted quickly without compromising delivery timelines.
-</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Sarah Thompson">
-                    <div>
-                        <p class="user-name">Sarah Thompson</p>
-                        <p class="user-title">Project Manager</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"We approached Yoho Technologies for a cross-platform mobile app. They handled everything from design to deployment professionally. Their regular updates and transparent process made us feel confident throughout."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Michael Chen">
-                    <div>
-                        <p class="user-name">Michael Chen</p>
-                        <p class="user-title">Software Developer</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"As a startup, we needed a tech partner who could understand our vision and work closely with us. Yoho Technologies delivered a scalable MVP within our budget and offered continued support post-launch."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Emily Rodriguez">
-                    <div>
-                        <p class="user-name">Emily Rodriguez</p>
-                        <p class="user-title">Data Analyst</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 4 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Yoho Technologies built a custom booking system for my business. Their team listened carefully to our needs and translated them into a user-friendly application. We've seen a 40% increase in customer engagement."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Ryan Sullivan">
-                    <div>
-                        <p class="user-name">Ryan Sullivan</p>
-                        <p class="user-title">Business Owner</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 5 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Despite being in different time zones, Yoho's communication was consistent and effective. They managed our project remotely with professionalism and precision. I would recommend them to anyone looking for remote tech services."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="David Patel">
-                    <div>
-                        <p class="user-name">David Patel</p>
-                        <p class="user-title">IT Consultant</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 6 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Yoho Technologies helped us digitize patient record management. The team followed strict data privacy protocols and built a secure system. We're impressed with their domain understanding and execution."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Olivia Harper">
-                    <div>
-                        <p class="user-name">Olivia Harper</p>
-                        <p class="user-title">Marketing Specialist</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 7 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"I've worked with several development teams, and Yoho stands out for their structured workflow and on-time delivery. They're efficient, technically strong, and committed to quality."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="James Carter">
-                    <div>
-                        <p class="user-name">James Carter</p>
-                        <p class="user-title">Operations Manager</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 8 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"We hired Yoho Technologies to develop an online learning portal. They included features like live classes, assessments, and student tracking. The final product was clean, fast, and well-optimized for mobile use."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Dr. Lisa Wang">
-                    <div>
-                        <p class="user-name">Dr. Lisa Wang</p>
-                        <p class="user-title">Research Scientist</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 9 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Being from a non-tech background, I was worried about app development. But Yoho Technologies patiently explained each step and guided me through the entire process. I'm very happy with their service and clarity."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Alex Johnson">
-                    <div>
-                        <p class="user-name">Alex Johnson</p>
-                        <p class="user-title">Data Scientist</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 10 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"This is our second time working with Yoho Technologies, and the experience was just as smooth as the first. They maintained code quality, provided timely updates, and handled last-minute changes professionally."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Maria Garcia">
-                    <div>
-                        <p class="user-name">Maria Garcia</p>
-                        <p class="user-title">Financial Director</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 11 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The natural language processing is phenomenal. It understands complex queries perfectly."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Jennifer Lee">
-                    <div>
-                        <p class="user-name">Jennifer Lee</p>
-                        <p class="user-title">Content Creator</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 12 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"This AI platform has revolutionized our entire workflow. The integration capabilities are seamless, and the learning curve is practically non-existent. Our team's productivity has increased by 300%!"</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Robert Kim">
-                    <div>
-                        <p class="user-name">Robert Kim</p>
-                        <p class="user-title">CTO</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 13 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The real-time analytics feature has transformed how we make business decisions. Absolutely brilliant!"</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Amanda Wilson">
-                    <div>
-                        <p class="user-name">Amanda Wilson</p>
-                        <p class="user-title">Business Analyst</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 14 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Security and privacy are top-notch. I feel completely confident using this AI for sensitive business operations."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Thomas Brown">
-                    <div>
-                        <p class="user-name">Thomas Brown</p>
-                        <p class="user-title">Security Officer</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 15 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The customization options are endless. It adapts perfectly to our unique business requirements."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Rachel Davis">
-                    <div>
-                        <p class="user-name">Rachel Davis</p>
-                        <p class="user-title">UX Designer</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 16 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The collaborative features make team projects so much more efficient. Everyone can work together seamlessly."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Kevin Martinez">
-                    <div>
-                        <p class="user-name">Kevin Martinez</p>
-                        <p class="user-title">Team Lead</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 17 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Mobile integration works flawlessly. I can access everything I need from anywhere."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Sophie Turner">
-                    <div>
-                        <p class="user-name">Sophie Turner</p>
-                        <p class="user-title">Mobile Developer</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 18 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"The learning algorithms are incredibly sophisticated. It gets smarter with every interaction."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Daniel Clark">
-                    <div>
-                        <p class="user-name">Daniel Clark</p>
-                        <p class="user-title">AI Researcher</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 19 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Exceptional performance under high loads. This AI handles our enterprise needs perfectly."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Grace Liu">
-                    <div>
-                        <p class="user-name">Grace Liu</p>
-                        <p class="user-title">Systems Administrator</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 20 -->
-            <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"After trying dozens of AI solutions, this is the only one that truly delivers on its promises. The innovation and attention to detail are extraordinary. It's not just a tool—it's a game-changer for our entire industry."</p>
-                <div class="user-info">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
-                         class="user-avatar" alt="Marcus Johnson">
-                    <div>
-                        <p class="user-name">Marcus Johnson</p>
-                        <p class="user-title">CEO & Founder</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
 
     <!-- Stats Section -->
     <div class="stats-section">
@@ -955,7 +847,7 @@ The user interface is smooth, intuitive, and visually appealing, while the backe
 
         <section class="products-section">
         <div class="container">
-            <h2 class="section-title">Our products</h2>
+            <h2 class="section-title">Our Experties</h2>
             
             <p class="section-description">
                 With years of hands-on experience, we know what works, and what doesn't. We not only understand your unique challenges, we anticipate them and deliver <span class="highlight">innovative solutions to speed up your digital development and time to market</span>, keeping you ahead of the curve.
@@ -963,40 +855,284 @@ The user interface is smooth, intuitive, and visually appealing, while the backe
             
             <div class=" products row g-4">
                 <!-- Vega Flywheel -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <h3 class="product-title">Pharmacy Billing Software</h3>
-                        <div class="product-subtitle">Reinventing product discovery.</div>
-                        <div class="product-description">
-                            <strong>Innovative. Efficient. Strategic.</strong> YOHO very proudly presenting Medical store billing software or Pharmacy billing software in chennai the modern technology. Medical store billing software in chennai is specially developed for Medical, Pharma and Drug Shops. It covers all aspects involved in running a day to day medical retail business.
-                           
-                        </div>
-                        <a href="#" class="discover-btn">Discover more</a>
+                <div class="collage-container">
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div>
+                        <p class="user-name">Pharmacy Billing Software</p>
                     </div>
-                </div>
-                
-                <!-- Vega GuardIAM -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <h3 class="product-title">Job Portal Development</h3>
-                        <div class="product-subtitle">Ultimate Identity Access Management.</div>
-                        <div class="product-description">
-                          Looking for Job Portal Development / online recruitment software in chennai, then we can provide best job portal development with extra feature. YOHO provide job portal with excellent feature as per client requirements. Job Portals provide an ideal platform for the employers to reach their vision employees.                        </div>
-                        <a href="#" class="discover-btn">Discover more</a>
-                    </div>
-                </div>
-                
-                <!-- Chatbot Accelerator -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card">
-                        <h3 class="product-title">Forex Trading</h3>
-                        <div class="product-subtitle">Fast-developed. Intuitive. Human-like.</div>
-                        <div class="product-description">
-                           We provide a new trading system for beginners. Our Robot analyze the market as every second. Thats automatically take the desition Buy or Sell. Our automated system provide BUY and sell signals to the robot. Just install this application to get a successful forex trading experience.  </div>
-                        <a href="#" class="discover-btn">Discover more</a>
-                    </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+Enables pharmacies to manage sales, inventory, expiry alerts, and GST-compliant billing.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/hospital.svg" 
+                         class="user-avatar" alt="hospital-img">
                 </div>
             </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">Hospital & Clinic Management System</p>
+               
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Covers OPD/IPD patient records, appointment scheduling, lab reports, and doctor availability. Enhances patient care with streamlined operations.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/health_cross_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Michael Chen">
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div>
+                <p class="user-name">E-commerce Website & App Development</p>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Customized online store solutions with cart, checkout, payment gateway, and order tracking. Scalable platforms for B2B and B2C businesses.
+
+</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/package_2_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Emily Rodriguez">
+                  
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">Inventory & Stock Management Software</p>
+                    
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Real-time stock updates, low-stock alerts, and automated reorder features. Ideal for warehouses, retailers, and distributors.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/finance_mode_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Ryan Sullivan">
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name"> Customer Relationship Management (CRM)</p>
+                    
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Helps businesses manage leads, follow-ups, customer history, and feedback. Boosts sales and retention with smarter engagement.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/customer.svg" 
+                         class="user-avatar" alt="David Patel">
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name"> Enterprise Resource Planning (ERP)</p>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Integrates multiple business processes like sales, finance, HR, and inventory. One dashboard to control your entire business workflow</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/enterprise_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Olivia Harper">
+                        
+                </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">Mobile App Development <br/> (Android & iOS)</p>
+                    
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Native and cross-platform apps tailored to your business. Includes UI/UX design, backend integration, and app store deployment.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/mobile.svg" 
+                         class="user-avatar" alt="James Carter">
+                </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">Education & eLearning Solutions</p>
+                
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Online learning platforms with quizzes, video lectures, and student progress tracking. Suitable for schools, colleges, and training institutes.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/education.svg" 
+                         class="user-avatar" alt="Dr. Lisa Wang">
+                </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">Hotel & Restaurant Management Software</p>
+                  
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Manages bookings, tables, kitchen orders (KOT), billing, and reviews. Simplifies restaurant and hospitality operations.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/storefront_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Alex Johnson">
+                </div>
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">Accounting & Payroll Software</p>
+                    
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Automates salary generation, TDS, PF/ESI calculations, and ledger entries. Ensures financial compliance and staff satisfaction.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/account_tree_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Maria Garcia">
+                </div>
+            </div>
+
+            <!-- Testimonial 11 -->
+            <div class="testimonial-card">
+                 <div>
+                        <p class="user-name">Real Estate CRM & Management Systems</p>
+                        
+                    </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Tracks leads, manages properties, customer visits, and deal closures. Ideal for builders, agents, and property managers.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/realestate.svg" 
+                         class="user-avatar" alt="Jennifer Lee">
+                   
+                </div>
+            </div>
+
+            <!-- Testimonial 12 -->
+            <div class="testimonial-card">
+                <div>
+                        <p class="user-name">Logistics & Fleet Management</p>
+                        
+                    </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Monitors vehicle movement, delivery routes, fuel logs, and driver activity. Ensures timely deliveries and cost efficiency.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/corporate_fare_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Robert Kim">
+                    
+                </div>
+            </div>
+
+            <!-- Testimonial 13 -->
+            <div class="testimonial-card">
+                <div>
+                        <p class="user-name">Point of Sale (POS) Systems</p>
+                        
+                    </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Fast billing, barcode scanning, sales analytics, and inventory sync. Works for retail shops, supermarkets, and boutiques.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/add_circle_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Amanda Wilson">
+                    
+                </div>
+            </div>
+
+            <!-- Testimonial 14 -->
+            <div class="testimonial-card">
+                <div>
+                        <p class="user-name">Custom Web Development</p>
+                        
+                    </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">From portfolio sites to admin dashboards, we build responsive, SEO-friendly websites. Includes CMS integration and security features.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/airplay_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Thomas Brown">
+                    
+                </div>
+            </div>
+
+            <!-- Testimonial 15 -->
+            <div class="testimonial-card">
+                <div>
+                        <p class="user-name">Cloud & SaaS-Based Solutions</p>
+                        
+                    </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Move your software to the cloud for 24/7 accessibility. Scalable, secure, and subscription-ready for global users.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/cloud.svg" 
+                         class="user-avatar" alt="Rachel Davis">
+                    
+                </div>
+            </div>
+
+            <!-- Testimonial 16 -->
+            <div class="testimonial-card">
+                <div>
+                        <p class="user-name">AI & Machine Learning Applications</p>
+                        
+                    </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">From recommendation engines to smart analytics, we create intelligent systems. Helps automate decision-making with data insights.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/ai.svg" 
+                         class="user-avatar" alt="Kevin Martinez">
+                    
+                </div>
+            </div>
+
+            <!-- Testimonial 17 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">Cybersecurity & Secure Software</p>
+                   
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Implement SSL, 2FA, data encryption, and penetration-tested systems. Protects your digital assets from cyber threats.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/encrypted_24dp_E3E3E3_FILL0_wght100_GRAD0_opsz24.svg" 
+                         class="user-avatar" alt="Sophie Turner">
+                </div>
+            </div>
+
+            <!-- Testimonial 18 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">Automation Tools & Workflow Software</p>
+                    
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Replaces repetitive manual tasks with smart automation. Boosts productivity with bots, triggers, and logic flows.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/cyber.svg" 
+                         class="user-avatar" alt="Daniel Clark">
+                </div>
+            </div>
+            
+            <!-- Testimonial 19 -->
+            <div class="testimonial-card">
+                <div>
+                    <p class="user-name">API Integration & Development</p>
+    
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">Connects software to payment gateways, SMS, WhatsApp, or any 3rd-party tools. Seamless, secure, and scalable integrations.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/api.svg" 
+                         class="user-avatar" alt="Grace Liu">
+                </div>
+            </div>
+
+        </div>
+    </div>
         </div>
     </section>
 
@@ -1143,10 +1279,47 @@ The user interface is smooth, intuitive, and visually appealing, while the backe
     </div>
   </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./Src/JS/Overview.js"></script>
     <script type="module" src="./Src/JS/Navbar.js"></script>
     <script type="module" src="./Src/JS/dropdown.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="./Src/JS/Mobile.js"></script>
+    <script type="module" src="./Src/JS/search.js"></script>
+  <script>
+    // Ensure navbar stays fixed
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbar = document.getElementById('navbar');
+      const colorBar = document.querySelector('.color-bar');
+      if (navbar) {
+        navbar.style.position = 'fixed';
+        navbar.style.top = '4px';
+        navbar.style.zIndex = '1001';
+      }
+      if (colorBar) {
+        colorBar.style.position = 'fixed';
+        colorBar.style.top = '0';
+        colorBar.style.zIndex = '1002';
+        colorBar.style.opacity = '1';
+        colorBar.classList.remove('hidden');
+      }
+    });
+  </script>
+  <script>
+    // Loading screen
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 800);
+
+      // Dynamic copyright year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
+
 
     
 </body>
