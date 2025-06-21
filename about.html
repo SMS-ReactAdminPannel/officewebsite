@@ -39,6 +39,91 @@
 
   <!-- Navbar -->
   <div class="color-bar"></div>
+  <div class="nav-container">
+    <div class="logo">
+      <a href="index.html">
+        <div class="logo-container">
+          <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+          <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+        </div>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">Who We Are</a></li>
+      <li class="dropdown-parent">
+        <a href="services.html" class="dropdown-trigger">What We Do</a>
+        <div class="dropdown-backdrop"></div>
+        <div class="mega-dropdown">
+          <div class="mega-dropdown-container">
+            <div class="dropdown-categories">
+              <a href="#" class="category-item active" data-category="overview">Overview</a>
+              <a href="#" class="category-item" data-category="website-design">Website Design</a>
+              <a href="#" class="category-item" data-category="website-development">Website Development</a>
+              <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
+              <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
+            </div>
+            <div class="dropdown-services active" id="overview">
+              <div class="services-title">Our Services Overview</div>
+              <div class="services-grid">
+                <a href="services.html" class="service-item">Website Design & Development</a>
+                <a href="services.html" class="service-item">Mobile App Development</a>
+                <a href="services.html" class="service-item">Digital Marketing Solutions</a>
+                <a href="services.html" class="service-item">E-Commerce Solutions</a>
+                <a href="services.html" class="service-item">Custom Software Development</a>
+                <a href="services.html" class="service-item">UI/UX Design Services</a>
+                <a href="services.html" class="service-item">Cloud Solutions</a>
+                <a href="services.html" class="service-item">SEO & Analytics</a>
+                <a href="services.html" class="service-item">Consulting Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown-parent">
+        <a href="services.html" class="dropdown-trigger">Industries</a>
+        <div class="dropdown-backdrop"></div>
+        <div class="mega-dropdown">
+          <div class="mega-dropdown-container">
+            <div class="dropdown-categories">
+              <a href="#" class="category-item active" data-category="fintech">FinTech</a>
+              <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
+              <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
+              <a href="#" class="category-item" data-category="education">EdTech</a>
+            </div>
+            <div class="dropdown-services active" id="fintech">
+              <div class="services-title">FinTech Solutions</div>
+              <div class="services-grid">
+                <a href="services.html" class="service-item">Banking Solutions</a>
+                <a href="services.html" class="service-item">Payment Gateways</a>
+                <a href="services.html" class="service-item">Digital Wallets</a>
+                <a href="services.html" class="service-item">Investment Platforms</a>
+                <a href="services.html" class="service-item">Insurance Tech</a>
+                <a href="services.html" class="service-item">Blockchain Solutions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="navbar-right">
+      <div class="search-container">
+        <button class="search-toggle" id="search-toggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+        <div class="search-dropdown" id="search-dropdown">
+          <input type="text" placeholder="Search..." class="search-input" id="search-input">
+          <button class="search-close" id="search-close">×</button>
+        </div>
+      </div>
+      <a href="contact.html" class="cta-button">Get in Touch</a>
+    </div>
+  </div>
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="logo">
@@ -50,14 +135,14 @@
         </a>
       </div>
       <ul class="nav-links">
-        <li><a href="about.html" class="active">Who We Are</a></li>
+        <li><a href="about.html">Who We Are</a></li>
         <li class="dropdown-parent">
-          <a href="services.html" class="dropdown-trigger">What We Do</a>
+          <a href="#" class="dropdown-trigger">What We Do</a>
           <div class="dropdown-backdrop"></div>
           <div class="mega-dropdown">
             <div class="mega-dropdown-container">
               <div class="dropdown-categories">
-                <a href="#" class="category-item active" data-category="overview">Overview</a>
+                <a href="services.html" class="category-item active" data-category="overview">Overview</a>
                 <a href="#" class="category-item" data-category="website-design">Website Design</a>
                 <a href="#" class="category-item" data-category="website-development">Website Development</a>
                 <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
@@ -75,6 +160,59 @@
                   <a href="services.html" class="service-item">Cloud Solutions</a>
                   <a href="services.html" class="service-item">SEO & Analytics</a>
                   <a href="services.html" class="service-item">Consulting Services</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="website-design">
+                <div class="services-title">Website Design</div>
+                <div class="services-grid">
+                  <a href="staticwebdesign.html" class="service-item">Static Website Designing</a>
+                  <a href="#" class="service-item">Dynamic Website Designing</a>
+                  <a href="#" class="service-item">Corporate Website Designing</a>
+                  <a href="#" class="service-item">Professional Website Designing</a>
+                  <a href="#" class="service-item">Customized Website Designing</a>
+                  <a href="#" class="service-item">Website Re-Designing</a>
+                  <a href="#" class="service-item">Responsive Website Designing</a>
+                  <a href="#" class="service-item">Angular JS Website Designing</a>
+                  <a href="#" class="service-item">Landing Page Designing</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="website-development">
+                <div class="services-title">Website Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Web Application Development</a>
+                  <a href="#" class="service-item">PHP Website Development</a>
+                  <a href="#" class="service-item">Web Portal Development</a>
+                  <a href="#" class="service-item">E-Commerce Website Development</a>
+                  <a href="#" class="service-item">React JS Development</a>
+                  <a href="#" class="service-item">WordPress Development</a>
+                  <a href="#" class="service-item">PHP Application Development</a>
+                  <a href="#" class="service-item">OpenSource Framework</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="mobile-solutions">
+                <div class="services-title">Mobile App Development</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Hybrid Apps Development</a>
+                  <a href="#" class="service-item">Android Apps Development</a>
+                  <a href="#" class="service-item">iPhone Apps Development</a>
+                  <a href="#" class="service-item">Cross Platform Apps Development</a>
+                  <a href="#" class="service-item">Mobile Apps Upgradation</a>
+                  <a href="#" class="service-item">Mobile Apps Re-Design</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="digital-marketing">
+                <div class="services-title">Digital Marketing</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Market Research and Analysis</a>
+                  <a href="#" class="service-item">Content Writing Services</a>
+                  <a href="#" class="service-item">Search Engine Optimization</a>
+                  <a href="#" class="service-item">Search Engine Marketing</a>
+                  <a href="#" class="service-item">Social Media Optimization</a>
+                  <a href="#" class="service-item">Social Media Marketing</a>
+                  <a href="#" class="service-item">E-Mail Marketing</a>
+                  <a href="#" class="service-item">SMS Marketing</a>
+                  <a href="#" class="service-item">Lead Generation</a>
+                  <a href="#" class="service-item">Google PPC</a>
                 </div>
               </div>
             </div>
@@ -102,6 +240,39 @@
                   <a href="services.html" class="service-item">Blockchain Solutions</a>
                 </div>
               </div>
+              <div class="dropdown-services" id="healthcare">
+                <div class="services-title">HealthTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Telemedicine Platforms</a>
+                  <a href="#" class="service-item">Health Management Systems</a>
+                  <a href="#" class="service-item">Medical Records</a>
+                  <a href="#" class="service-item">Fitness Apps</a>
+                  <a href="#" class="service-item">Healthcare Analytics</a>
+                  <a href="#" class="service-item">Medical IoT</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="ecommerce">
+                <div class="services-title">E-Commerce Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Online Marketplaces</a>
+                  <a href="#" class="service-item">B2B Platforms</a>
+                  <a href="#" class="service-item">Inventory Management</a>
+                  <a href="#" class="service-item">Order Management</a>
+                  <a href="#" class="service-item">Customer Analytics</a>
+                  <a href="#" class="service-item">Multi-vendor Systems</a>
+                </div>
+              </div>
+              <div class="dropdown-services" id="education">
+                <div class="services-title">EdTech Solutions</div>
+                <div class="services-grid">
+                  <a href="#" class="service-item">Learning Management Systems</a>
+                  <a href="#" class="service-item">Online Course Platforms</a>
+                  <a href="#" class="service-item">Student Information Systems</a>
+                  <a href="#" class="service-item">Virtual Classrooms</a>
+                  <a href="#" class="service-item">Assessment Tools</a>
+                  <a href="#" class="service-item">Educational Apps</a>
+                </div>
+              </div>
             </div>
           </div>
         </li>
@@ -125,536 +296,364 @@
         <a href="contact.html" class="cta-button">Get in Touch</a>
       </div>
     </div>
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <div class="logo">
-          <a href="index.html">
-            <div class="logo-container">
-              <img src="Src/Assets/White 3.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
-              <img src="Src/Assets/Green (2).png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
-            </div>
-          </a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="about.html">Who We Are</a></li>
-          <li class="dropdown-parent">
-            <a href="#" class="dropdown-trigger">What We Do</a>
-            <div class="dropdown-backdrop"></div>
-            <div class="mega-dropdown">
-              <div class="mega-dropdown-container">
-                <div class="dropdown-categories">
-                  <a href="services.html" class="category-item active" data-category="overview">Overview</a>
-                  <a href="#" class="category-item" data-category="website-design">Website Design</a>
-                  <a href="#" class="category-item" data-category="website-development">Website Development</a>
-                  <a href="#" class="category-item" data-category="mobile-solutions">Mobile Solutions</a>
-                  <a href="#" class="category-item" data-category="digital-marketing">Digital Marketing</a>
-                </div>
-                <div class="dropdown-services active" id="overview">
-                  <div class="services-title">Our Services Overview</div>
-                  <div class="services-grid">
-                    <a href="services.html" class="service-item">Website Design & Development</a>
-                    <a href="services.html" class="service-item">Mobile App Development</a>
-                    <a href="services.html" class="service-item">Digital Marketing Solutions</a>
-                    <a href="services.html" class="service-item">E-Commerce Solutions</a>
-                    <a href="services.html" class="service-item">Custom Software Development</a>
-                    <a href="services.html" class="service-item">UI/UX Design Services</a>
-                    <a href="services.html" class="service-item">Cloud Solutions</a>
-                    <a href="services.html" class="service-item">SEO & Analytics</a>
-                    <a href="services.html" class="service-item">Consulting Services</a>
-                  </div>
-                </div>
-                <div class="dropdown-services" id="website-design">
-                  <div class="services-title">Website Design</div>
-                  <div class="services-grid">
-                    <a href="staticwebdesign.html" class="service-item">Static Website Designing</a>
-                    <a href="#" class="service-item">Dynamic Website Designing</a>
-                    <a href="#" class="service-item">Corporate Website Designing</a>
-                    <a href="#" class="service-item">Professional Website Designing</a>
-                    <a href="#" class="service-item">Customized Website Designing</a>
-                    <a href="#" class="service-item">Website Re-Designing</a>
-                    <a href="#" class="service-item">Responsive Website Designing</a>
-                    <a href="#" class="service-item">Angular JS Website Designing</a>
-                    <a href="#" class="service-item">Landing Page Designing</a>
-                  </div>
-                </div>
-                <div class="dropdown-services" id="website-development">
-                  <div class="services-title">Website Development</div>
-                  <div class="services-grid">
-                    <a href="#" class="service-item">Web Application Development</a>
-                    <a href="#" class="service-item">PHP Website Development</a>
-                    <a href="#" class="service-item">Web Portal Development</a>
-                    <a href="#" class="service-item">E-Commerce Website Development</a>
-                    <a href="#" class="service-item">React JS Development</a>
-                    <a href="#" class="service-item">WordPress Development</a>
-                    <a href="#" class="service-item">PHP Application Development</a>
-                    <a href="#" class="service-item">OpenSource Framework</a>
-                  </div>
-                </div>
-                <div class="dropdown-services" id="mobile-solutions">
-                  <div class="services-title">Mobile App Development</div>
-                  <div class="services-grid">
-                    <a href="#" class="service-item">Hybrid Apps Development</a>
-                    <a href="#" class="service-item">Android Apps Development</a>
-                    <a href="#" class="service-item">iPhone Apps Development</a>
-                    <a href="#" class="service-item">Cross Platform Apps Development</a>
-                    <a href="#" class="service-item">Mobile Apps Upgradation</a>
-                    <a href="#" class="service-item">Mobile Apps Re-Design</a>
-                  </div>
-                </div>
-                <div class="dropdown-services" id="digital-marketing">
-                  <div class="services-title">Digital Marketing</div>
-                  <div class="services-grid">
-                    <a href="#" class="service-item">Market Research and Analysis</a>
-                    <a href="#" class="service-item">Content Writing Services</a>
-                    <a href="#" class="service-item">Search Engine Optimization</a>
-                    <a href="#" class="service-item">Search Engine Marketing</a>
-                    <a href="#" class="service-item">Social Media Optimization</a>
-                    <a href="#" class="service-item">Social Media Marketing</a>
-                    <a href="#" class="service-item">E-Mail Marketing</a>
-                    <a href="#" class="service-item">SMS Marketing</a>
-                    <a href="#" class="service-item">Lead Generation</a>
-                    <a href="#" class="service-item">Google PPC</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="dropdown-parent">
-            <a href="services.html" class="dropdown-trigger">Industries</a>
-            <div class="dropdown-backdrop"></div>
-            <div class="mega-dropdown">
-              <div class="mega-dropdown-container">
-                <div class="dropdown-categories">
-                  <a href="#" class="category-item active" data-category="fintech">FinTech</a>
-                  <a href="#" class="category-item" data-category="healthcare">HealthTech</a>
-                  <a href="#" class="category-item" data-category="ecommerce">E-Commerce</a>
-                  <a href="#" class="category-item" data-category="education">EdTech</a>
-                </div>
-                <div class="dropdown-services active" id="fintech">
-                  <div class="services-title">FinTech Solutions</div>
-                  <div class="services-grid">
-                    <a href="services.html" class="service-item">Banking Solutions</a>
-                    <a href="services.html" class="service-item">Payment Gateways</a>
-                    <a href="services.html" class="service-item">Digital Wallets</a>
-                    <a href="services.html" class="service-item">Investment Platforms</a>
-                    <a href="services.html" class="service-item">Insurance Tech</a>
-                    <a href="services.html" class="service-item">Blockchain Solutions</a>
-                  </div>
-                </div>
-                <div class="dropdown-services" id="healthcare">
-                  <div class="services-title">HealthTech Solutions</div>
-                  <div class="services-grid">
-                    <a href="#" class="service-item">Telemedicine Platforms</a>
-                    <a href="#" class="service-item">Health Management Systems</a>
-                    <a href="#" class="service-item">Medical Records</a>
-                    <a href="#" class="service-item">Fitness Apps</a>
-                    <a href="#" class="service-item">Healthcare Analytics</a>
-                    <a href="#" class="service-item">Medical IoT</a>
-                  </div>
-                </div>
-                <div class="dropdown-services" id="ecommerce">
-                  <div class="services-title">E-Commerce Solutions</div>
-                  <div class="services-grid">
-                    <a href="#" class="service-item">Online Marketplaces</a>
-                    <a href="#" class="service-item">B2B Platforms</a>
-                    <a href="#" class="service-item">Inventory Management</a>
-                    <a href="#" class="service-item">Order Management</a>
-                    <a href="#" class="service-item">Customer Analytics</a>
-                    <a href="#" class="service-item">Multi-vendor Systems</a>
-                  </div>
-                </div>
-                <div class="dropdown-services" id="education">
-                  <div class="services-title">EdTech Solutions</div>
-                  <div class="services-grid">
-                    <a href="#" class="service-item">Learning Management Systems</a>
-                    <a href="#" class="service-item">Online Course Platforms</a>
-                    <a href="#" class="service-item">Student Information Systems</a>
-                    <a href="#" class="service-item">Virtual Classrooms</a>
-                    <a href="#" class="service-item">Assessment Tools</a>
-                    <a href="#" class="service-item">Educational Apps</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+  </nav>
 
-        <div class="navbar-right">
-          <div class="search-container">
-            <button class="search-toggle" id="search-toggle">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-            <div class="search-dropdown" id="search-dropdown">
-              <input type="text" placeholder="Search..." class="search-input" id="search-input">
-              <button class="search-close" id="search-close">×</button>
+  <!-- Main Content -->
+  <main>
+    <!-- Who We Are Section -->
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Column: Text -->
+          <div class="col-md-6">
+            <div class="video-content-inner">
+              <h1>Who We Are: Building greater futures through innovation and digital excellence</h1>
+              <p>Leading the way in digital solutions for over 7 years, we transform businesses across Chennai and
+                beyond.</p>
+              <a href="#our-story" class="cta-button">Discover Our Story</a>
             </div>
           </div>
-          <a href="contact.html" class="cta-button">Get in Touch</a>
+
+          <!-- Right Column: Video -->
+          <div class="col-md-6 video-wrapper">
+            <video autoplay muted loop playsinline>
+              <source src="Src/Assets/About.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
-    </nav>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Who We Are Section -->
-      <section>
-        <div class="container">
-          <div class="row align-items-center">
-            <!-- Left Column: Text -->
-            <div class="col-md-6">
-              <div class="video-content-inner">
-                <h1>Who We Are: Building greater futures through innovation and digital excellence</h1>
-                <p>Leading the way in digital solutions for over 7 years, we transform businesses across Chennai and
-                  beyond.</p>
-                <a href="#our-story" class="cta-button">Discover Our Story</a>
-              </div>
+    <!-- Passionate Hero Box Section -->
+    <section>
+      <div class="container">
+        <div class="hero-box text-white">
+          <h1 class="section-title">Passionate. Proactive. Expert.</h1>
+          <p class="hero-text">
+            We bring the brains and passion that drive digital–led progress. We match your ambition, extend your team
+            and drive your success.
+            And beneath the technical expertise, the complexity and variety, we're united by a single vision:
+            <b>to co–create the world's best digital products with the world's most innovative businesses.</b>
+            Heads in the world. Hearts in the code.
+          </p>
+          <button class="get-in-touch-btn">Get in touch</button>
+          <img src="Src/Assets/Frame 284.png" alt="Circles" class="circle-graphic">
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="custom-card p-4 h-100">
+              <h6>Life At Yoho</h6>
+              <h2 class="mb-4">Meet our<br>team</h2>
+              <p><strong>Engineers. Data scientists. Product owners.<br>Business analysts. Project managers.</strong>
+              </p>
+              <p>We're a family of 900+ innovators, all working together to push the limits of what's possible and
+                redefine the digital landscape.</p>
+              <p>Meet the people who turn your ideas into a reality.</p>
+              <button class="custom-btn mt-4">Get to know us</button>
+              <img src="Src/Assets/Frame 285.png" class="decor-img top-right" alt="Design" />
             </div>
+          </div>
 
-            <!-- Right Column: Video -->
-            <div class="col-md-6 video-wrapper">
-              <video autoplay muted loop playsinline>
-                <source src="Src/Assets/About.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="custom-card p-4 h-100">
+              <h6>History</h6>
+              <h2 class="mb-4">Our story</h2>
+              <p>Explore some of our biggest achievements and milestones since 2008.</p>
+              <p>From our humble beginnings in a university dorm room in Chennai to a global company with offices
+                worldwide —<br>
+                <strong>our story is one of ambition, hard work, passion and partnership.</strong>
+              </p>
+              <button class="custom-btn mt-4">Read our story</button>
+              <img src="Src/Assets/Frame 290.png" class="decor-img top-right" alt="Design" />
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="custom-card p-4 h-100">
+              <h6>Culture Book</h6>
+              <h2 class="mb-4">Our culture</h2>
+              <p>Our company culture is rooted in our creativity. <strong>We're here to do fulfilling work –</strong>
+                and have fun while we're doing it.</p>
+              <p>Get a little taste of what it's like to work at Yoho by downloading our culture book.</p>
+              <button class="custom-btn mt-4">Get our culture book</button>
+              <img src="Src/Assets/Frame 291.png" class="decor-img top-right" alt="Design" />
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Passionate Hero Box Section -->
-      <section>
-        <div class="container">
-          <div class="hero-box text-white">
-            <h1 class="section-title">Passionate. Proactive. Expert.</h1>
-            <p class="hero-text">
-              We bring the brains and passion that drive digital–led progress. We match your ambition, extend your team
-              and drive your success.
-              And beneath the technical expertise, the complexity and variety, we're united by a single vision:
-              <b>to co–create the world's best digital products with the world's most innovative businesses.</b>
-              Heads in the world. Hearts in the code.
-            </p>
-            <button class="get-in-touch-btn">Get in touch</button>
-            <img src="Src/Assets/Frame 284.png" alt="Circles" class="circle-graphic">
+    <!-- Value Section -->
+    <section class="value-section text-white py-5">
+      <div class="container text-center">
+        <h2 class="section-heading mb-5">Engineering real value since 2008</h2>
+        <div class="row justify-content-center">
+          <div class="col-6 col-md-3 mb-4">
+            <img src="Src/Assets/Frame 288.png" alt="Years" class="stat-icon mb-3">
+            <h4 class="text-orange">17+</h4>
+            <p>Years strong</p>
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <img src="Src/Assets/Frame 286.png" alt="Engineers" class="stat-icon mb-3">
+            <h4 class="text-orange">900+</h4>
+            <p>World class software engineers</p>
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <img src="Src/Assets/Frame 287.png" alt="Projects" class="stat-icon mb-3">
+            <h4 class="text-orange">1500+</h4>
+            <p>Projects launched</p>
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <img src="Src/Assets/Frame 292.png" alt="Clients" class="stat-icon mb-3">
+            <h4 class="text-orange">200+</h4>
+            <p>Global clients</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Cards Section -->
-      <section class="py-5">
-        <div class="container">
-          <div class="row g-4">
-            <!-- Card 1 -->
-            <div class="col-md-4">
-              <div class="custom-card p-4 h-100">
-                <h6>Life At Yoho</h6>
-                <h2 class="mb-4">Meet our<br>team</h2>
-                <p><strong>Engineers. Data scientists. Product owners.<br>Business analysts. Project managers.</strong>
-                </p>
-                <p>We're a family of 900+ innovators, all working together to push the limits of what's possible and
-                  redefine the digital landscape.</p>
-                <p>Meet the people who turn your ideas into a reality.</p>
-                <button class="custom-btn mt-4">Get to know us</button>
-                <img src="Src/Assets/Frame 285.png" class="decor-img top-right" alt="Design" />
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-md-4">
-              <div class="custom-card p-4 h-100">
-                <h6>History</h6>
-                <h2 class="mb-4">Our story</h2>
-                <p>Explore some of our biggest achievements and milestones since 2008.</p>
-                <p>From our humble beginnings in a university dorm room in Chennai to a global company with offices
-                  worldwide —<br>
-                  <strong>our story is one of ambition, hard work, passion and partnership.</strong>
-                </p>
-                <button class="custom-btn mt-4">Read our story</button>
-                <img src="Src/Assets/Frame 290.png" class="decor-img top-right" alt="Design" />
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-md-4">
-              <div class="custom-card p-4 h-100">
-                <h6>Culture Book</h6>
-                <h2 class="mb-4">Our culture</h2>
-                <p>Our company culture is rooted in our creativity. <strong>We're here to do fulfilling work –</strong>
-                  and have fun while we're doing it.</p>
-                <p>Get a little taste of what it's like to work at Yoho by downloading our culture book.</p>
-                <button class="custom-btn mt-4">Get our culture book</button>
-                <img src="Src/Assets/Frame 291.png" class="decor-img top-right" alt="Design" />
-              </div>
-            </div>
-          </div>
+    <!-- Leadership Section -->
+    <div class="leadership-section py-5 text-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-light">Our leadership team</h2>
+          <p class="lead">
+            Behind every story, there is a team of visionaries who inspire us to dream big and push technological
+            boundaries to create resilient solutions for the future.
+            <br />
+            Passionate. Proactive. Expert. Meet the people who turn your ideas into a reality.
+          </p>
         </div>
-      </section>
 
-      <!-- Value Section -->
-      <section class="value-section text-white py-5">
-        <div class="container text-center">
-          <h2 class="section-heading mb-5">Engineering real value since 2008</h2>
-          <div class="row justify-content-center">
-            <div class="col-6 col-md-3 mb-4">
-              <img src="Src/Assets/Frame 288.png" alt="Years" class="stat-icon mb-3">
-              <h4 class="text-orange">17+</h4>
-              <p>Years strong</p>
-            </div>
-            <div class="col-6 col-md-3 mb-4">
-              <img src="Src/Assets/Frame 286.png" alt="Engineers" class="stat-icon mb-3">
-              <h4 class="text-orange">900+</h4>
-              <p>World class software engineers</p>
-            </div>
-            <div class="col-6 col-md-3 mb-4">
-              <img src="Src/Assets/Frame 287.png" alt="Projects" class="stat-icon mb-3">
-              <h4 class="text-orange">1500+</h4>
-              <p>Projects launched</p>
-            </div>
-            <div class="col-6 col-md-3 mb-4">
-              <img src="Src/Assets/Frame 292.png" alt="Clients" class="stat-icon mb-3">
-              <h4 class="text-orange">200+</h4>
-              <p>Global clients</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Leadership Section -->
-      <div class="leadership-section py-5 text-white">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="display-5 fw-light">Our leadership team</h2>
-            <p class="lead">
-              Behind every story, there is a team of visionaries who inspire us to dream big and push technological
-              boundaries to create resilient solutions for the future.
-              <br />
-              Passionate. Proactive. Expert. Meet the people who turn your ideas into a reality.
-            </p>
-          </div>
-
-          <section class="py-5 position-relative">
-            <div class="container">
-              <div id="leadershipCarousel" class="carousel slide position-relative">
-                <div class="carousel-inner">
-                  <!-- Slide 1 -->
-                  <div class="carousel-item active">
-                    <div class="row g-4">
-                      <div class="col-md-4">
-                        <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
-                          <img
-                            src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg"
-                            class="card-img" alt="Leader 1" />
-                          <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
-                            <h5 class="card-title fs-3">Sasa Popovic</h5>
-                            <p class="btn btn-outline-light rounded-pill btn-sm w-auto">Co-founder & CEO</p>
-                          </div>
+        <section class="py-5 position-relative">
+          <div class="container">
+            <div id="leadershipCarousel" class="carousel slide position-relative">
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-4">
+                    <div class="col-md-4">
+                      <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
+                        <img
+                          src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg"
+                          class="card-img" alt="Leader 1" />
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
+                          <h5 class="card-title fs-3">Sasa Popovic</h5>
+                          <p class="btn btn-outline-light rounded-pill btn-sm w-auto">Co-founder & CEO</p>
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
-                          <img
-                            src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg"
-                            class="card-img" alt="Leader 2" />
-                          <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
-                            <h5 class="card-title fs-3">Vladan Ostojic</h5>
-                            <p class="btn btn-outline-light rounded-pill btn-sm w-auto">Co-founder</p>
-                          </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
+                        <img
+                          src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg"
+                          class="card-img" alt="Leader 2" />
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
+                          <h5 class="card-title fs-3">Vladan Ostojic</h5>
+                          <p class="btn btn-outline-light rounded-pill btn-sm w-auto">Co-founder</p>
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
-                          <img
-                            src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg"
-                            class="card-img" alt="Leader 3" />
-                          <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
-                            <h5 class="card-title fs-3">Boban Miksin</h5>
-                            <p class="btn btn-outline-light rounded-pill btn-sm w-auto">Executive Partner and CTO</p>
-                          </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card bg-dark text-white border-0 rounded-4 overflow-hidden">
+                        <img
+                          src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6dda724731681.563391e030c43.jpeg"
+                          class="card-img" alt="Leader 3" />
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4 gradient-overlay">
+                          <h5 class="card-title fs-3">Boban Miksin</h5>
+                          <p class="btn btn-outline-light rounded-pill btn-sm w-auto">Executive Partner and CTO</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <button class="carousel-control-prev custom-carousel-btn" type="button"
-                  data-bs-target="#leadershipCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next custom-carousel-btn" type="button"
-                  data-bs-target="#leadershipCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
               </div>
+
+              <button class="carousel-control-prev custom-carousel-btn" type="button"
+                data-bs-target="#leadershipCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next custom-carousel-btn" type="button"
+                data-bs-target="#leadershipCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <!-- Footer Top Section -->
-        <div class="footer-top">
-          <div class="footer-brand">
-            <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
-            <div class="footer-contact">
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>+91 98844 92652</span>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>info@yohotechnologies.com</span>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117.
-                  (Near:ESAF BANK)</span>
-              </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Top Section -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 98844 92652</span>
             </div>
-          </div>
-
-          <div class="footer-links">
-            <div class="footer-links-column">
-              <h3>Company</h3>
-              <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="about.html">Leadership</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="about.html">News & Events</a></li>
-                <li><a href="about.html">Awards & Recognition</a></li>
-                <li><a href="about.html">Investor Relations</a></li>
-              </ul>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@yohotechnologies.com</span>
             </div>
-
-            <div class="footer-links-column">
-              <h3>Services</h3>
-              <ul>
-                <li><a href="services.html">E-Commerce Solutions</a></li>
-                <li><a href="services.html">Supply Chain Management</a></li>
-                <li><a href="services.html">Data Analytics</a></li>
-                <li><a href="services.html">Cloud Services</a></li>
-                <li><a href="services.html">AI & Machine Learning</a></li>
-                <li><a href="services.html">Digital Consulting</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-links-column">
-              <h3>Industries</h3>
-              <ul>
-                <li><a href="services.html">Retail & Consumer</a></li>
-                <li><a href="services.html">Healthcare</a></li>
-                <li><a href="services.html">Financial Services</a></li>
-                <li><a href="services.html">Manufacturing</a></li>
-                <li><a href="services.html">Government</a></li>
-                <li><a href="services.html">Education</a></li>
-              </ul>
-            </div>
-
-            <div class="footer-links-column">
-              <h3>Resources</h3>
-              <ul>
-                <li><a href="about.html">Blog</a></li>
-                <li><a href="about.html">Case Studies</a></li>
-                <li><a href="about.html">Whitepapers</a></li>
-                <li><a href="about.html">Documentation</a></li>
-                <li><a href="contact.html">Support Center</a></li>
-                <li><a href="about.html">Training & Certification</a></li>
-              </ul>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai - 600117.
+                (Near:ESAF BANK)</span>
             </div>
           </div>
         </div>
 
-
-
-        <!-- Footer Bottom Section -->
-        <div class="footer-bottom">
-          <div class="footer-logo">
-            <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
-          </div>
-          <div class="footer-bottom-left">
-            <div class="copyright">
-              &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
-            </div>
-            <div class="footer-bottom-links">
-              <a href="privacy.html">Privacy Policy</a>
-              <a href="terms.html">Terms of Service</a>
-              <a href="cookies.html">Cookie Policy</a>
-              <a href="security.html">Security</a>
-              <a href="accessibility.html">Accessibility</a>
-              <a href="sitemap.html">Sitemap</a>
-            </div>
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html">Leadership</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="about.html">News & Events</a></li>
+              <li><a href="about.html">Awards & Recognition</a></li>
+              <li><a href="about.html">Investor Relations</a></li>
+            </ul>
           </div>
 
-          <div class="footer-bottom-right">
-            <div class="social-links">
-              <a href="#" aria-label="LinkedIn" class="social-linkedin">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" aria-label="Twitter" class="social-twitter">
-                <i class="fab fa-x-twitter"></i>
-              </a>
-              <a href="#" aria-label="Facebook" class="social-facebook">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" aria-label="YouTube" class="social-youtube">
-                <i class="fab fa-youtube"></i>
-              </a>
-              <a href="#" aria-label="Instagram" class="social-instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
+          <div class="footer-links-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="services.html">E-Commerce Solutions</a></li>
+              <li><a href="services.html">Supply Chain Management</a></li>
+              <li><a href="services.html">Data Analytics</a></li>
+              <li><a href="services.html">Cloud Services</a></li>
+              <li><a href="services.html">AI & Machine Learning</a></li>
+              <li><a href="services.html">Digital Consulting</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Industries</h3>
+            <ul>
+              <li><a href="services.html">Retail & Consumer</a></li>
+              <li><a href="services.html">Healthcare</a></li>
+              <li><a href="services.html">Financial Services</a></li>
+              <li><a href="services.html">Manufacturing</a></li>
+              <li><a href="services.html">Government</a></li>
+              <li><a href="services.html">Education</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="about.html">Blog</a></li>
+              <li><a href="about.html">Case Studies</a></li>
+              <li><a href="about.html">Whitepapers</a></li>
+              <li><a href="about.html">Documentation</a></li>
+              <li><a href="contact.html">Support Center</a></li>
+              <li><a href="about.html">Training & Certification</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="Src/JS/About.js"></script>
-    <script src="Src/JS/dropdown.js"></script>
-    <script src="Src/JS/search.js"></script>
-    <script>
-      // Ensure navbar stays fixed
-      document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.getElementById('navbar');
-        const colorBar = document.querySelector('.color-bar');
-        if (navbar) {
-          navbar.style.position = 'fixed';
-          navbar.style.top = '4px';
-          navbar.style.zIndex = '1001';
-        }
-        if (colorBar) {
-          colorBar.style.position = 'fixed';
-          colorBar.style.top = '0';
-          colorBar.style.zIndex = '1002';
-          colorBar.style.opacity = '1';
-          colorBar.classList.remove('hidden');
-        }
-      });
-    </script>
-    <script>
-      // Loading screen
-      document.addEventListener('DOMContentLoaded', function () {
-        const loadingScreen = document.getElementById('loading-screen');
+
+
+      <!-- Footer Bottom Section -->
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+        </div>
+        <div class="footer-bottom-left">
+          <div class="copyright">
+            &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+          </div>
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="cookies.html">Cookie Policy</a>
+            <a href="security.html">Security</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Src/JS/About.js"></script>
+  <script src="Src/JS/dropdown.js"></script>
+  <script src="Src/JS/search.js"></script>
+  <script>
+    // Ensure navbar stays fixed
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbar = document.getElementById('navbar');
+      const colorBar = document.querySelector('.color-bar');
+      if (navbar) {
+        navbar.style.position = 'fixed';
+        navbar.style.top = '4px';
+        navbar.style.zIndex = '1001';
+      }
+      if (colorBar) {
+        colorBar.style.position = 'fixed';
+        colorBar.style.top = '0';
+        colorBar.style.zIndex = '1002';
+        colorBar.style.opacity = '1';
+        colorBar.classList.remove('hidden');
+      }
+    });
+  </script>
+  <script>
+    // Loading screen
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(() => {
+        loadingScreen.classList.add('hidden');
         setTimeout(() => {
-          loadingScreen.classList.add('hidden');
-          setTimeout(() => {
-            loadingScreen.style.display = 'none';
-          }, 500);
-        }, 800);
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }, 800);
 
-        // Dynamic copyright year
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
-      });
-    </script>
+      // Dynamic copyright year
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 
 </html>
