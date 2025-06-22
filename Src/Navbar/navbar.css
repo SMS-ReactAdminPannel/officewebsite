@@ -38,9 +38,11 @@
   /* Navbar Base Styles */
   .navbar {
     position: fixed;
-    top: 4px;
+    top: 0;
     left: 0;
     right: 0;
+    margin-top: -10px;
+    padding: 10px;
     z-index: 1001;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(20px);
@@ -121,7 +123,7 @@
   
   .nav-links a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 15px;
     font-weight: 400;
     padding: 0.5rem 0;
@@ -131,6 +133,7 @@
   
   .nav-links a:hover {
     color: #3aed6a;
+    text-decoration: none;
     transform: translateY(-1px);
   }
   
@@ -181,7 +184,7 @@
   
   .dropdown-parent.active .dropdown-trigger::before {
     transform: translateY(-50%) rotate(180deg);
-    border-color: #3aed6a transparent transparent transparent;
+    /* border-color: #3aed6a transparent transparent transparent; */
   }
   
   .mega-dropdown {
@@ -224,6 +227,20 @@
   }
   
   .category-item {
+    display: block;
+    padding: 12px 16px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    border-left: 3px solid transparent;
+  }
+
+  .web-overview{
     display: block;
     padding: 12px 16px;
     color: #ffffff;
@@ -298,6 +315,10 @@
   /* Search Styles */
   .search-container {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
   }
   
   .search-toggle {
@@ -319,21 +340,16 @@
   }
   
   .search-dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
+    position: relative;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(20px);
     border-radius: 12px;
-    padding: 1rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
+    transform: translateX(10px);
     transition: all 0.3s ease;
     width: 300px;
-    z-index: 1003;
-    margin-top: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
@@ -343,7 +359,7 @@
   .search-dropdown.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(0);
   }
   
   .search-input {
@@ -359,7 +375,7 @@
   }
   
   .search-input:focus {
-    border-color: #3aed6a;
+    border-color: #ffffff;
     box-shadow: 0 0 0 3px rgba(58, 237, 106, 0.2);
   }
   
@@ -389,22 +405,26 @@
   
   /* Connect Button */
   .connect-button {
-    background: #3aed6a;
-    color: #000000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 50px; /* fully rounded corners */
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
+    line-height: 1;
+    letter-spacing: -0.01em;
   }
   
   .connect-button:hover {
-    background: #15de79;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(58, 237, 106, 0.3);
-    color: #000000;
+    background: white;
+    text-decoration: none;
+    color: black;
   }
   
   /* Mobile Menu Toggle */
@@ -498,6 +518,7 @@
     padding: 5px 10px 5px 10px ;
     align-self: center;
     font-size: 10px;
+    display: none;
     border-radius: 20px;
   }
 
@@ -622,13 +643,14 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    outline: none !important;
     justify-content: space-between;
     transition: all 0.3s ease;
   }
   
-  .mobile-dropdown-trigger:hover {
+  /* .mobile-dropdown-trigger:hover {
     color: #3aed6a;
-  }
+  } */
   
   .mobile-dropdown-trigger i {
     transition: transform 0.3s ease;
@@ -657,6 +679,15 @@
   }
   
   .mobile-service-category h4 {
+    color: #3aed6a;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .mobile-service-category #overview{
     color: #3aed6a;
     font-size: 14px;
     font-weight: 600;
@@ -749,9 +780,9 @@
   }
   
   /* Main Content Styles */
-  main {
+  /* main {
     padding-top: 68px;
-  }
+  } */
   
   
   /* Tablet Styles */
@@ -785,6 +816,9 @@
     .navbar {
       top: 0;
     }
+    .mobile-nav-responce  .gettouch-btn-mobile{
+      display: block;
+    }
     
     .nav-container {
       height: 60px;
@@ -808,9 +842,9 @@
       height: 40px;
     }
     
-    main {
+    /* main {
       padding-top: 64px;
-    }
+    } */
     
   }
   

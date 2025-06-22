@@ -20,10 +20,10 @@ body {
   max-width: 1300px;
   margin: 0 auto 80px;
   gap: 40px;
-  margin-top: 4%;
 }
 
 .text-section {
+  margin-top: 40px;
   flex: 1 1 500px;
   animation: fadeInLeft 1s ease;
 }
@@ -72,6 +72,7 @@ body {
 }
 
 .image-section {
+  padding-top: 40px;
   flex: 1 1 500px;
   text-align: center;
   animation: fadeInRight 1s ease;
@@ -80,11 +81,6 @@ body {
 .image-section img {
   max-width: 100%;
   border-radius: 12px;
-}
-.image-section #cloudimg{
-  border-radius: 50%;
-  width: 80% !important;
-  opacity: .8;
 }
 
 /* Services Section */
@@ -288,6 +284,7 @@ body {
   .text-content h1 {
     font-size: 2rem;
     
+    
   }
   .text-content-para{
     color: #ffffff;
@@ -299,6 +296,7 @@ body {
   font-size: 2.5rem;
   font-weight: 100;
   margin-bottom: 40px;
+  text-align: center;
   }
 
   .text-section p,
@@ -461,22 +459,27 @@ h1.underline:hover::after {
 }
 
 .header {
-  text-align: center;
-  padding: 40px 0;
+  display: flex;
+  text-align: left;
+  padding: 50px 0;
   color: white;
   background-color: #000;
+  max-width: 1300px;
+  margin: 0 auto 20px;
+  gap: 40px;
 }
 
 .header h1 {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
   font-size: 2.5rem;
-  font-weight: 300;
-  margin-bottom: 10px;
+  font-weight: 200;
 }
 
-.header p {
+/* .header p {
   font-size: 1.1rem;
   opacity: 0.8;
-}
+} */
 
 @media (max-width: 768px) {
   .testimonials-container {
