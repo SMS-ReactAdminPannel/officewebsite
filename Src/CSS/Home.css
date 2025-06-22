@@ -745,14 +745,6 @@
   .section-title1 {
     margin-bottom: 40px;
   }
-
-  .company-logo {
-    height: 50px;
-  }
-
-  .logo-container {
-    min-height: 100px;
-  }
 }
 
 @media (max-width: 576px) {
