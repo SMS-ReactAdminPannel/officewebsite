@@ -520,6 +520,11 @@
     font-size: 10px;
     display: none;
     border-radius: 20px;
+    text-decoration: none !important;
+  }
+ 
+  .mobile-nav-responce  .gettouch-btn-mobile a{
+    text-decoration: none;
   }
 
   .mobile-nav-subhead-1,.mobile-nav-subhead-2,.mobile-nav-subhead-3,.mobile-nav-subhead-4{
@@ -613,7 +618,7 @@
   .mobile-nav-link {
     display: block;
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 16px 0;
     font-size: 16px;
     font-weight: 400;
@@ -646,6 +651,10 @@
     outline: none !important;
     justify-content: space-between;
     transition: all 0.3s ease;
+  }
+  
+   .mobile-dropdown-trigger button{
+    text-decoration: none !important;
   }
   
   /* .mobile-dropdown-trigger:hover {
@@ -694,6 +703,7 @@
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-decoration: none !important;
   }
   
   .mobile-service-category ul {
@@ -722,11 +732,12 @@
   
   /* Mobile CTA */
   .mobile-cta {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
   
   .mobile-connect-btn {
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -734,7 +745,7 @@
     color: #000000;
     text-decoration: none;
     border: 2px solid #ffffff;
-    padding: 16px 24px;
+    padding: 10px 15px;
     border-radius: 12px;
     font-weight: 600;
     font-size: 15px;
@@ -755,7 +766,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
