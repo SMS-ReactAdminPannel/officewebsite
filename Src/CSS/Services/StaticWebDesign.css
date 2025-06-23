@@ -28,10 +28,10 @@ body {
   animation: fadeInLeft 1s ease;
 }
 
-.text-section h1, .text-content h1 {
+.text-section h1{
   font-family: "Inter", sans-serif;
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 200;
 }
 
@@ -93,7 +93,7 @@ body {
 .section-1 h1 {
   font-family: "Inter", sans-serif;
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 200;
   margin-bottom: 80px;
 }
@@ -109,14 +109,17 @@ body {
 }
 
 .service h2 {
+  font-family: "Inter", sans-serif;
+  color: #ffff;
   font-size: 1.5rem;
+  font-weight: 400;
   margin: 20px 0 10px;
 }
 
 .service p , .text-content p{
   color: #ffffff;
   font-size: 1rem;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 200;
   line-height: 30px;
 }
@@ -124,6 +127,26 @@ body {
 .icon img {
   width: 80px;
   height: 80px;
+}
+/*Services Responsive */
+@media (max-width: 768px) {
+  .section-1{
+     flex-direction: column;
+    align-items: center;
+    padding-bottom: 2px;
+    
+  }
+
+}
+
+@media (max-width: 480px) {
+  .section-1{
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-1 h1{
+    text-align: center;
+  }
 }
 
 /* Design Systems Section */
@@ -161,6 +184,8 @@ body {
 }
 
 .tags span {
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.797);
   border: 1px solid white;
   padding: 10px 16px;
   border-radius: 20px;
@@ -273,20 +298,19 @@ body {
     align-items: center;
   }
 
-  .text-section, .image-section, .text-content, .visual-card {
+  .section-1{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section, .image-section, .text-content, .visual-card, .header {
     flex: 1 1 100%;
     padding: 20px 0;
     text-align: center;
   }
-
-  .text-section h1,
-  .section-1 h1,
-  .text-content h1,
-  .header h1 {
-    font-size: 1.8rem;
-  }
-  .header h1{
-    padding-left: 20px;
+  .image-section img{
+    width: 350px;
+    height: 250px;
   }
 
   .text-content-para{
@@ -403,15 +427,6 @@ h1.underline:hover::after {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    #ff6b6b,
-    #ffd93d,
-    #6bcf7f,
-    #4ecdc4,
-    #45b7d1,
-    #96ceb4
-  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -421,13 +436,14 @@ h1.underline:hover::after {
 }
 
 .stars {
-  color: #ffd700;
-  font-size: 1.2em;
+  color: #ffffff;
+  font-size: 1.4em;
   margin-bottom: 15px;
+  font-weight: 300;
 }
 
 .testimonial-text {
-  color: #ffffff;
+  color: #f5f2f2ce;
   font-size: 0.95em;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -464,18 +480,19 @@ h1.underline:hover::after {
 .header {
   display: flex;
   text-align: left;
-  padding: 50px 0;
   color: white;
   background-color: #000;
   max-width: 1300px;
   margin: 0 auto 20px;
   gap: 40px;
+  padding-top: 20px;
+  padding-left:20px;
 }
 
 .header h1 {
   font-family: "Inter", sans-serif;
   color: #ffffff;
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   font-weight: 200;
 }
 
@@ -485,6 +502,12 @@ h1.underline:hover::after {
 } */
 
 @media (max-width: 768px) {
+  .header{
+     flex-direction: column;
+    align-items: center;
+    padding-bottom: 2px;
+    
+  }
   .testimonials-container {
     columns: 2;
     column-gap: 15px;
@@ -493,6 +516,11 @@ h1.underline:hover::after {
 }
 
 @media (max-width: 480px) {
+  .header{
+     flex-direction: column;
+    align-items: center;
+    padding-left:0px;
+  }
   .testimonials-container {
     columns: 1;
     padding: 10px;
