@@ -65,10 +65,11 @@
     padding: 0;
     position: relative;
     overflow: hidden;
+    border-top: 2px solid #948888;
 }
 
 /* Footer Color Bar - Alternative approach */
-.footer::after {
+/* .footer::after {
     content: '';
     position: absolute;
     top: 0;
@@ -90,7 +91,7 @@
     z-index: 10;
     opacity: 1;
     transform: translate3d(0, 0, 0);
-}
+} */
 
 .footer::before {
     content: '';
@@ -492,10 +493,10 @@
         padding: 0 1.5rem;
     }
     
-    .footer-links {
+    /* .footer-links {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-    }
+    } */
 }
 
 @media (max-width: 1024px) {
@@ -520,11 +521,11 @@
         margin: 0 auto;
     }
     
-    .footer-links {
+    /* .footer-links {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
         justify-items: center;
-    }
+    } */
     
     .footer-links-column {
         text-align: center;
@@ -745,11 +746,11 @@
 }
 
 /* Keep 2x2 grid on mobile */
-            .footer-links {
+            /* .footer-links {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 2rem;
                 justify-items: start;
-            }
+            } */
             
             .footer-links-column {
                 text-align: left;
