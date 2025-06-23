@@ -242,7 +242,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     #ff6b6b,
     #ffd93d,
@@ -250,7 +250,7 @@ body {
     #4ecdc4,
     #45b7d1,
     #96ceb4
-  );
+  ); */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
