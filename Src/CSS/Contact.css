@@ -147,6 +147,7 @@ body {
   font-size: 1rem;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   text-align: left;
+  padding-left: 4px;
 }
 .description {
   color: #ffffff;
@@ -170,6 +171,7 @@ body {
 .contact-link {
   text-decoration: none;
   color: #f1f1f1;
+  padding-left: 4px;
 }
 
 .contact-link:hover {
