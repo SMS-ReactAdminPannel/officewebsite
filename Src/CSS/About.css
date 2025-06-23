@@ -116,7 +116,7 @@
 .custom-card h2 {
   font-family: "Inter", sans-serif;
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 100;
   line-height: 1.3;
 }
@@ -167,6 +167,12 @@ color: #ffffff;
     font-size: 1.5rem;
     margin-bottom: 30px;
   }
+  .section-heading {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
 }
 .pet { 
     padding: 10px 30px;
@@ -384,6 +390,13 @@ color: #ffffff;
     font-size: 1.5rem;
     font-weight: 100;
   }
+  .section-title {
+       font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 100;
+      margin-bottom: 40px;
+    }
 }
 
 
@@ -491,9 +504,11 @@ color: #ffffff;
         text-align: center;
         align-items: center;
       }
+      
 
       .video-content-inner h1 {
         font-size: 1.5rem;
+        margin-top: 30px;
       }
 
       .video-content-inner p {
@@ -535,6 +550,7 @@ color: #ffffff;
   }
 }
 
+
 .collage-container::-webkit-scrollbar {
   display: none;
 }
@@ -557,11 +573,7 @@ color: #ffffff;
     }
 
 
-    .mor:hover {
-      background-color: #39d139;
-      color: #ffffff;
-      border-color: #39d139;
-    }
+    
     /* Mobile View (≤768px): Center the heading */
 @media (max-width: 768px) {
   .section-header-heading {
@@ -748,12 +760,14 @@ color: #ffffff;
   color: #ffffff;
   font-size: 2.5rem;
   font-weight: 100;
+  margin-top: 81px;
 }
 
 /* Media Query: Reduce font-size to 1.5rem on screens ≤ 768px */
 @media (max-width: 768px) {
   .yoho {
     font-size: 1.5rem;
+    margin-top: 54px;
   }
 }
 /* Start slightly lower and invisible */
@@ -775,3 +789,89 @@ color: #ffffff;
     top: 25px;
 }
 }
+/* Animation utility classes */
+@keyframes fadeInLeftToCenter {
+  from {
+    opacity: 0;
+    transform: translateX(-150px) scale(0.9);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeInRightToCenter {
+  from {
+    opacity: 0;
+    transform: translateX(150px) scale(0.9);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.slide-left {
+  opacity: 0;
+  animation: fadeInLeftToCenter 1s ease-out forwards;
+}
+
+.slide-right {
+  opacity: 0;
+  animation: fadeInRightToCenter 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+ @media (max-width: 900px) {
+      .video-content-inner {
+        text-align: left;
+        align-items: center;
+      }
+      
+
+      .video-content-inner h1 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+      }
+
+      .video-content-inner p {
+        font-size: 16px;
+      }
+
+      .cta-button {
+        padding: 10px 24px;
+      }
+
+      .video-wrapper {
+        margin-top: 30px;
+      }
+      .decor-img {
+  position: absolute;
+  max-width: 136px;
+  max-height: 310px;
+  opacity: 0.6;
+}
+
+.top-right {
+  top: -23px;
+  right: -26px;
+  transform: translateX(40%);
+}
+.section-title {
+       font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 100;
+      margin-bottom: 40px;
+    }
+    
+      
+
+      
+    }
+
+

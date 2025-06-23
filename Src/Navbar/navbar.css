@@ -10,7 +10,8 @@
   }
   
   body {
-    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
@@ -221,6 +222,8 @@
   .mega-dropdown-container {
     display: flex;
     gap: 2rem;
+    padding-left: 120px;
+    padding-right: 80px;
   }
   
   .dropdown-categories {
@@ -820,7 +823,41 @@
     
     
   }
-  
+ /*Tab Styles */
+  @media (max-width: 900px) {
+    body {
+      padding-top: 64px;
+    }
+    
+    .navbar {
+      top: 0;
+    }
+    .mobile-nav-responce  .gettouch-btn-mobile{
+      display: block;
+    }
+    
+    .nav-container {
+      height: 60px;
+      padding: 0 1rem;
+    }
+    
+    .desktop-nav {
+      display: none;
+    }
+    
+    .mobile-menu-toggle {
+      display: flex;
+    }
+    
+    .logo-container {
+      width: 120px;
+      height: 40px;
+    }
+    
+    .logo-container img {
+      height: 40px;
+    }
+  }
   /* Mobile Styles */
   @media (max-width: 768px) {
     body {

@@ -484,6 +484,12 @@ input::placeholder {
   transform:translateY(-5px);
 }
 
+/* @media (max-width:576px){
+  .learn-more-btn{
+       margin-left: 66px;
+  }
+} */
+
 
 /* Featured Jobs Section */
 .featured-jobs-section {
