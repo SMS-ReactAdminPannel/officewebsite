@@ -97,13 +97,15 @@ p{
 }
 
 .career-btn {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: white;
+  color: #000000;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
 }
 
 .career-btn:hover {
-  background-color: #ffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .career-btn2 {
