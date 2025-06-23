@@ -22,11 +22,7 @@ body {
       border-radius: 999px;
     }
 
-    .custom-outline-btn:hover {
-      background-color: #39d139;
-      color: white;
-      border-color: #39d139;
-    }
+   
 
     .badge-pill {
       padding: 10px 15px;
@@ -45,11 +41,7 @@ body {
       border: 1px solid #ffffff;
     }
 
-    .badge-pill:hover {
-      background-color: #39d139;
-      color: #ffffff;
-      border-color: #39d139;
-    }
+    
 
     .form-box {
       background-color: rgba(0, 0, 0, 0);
