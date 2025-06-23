@@ -333,7 +333,7 @@ p {
 .stat-number {
   font-size: 1.5rem;
   font-weight: 300;
-  color: green;
+  color: #01d871;
   margin-bottom: 15px;
   line-height: 1;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);

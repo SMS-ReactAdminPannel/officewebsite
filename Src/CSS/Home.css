@@ -1322,18 +1322,16 @@
 
 .stat-icon {
   width: 110px;   
-  height: 110px; 
+  height: 150px; 
   object-fit: cover;
-  margin-left: 55px; 
-
 }
 
 .text-orange {
-  color: white;
+  color: #01d871 ;
   font-weight: 500;
   margin-bottom: 5px;
-  margin-top: 35px;
-  text-align: center;
+  /* margin-top: 35px;
+  text-align: center; */
 }
 
 
