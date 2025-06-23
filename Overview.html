@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Service</title>
     <link rel="stylesheet" href="./Src/CSS/Overview.css">
     <link rel="stylesheet" href="Src/Navbar/navbar.css">
     <link rel="stylesheet" href="Src/CSS/Footer.css">
@@ -22,932 +22,666 @@
         rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
         rel="stylesheet" />
-
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Src/Assets/Loaded.png" />
 </head>
 
 <body>
+  <!-- Loading Screen
+  <div id="loading-screen" class="loading-screen">
+    <img src="Src/Assets/Loaded.png" alt="Yoho Technologies Loading" class="rotating-logo">
+  </div> -->
 
-    <!-- Navbar -->
-    <!-- <div class="color-bar"></div> -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <!-- Logo -->
-            <div class="logo">
-                <a href="index.html">
-                    <div class="logo-container">
-                        <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo"
-                            loading="eager">
-                        <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo-white"
-                            loading="eager">
-                    </div>
-                </a>
+  <!-- Navbar -->
+  <!-- <div class="color-bar"></div> -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-container">
+            <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+            <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="desktop-nav" id="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="./about.html">Who We Are</a></li>
+          <li class="dropdown-parent">
+            <a href="#" class="dropdown-trigger">What We Do</a>
+            <div class="mega-dropdown">
+              <div class="mega-dropdown-container">
+                <div class="dropdown-categories">
+                  <a href="./Overview.html" class="web-overview">Overview</a>
+                  <a href="#" class="category-item active" data-category="website-design">Web Design</a>
+                  <a href="#" class="category-item" data-category="website-development">Web
+                    Development</a>
+                  <a href="#" class="category-item" data-category="mobile-solutions">Mobile
+                    Solutions</a>
+                  <a href="#" class="category-item" data-category="digital-marketing">Digital
+                    Marketing</a>
+                </div>
+                <div class="dropdown-services" id="website-design">
+                  <div class="services-title">Web Design</div>
+                  <div class="services-grid">
+                    <a href="./webDesign.html" class="service-item">Responsive Design 3.0</a>
+                    <a href="./webDesign.html" class="service-item">CSS Frameworks & Utilities</a>
+                    <a href="./webDesign.html" class="service-item">Component-Based UI Libraries</a>
+                    <a href="./webDesign.html" class="service-item">Next-Gen JavaScript Tooling</a>
+                    <a href="./webDesign.html" class="service-item">Headless CMS</a>
+                    <a href="./webDesign.html" class="service-item">API-First Development</a>
+                    <a href="./webDesign.html" class="service-item">AI in Web Design</a>
+                    <a href="./webDesign.html" class="service-item">Design Systems & Tokens</a>
+                    <a href="./webDesign.html" class="service-item">Animation & Interactivity</a>
+                    <a href="./webDesign.html" class="service-item">Accessibility & Inclusive Design</a>
+                    <a href="./webDesign.html" class="service-item">Performance-First Mindset</a>
+                    <a href="./webDesign.html" class="service-item">Web 3D and Immersive Design</a>
+                  </div>
+                </div>
+                <div class="dropdown-services" id="website-development">
+                  <div class="services-title">Web Development</div>
+                  <div class="services-grid">
+                    <a href="./webDevlop.html" class="service-item">Frontend Frameworks & Libraries</a>
+                    <a href="./webDevlop.html" class="service-item">JavaScript & TypeScript</a>
+                    <a href="./webDevlop.html" class="service-item">Build Tools & Bundlers</a>
+                    <a href="./webDevlop.html" class="service-item">Backend Frameworks & Runtimes</a>
+                    <a href="./webDevlop.html" class="service-item">Full-Stack Frameworks</a>
+                    <a href="./webDevlop.html" class="service-item">API Technologies</a>
+                    <a href="./webDevlop.html" class="service-item">Database & ORM Tools</a>
+                    <a href="./webDevlop.html" class="service-item">Authentication & Security</a>
+                    <a href="./webDevlop.html" class="service-item">DevOps & Deployment</a>
+                    <a href="./webDevlop.html" class="service-item">Hosting & Edge Platforms</a>
+                    <a href="./webDevlop.html" class="service-item">Realtime & Messaging</a>
+                    <a href="./webDevlop.html" class="service-item">AI Integration in Development</a>
+                  </div>
+                </div>
+                <div class="dropdown-services" id="mobile-solutions">
+                  <div class="services-title">Mobile App Development</div>
+                  <div class="services-grid">
+                    <a href="./mobilesolution.html" class="service-item">Cross-Platform Frameworks</a>
+                    <a href="./mobilesolution.html" class="service-item">Native Development Technologies</a>
+                    <a href="./mobilesolution.html" class="service-item">Hybrid App Technologies</a>
+                    <a href="./mobilesolution.html" class="service-item">Backend-as-a-Service (BaaS)</a>
+                    <a href="./mobilesolution.html" class="service-item">State Management & Architecture</a>
+                    <a href="./mobilesolution.html" class="service-item">UI/UX & Animation Libraries</a>
+                    <a href="./mobilesolution.html" class="service-item">Testing & CI/CD Tools</a>
+                    <a href="./mobilesolution.html" class="service-item">Push Notifications & Messaging</a>
+                    <a href="./mobilesolution.html" class="service-item">Offline & Sync Support</a>
+                    <a href="./mobilesolution.html" class="service-item">Mobile App Deployment</a>
+                    <a href="./mobilesolution.html" class="service-item">Security & Authentication</a>
+                    <a href="./mobilesolution.html" class="service-item">AI & ML in Mobile Apps</a>
+                  </div>
+                </div>
+                <div class="dropdown-services" id="digital-marketing">
+                  <div class="services-title">Digital Marketing</div>
+                  <div class="services-grid">
+                    <a href="./digitalMarketing.html" class="service-item">AI-Powered Marketing</a>
+                    <a href="./digitalMarketing.html" class="service-item">Marketing Automation Platforms</a>
+                    <a href="./digitalMarketing.html" class="service-item">Search Engine Optimization Tools</a>
+                    <a href="./digitalMarketing.html" class="service-item">Social Media Marketing Platforms</a>
+                    <a href="./digitalMarketing.html" class="service-item">Performance Analytics & Data</a>
+                    <a href="./digitalMarketing.html" class="service-item">Content Management & Blogging</a>
+                    <a href="./digitalMarketing.html" class="service-item">Email Marketing & Retargeting</a>
+                    <a href="./digitalMarketing.html" class="service-item">Search Engine Marketing (SEM)</a>
+                    <a href="./digitalMarketing.html" class="service-item">Influencer & Affiliate Marketing Tools</a>
+                    <a href="./digitalMarketing.html" class="service-item">Customer Relationship Management</a>
+                    <a href="./digitalMarketing.html" class="service-item">Voice & Visual Search Optimization</a>
+                    <a href="./digitalMarketing.html" class="service-item">Web Push & SMS Marketing</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </li>
+          <li><a href="./careers.html">Careers</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
 
-            <!-- Desktop Navigation -->
-            <div class="desktop-nav" id="desktop-nav">
-                <ul class="nav-links">
-                    <li><a href="./about.html">Who We Are</a></li>
-                    <li class="dropdown-parent">
-                        <a href="#" class="dropdown-trigger">What We Do</a>
-                        <div class="mega-dropdown">
-                            <div class="mega-dropdown-container">
-                                <div class="dropdown-categories">
-                                    <a href="./Overview.html" class="web-overview">Overview</a>
-                                    <a href="#" class="category-item active" data-category="website-design">Web
-                                        Design</a>
-                                    <a href="#" class="category-item" data-category="website-development">Web
-                                        Development</a>
-                                    <a href="#" class="category-item" data-category="mobile-solutions">Mobile
-                                        Solutions</a>
-                                    <a href="#" class="category-item" data-category="digital-marketing">Digital
-                                        Marketing</a>
-                                </div>
-                                <div class="dropdown-services" id="website-design">
-                                    <div class="services-title">Web Design</div>
-                                    <div class="services-grid">
-                                        <a href="./webDesign.html" class="service-item">Responsive Design 3.0</a>
-                                        <a href="./webDesign.html" class="service-item">CSS Frameworks & Utilities</a>
-                                        <a href="./webDesign.html" class="service-item">Component-Based UI Libraries</a>
-                                        <a href="./webDesign.html" class="service-item">Next-Gen JavaScript Tooling</a>
-                                        <a href="./webDesign.html" class="service-item">Headless CMS</a>
-                                        <a href="./webDesign.html" class="service-item">API-First Development</a>
-                                        <a href="./webDesign.html" class="service-item">AI in Web Design</a>
-                                        <a href="./webDesign.html" class="service-item">Design Systems & Tokens</a>
-                                        <a href="./webDesign.html" class="service-item">Animation & Interactivity</a>
-                                        <a href="./webDesign.html" class="service-item">Accessibility & Inclusive
-                                            Design</a>
-                                        <a href="./webDesign.html" class="service-item">Performance-First Mindset</a>
-                                        <a href="./webDesign.html" class="service-item">Web 3D and Immersive Design</a>
-                                    </div>
-                                </div>
-                                <div class="dropdown-services" id="website-development">
-                                    <div class="services-title">Web Development</div>
-                                    <div class="services-grid">
-                                        <a href="./webDevlop.html" class="service-item">Frontend Frameworks &
-                                            Libraries</a>
-                                        <a href="./webDevlop.html" class="service-item">JavaScript & TypeScript</a>
-                                        <a href="./webDevlop.html" class="service-item">Build Tools & Bundlers</a>
-                                        <a href="./webDevlop.html" class="service-item">Backend Frameworks &
-                                            Runtimes</a>
-                                        <a href="./webDevlop.html" class="service-item">Full-Stack Frameworks</a>
-                                        <a href="./webDevlop.html" class="service-item">API Technologies</a>
-                                        <a href="./webDevlop.html" class="service-item">Database & ORM Tools</a>
-                                        <a href="./webDevlop.html" class="service-item">Authentication & Security</a>
-                                        <a href="./webDevlop.html" class="service-item">DevOps & Deployment</a>
-                                        <a href="./webDevlop.html" class="service-item">Hosting & Edge Platforms</a>
-                                        <a href="./webDevlop.html" class="service-item">Realtime & Messaging</a>
-                                        <a href="./webDevlop.html" class="service-item">AI Integration in
-                                            Development</a>
-                                    </div>
-                                </div>
-                                <div class="dropdown-services" id="mobile-solutions">
-                                    <div class="services-title">Mobile App Development</div>
-                                    <div class="services-grid">
-                                        <a href="./mobilesolution.html" class="service-item">Cross-Platform
-                                            Frameworks</a>
-                                        <a href="./mobilesolution.html" class="service-item">Native Development
-                                            Technologies</a>
-                                        <a href="./mobilesolution.html" class="service-item">Hybrid App Technologies</a>
-                                        <a href="./mobilesolution.html" class="service-item">Backend-as-a-Service
-                                            (BaaS)</a>
-                                        <a href="./mobilesolution.html" class="service-item">State Management &
-                                            Architecture</a>
-                                        <a href="./mobilesolution.html" class="service-item">UI/UX & Animation
-                                            Libraries</a>
-                                        <a href="./mobilesolution.html" class="service-item">Testing & CI/CD Tools</a>
-                                        <a href="./mobilesolution.html" class="service-item">Push Notifications &
-                                            Messaging</a>
-                                        <a href="./mobilesolution.html" class="service-item">Offline & Sync Support</a>
-                                        <a href="./mobilesolution.html" class="service-item">Mobile App Deployment</a>
-                                        <a href="./mobilesolution.html" class="service-item">Security &
-                                            Authentication</a>
-                                        <a href="./mobilesolution.html" class="service-item">AI & ML in Mobile Apps</a>
-                                    </div>
-                                </div>
-                                <div class="dropdown-services" id="digital-marketing">
-                                    <div class="services-title">Digital Marketing</div>
-                                    <div class="services-grid">
-                                        <a href="./digitalMarketing.html" class="service-item">AI-Powered Marketing</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Marketing Automation
-                                            Platforms</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Search Engine
-                                            Optimization
-                                            Tools</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Social Media Marketing
-                                            Platforms</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Performance Analytics &
-                                            Data</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Content Management &
-                                            Blogging</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Email Marketing &
-                                            Retargeting</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Search Engine Marketing
-                                            (SEM)</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Influencer & Affiliate
-                                            Marketing Tools</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Customer Relationship
-                                            Management</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Voice & Visual Search
-                                            Optimization</a>
-                                        <a href="./digitalMarketing.html" class="service-item">Web Push & SMS
-                                            Marketing</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="./careers.html">Careers</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
+
+
+        <div class="navbar-right">
+          <div class="search-container">
+            <div class="search-dropdown" id="search-dropdown">
+              <input type="text" placeholder="Search..." class="search-input" id="search-input">
+              <!-- <button class="search-close" id="search-close">×</button> -->
+            </div>
+            <button class="search-toggle" id="search-toggle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+          <a href="https://wa.me/919884492652" class="connect-button">Let's connect</a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="mobile-nav-responce">
+        <a class="gettouch-btn-mobile" href="https://wa.me/919884492652">
+          Let's Connect
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-header">
+        <div class="mobile-logo">
+          <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo" loading="eager">
+          <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="navbar-logo-white" loading="eager">
+        </div>
+        <button class="mobile-close" id="mobile-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="mobile-nav-content">
+        <!-- Mobile Search -->
+        <div class="mobile-search">
+          <div class="mobile-search-box">
+            <input type="text" placeholder="Search services..." class="mobile-search-input">
+            <button class="mobile-search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Items -->
+        <ul class="mobile-nav-links">
+          <li><a href="./about.html" class="mobile-nav-link">Who We Are</a></li>
+
+          <li class="mobile-dropdown">
+            <button class="mobile-dropdown-trigger">
+              What We Do
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="mobile-dropdown-content">
+              <div class="mobile-service-category">
+                <a href="./Overview.html" id="overview">Overview</a>
+              </div>
+              <div class="mobile-service-category">
+                <div class="mobile-nav-subhead-1">
+                  <h4>Web Design</h4>
+                  <i class="fa-solid fa-plus" class="icons-1"></i>
+                </div>
+                <ul class="mobile-nav-submenu-1">
+                  <li><a href="./webDesign.html">Responsive Design 3.0</a></li>
+                  <li><a href="./webDesign.html">CSS Frameworks</a></li>
+                  <li><a href="./webDesign.html">UI Libraries</a></li>
+                  <li><a href="./webDesign.html">JavaScript Tooling</a></li>
+                  <li><a href="./webDesign.html">AI in Web Design</a></li>
                 </ul>
-
-
-
-                <div class="navbar-right">
-                    <div class="search-container">
-                        <div class="search-dropdown" id="search-dropdown">
-                            <input type="text" placeholder="Search..." class="search-input" id="search-input">
-                            <!-- <button class="search-close" id="search-close">×</button> -->
-                        </div>
-                        <button class="search-toggle" id="search-toggle">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <a href="https://wa.me/919884492652" class="connect-button">Let's connect</a>
+              </div>
+              <div class="mobile-service-category">
+                <div class="mobile-nav-subhead-2">
+                  <h4>Web Development</h4>
+                  <i class="fa-solid fa-plus" class="icons-2"></i>
                 </div>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="mobile-nav-responce">
-                <a class="gettouch-btn-mobile" href="https://wa.me/919884492652">
-                    Let's Connect
-                </a>
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Overlay -->
-
-        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-
-        <!-- Mobile Navigation -->
-        <div class="mobile-nav" id="mobile-nav">
-            <div class="mobile-nav-header">
-                <div class="mobile-logo">
-                    <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies">
-                </div>
-                <button class="mobile-close" id="mobile-close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <div class="mobile-nav-content">
-                <!-- Mobile Search -->
-                <div class="mobile-search">
-                    <div class="mobile-search-box">
-                        <input type="text" placeholder="Search services..." class="mobile-search-input">
-                        <button class="mobile-search-btn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Items -->
-                <ul class="mobile-nav-links">
-                    <li><a href="./about.html" class="mobile-nav-link">Who We Are</a></li>
-
-                    <li class="mobile-dropdown">
-                        <button class="mobile-dropdown-trigger">
-                            What We Do
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="mobile-dropdown-content">
-                            <div class="mobile-service-category">
-                                <a href="./Overview.html" id="overview">Overview</a>
-                            </div>
-                            <div class="mobile-service-category">
-                                <div class="mobile-nav-subhead-1">
-                                    <h4>Web Design</h4>
-                                    <i class="fa-solid fa-plus" class="icons-1"></i>
-                                </div>
-                                <ul class="mobile-nav-submenu-1">
-                                    <li><a href="./webDesign.html">Responsive Design 3.0</a></li>
-                                    <li><a href="./webDesign.html">CSS Frameworks</a></li>
-                                    <li><a href="./webDesign.html">UI Libraries</a></li>
-                                    <li><a href="./webDesign.html">JavaScript Tooling</a></li>
-                                    <li><a href="./webDesign.html">AI in Web Design</a></li>
-                                </ul>
-                            </div>
-                            <div class="mobile-service-category">
-                                <div class="mobile-nav-subhead-2">
-                                    <h4>Web Development</h4>
-                                    <i class="fa-solid fa-plus" class="icons-2"></i>
-                                </div>
-                                <ul class="mobile-nav-submenu-2">
-                                    <li><a href="./webDevlop.html">Frontend Frameworks</a></li>
-                                    <li><a href="./webDevlop.html">JavaScript & TypeScript</a></li>
-                                    <li><a href="./webDevlop.html">Build Tools</a></li>
-                                    <li><a href="./webDevlop.html">Backend Frameworks</a></li>
-                                    <li><a href="./webDevlop.html">API Technologies</a></li>
-                                </ul>
-                            </div>
-                            <div class="mobile-service-category">
-                                <div class="mobile-nav-subhead-3">
-                                    <h4>Mobile Solutions</h4>
-                                    <i class="fa-solid fa-plus" class="icons-3"></i>
-                                </div>
-                                <ul class="mobile-nav-submenu-3">
-                                    <li><a href="./mobilesolution.html">Cross-Platform Apps</a></li>
-                                    <li><a href="./mobilesolution.html">Native Development</a></li>
-                                    <li><a href="./mobilesolution.html">Hybrid Technologies</a></li>
-                                    <li><a href="./mobilesolution.html">Mobile Security</a></li>
-                                    <li><a href="./mobilesolution.html">AR/VR Technologies</a></li>
-                                </ul>
-                            </div>
-                            <div class="mobile-service-category">
-                                <div class="mobile-nav-subhead-4">
-                                    <h4>Digital Marketing</h4>
-                                    <i class="fa-solid fa-plus" class="icons-4"></i>
-                                </div>
-                                <ul class="mobile-nav-submenu-4">
-                                    <li><a href="./digitalMarketing.html">AI-Powered Marketing</a></li>
-                                    <li><a href="./digitalMarketing.html">SEO Tools</a></li>
-                                    <li><a href="./digitalMarketing.html">Social Media Marketing</a></li>
-                                    <li><a href="./digitalMarketing.html">Email Marketing</a></li>
-                                    <li><a href="./digitalMarketing.html">Analytics & Data</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li><a href="./careers.html" class="mobile-nav-link">Careers</a></li>
-                    <li><a href="./contact.html" class="mobile-nav-link">Contact Us</a></li>
+                <ul class="mobile-nav-submenu-2">
+                  <li><a href="./webDevlop.html">Frontend Frameworks</a></li>
+                  <li><a href="./webDevlop.html">JavaScript & TypeScript</a></li>
+                  <li><a href="./webDevlop.html">Build Tools</a></li>
+                  <li><a href="./webDevlop.html">Backend Frameworks</a></li>
+                  <li><a href="./webDevlop.html">API Technologies</a></li>
                 </ul>
-
-                <!-- Mobile CTA -->
-                <div class="mobile-cta">
-                    <a href="https://wa.me/919884492652" class="mobile-connect-btn">
-                        <i class="fab fa-whatsapp"></i>
-                        Let's Connect on WhatsApp
-                    </a>
+              </div>
+              <div class="mobile-service-category">
+                <div class="mobile-nav-subhead-3">
+                  <h4>Mobile Solutions</h4>
+                  <i class="fa-solid fa-plus" class="icons-3"></i>
                 </div>
-
-                <!-- Mobile Social Links -->
-                <div class="mobile-social">
-                    <a href="#" class="mobile-social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="mobile-social-link"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="mobile-social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="mobile-social-link"><i class="fab fa-instagram"></i></a>
+                <ul class="mobile-nav-submenu-3">
+                  <li><a href="./mobilesolution.html">Cross-Platform Apps</a></li>
+                  <li><a href="./mobilesolution.html">Native Development</a></li>
+                  <li><a href="./mobilesolution.html">Hybrid Technologies</a></li>
+                  <li><a href="./mobilesolution.html">Mobile Security</a></li>
+                  <li><a href="./mobilesolution.html">AR/VR Technologies</a></li>
+                </ul>
+              </div>
+              <div class="mobile-service-category">
+                <div class="mobile-nav-subhead-4">
+                  <h4>Digital Marketing</h4>
+                  <i class="fa-solid fa-plus" class="icons-4"></i>
                 </div>
+                <ul class="mobile-nav-submenu-4">
+                  <li><a href="./digitalMarketing.html">AI-Powered Marketing</a></li>
+                  <li><a href="./digitalMarketing.html">SEO Tools</a></li>
+                  <li><a href="./digitalMarketing.html">Social Media Marketing</a></li>
+                  <li><a href="./digitalMarketing.html">Email Marketing</a></li>
+                  <li><a href="./digitalMarketing.html">Analytics & Data</a></li>
+                </ul>
+              </div>
             </div>
-        </div>
-    </nav>
+          </li>
 
-    <!-- main -->
-    <main>
-        <div class="hero-section">
-            <div class="container">
-                <div class="row align-items-center min-vh-100 g-0">
-                    <div class="col-lg-6 d-flex justify-content-end p-0">
-                        <div class="video-container">
-                            <video class="video-element" id="mainVideo" autoplay muted loop>
-                                <source src="./Src/Assets/Career.mp4" type="video/mp4">
-                                <source src="./Src/Assets/Career.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <!-- <div class="controls">
-                            <div class="play-pause-btn" onclick="togglePlay()">
-                                <i class="fas fa-pause" id="playIcon"></i>
-                            </div>
-                            <div class="sound-btn" onclick="toggleSound()">
-                                <i class="fas fa-volume-mute" id="soundIcon"></i>
-                            </div>
-                        </div> -->
-                        </div>
-                    </div>
+          <li><a href="./careers.html" class="mobile-nav-link">Careers</a></li>
+          <li><a href="./contact.html" class="mobile-nav-link">Contact Us</a></li>
+        </ul>
 
-                    <div class="col-lg-6 d-flex align-items-center p-0">
-                        <div class="content-section">
-                            <h1 class="main-heading">
-                                Big enough to deliver.
-                                Small enough to care.
-                            </h1>
-
-                            <p>
-                                We're more than just hands on keyboards. We take time to learn everything about your
-                                business: your dreams, hopes, fears, challenges. And together, we find new and inventive
-                                ways to grow your revenue, delight your customers, and solve the problems you face.
-                            </p>
-
-                            <p>
-                                We're not too big that you'll just be a number, and not too small that we can't scale
-                                with you.
-                            </p>
-
-                            <a href="#" class="cts-button">Get to know us</a>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
+        <!-- Mobile CTA -->
+        <div class="mobile-cta">
+          <a href="https://wa.me/919884492652" class="mobile-connect-btn">
+            <i class="fab fa-whatsapp"></i>
+            Let's Connect on WhatsApp
+          </a>
         </div>
 
-        <!-- Services Section -->
-        <div class="services-section">
-            <div class="container px-5">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h2 class="services-heading">
-                            By your side, every step the<br>
-                            product lifecycle
-                        </h2>
-                        <p class="services-description">
-                            From concept to validation. Prototyping to strategy. Acceleration to delivery. We are
-                            your hands-on digital product development and system integration services partner.
-                            We transform your dreams into tailored digital experiences your users will love.
+        <!-- Mobile Social Links -->
+        <div class="mobile-social">
+          <a href="#" class="mobile-social-link"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="mobile-social-link"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="mobile-social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="mobile-social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- main -->
+ <main class="main">
+        <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 g-0">
+                <div class="col-lg-6 d-flex justify-content-end p-0">
+                    <div class="video-container">
+                        <video class="video-element" id="mainVideo" autoplay muted loop>
+                            <source src="./Src/Assets/Career.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 d-flex align-items-center p-0">
+                    <div class="content-section">
+                        <h1 class="main-heading">
+                            Powerful Enough to Deliver.<br>
+                            Personal Enough to Listen.
+                        </h1>
+                        
+                        <p>
+                            We take the time to understand your business inside and out—your goals, challenges, vision, and what keeps you up at night. With that insight, we build smart, scalable software solutions that fuel growth, streamline operations, and elevate your customer experience.
                         </p>
+                        
+                        <p>
+                            We're the right size to give you personal attention without limits—we’re agile enough to move fast, and robust enough to grow with you.
+                        </p>
+                        
+                        <a href="#" class="cts-button">Get to know us</a>
                     </div>
-                </div>
-
-                <div class="row mt-5">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-starburst">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <line x1="50" y1="10" x2="50" y2="90"/>
-                                    <line x1="10" y1="50" x2="90" y2="50"/>
-                                    <line x1="21.7" y1="21.7" x2="78.3" y2="78.3"/>
-                                    <line x1="78.3" y1="21.7" x2="21.7" y2="78.3"/>
-                                    <line x1="35" y1="15" x2="65" y2="85"/>
-                                    <line x1="85" y1="35" x2="15" y2="65"/>
-                                    <line x1="65" y1="15" x2="35" y2="85"/>
-                                    <line x1="15" y1="35" x2="85" y2="65"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title"> Programming Languages</h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-atom">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="50" r="5"/>
-                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(0 50 50)"/>
-                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(60 50 50)"/>
-                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(120 50 50)"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">Web Development </h3>
-                            <!-- <a href="#" class="service-link">
-                           Read more<i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-refresh">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="50" r="30"/>
-                                    <circle cx="50" cy="50" r="20"/>
-                                    <circle cx="50" cy="50" r="10"/>
-                                    <circle cx="50" cy="50" r="35"/>
-                                    <path d="M50,15 L55,25 L45,25 Z"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">Databases Technologies</h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-monitor">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <rect x="20" y="25" width="60" height="40" rx="3"/>
-                                    <line x1="20" y1="75" x2="80" y2="75"/>
-                                    <line x1="35" y1="65" x2="35" y2="75"/>
-                                    <line x1="65" y1="65" x2="65" y2="75"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">Cloud Computing Platforms</h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-circles">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="50" r="8"/>
-                                    <circle cx="50" cy="50" r="16"/>
-                                    <circle cx="50" cy="50" r="24"/>
-                                    <circle cx="50" cy="50" r="32"/>
-                                    <circle cx="50" cy="50" r="40"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">DevOps Tools </h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-network">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="30" r="8"/>
-                                    <circle cx="25" cy="60" r="8"/>
-                                    <circle cx="75" cy="60" r="8"/>
-                                    <circle cx="50" cy="80" r="8"/>
-                                    <line x1="50" y1="38" x2="32" y2="52"/>
-                                    <line x1="50" y1="38" x2="68" y2="52"/>
-                                    <line x1="33" y1="60" x2="42" y2="72"/>
-                                    <line x1="67" y1="60" x2="58" y2="72"/>
-                                    <line x1="50" y1="15" x2="50" y2="5"/>
-                                    <line x1="45" y1="20" x2="35" y2="10"/>
-                                    <line x1="55" y1="20" x2="65" y2="10"/>
-                                    <line x1="40" y1="25" x2="25" y2="15"/>
-                                    <line x1="60" y1="25" x2="75" y2="15"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">Mobile App Development</h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-starburst">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <line x1="50" y1="10" x2="50" y2="90"/>
-                                    <line x1="10" y1="50" x2="90" y2="50"/>
-                                    <line x1="21.7" y1="21.7" x2="78.3" y2="78.3"/>
-                                    <line x1="78.3" y1="21.7" x2="21.7" y2="78.3"/>
-                                    <line x1="35" y1="15" x2="65" y2="85"/>
-                                    <line x1="85" y1="35" x2="15" y2="65"/>
-                                    <line x1="65" y1="15" x2="35" y2="85"/>
-                                    <line x1="15" y1="35" x2="85" y2="65"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">Cybersecurity Technologies</h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-atom">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="50" r="5"/>
-                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(0 50 50)"/>
-                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(60 50 50)"/>
-                                    <ellipse cx="50" cy="50" rx="35" ry="15" transform="rotate(120 50 50)"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title"> E R P Softwares </h3>
-                            <!-- <a href="#" class="service-link">
-                           Read more<i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-refresh">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="50" r="30"/>
-                                    <circle cx="50" cy="50" r="20"/>
-                                    <circle cx="50" cy="50" r="10"/>
-                                    <circle cx="50" cy="50" r="35"/>
-                                    <path d="M50,15 L55,25 L45,25 Z"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title"> Data Analytics </h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-monitor">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <rect x="20" y="25" width="60" height="40" rx="3"/>
-                                    <line x1="20" y1="75" x2="80" y2="75"/>
-                                    <line x1="35" y1="65" x2="35" y2="75"/>
-                                    <line x1="65" y1="65" x2="65" y2="75"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">UI/UX Development</h3>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-circles">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="50" r="8"/>
-                                    <circle cx="50" cy="50" r="16"/>
-                                    <circle cx="50" cy="50" r="24"/>
-                                    <circle cx="50" cy="50" r="32"/>
-                                    <circle cx="50" cy="50" r="40"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">Development Frameworks</h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-network">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="30" r="8"/>
-                                    <circle cx="25" cy="60" r="8"/>
-                                    <circle cx="75" cy="60" r="8"/>
-                                    <circle cx="50" cy="80" r="8"/>
-                                    <line x1="50" y1="38" x2="32" y2="52"/>
-                                    <line x1="50" y1="38" x2="68" y2="52"/>
-                                    <line x1="33" y1="60" x2="42" y2="72"/>
-                                    <line x1="67" y1="60" x2="58" y2="72"/>
-                                    <line x1="50" y1="15" x2="50" y2="5"/>
-                                    <line x1="45" y1="20" x2="35" y2="10"/>
-                                    <line x1="55" y1="20" x2="65" y2="10"/>
-                                    <line x1="40" y1="25" x2="25" y2="15"/>
-                                    <line x1="60" y1="25" x2="75" y2="15"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">Backend Frameworks </h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <!-- <div class="service-icon">
-                            <svg viewBox="0 0 100 100" class="icon-circles">
-                                <g stroke="currentColor" stroke-width="2" fill="none">
-                                    <circle cx="50" cy="50" r="8"/>
-                                    <circle cx="50" cy="50" r="16"/>
-                                    <circle cx="50" cy="50" r="24"/>
-                                    <circle cx="50" cy="50" r="32"/>
-                                    <circle cx="50" cy="50" r="40"/>
-                                </g>
-                            </svg>
-                        </div> -->
-                            <h3 class="service-title">WebAssembly</h3>
-                            <!-- <a href="#" class="service-link">
-                            Read more <i class="fas fa-arrow-right"></i>
-                        </a> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-
-                            <h3 class="service-title">Testing & Automation Tools</h3>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-card">
-                            <h3 class="service-title">Database & ORM Tools</h3>
-
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Stats Section -->
-        <div class="stats-section">
-            <div class="container">
-                <h2 class="stats-heading text-center t mt-5"> Strength in numbers </h2>
-                <div class="row stats-strength">
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="stat-item text-center">
-                            <div class="stat-icon">
-                                <svg viewBox="0 0 100 100" class="icon-star">
-                                    <g stroke="currentColor" stroke-width="2" fill="none">
-                                        <line x1="50" y1="15" x2="50" y2="85" />
-                                        <line x1="15" y1="50" x2="85" y2="50" />
-                                        <line x1="25.8" y1="25.8" x2="74.2" y2="74.2" />
-                                        <line x1="74.2" y1="25.8" x2="25.8" y2="74.2" />
-                                        <line x1="37.5" y1="18.3" x2="62.5" y2="81.7" />
-                                        <line x1="81.7" y1="37.5" x2="18.3" y2="62.5" />
-                                        <line x1="62.5" y1="18.3" x2="37.5" y2="81.7" />
-                                        <line x1="18.3" y1="37.5" x2="81.7" y2="62.5" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="stat-number">150+</div>
-                            <div class="stat-label">Projects launched</div>
-                        </div>
+    <!-- Services Section -->
+    <div class="services-section">
+        <div class="container px-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="services-heading">
+                        With you through every <br>
+                        phase of the product journey
+                    </h2>
+                    <p class="services-description">
+                        Concept. Strategy. Prototype. Launch.<br>
+We’re your dedicated partner in building custom digital products and integrated systems that deliver value—and delight.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Programming Languages</h3>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="stat-item text-center">
-                            <div class="stat-icon">
-                                <svg viewBox="0 0 100 100" class="icon-building">
-                                    <g stroke="currentColor" stroke-width="2" fill="none">
-                                        <path d="M25 75 L25 25 Q25 20 30 20 L70 20 Q75 20 75 25 L75 75" />
-                                        <line x1="15" y1="75" x2="85" y2="75" />
-                                        <line x1="15" y1="80" x2="85" y2="80" />
-                                        <rect x="35" y="35" width="8" height="8" />
-                                        <rect x="57" y="35" width="8" height="8" />
-                                        <rect x="35" y="50" width="8" height="8" />
-                                        <rect x="57" y="50" width="8" height="8" />
-                                        <rect x="46" y="60" width="8" height="15" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="stat-number">80+</div>
-                            <div class="stat-label">Clients trusting us</div>
-                        </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Web Development</h3>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="stat-item text-center">
-                            <div class="stat-icon">
-                                <svg viewBox="0 0 100 100" class="icon-atom-alt">
-                                    <g stroke="currentColor" stroke-width="2" fill="none">
-                                        <circle cx="50" cy="50" r="6" />
-                                        <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(0 50 50)" />
-                                        <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(60 50 50)" />
-                                        <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(120 50 50)" />
-                                        <circle cx="35" cy="35" r="3" />
-                                        <circle cx="65" cy="35" r="3" />
-                                        <circle cx="65" cy="65" r="3" />
-                                        <circle cx="35" cy="65" r="3" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="stat-number">90+</div>
-                            <div class="stat-label">Expert software engineers</div>
-                        </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Database Technologies</h3>
                     </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Cloud Computing Platforms</h3>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">DevOps Tools</h3>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Mobile App Development</h3>
+                    </div>
+                </div>
 
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="stat-item text-center">
-                            <div class="stat-icon">
-                                <svg viewBox="0 0 100 100" class="icon-sun">
-                                    <g stroke="currentColor" stroke-width="2" fill="none">
-                                        <circle cx="50" cy="50" r="15" />
-                                        <line x1="50" y1="15" x2="50" y2="25" />
-                                        <line x1="50" y1="75" x2="50" y2="85" />
-                                        <line x1="85" y1="50" x2="75" y2="50" />
-                                        <line x1="25" y1="50" x2="15" y2="50" />
-                                        <line x1="73.5" y1="26.5" x2="67.1" y2="32.9" />
-                                        <line x1="32.9" y1="67.1" x2="26.5" y2="73.5" />
-                                        <line x1="73.5" y1="73.5" x2="67.1" y2="67.1" />
-                                        <line x1="32.9" y1="32.9" x2="26.5" y2="26.5" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Years in the market</div>
-                        </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Cybersecurity Technologies</h3>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">ERP Software</h3>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Data Analytics</h3>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">UI/UX Development</h3>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Development Frameworks</h3>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Backend Frameworks</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">WebAssembly</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Testing & Automation Tools</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3 class="service-title">Database & ORM Tools</h3>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Tech Stack Section -->
-            <div class="tech-stack-section">
-                <div class="container">
-                    <h1 class="tech-heading underline">Our tech stack. Tailored to yours.</h1>
-
-                    <div class="tech-grid">
-                        <!-- Row 1 -->
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/net-core.png" alt=".net-image" class="tech-img">
-                            </div>
-                            <div class="tech-label">.NET</div>
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="container">
+            <h2 class="stats-heading text-center mt-5">Strength in numbers</h2>
+            <div class="row stats-strength">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 100 100" class="icon-star">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <line x1="50" y1="15" x2="50" y2="85"/>
+                                    <line x1="15" y1="50" x2="85" y2="50"/>
+                                    <line x1="25.8" y1="25.8" x2="74.2" y2="74.2"/>
+                                    <line x1="74.2" y1="25.8" x2="25.8" y2="74.2"/>
+                                </g>
+                            </svg>
                         </div>
-
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/java.png" alt="java-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Java</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/python-icon.png" alt=".net-image" class="tech-img">
-                            </div>
-                            <div class="tech-label">Python</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/node-js.png" alt=".net-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Node.js</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/html.png" alt="html-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">HTML</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/css.png" alt="css-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">CSS</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/react.png" alt="react-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">React</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/angular.png" alt="angular-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Angular</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/vue-js.png" alt="vue-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Vue.js</div>
-                        </div>
-
-                        <!-- Row 2 -->
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/php 1.png" alt="php-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Php</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/flutter.png" alt="flutter-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Flutter</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/android.png" alt="android-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Android</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/ios.png" alt="ios-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">iOS</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/kotlin.png" alt="kotlin-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Kotlin</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/swift.png" alt="swift-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Swift</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/azure-2.png" alt="azure-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Azure</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/aws-2.png" alt="aws-image" class="tech-img">
-
-                            </div>
-                            <div class="tech-label">AWS</div>
-                        </div>
-
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <img src="./Src/Assets/tech icons/google-cloud-1.png" alt="google-image"
-                                    class="tech-img">
-
-                            </div>
-                            <div class="tech-label">Google Cloud</div>
-                        </div>
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Projects launched</div>
                     </div>
                 </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 100 100" class="icon-building">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M25 75 L25 25 Q25 20 30 20 L70 20 Q75 20 75 25 L75 75"/>
+                                    <line x1="15" y1="75" x2="85" y2="75"/>
+                                    <line x1="15" y1="80" x2="85" y2="80"/>
+                                    <rect x="35" y="35" width="8" height="8"/>
+                                    <rect x="57" y="35" width="8" height="8"/>
+                                    <rect x="35" y="50" width="8" height="8"/>
+                                    <rect x="57" y="50" width="8" height="8"/>
+                                    <rect x="46" y="60" width="8" height="15"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-number">80+</div>
+                        <div class="stat-label">Clients trusting us</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 100 100" class="icon-atom-alt">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="6"/>
+                                    <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(0 50 50)"/>
+                                    <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(60 50 50)"/>
+                                    <ellipse cx="50" cy="50" rx="30" ry="12" transform="rotate(120 50 50)"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-number">90+</div>
+                        <div class="stat-label">Expert software engineers</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item text-center">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 100 100" class="icon-sun">
+                                <g stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="50" cy="50" r="15"/>
+                                    <line x1="50" y1="15" x2="50" y2="25"/>
+                                    <line x1="50" y1="75" x2="50" y2="85"/>
+                                    <line x1="85" y1="50" x2="75" y2="50"/>
+                                    <line x1="25" y1="50" x2="15" y2="50"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years in the market</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <section class="products-section">
-                    <div class="container">
-                        <h2 class="section-title underline">Our Experties</h2>
+    <!-- Tech Stack Section -->
+    <div class="tech-stack-section">
+        <div class="container">
+            <h1 class="tech-heading ">Our tech stack. Tailored to yours.</h1>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/net-core.png" alt=".NET" class="tech-img">
+                    </div>
+                    <div class="tech-label">.NET</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/java.png" alt="Java" class="tech-img">
+                    </div>
+                    <div class="tech-label">Java</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/python-icon.png" alt="Python" class="tech-img">
+                    </div>
+                    <div class="tech-label">Python</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/node-js.png" alt="Node.js" class="tech-img">
+                    </div>
+                    <div class="tech-label">Node.js</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/html.png" alt="HTML" class="tech-img">
+                    </div>
+                    <div class="tech-label">HTML</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/css.png" alt="CSS" class="tech-img">
+                    </div>
+                    <div class="tech-label">CSS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/react.png" alt="React" class="tech-img">
+                    </div>
+                    <div class="tech-label">React</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/angular.png" alt="Angular" class="tech-img">
+                    </div>
+                    <div class="tech-label">Angular</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/vue-js.png" alt="Vue.js" class="tech-img">
+                    </div>
+                    <div class="tech-label">Vue.js</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/php 1.png" alt="PHP" class="tech-img">
+                    </div>
+                    <div class="tech-label">PHP</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/flutter.png" alt="Flutter" class="tech-img">
+                    </div>
+                    <div class="tech-label">Flutter</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/android.png" alt="Android" class="tech-img">
+                    </div>
+                    <div class="tech-label">Android</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/ios.png" alt="iOS" class="tech-img">
+                    </div>
+                    <div class="tech-label">iOS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/kotlin.png" alt="Kotlin" class="tech-img">
+                    </div>
+                    <div class="tech-label">Kotlin</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/swift.png" alt="Swift" class="tech-img">
+                    </div>
+                    <div class="tech-label">Swift</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/azure-2.png" alt="Azure" class="tech-img">
+                    </div>
+                    <div class="tech-label">Azure</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/aws-2.png" alt="AWS" class="tech-img">
+                    </div>
+                    <div class="tech-label">AWS</div>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <img src="./Src/Assets/tech icons/google-cloud-1.png" alt="Google Cloud" class="tech-img">
+                    </div>
+                    <div class="tech-label">Google Cloud</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        <p class="section-description">
-                            With years of hands-on experience, we know what works, and what doesn't. We not only
-                            understand your unique challenges, we anticipate them and deliver innovative solutions to
-                            speed up your digital development and time to market, keeping you ahead of the curve.</p>
-
-                        <div class=" products row g-4">
-                            <!-- Vega Flywheel -->
-                            <div class="collage-container">
-                                <div class="testimonials-container">
-                                    <!-- Testimonial 1 -->
-                                    <div class="testimonial-card">
-                                        <div>
-                                            <p class="user-name">Pharmacy Billing Software</p>
-                                        </div>
-                                        <div class="stars">★★★★★</div>
-                                        <p class="testimonial-text">
-                                            Enables pharmacies to manage sales, inventory, expiry alerts, and
-                                            GST-compliant billing.</p>
-                                        <div class="user-info">
-                                            <img src="./Src/Assets/experties/hospital.svg" class="user-avatar"
-                                                alt="hospital-img">
-                                        </div>
-                                    </div>
+    <!-- Expertise Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title ">Our Expertise</h2>
+            
+           <p class="section-description">
+                With years of hands-on experience, we know what works, and what doesn't. We not only understand your unique challenges, we anticipate them and deliver innovative solutions to speed up your digital development and time to market, keeping you ahead of the curve.</p>
+            
+            <div class=" products row g-4">
+                <!-- Vega Flywheel -->
+                <div class="collage-container">
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div>
+                        <p class="user-name">Pharmacy Billing Software</p>
+                    </div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">
+Enables pharmacies to manage sales, inventory, expiry alerts, and GST-compliant billing.</p>
+                <div class="user-info">
+                    <img src="./Src/Assets/experties/hospital.svg" 
+                         class="user-avatar" alt="hospital-img">
+                </div>
+            </div>
 
                                     <!-- Testimonial 2 -->
                                     <div class="testimonial-card">
@@ -1246,15 +980,14 @@
                         </div>
                 </section>
 
-            </div>
-
-
-            <div class="flow-section">
-                <div class="flow-img-section">
-                    <h1 class="services-heading underline">Process to join our team</h1>
-                    <div class="flow-image-container"></div>
-                </div>
-            </div>
+    <!-- Process Section -->
+    <div class="flow-section">
+        <div class="flow-img-section">
+            <h1 class="flow-heading ">Process to join our team</h1>
+            <div class="flow-image-container"></div>
+        </div>
+    </div>
+</main>
 
 
             <footer class="footer">
@@ -1265,88 +998,77 @@
                             <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
                             <div class="footer-contact">
                                 <div class="contact-item">
-                                    <i class="fas fa-phone"></i>
+                                    <i class="bi bi-telephone"></i>
                                     <span>+91 98844 92652</span>
                                 </div>
                                 <div class="contact-item">
-                                    <i class="fas fa-envelope"></i>
+                                    <i class="bi bi-envelope"></i>
                                     <span>info@yohotechnologies.com</span>
                                 </div>
                                 <div class="contact-item">
-                                    <i class="fas fa-map-marker-alt"></i>
+                                    <i class="fbi bi-geo-alt"></i>
                                     <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai,
-                                        Chennai - 600117.
-                                        (Near:ESAF BANK)</span>
+                                        Chennai -
+                                        600117.
+                                    </span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="footer-links">
-                            <div class="footer-links-column">
-                                <h3>Company</h3>
-                                <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="about.html">Leadership</a></li>
-                                    <li><a href="careers.html">Careers</a></li>
-                                    <li><a href="about.html">News & Events</a></li>
-                                    <li><a href="about.html">Awards & Recognition</a></li>
-                                    <li><a href="about.html">Investor Relations</a></li>
-                                </ul>
+                            <div class="footer-links-row footer-links-top">
+                                <div class="footer-links-column">
+                                    <h3>Company</h3>
+                                    <ul>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="about.html">Leadership</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                        <li><a href="about.html">News & Events</a></li>
+                                        <li><a href="about.html">Awards & Recognition</a></li>
+                                        <li><a href="about.html">Investor Relations</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="footer-links-column">
+                                    <h3>Services</h3>
+                                    <ul>
+                                        <li><a href="Overview.html">E-Commerce Solutions</a></li>
+                                        <li><a href="Overview.html">Supply Chain Management</a></li>
+                                        <li><a href="Overview.html">Data Analytics</a></li>
+                                        <li><a href="Overview.html">Cloud Services</a></li>
+                                        <li><a href="Overview.html">AI & Machine Learning</a></li>
+                                        <li><a href="Overview.html">Digital Consulting</a></li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            <div class="footer-links-column">
-                                <h3>Services</h3>
-                                <ul>
-                                    <li><a href="services.html">E-Commerce Solutions</a></li>
-                                    <li><a href="services.html">Supply Chain Management</a></li>
-                                    <li><a href="services.html">Data Analytics</a></li>
-                                    <li><a href="services.html">Cloud Services</a></li>
-                                    <li><a href="services.html">AI & Machine Learning</a></li>
-                                    <li><a href="services.html">Digital Consulting</a></li>
-                                </ul>
-                            </div>
+                            <div class="footer-links-row footer-links-bottom">
+                                <div class="footer-links-column">
+                                    <h3>Industries</h3>
+                                    <ul>
+                                        <li><a href="Overview.html">Retail & Consumer</a></li>
+                                        <li><a href="Overview.html">Healthcare</a></li>
+                                        <li><a href="Overview.html">Financial Services</a></li>
+                                        <li><a href="Overview.html">Manufacturing</a></li>
+                                        <li><a href="Overview.html">Government</a></li>
+                                        <li><a href="Overview.html">Education</a></li>
+                                    </ul>
+                                </div>
 
-                            <div class="footer-links-column">
-                                <h3>Industries</h3>
-                                <ul>
-                                    <li><a href="services.html">Retail & Consumer</a></li>
-                                    <li><a href="services.html">Healthcare</a></li>
-                                    <li><a href="services.html">Financial Services</a></li>
-                                    <li><a href="services.html">Manufacturing</a></li>
-                                    <li><a href="services.html">Government</a></li>
-                                    <li><a href="services.html">Education</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="footer-links-column">
-                                <h3>Resources</h3>
-                                <ul>
-                                    <li><a href="about.html">Blog</a></li>
-                                    <li><a href="about.html">Case Studies</a></li>
-                                    <li><a href="about.html">Whitepapers</a></li>
-                                    <li><a href="about.html">Documentation</a></li>
-                                    <li><a href="contact.html">Support Center</a></li>
-                                    <li><a href="about.html">Training & Certification</a></li>
-                                </ul>
+                                <div class="footer-links-column">
+                                    <h3>Resources</h3>
+                                    <ul>
+                                        <li><a href="about.html">Blog</a></li>
+                                        <li><a href="about.html">Case Studies</a></li>
+                                        <li><a href="about.html">Whitepapers</a></li>
+                                        <li><a href="about.html">Documentation</a></li>
+                                        <li><a href="contact.html">Support Center</a></li>
+                                        <li><a href="about.html">Training & Certification</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Newsletter Subscription -->
-                    <!-- <div class="footer-newsletter">
-        <div class="newsletter-content">
-          <h3>Stay Updated</h3>
-          <p>Subscribe to our newsletter for the latest insights and technology trends</p>
-        </div>
-        <div class="newsletter-form">
-          <form id="newsletter-form">
-            <div class="input-group">
-              <input type="email" placeholder="Enter your email address" required>
-              <button type="submit">Subscribe</button>
-            </div>
-          </form>
-        </div>
-      </div> -->
 
                     <!-- Footer Bottom Section -->
                     <div class="footer-bottom">
@@ -1367,57 +1089,61 @@
                             </div>
                         </div>
 
-                        <div class="footer-bottom-right">
-                            <div class="social-links">
-                                <a href="#" aria-label="LinkedIn" class="social-linkedin">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" aria-label="Twitter" class="social-twitter">
-                                    <i class="fab fa-x-twitter"></i>
-                                </a>
-                                <a href="#" aria-label="Facebook" class="social-facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" aria-label="YouTube" class="social-youtube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" aria-label="Instagram" class="social-instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="Src/JS/Home.js"></script>
-            <!-- <script src="Src/JS/MobileNav.js"></script> -->
-            <script src="Src/JS/ActivePage.js"></script>
-            <script src="Src/JS/Overview.js"></script>
-            <script src="Src/JS/Overview.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="Src/Navbar/navbar.js"></script>
-            <script src="Src/JS/dropdown.js"></script>
-            <script src="Src/JS/search.js"></script>
-            <script>
-                // Ensure navbar stays fixed
-                document.addEventListener('DOMContentLoaded', function () {
-                    const navbar = document.getElementById('navbar');
-                    const colorBar = document.querySelector('.color-bar');
-                    if (navbar) {
-                        navbar.style.position = 'fixed';
-                        navbar.style.top = '4px';
-                        navbar.style.zIndex = '1001';
-                    }
-                    if (colorBar) {
-                        colorBar.style.position = 'fixed';
-                        colorBar.style.top = '0';
-                        colorBar.style.zIndex = '1002';
-                        colorBar.style.opacity = '1';
-                        colorBar.classList.remove('hidden');
-                    }
-                });
-            </script>
+        <div class="footer-bottom-right">
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="social-twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Src/JS/Home.js"></script>
+  <script src="Src/JS/Index.js"></script>
+  <script src="Src/JS/MobileNav.js"></script>
+  <script src="Src/JS/Overview.js"></script>
+  <script src="Src/JS/ActivePage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Src/Navbar/navbar.js"></script>
+  <script src="Src/JS/dropdown.js"></script>
+  <script src="Src/JS/search.js"></script>
+  
+
+
+    <!-- // Ensure navbar stays fixed -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbar = document.getElementById('navbar');
+      const colorBar = document.querySelector('.color-bar');
+      if (navbar) {
+        navbar.style.position = 'fixed';
+        navbar.style.top = '4px';
+        navbar.style.zIndex = '1001';
+      }
+      if (colorBar) {
+        colorBar.style.position = 'fixed';
+        colorBar.style.top = '0';
+        colorBar.style.zIndex = '1002';
+        colorBar.style.opacity = '1';
+        colorBar.classList.remove('hidden');
+      }
+    });
+  </script>
             <script>
                 // Loading screen
                 document.addEventListener('DOMContentLoaded', function () {
