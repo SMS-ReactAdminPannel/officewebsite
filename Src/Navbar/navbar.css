@@ -313,7 +313,7 @@
   }
   
   /* Search Styles */
-  .search-container {
+  .navbarsearch-container{
     position: relative;
     display: flex;
     flex-direction: row;
