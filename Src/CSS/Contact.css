@@ -57,7 +57,7 @@ body {
 
 .custom-form .form-control::placeholder,
 .custom-form textarea::placeholder {
-  color: #ccc; 
+  color: #8a8787; 
 }
 
 .custom-form .form-control:focus,

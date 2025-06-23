@@ -1,4 +1,3 @@
-/* Walmart Global Tech Hero Section */
 
 .hero-section {
   height: 110vh;
@@ -256,9 +255,7 @@
 
 .hero-code-text .highlight {
  
-  background: linear-gradient(90deg, #15de79, #3e90de);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+color: #01d871 ;
 }
 
 .hero-title {
