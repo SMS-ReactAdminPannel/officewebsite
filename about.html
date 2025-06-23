@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
+ 
 
 
 
@@ -249,28 +250,32 @@
   <!-- Main Content -->
   <main>
     <!-- Who We Are Section -->
-    <section >
-      <div class="container  ">
-        <div class="row align-items-center ">
-          <!-- Left Column: Text -->
-          <div class="col-md-6  slide-section ">
-            <div class="video-content-inner ">
-              <h1 >Who We Are: Empowering Digital Growth with Innovation and Expertise</h1>
-              <p>With over 7 years of excellence, Yoho Technologies is at the forefront of delivering cutting-edge digital solutions.</p>
-              <a href="#our-story" class=" cut">Discover Our Story</a>
-            </div>
-          </div>
+   <section>
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Column: Text with fade from left -->
+      <!-- Left Column: Text -->
+<div class="col-md-6 slide-left">
+  <div class="video-content-inner">
+    <h1>Who We Are: Empowering Digital Growth with Innovation and Expertise</h1>
+    <p>With over 7 years of excellence, Yoho Technologies is at the forefront of delivering cutting-edge digital solutions.</p>
+    <a href="#our-story" class="cut">Discover Our Story</a>
+  </div>
+</div>
 
-          <!-- Right Column: Video -->
-          <div class="col-md-6 video-wrapper  slide-section">
-            <video autoplay muted loop playsinline>
-              <source src="Src/Assets/About bg video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- Right Column: Video -->
+<div class="col-md-6 video-wrapper slide-right">
+  <video autoplay muted loop playsinline>
+    <source src="Src/Assets/About bg video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Passionate Hero Box Section -->
     <section class="py-5 ">
@@ -293,7 +298,7 @@
         Focused minds. Purposeful tech.
       </p>
 
-      <button class="custom-btn">Get in touch</button>
+      <button class="cut">Get in touch</button>
       <img src="Src/Assets/Frame 284.png" alt="Circles" class="pay">
     </div>
 
@@ -832,6 +837,8 @@ The user interface is smooth, intuitive, and visually appealing, while the backe
 
   document.querySelectorAll('.slide-section').forEach(el => observer.observe(el));
 </script>
+
+
 
   </main>
 
