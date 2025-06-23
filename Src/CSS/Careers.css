@@ -6,6 +6,12 @@
   --stat-bg: rgba(255, 255, 255, 0.06);
   --font-main: "Inter", sans-serif;
 }
+h1{ 
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
 
 p{
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif !important;
@@ -97,13 +103,15 @@ p{
 }
 
 .career-btn {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: white;
+  color: #000000;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
 }
 
 .career-btn:hover {
-  background-color: #ffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .career-btn2 {
@@ -262,9 +270,17 @@ p{
   margin-bottom: 20px;
 }
 
+input::placeholder {
+  color:white;
+  opacity: 1;  /* Optional: make it fully opaque */
+}
+
+
 .yoho-input-group {
   position: relative;
   flex: 1 1 200px;
+  border-radius: 30px;
+    border: 1px solid white;
   min-width: 200px;
   width: 100%;
 }
@@ -275,8 +291,9 @@ p{
   font-weight: 300;
   padding: 12px 15px 12px 42px;
    font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  background: white;
-  color: black;
+  background:black;
+  border: 1px solid white;
+  color: white;
   border: none;
   border-radius: 30px;
   font-size: 16px;
@@ -291,8 +308,8 @@ p{
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
-  color: #888;
-  font-size: 16px;
+  color: white;
+  font-size: 18px;
   pointer-events: none;
   z-index: 1;
 }
@@ -309,11 +326,13 @@ p{
   padding: 12px 25px;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   border: none;
-  background: #fff;
-  color: #000;
+  background:black;
+  color:white;
   font-weight: 300;
   font-size: 16px;
   border-radius: 10px;
+  /* border-radius: 30px; */
+    border: 1px solid white;
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-flex;
@@ -322,8 +341,8 @@ p{
 }
 
 .yoho-search-btn:hover {
-  background: #00ffcc;
-  color: #000;
+  background:black;
+  color: white;
 }
 
 /* === MOBILE RESPONSIVE FIXES === */
@@ -618,8 +637,9 @@ p{
   color: white;
     font-family: 'Inter', sans-serif;
   border: none;
-  padding: 12px 25px;
+  padding: 8px 15px;
   border-radius: 8px;
+  border: 1px solid white;
   font-size: 15px;
   font-weight: 300;
   cursor: pointer;
