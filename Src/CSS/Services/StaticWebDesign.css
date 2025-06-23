@@ -181,6 +181,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
 }
 
 .tags span {
@@ -190,6 +191,7 @@ body {
   padding: 10px 16px;
   border-radius: 20px;
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .visual-card {
@@ -332,9 +334,16 @@ body {
   }
 
   .buttons {
-    flex-direction: column;
+    justify-content: center;
     gap: 10px;
     align-items: center;
+  }
+  .tags{
+    justify-content: center;
+    align-items: center;
+  }
+  .tags span{
+    text-align: center;
   }
 }
 
