@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/Src/CSS/Services/StaticWebDesign.css" rel="stylesheet">
+    <link href="Src/Navbar/navbar.css" rel="stylesheet">
+    <link rel="stylesheet" href="Src/CSS/Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+    <link href="/Src/CSS/fonts.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <div class="color-bar"></div> -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-container">
+                        <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo"
+                            loading="eager">
+                        <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies" id="navbar-logo-white"
+                            loading="eager">
+                    </div>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="desktop-nav" id="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="./about.html">Who We Are</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#" class="dropdown-trigger">What We Do</a>
+                        <div class="mega-dropdown">
+                            <div class="mega-dropdown-container">
+                                <div class="dropdown-categories">
+                                    <a href="./Overview.html" class="web-overview">Overview</a>
+                                    <a href="#" class="category-item active" data-category="website-design">Web
+                                        Design</a>
+                                    <a href="#" class="category-item" data-category="website-development">Web
+                                        Development</a>
+                                    <a href="#" class="category-item" data-category="mobile-solutions">Mobile
+                                        Solutions</a>
+                                    <a href="#" class="category-item" data-category="digital-marketing">Digital
+                                        Marketing</a>
+                                </div>
+                                <div class="dropdown-services" id="website-design">
+                                    <div class="services-title">Web Design</div>
+                                    <div class="services-grid">
+                                        <a href="./webDesign.html" class="service-item">Responsive Design 3.0</a>
+                                        <a href="./webDesign.html" class="service-item">CSS Frameworks & Utilities</a>
+                                        <a href="./webDesign.html" class="service-item">Component-Based UI Libraries</a>
+                                        <a href="./webDesign.html" class="service-item">Next-Gen JavaScript Tooling</a>
+                                        <a href="./webDesign.html" class="service-item">Headless CMS</a>
+                                        <a href="./webDesign.html" class="service-item">API-First Development</a>
+                                        <a href="./webDesign.html" class="service-item">AI in Web Design</a>
+                                        <a href="./webDesign.html" class="service-item">Design Systems & Tokens</a>
+                                        <a href="./webDesign.html" class="service-item">Animation & Interactivity</a>
+                                        <a href="./webDesign.html" class="service-item">Accessibility & Inclusive
+                                            Design</a>
+                                        <a href="./webDesign.html" class="service-item">Performance-First Mindset</a>
+                                        <a href="./webDesign.html" class="service-item">Web 3D and Immersive Design</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-services" id="website-development">
+                                    <div class="services-title">Web Development</div>
+                                    <div class="services-grid">
+                                        <a href="./webDevlop.html" class="service-item">Frontend Frameworks &
+                                            Libraries</a>
+                                        <a href="./webDevlop.html" class="service-item">JavaScript & TypeScript</a>
+                                        <a href="./webDevlop.html" class="service-item">Build Tools & Bundlers</a>
+                                        <a href="./webDevlop.html" class="service-item">Backend Frameworks &
+                                            Runtimes</a>
+                                        <a href="./webDevlop.html" class="service-item">Full-Stack Frameworks</a>
+                                        <a href="./webDevlop.html" class="service-item">API Technologies</a>
+                                        <a href="./webDevlop.html" class="service-item">Database & ORM Tools</a>
+                                        <a href="./webDevlop.html" class="service-item">Authentication & Security</a>
+                                        <a href="./webDevlop.html" class="service-item">DevOps & Deployment</a>
+                                        <a href="./webDevlop.html" class="service-item">Hosting & Edge Platforms</a>
+                                        <a href="./webDevlop.html" class="service-item">Realtime & Messaging</a>
+                                        <a href="./webDevlop.html" class="service-item">AI Integration in
+                                            Development</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-services" id="mobile-solutions">
+                                    <div class="services-title">Mobile App Development</div>
+                                    <div class="services-grid">
+                                        <a href="./mobilesolution.html" class="service-item">Cross-Platform
+                                            Frameworks</a>
+                                        <a href="./mobilesolution.html" class="service-item">Native Development
+                                            Technologies</a>
+                                        <a href="./mobilesolution.html" class="service-item">Hybrid App Technologies</a>
+                                        <a href="./mobilesolution.html" class="service-item">Backend-as-a-Service
+                                            (BaaS)</a>
+                                        <a href="./mobilesolution.html" class="service-item">State Management &
+                                            Architecture</a>
+                                        <a href="./mobilesolution.html" class="service-item">UI/UX & Animation
+                                            Libraries</a>
+                                        <a href="./mobilesolution.html" class="service-item">Testing & CI/CD Tools</a>
+                                        <a href="./mobilesolution.html" class="service-item">Push Notifications &
+                                            Messaging</a>
+                                        <a href="./mobilesolution.html" class="service-item">Offline & Sync Support</a>
+                                        <a href="./mobilesolution.html" class="service-item">Mobile App Deployment</a>
+                                        <a href="./mobilesolution.html" class="service-item">Security &
+                                            Authentication</a>
+                                        <a href="./mobilesolution.html" class="service-item">AI & ML in Mobile Apps</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-services" id="digital-marketing">
+                                    <div class="services-title">Digital Marketing</div>
+                                    <div class="services-grid">
+                                        <a href="./digitalMarketing.html" class="service-item">AI-Powered Marketing</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Marketing Automation
+                                            Platforms</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Search Engine
+                                            Optimization
+                                            Tools</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Social Media Marketing
+                                            Platforms</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Performance Analytics &
+                                            Data</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Content Management &
+                                            Blogging</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Email Marketing &
+                                            Retargeting</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Search Engine Marketing
+                                            (SEM)</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Influencer & Affiliate
+                                            Marketing Tools</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Customer Relationship
+                                            Management</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Voice & Visual Search
+                                            Optimization</a>
+                                        <a href="./digitalMarketing.html" class="service-item">Web Push & SMS
+                                            Marketing</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="./careers.html">Careers</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+
+
+
+                <div class="navbar-right">
+                    <div class="search-container">
+                        <div class="search-dropdown" id="search-dropdown">
+                            <input type="text" placeholder="Search..." class="search-input" id="search-input">
+                            <!-- <button class="search-close" id="search-close">×</button> -->
+                        </div>
+                        <button class="search-toggle" id="search-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="https://wa.me/919884492652" class="connect-button">Let's connect</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-nav-responce">
+                <a class="gettouch-btn-mobile" href="https://wa.me/919884492652">
+                    Let's Connect
+                </a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="mobile-logo">
+                    <img src="Src/Assets/Yoho White Color.png" alt="Yoho Technologies">
+                </div>
+                <button class="mobile-close" id="mobile-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="mobile-nav-content">
+                <!-- Mobile Search -->
+                <div class="mobile-search">
+                    <div class="mobile-search-box">
+                        <input type="text" placeholder="Search services..." class="mobile-search-input">
+                        <button class="mobile-search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Items -->
+                <ul class="mobile-nav-links">
+                    <li><a href="./about.html" class="mobile-nav-link">Who We Are</a></li>
+
+                    <li class="mobile-dropdown">
+                        <button class="mobile-dropdown-trigger">
+                            What We Do
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="mobile-dropdown-content">
+                            <div class="mobile-service-category">
+                                <a href="./Overview.html" id="overview">Overview</a>
+                            </div>
+                            <div class="mobile-service-category">
+                                <div class="mobile-nav-subhead-1">
+                                    <h4>Web Design</h4>
+                                    <i class="fa-solid fa-plus" class="icons-1"></i>
+                                </div>
+                                <ul class="mobile-nav-submenu-1">
+                                    <li><a href="./webDesign.html">Responsive Design 3.0</a></li>
+                                    <li><a href="./webDesign.html">CSS Frameworks</a></li>
+                                    <li><a href="./webDesign.html">UI Libraries</a></li>
+                                    <li><a href="./webDesign.html">JavaScript Tooling</a></li>
+                                    <li><a href="./webDesign.html">AI in Web Design</a></li>
+                                </ul>
+                            </div>
+                            <div class="mobile-service-category">
+                                <div class="mobile-nav-subhead-2">
+                                    <h4>Web Development</h4>
+                                    <i class="fa-solid fa-plus" class="icons-2"></i>
+                                </div>
+                                <ul class="mobile-nav-submenu-2">
+                                    <li><a href="./webDevlop.html">Frontend Frameworks</a></li>
+                                    <li><a href="./webDevlop.html">JavaScript & TypeScript</a></li>
+                                    <li><a href="./webDevlop.html">Build Tools</a></li>
+                                    <li><a href="./webDevlop.html">Backend Frameworks</a></li>
+                                    <li><a href="./webDevlop.html">API Technologies</a></li>
+                                </ul>
+                            </div>
+                            <div class="mobile-service-category">
+                                <div class="mobile-nav-subhead-3">
+                                    <h4>Mobile Solutions</h4>
+                                    <i class="fa-solid fa-plus" class="icons-3"></i>
+                                </div>
+                                <ul class="mobile-nav-submenu-3">
+                                    <li><a href="./mobilesolution.html">Cross-Platform Apps</a></li>
+                                    <li><a href="./mobilesolution.html">Native Development</a></li>
+                                    <li><a href="./mobilesolution.html">Hybrid Technologies</a></li>
+                                    <li><a href="./mobilesolution.html">Mobile Security</a></li>
+                                    <li><a href="./mobilesolution.html">AR/VR Technologies</a></li>
+                                </ul>
+                            </div>
+                            <div class="mobile-service-category">
+                                <div class="mobile-nav-subhead-4">
+                                    <h4>Digital Marketing</h4>
+                                    <i class="fa-solid fa-plus" class="icons-4"></i>
+                                </div>
+                                <ul class="mobile-nav-submenu-4">
+                                    <li><a href="./digitalMarketing.html">AI-Powered Marketing</a></li>
+                                    <li><a href="./digitalMarketing.html">SEO Tools</a></li>
+                                    <li><a href="./digitalMarketing.html">Social Media Marketing</a></li>
+                                    <li><a href="./digitalMarketing.html">Email Marketing</a></li>
+                                    <li><a href="./digitalMarketing.html">Analytics & Data</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="./careers.html" class="mobile-nav-link">Careers</a></li>
+                    <li><a href="./contact.html" class="mobile-nav-link">Contact Us</a></li>
+                </ul>
+
+                <!-- Mobile CTA -->
+                <div class="mobile-cta">
+                    <a href="https://wa.me/919884492652" class="mobile-connect-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Let's Connect on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile Social Links -->
+                <div class="mobile-social">
+                    <a href="#" class="mobile-social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="mobile-social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="mobile-social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="mobile-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container1">
+        <div class="text-section">
+            <h1 class="heading underline">Web Development</h1>
+            <p>Web development is the process of building and maintaining websites and web applications that run on the
+                internet. It involves everything from creating simple static pages to complex, interactive apps like
+                online stores, social media platforms, and SaaS tools.</p>
+            <div class="buttons">
+                <button>Our work</button>
+                <button>Get in touch</button>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="/Src/Assets/WebStatic/Service3.jpg" alt="UI UX Design Mockup" />
+        </div>
+    </div>
+
+    <!-- SECTION 2: Services -->
+    <div class="section-1">
+        <h1 class="underline"> We offer</h1>
+        <div class="services">
+            <div class="service" data-aos="zoom-out-up">
+                <div class="icon"><img class="desc-img-1" src="/Src/Assets/star.png" alt=""></div>
+                <h2>Build Tools & Bundlers</h2>
+                <p> Tools like Webpack, Vite, and Parcel bundle and optimize code for performance, enabling modern
+                    development workflows with hot reloading, tree-shaking, and asset management.</p>
+            </div>
+            <div class="service" data-aos="zoom-out-up">
+                <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service6.png" alt=""></div>
+                <h2> Frontend Frameworks & Libraries</h2>
+                <p>Frameworks like React, Vue, and Svelte offer reusable components and efficient rendering, making it
+                    easier to build dynamic UIs.</p>
+            </div>
+            <div class="service" data-aos="zoom-out-up">
+                <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service7.png" alt=""></div>
+                <h2> Full-Stack Frameworks</h2>
+                <p>Frameworks like Next.js, Nuxt.js, and Remix offer both frontend and backend capabilities, supporting
+                    SSR, routing, and API handling in a single environment.</p>
+            </div>
+            <div class="service" data-aos="zoom-out-up">
+                <div class="icon"><img class="desc-img-1" src="/Src/Assets/WebStatic/Service8.png" alt=""></div>
+                <h2>Authentication & Security</h2>
+                <p>Critical for protecting user data and app integrity. Involves password hashing, OAuth, JWT tokens,
+                    2FA, and security headers.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1 class="underline">Our Features</h1>
+        <!-- <p>Real testimonials from real people</p> -->
+    </div>
+
+    <div class="collage-container">
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="stars">Frontend Frameworks & Libraries</div>
+                <p class="testimonial-text">
+                    Frontend frameworks and libraries are tools that help developers build interactive, efficient, and
+                    maintainable user interfaces (UIs) for websites and web apps. They provide structure, reusable
+                    components, and patterns to handle everything from layout to state management.Without frameworks,
+                    building dynamic UIs from scratch in plain HTML, CSS, and JavaScript becomes repetitive and hard to
+                    manage as the app grows. Frameworks solve this by offering. Component-based architecture (like
+                    building blocks).Efficient state management. Reactivity (auto-updating UI when data
+                    changes),Performance optimizations, Routing and SPA (Single Page Application) handling.
+                </p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Sarah Thompson">
+                    <div>
+                        <p class="user-name">Sarah Thompson</p>
+                        <p class="user-title">Project Manager</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="stars"> JavaScript & TypeScript</div>
+                <p class="testimonial-text">JavaScript is a lightweight, high-level, interpreted programming language
+                    that allows developers to create interactive and dynamic content in web browsers.Runs in all modern
+                    web browsers (client-side),Used for DOM manipulation, animations, form validation, etc.TypeScript is
+                    a superset of JavaScript developed by Microsoft. It adds static typing and modern features,
+                    compiling down to regular JavaScript.Strong editor support with autocompletion and refactoring tools
+                </p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Michael Chen">
+                    <div>
+                        <p class="user-name">Michael Chen</p>
+                        <p class="user-title">Software Developer</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="stars">Build Tools & Bundlers</div>
+                <p class="testimonial-text">Build tools and bundlers are utilities that automate the process of
+                    preparing your code for production. They take your raw source files (HTML, CSS, JavaScript, images)
+                    and optimize, bundle, transform, and deliver them in a form that browsers can use efficiently.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Emily Rodriguez">
+                    <div>
+                        <p class="user-name">Emily Rodriguez</p>
+                        <p class="user-title">Data Analyst</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div class="stars">Backend Frameworks & Runtimes</div>
+                <p class="testimonial-text">Backend frameworks and runtimes are tools and environments that help
+                    developers build the server-side logic of web applications — where data is processed, stored, and
+                    delivered to the frontend.They handle HTTP requests, databases, authentication, APIs, and business
+                    logic.Runtimes (like Node.js, Deno) provide the environment where backend code executes.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Ryan Sullivan">
+                    <div>
+                        <p class="user-name">Ryan Sullivan</p>
+                        <p class="user-title">Business Owner</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <div class="stars">Full-Stack Frameworks</div>
+                <p class="testimonial-text">Full-stack frameworks are development tools that provide both frontend and
+                    backend capabilities in a single integrated package.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="David Patel">
+                    <div>
+                        <p class="user-name">David Patel</p>
+                        <p class="user-title">IT Consultant</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <div class="stars">API Technologies</div>
+                <p class="testimonial-text">API Technologies (Application Programming Interface) allow different
+                    systems, applications, or services to communicate with each other.Send and receive data between
+                    frontend & backend Connect with third-party services (e.g., payment gateways, social media), API
+                    Technologies are the backbone of data flow in modern applications, enabling frontends, backends, and
+                    external systems to interact reliably, securely, and efficiently.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Olivia Harper">
+                    <div>
+                        <p class="user-name">Olivia Harper</p>
+                        <p class="user-title">Marketing Specialist</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial-card">
+                <div class="stars">Database & ORM Tools</div>
+                <p class="testimonial-text">Databases store, manage, and retrieve structured or unstructured data for
+                    web applications.
+                    ORMs (Object-Relational Mappers) are tools/libraries that help developers interact with databases
+                    using programming language objects instead of raw SQL.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="James Carter">
+                    <div>
+                        <p class="user-name">James Carter</p>
+                        <p class="user-title">Operations Manager</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial-card">
+                <div class="stars">
+                    Authentication & Security</div>
+                <p class="testimonial-text">Authentication is the process of verifying who a user is.
+                    Security is about protecting data, systems, and users from unauthorized access, attacks, and
+                    vulnerabilities.
+                    Together, they ensure only legitimate users can access the right data — and that all interactions
+                    are safe and secure.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Dr. Lisa Wang">
+                    <div>
+                        <p class="user-name">Dr. Lisa Wang</p>
+                        <p class="user-title">Research Scientist</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card">
+                <div class="stars">DevOps & Deployment</div>
+                <p class="testimonial-text">DevOps (Development + Operations) is a set of practices that automate and
+                    integrate the processes between software development and IT operations — to build, test, release,
+                    and deploy software faster and more reliably.
+                    Deployment is the process of moving code from development to a live environment (like staging or
+                    production), making it accessible to users.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Alex Johnson">
+                    <div>
+                        <p class="user-name">Alex Johnson</p>
+                        <p class="user-title">Data Scientist</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial-card">
+                <div class="stars">Hosting & Edge Platforms</div>
+                <p class="testimonial-text"> Hosting Platforms provide infrastructure to deploy, run, and serve your
+                    website or web application on the internet.
+                    Edge Platforms push your content and logic closer to users using global edge networks, resulting in
+                    faster performance, lower latency, and better scalability.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Maria Garcia">
+                    <div>
+                        <p class="user-name">Maria Garcia</p>
+                        <p class="user-title">Financial Director</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 11 -->
+            <div class="testimonial-card">
+                <div class="stars">Realtime & Messaging</div>
+                <p class="testimonial-text">Realtime in web development refers to the ability to send and receive data
+                    instantly between clients and servers—without needing to refresh the page.
+
+                    Messaging refers to communication between systems or users, such as chat apps, live notifications,
+                    or backend services using queues or brokers.
+
+                    Together, they power dynamic, interactive, and responsive applications.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Jennifer Lee">
+                    <div>
+                        <p class="user-name">Jennifer Lee</p>
+                        <p class="user-title">Content Creator</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 12 -->
+            <div class="testimonial-card">
+                <div class="stars">AI Integration in Development</div>
+                <p class="testimonial-text">AI Integration refers to incorporating Artificial Intelligence (AI)
+                    capabilities into web and software development to enhance user experience, automate workflows, and
+                    build intelligent features.
+
+                    It means using machine learning, natural language processing (NLP), computer vision, or generative
+                    AI directly within your applications or development workflow.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Robert Kim">
+                    <div>
+                        <p class="user-name">Robert Kim</p>
+                        <p class="user-title">CTO</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 13 -->
+            <div class="testimonial-card">
+                <div class="stars">Package Managers & Monorepos</div>
+                <p class="testimonial-text">A package manager helps you install, update, and manage third-party
+                    libraries or dependencies in your project — like React, Tailwind CSS, Express, etc.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Amanda Wilson">
+                    <div>
+                        <p class="user-name">Amanda Wilson</p>
+                        <p class="user-title">Business Analyst</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 14 -->
+            <div class="testimonial-card">
+                <div class="stars">Progressive Web Apps (PWA)</div>
+                <p class="testimonial-text">A Progressive Web App (PWA) is a web application that uses modern browser
+                    features to deliver a native app-like experience — including offline access, push notifications, and
+                    installation on a user’s home screen.
+
+                    In short, it's a website that behaves like a mobile app.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Thomas Brown">
+                    <div>
+                        <p class="user-name">Thomas Brown</p>
+                        <p class="user-title">Security Officer</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Testimonial 15 -->
+            <div class="testimonial-card">
+                <div class="stars">WebAssembly (WASM)</div>
+                <p class="testimonial-text">WebAssembly (WASM) is a low-level, binary instruction format that allows
+                    code written in languages like C, C++, Rust, Go, and others to run at near-native speed in the
+                    browser.
+
+                    It’s designed to work alongside JavaScript, giving web applications access to high-performance
+                    computing previously limited to native apps.</p>
+                <!-- <div class="user-info">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face"
+                        class="user-avatar" alt="Rachel Davis">
+                    <div>
+                        <p class="user-name">Rachel Davis</p>
+                        <p class="user-title">UX Designer</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- SECTION 3: Embracing Design Systems -->
+    <section class="container">
+        <div class="text-content" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+            data-aos-duration="900">
+            <h1 class="underline"> Areas of Web Development</h1>
+            <p class="text-content-para">Powers nearly all websites and apps online,In-demand skill in tech, business,
+                education, and startups,Enables you to create, launch, and grow digital products
+            </p>
+            <div class="tags">
+                <span>Frontend Development (Client-side)</span>
+                <span>Backend Development</span>
+                <span> Database Management</span>
+                <span>Deployment</span>
+                <span>TypeScript</span>
+            </div>
+        </div>
+        <div class="visual-card" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"
+            data-aos-duration="900">
+            <div class="icon-circle">
+                <div class="center-dot"></div>
+                <div class="orbit">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <p class="note">
+                We guide you in the planning, design, and development of your personal or corporate websites, where the
+                information or content once written does not change very often.<b>Yoho Technologies is one of the top
+                    web
+                    designers in Chennai.</b>
+            </p>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Top Section -->
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <p class="footer-tagline">Reimagining retail technology solutions for a better future.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98844 92652</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@yohotechnologies.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>SF1, Second Floor, Plot. No. 29, Sri Ambal Nagar Main Road, Keelkattalai, Chennai -
+                                600117.
+                                (Near:ESAF BANK)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">Leadership</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="about.html">News & Events</a></li>
+                            <li><a href="about.html">Awards & Recognition</a></li>
+                            <li><a href="about.html">Investor Relations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="services.html">E-Commerce Solutions</a></li>
+                            <li><a href="services.html">Supply Chain Management</a></li>
+                            <li><a href="services.html">Data Analytics</a></li>
+                            <li><a href="services.html">Cloud Services</a></li>
+                            <li><a href="services.html">AI & Machine Learning</a></li>
+                            <li><a href="services.html">Digital Consulting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h3>Industries</h3>
+                        <ul>
+                            <li><a href="services.html">Retail & Consumer</a></li>
+                            <li><a href="services.html">Healthcare</a></li>
+                            <li><a href="services.html">Financial Services</a></li>
+                            <li><a href="services.html">Manufacturing</a></li>
+                            <li><a href="services.html">Government</a></li>
+                            <li><a href="services.html">Education</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="about.html">Blog</a></li>
+                            <li><a href="about.html">Case Studies</a></li>
+                            <li><a href="about.html">Whitepapers</a></li>
+                            <li><a href="about.html">Documentation</a></li>
+                            <li><a href="contact.html">Support Center</a></li>
+                            <li><a href="about.html">Training & Certification</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Newsletter Subscription -->
+            <!-- <div class="footer-newsletter">
+        <div class="newsletter-content">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest insights and technology trends</p>
+        </div>
+        <div class="newsletter-form">
+          <form id="newsletter-form">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" required>
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div> -->
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="Src/Assets/Yoho Green Color.png" alt="Yoho Technologies" id="footer-logo">
+                </div>
+                <div class="footer-bottom-left">
+                    <div class="copyright">
+                        &copy; <span id="copyright-year"></span> YOHO TECHNOLOGIES PVT LTD All Rights Reserved
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                        <a href="security.html">Security</a>
+                        <a href="accessibility.html">Accessibility</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-right">
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="social-youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/officewebsite/Navbar.js"></script>
+    <script src="Src/Navbar/navbar.js"></script>
+    <script src="Src/JS/dropdown.js"></script>
+    <script src="Src/JS/search.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

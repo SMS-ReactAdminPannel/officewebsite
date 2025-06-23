@@ -5,7 +5,7 @@ body {
     }
 
     .custom-outline-btn {
-      padding: 10px 30px;
+      padding: 12px 60px;
       border: 1px solid #ffffff;
       border-radius: 999px;
       background: transparent;
@@ -29,7 +29,7 @@ body {
     }
 
     .badge-pill {
-      padding: 10px 30px;
+      padding: 10px 15px;
       border: 1px solid #000000;
       border-radius: 999px;
       background: black;
@@ -139,14 +139,221 @@ body {
 .heading {
   font-family: "Inter", sans-serif;
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: -8.5rem;
   font-weight: 100;
+  text-align: center;
+  
+}
+.chennai{
+   font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: -8.5rem;
+  font-weight: 100;
+ 
+
+}
+.second{
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+  text-align: left;
 }
 .description {
   color: #ffffff;
   font-size: 1rem;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 300;
+   text-align: center;
 }
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .description {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #f1f1f1;
+  
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.contact-link:hover {
+  color: #4ade80;
+}
+.responsive-select {
+  width: 200px; /* Default for desktop */
+}
+
+/* On mobile (≤768px), make it full width */
+@media (max-width: 768px) {
+  .responsive-select {
+    width: 100%;
+    margin-left: 90px;
+  }
+}
+
+.collage-container::-webkit-scrollbar {
+  display: none;
+}
+
+.collage-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 20px;
+  background-color: #000;
+}
+
+/* Changed from grid to columns for masonry layout */
+.testimonials-container {
+  columns: 3;
+  column-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+}
+
+.testimonial-card {
+  break-inside: avoid;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: #ffffff;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #ffd93d,
+    #6bcf7f,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  color: #ffffff;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-justify: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-name {
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.user-title {
+  color: #cccccc;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 0;
+  color: white;
+  background-color: #000;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    columns: 2;
+    column-gap: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-container {
+    columns: 1;
+    padding: 10px;
+  }
+}
+.slide-section {
+  transform: translateY(60px);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* When JS adds .visible, the section animates into place */
+.slide-section.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
 
 

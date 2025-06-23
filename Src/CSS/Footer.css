@@ -60,7 +60,7 @@
 
 /* Footer Styles - Professional Yoho Technologies Design */
 .footer {
-    /* background: black; */
+    background: black;
     color: #ffffff;
     padding: 0;
     position: relative;
@@ -499,6 +499,11 @@
 }
 
 @media (max-width: 1024px) {
+    .footer-tagline{
+        text-align: left;
+        margin-left: 65px;
+    }
+
     .footer-top {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -599,8 +604,7 @@
     }
     
     .footer-tagline {
-        font-size: 0.9rem;
-        max-width: 300px;
+        font-size: 12px;
         line-height: 1.5;
     }
     
@@ -610,12 +614,17 @@
     
     .contact-item {
         font-size: 0.75rem;
-        gap: 0.2rem;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        /* margin-left: 4%; */
     }
     
     .contact-item i {
         font-size: 0.75rem;
-        width: 14px;
+        /* width: 14px; */
+        padding-left: 10px;
     }
     
     .footer-links {
