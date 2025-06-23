@@ -169,3 +169,4 @@ window.addEventListener("DOMContentLoaded", () => {
   console.log('🚀 DOM loaded, router will handle initial navigation');
   // Router initialization is handled in Router.js
 });
+

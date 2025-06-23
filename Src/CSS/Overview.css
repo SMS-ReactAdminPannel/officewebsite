@@ -88,11 +88,11 @@ p {
 
 /* Hero Section */
 .hero-section {
-  min-height: 80vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 40px;
   align-items: center;
   background: #000;
 }
@@ -725,6 +725,7 @@ p {
     padding-left: 0;
     margin-top: 40px;
     order: 2;
+    text-align:left
   }
 
   .main-heading {
@@ -802,7 +803,7 @@ p {
   }
 
   .stats-section {
-    padding: 60px 0;
+    padding: 10px 0;
   }
 
   .stats-heading {
