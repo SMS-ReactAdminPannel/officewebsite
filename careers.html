@@ -9,11 +9,16 @@
     content="Join our team of innovative professionals. Explore career opportunities at Yoho Technologies.">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="Src/CSS/Index.css">
@@ -153,7 +158,7 @@
           <div class="search-container">
             <div class="search-dropdown" id="search-dropdown">
               <input type="text" placeholder="Search..." class="search-input" id="search-input">
-              <!-- <button class="search-close" id="search-close">×</button> -->
+              <button class="search-close" id="search-close">×</button>
             </div>
             <button class="search-toggle" id="search-toggle">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -325,19 +330,19 @@
         <div class="career-right">
           <div class="career-stats">
             <div class="stat-item">
-              <span class="stat-number">500+</span>
+              <span class="stat-number">500+&nbsp;</span>
               <span class="stat-label">Openings</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">50+</span>
+              <span class="stat-number">50+&nbsp;</span>
               <span class="stat-label">Countries</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">35%</span>
+              <span class="stat-number">35%&nbsp;</span>
               <span class="stat-label">Wage Growth</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">95%</span>
+              <span class="stat-number">95%&nbsp;</span>
               <span class="stat-label">Career Growth</span>
             </div>
           </div>
@@ -346,75 +351,81 @@
     </section>
 
     <!-- Job Search Section -->
-    <section class="job-search-section">
-      <div class="search-container">
-        <h2>Find your next role</h2>
-        <p>
-          We think big and set the pace in this industry. We empower outcomes.
-          We forge partnerships and bring people and technology together— and
-          here's where your skills could define a better world.
-        </p>
+    <section class="yoho-job-search-section">
+  <div class="yoho-search-container">
+    <h2 class="yoho-search-heading">Find your next role</h2>
+    <p class="yoho-search-description">
+      We think big and set the pace in this industry. We empower outcomes. We forge partnerships and bring people and technology together— and here's where your skills could define a better world.
+    </p>
 
-        <div class="search-form-wrapper">
-          <form id="careers-search-form" class="advanced-search-form">
-            <div class="search-inputs">
-              <div class="input-group">
-                <i class="fas fa-search"></i>
-                <input type="text" name="job-keyword" placeholder="Job title, keyword, or company" />
-              </div>
-              <div class="input-group">
-                <i class="fas fa-map-marker-alt"></i>
-                <select name="job-location">
-                  <option value="">All Locations</option>
-                  <option value="chennai">Chennai</option>
-                  <option value="bangalore">Bangalore</option>
-                  <option value="mumbai">Mumbai</option>
-                  <option value="delhi">Delhi</option>
-                  <option value="hyderabad">Hyderabad</option>
-                  <option value="pune">Pune</option>
-                  <option value="remote">Remote</option>
-                </select>
-              </div>
-              <div class="input-group">
-                <i class="fas fa-briefcase"></i>
-                <select name="job-department">
-                  <option value="">All Departments</option>
-                  <option value="software-engineering">Software Engineering</option>
-                  <option value="consulting">Consulting</option>
-                  <option value="design-ux">Design & UX</option>
-                  <option value="data-analytics">Data & Analytics</option>
-                  <option value="cloud">Cloud</option>
-                  <option value="security">Security</option>
-                  <option value="sales">Sales</option>
-                  <option value="marketing">Marketing</option>
-                  <option value="project-management">Project Management</option>
-                  <option value="ai-ml">AI & Machine Learning</option>
-                </select>
-              </div>
-              <div class="input-group">
-                <i class="fas fa-user-tie"></i>
-                <select name="experience-level">
-                  <option value="">All Experience Levels</option>
-                  <option value="entry">Entry Level (0-2 years)</option>
-                  <option value="mid">Mid Level (3-5 years)</option>
-                  <option value="senior">Senior Level (6-10 years)</option>
-                  <option value="lead">Lead Level (10+ years)</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="search-btn">
-              <i class="fas fa-search"></i>
-              Search Jobs
-            </button>
-          </form>
+    <div class="yoho-search-form-wrapper">
+      <form id="yoho-careers-search-form" class="yoho-advanced-search-form">
+        <div class="yoho-search-inputs">
+          <!-- Job Title -->
+          <div class="yoho-input-group">
+            <i class="fas fa-briefcase yoho-icon"></i>
+            <input type="text" name="job-keyword" placeholder="Job title, keyword, or company" />
+          </div>
+
+          <!-- Location -->
+          <div class="yoho-input-group">
+            <i class="fas fa-map-marker-alt yoho-icon"></i>
+            <select name="job-location">
+              <option value="" class="yoho-options">All Locations</option>
+              <option value="chennai" class="yoho-options">Chennai</option>
+              <option value="bangalore" class="yoho-options">Bangalore</option>
+              <option value="mumbai" class="yoho-options">Mumbai</option>
+              <option value="delhi" class="yoho-options">Delhi</option>
+              <option value="hyderabad" class="yoho-options">Hyderabad</option>
+              <option value="pune" class="yoho-options">Pune</option>
+              <option value="remote" class="yoho-options">Remote</option>
+            </select>
+          </div>
+
+          <!-- Department -->
+          <div class="yoho-input-group">
+            <i class="fas fa-layer-group yoho-icon"></i>
+            <select name="job-department">
+              <option value="" class="yoho-options">All Departments</option>
+              <option value="software-engineering" class="yoho-options">Software Engineering</option>
+              <option value="consulting" class="yoho-options">Consulting</option>
+              <option value="design-ux" class="yoho-options">Design & UX</option>
+              <option value="data-analytics" class="yoho-options">Data & Analytics</option>
+              <option value="cloud" class="yoho-options">Cloud</option>
+              <option value="security" class="yoho-options">Security</option>
+              <option value="sales" class="yoho-options">Sales</option>
+              <option value="marketing" class="yoho-options">Marketing</option>
+              <option value="project-management" class="yoho-options">Project Management</option>
+              <option value="ai-ml" class="yoho-options">AI & Machine Learning</option>
+            </select>
+          </div>
+
+          <!-- Experience -->
+          <div class="yoho-input-group">
+            <i class="fas fa-user-tie yoho-icon"></i>
+            <select name="experience-level">
+              <option value="" class="yoho-options">Experience Levels</option>
+              <option value="entry" class="yoho-options">Entry Level (0-2 years)</option>
+              <option value="mid" class="yoho-options">Mid Level (3-5 years)</option>
+              <option value="senior" class="yoho-options">Senior Level (6-10 years)</option>
+              <option value="lead" class="yoho-options">Lead Level (10+ years)</option>
+            </select>
+          </div>
         </div>
-      </div>
-    </section>
+
+        <!-- Submit Button -->
+        <button type="submit" class="yoho-search-btn">
+          <i class="fas fa-search"></i> Search Jobs
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 
     <!-- Featured Jobs Section -->
     <section class="featured-jobs-section">
       <div class="featured-jobs-container">
-        <h2 style="color: white;">Featured Opportunities</h2>
+        <h2>Featured Opportunities</h2>
         <div class="job-listings" id="job-listings">
           <div class="job-card" data-department="software-engineering" data-location="chennai" data-experience="senior">
             <div class="job-header">
@@ -614,7 +625,7 @@
             </div>
             <h3>Design & UX</h3>
             <div class="department-roles">
-              <span class="role-tag">UX Designer</span>
+              <span class="role-tag">UX Designer &nbsp;&nbsp;&nbsp;</span>
               <span class="role-tag">UI Designer</span>
               <span class="role-tag">Visual Designer</span>
               <span class="role-tag">User Researcher</span>

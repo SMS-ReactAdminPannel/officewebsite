@@ -193,6 +193,13 @@ p {
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
+@media (max-width: 576px){
+  .cts-button{
+  
+    margin-left: 56px;
+  }
+}
+
 /* Services Section */
 .services-section {
   background-color: #000;
