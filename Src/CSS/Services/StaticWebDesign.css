@@ -305,10 +305,14 @@ body {
     align-items: center;
   }
 
-  .text-section, .image-section, .text-content, .visual-card, .header {
+  .text-section, .image-section, .text-content, .header {
     flex: 1 1 100%;
     padding: 20px 0;
     text-align: center;
+  }
+
+  .visual-card{
+    padding-top: 50px;
   }
   .image-section img{
     width: 350px;
