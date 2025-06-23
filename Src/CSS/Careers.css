@@ -6,6 +6,12 @@
   --stat-bg: rgba(255, 255, 255, 0.06);
   --font-main: "Inter", sans-serif;
 }
+h1{ 
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
 
 p{
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif !important;
