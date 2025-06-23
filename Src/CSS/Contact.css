@@ -11,7 +11,6 @@ body {
       background: transparent;
       color: white;
       font-size: 1rem;
-      font-weight: 200;
       font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
       transition: all 0.3s ease-in-out;
       display: inline-flex;
@@ -31,7 +30,6 @@ body {
       background: black;
       color: white;
       font-size: 1rem;
-      font-weight: 200;
       font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
       transition: all 0.3s ease-in-out;
       display: inline-flex;
@@ -148,14 +146,13 @@ body {
   color: #ffffff;
   font-size: 1rem;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
   text-align: left;
 }
 .description {
   color: #ffffff;
   font-size: 1rem;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
+  
    text-align: center;
 }
 .responsive-img {
