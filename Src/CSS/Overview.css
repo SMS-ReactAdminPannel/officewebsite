@@ -493,7 +493,8 @@ p {
   font-size: 1rem;
   line-height: 1.6;
   color: #ffffff;
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 300;
 }
@@ -572,6 +573,7 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
   text-justify: auto;
+  margin-top: 30px;
 }
 
 .user-info {
@@ -630,6 +632,10 @@ p {
     column-gap: 15px;
     padding: 15px;
   }
+  section-description {
+     margin-bottom: 20px;
+  padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -639,6 +645,10 @@ p {
   }
   p{
     text-align:left;
+  }
+  section-description {
+      margin-bottom: 20px;
+  padding-bottom: 20px;
   }
 }
 .products-section { 
