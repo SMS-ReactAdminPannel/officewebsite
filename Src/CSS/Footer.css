@@ -117,10 +117,10 @@
     grid-template-columns: 1fr 2fr;
     gap: 4rem;
     padding: 4rem 0 3rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0px solid rgba(255, 255, 255, 0.1);
     position: relative;
     margin-top: 4px; /* Space for the color bar */
-        background: black;
+        /* background: black; */
     opacity: 1000;
 }
 
@@ -478,7 +478,7 @@
 }
 
 .footer-language select option {
-    background: #001833;
+    /* background: #001833; */
     color: #ffffff;
 }
 
@@ -694,14 +694,15 @@
     }
     
     .footer-links {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
+         grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    text-align: left;
     }
     
     .footer-links-column {
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        width: 100%;
+    padding: 0;                /* remove the 1 rem vertical padding used as separators */
+    border-bottom: none;
     }
     
     .footer-links-column:last-child {
@@ -808,3 +809,32 @@
         font-size: 13px;
     }
 }
+
+/* Keep 2x2 grid on mobile */
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                justify-items: start;
+            }
+            
+            .footer-links-column {
+                text-align: left;
+                width: 100%;
+            }
+            
+            .footer-links-column h3,
+            .footer-links-column h5 {
+                font-size: 1rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .footer-links-column h3::after,
+            .footer-links-column h5::after {
+                left: 0;
+                transform: none;
+            }
+            
+            .footer-links-column ul li a {
+                font-size: 0.85rem;
+                padding: 0.2rem 0;
+            }

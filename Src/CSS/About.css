@@ -68,7 +68,12 @@
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 300;
 }
-
+.project{
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+}
 
 .custom-card {
   border: 1px solid #fff;
@@ -86,6 +91,14 @@
   color: #ffffff;
   font-size: 2.5rem;
   font-weight: 100;
+}
+.sustain {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 100;
+  text-align:left;
+  
 }
 
 .stat-icon {
@@ -148,6 +161,11 @@ color: #ffffff;
   .custom-btn{
     margin-top:15px;
     
+  }
+  .sustain{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
   }
 }
 .pet { 
@@ -685,12 +703,31 @@ color: #ffffff;
   font-size: 2.5rem;
   font-weight: 300;
   margin-bottom: 10px;
+      margin-top: 4px;
 }
-
 .header p {
   font-size: 1.1rem;
   opacity: 0.8;
 }
+
+.align {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .align {
+    text-align: center;
+  }
+  .header h1 {
+  font-size: 1.5rem;
+  
+}
+}
+
+
+
+
+
 
 @media (max-width: 768px) {
   .testimonials-container {
