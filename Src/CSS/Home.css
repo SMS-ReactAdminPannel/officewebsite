@@ -516,7 +516,9 @@ color: #01d871 ;
     padding-right: 130px;
   }
 
-
+  .hero-video-container{
+    left: -80px;
+  }
 
 }
 

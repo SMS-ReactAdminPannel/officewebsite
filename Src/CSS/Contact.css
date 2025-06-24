@@ -21,9 +21,6 @@ body {
      
       border-radius: 999px;
     }
-<<<<<<< HEAD
-    
-=======
     .custom-outline-btn:hover {
   
   transform: scale(1.05);
@@ -37,7 +34,6 @@ body {
   }
 }
 
->>>>>>> 35fb65c4d175a8fb4a219579dad3f0455e9c1908
 
    
 
@@ -227,6 +223,8 @@ body {
 }
 
 
+
+
 /* On mobile (≤768px), make it full width */
 @media (max-width: 768px) {
   .responsive-select {
@@ -240,7 +238,7 @@ body {
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 300;
    text-align: center;
-   margin-left: 249px;
+   margin-left: 13px;
 }
   .office{
   width: 370px;
