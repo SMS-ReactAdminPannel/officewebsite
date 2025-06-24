@@ -88,7 +88,7 @@ p {
 
 /* Hero Section */
 .hero-section {
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
   display: flex;
   margin: auto;
@@ -189,14 +189,22 @@ p {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.5);
   color: white;
+  text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 576px){
+  .cts-button{
+  
+    margin-left: 56px;
+  }
 }
 
 /* Services Section */
 .services-section {
   background-color: #000;
-  padding: 70px 0 0;
+  padding: 30px 0 0;
   color: white;
 }
 
@@ -325,7 +333,7 @@ p {
 .stat-number {
   font-size: 1.5rem;
   font-weight: 300;
-  color: green;
+  color: #01d871;
   margin-bottom: 15px;
   line-height: 1;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -427,7 +435,6 @@ p {
   right: -5px;
   bottom: -5px;
   border-radius: 50%;
-  /* background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent); */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -445,7 +452,7 @@ p {
 }
 
 .tech-item:hover .tech-img {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) ;
 }
 
 .tech-label {
@@ -487,7 +494,8 @@ p {
   font-size: 1rem;
   line-height: 1.6;
   color: #ffffff;
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 300;
 }
@@ -566,6 +574,7 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
   text-justify: auto;
+  margin-top: 30px;
 }
 
 .user-info {
@@ -624,6 +633,10 @@ p {
     column-gap: 15px;
     padding: 15px;
   }
+  section-description {
+     margin-bottom: 20px;
+  padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -633,6 +646,10 @@ p {
   }
   p{
     text-align:left;
+  }
+  section-description {
+      margin-bottom: 20px;
+  padding-bottom: 20px;
   }
 }
 .products-section { 

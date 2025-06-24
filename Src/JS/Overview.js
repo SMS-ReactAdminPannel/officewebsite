@@ -1,24 +1,3 @@
-
-    // Ensure navbar stays fixed
-    document.addEventListener('DOMContentLoaded', function () {
-      const navbar = document.getElementById('navbar');
-      const colorBar = document.querySelector('.color-bar');
-      if (navbar) {
-        navbar.style.position = 'fixed';
-        navbar.style.top = '4px';
-        navbar.style.zIndex = '1001';
-      }
-      if (colorBar) {
-        colorBar.style.position = 'fixed';
-        colorBar.style.top = '0';
-        colorBar.style.zIndex = '1002';
-        colorBar.style.opacity = '1';
-        colorBar.classList.remove('hidden');
-      }
-    });
-
-
-    
     document.addEventListener('DOMContentLoaded', function() {
   
         // Function to animate numbers
@@ -64,30 +43,30 @@
         
 
     // Loading screen
-    document.addEventListener('DOMContentLoaded', function () {
-      const loadingScreen = document.getElementById('loading-screen');
-      setTimeout(() => {
-        loadingScreen.classList.add('hidden');
-        setTimeout(() => {
-          loadingScreen.style.display = 'none';
-        }, 500);
-      }, 800);
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   const loadingScreen = document.getElementById('loading-screen');
+    //   setTimeout(() => {
+    //     loadingScreen.classList.add('hidden');
+    //     setTimeout(() => {
+    //       loadingScreen.style.display = 'none';
+    //     }, 500);
+    //   }, 800);
 
-                    // Dynamic copyright year
-                    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-                });
-                const observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('visible');   // fade / slide in
-                            } else {
-                                entry.target.classList.remove('visible'); // reset when it leaves
-                            }
-                        });
-                    },
-                    { threshold: 0.1 }  // fire when 10 % of the section is visible
-                );
+    //                 // Dynamic copyright year
+    //                 document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    //             });
+    //             const observer = new IntersectionObserver(
+    //                 (entries) => {
+    //                     entries.forEach(entry => {
+    //                         if (entry.isIntersecting) {
+    //                             entry.target.classList.add('visible');   // fade / slide in
+    //                         } else {
+    //                             entry.target.classList.remove('visible'); // reset when it leaves
+    //                         }
+    //                     });
+    //                 },
+    //                 { threshold: 0.1 }  // fire when 10 % of the section is visible
+    //             );
 
-                document.querySelectorAll('.slide-section')
-                    .forEach(el => observer.observe(el));
+    //             document.querySelectorAll('.slide-section')
+    //                 .forEach(el => observer.observe(el));

@@ -6,20 +6,26 @@
   --stat-bg: rgba(255, 255, 255, 0.06);
   --font-main: "Inter", sans-serif;
 }
+h1{ 
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
 
 p{
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif !important;
-  font-weight: 200 !important;
+  font-weight: 100 !important;
   font-size: 1rem !important;
 }
 /* Section Base */
 .careers-hero {
   background-color: #000;
   /* color: var(--text-color); */
-  padding: 100px 20px;
+  padding: 90px 20px;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  /* height: 100vh; */
   margin-top: 50px;
 }
 
@@ -41,29 +47,29 @@ p{
 }
 
 .career-title {
-  font-size: 3rem;
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-weight: 100;
-  line-height: 1.2;
+  font-family: "Inter", sans-serif ;
+  font-weight: 100 ;
+  font-size: 2.5rem ;
+  color: #ffffff;
+  line-height: 1;
   margin-bottom: 20px;
 }
 
 .career-subtitle {
-  font-size: 1.25rem;
-  color: var(--primary-color);
+  font-size: 20px;
+  color: white;
   font-family: "Inter", sans-serif;
-  font-weight: 200;
+  font-weight: 100;
   margin-bottom: 15px;
 }
 
 .career-description {
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.8;
   font-weight: 300;
   margin-bottom: 30px;
-  color: var(--text-color);
+  color:white;
 }
 
 /* Buttons */
@@ -150,14 +156,14 @@ p{
 
 .stat-number {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 200;
   color: var(--primary-color);
   margin-bottom: 8px;
 }
 
 .stat-label {
-  font-size: 1rem;
-  color: #e2e8f0;
+  font-size: 16px;
+  color: white;
   /* opacity: 0.85; */
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 300;
@@ -176,6 +182,17 @@ p{
 }
 
 /* Responsive */
+
+
+@media (min-width: 600px) and (max-width: 910px) {
+  .career-stats {
+    grid-template-columns: repeat(2, 1fr);
+     }
+  .career-actions{
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .careers-hero-container {
     flex-direction: row;
@@ -183,8 +200,7 @@ p{
     font-size: 0.5rem;
   }
   .career-title {
-    font-size: 1.5rem;
-    font-family: "Inter", sans-serif;
+    font-size: 32px;
     font-weight: 100;
   }
 
@@ -203,121 +219,178 @@ p{
   }
 }
 
-/* Job Search Section */
-.job-search-section {
-  padding: 10px;
-  background: #000000;
-  color: #fff;
-  height: 80vh;
-}
 
-.search-container {
-  max-width: 1200px;
-  margin: 0 auto;
+
+
+
+
+
+
+
+.yoho-job-search-section {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 20px;
   text-align: center;
 }
 
-.search-container h2 {
-  margin-bottom: 20px;
+.yoho-search-heading {
   font-family: "Inter", sans-serif;
-  color: #ffffff;
-  font-size: 3rem;
   font-weight: 100;
-}
-
-.search-container > p {
+  font-size: 40px;
   color: #ffffff;
-  font-size: 1.1rem;
-  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
-  /* color: var(--text-color); */
-  margin-bottom: 50px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.search-form-wrapper {
-  background: var(--light-gray);
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: var(--shadow-light);
-  border: 1px solid white;
-}
-
-.advanced-search-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.search-inputs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.input-group {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.input-group i {
-  position: absolute;
-  left: 10px;
-  top: 15px;
-  color: green;
-  font-size: 20px;
-  /* z-index: ; */
-}
-
-.input-group input,
-.input-group select {
-  width: 100%;
-  padding: 15px 15px 15px 45px;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
+.yoho-search-description {
+   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+   font-weight: 300;
   font-size: 16px;
-  background: white;
-  transition: all 0.3s ease;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  color:white;
 }
 
-.input-group input:focus,
-.input-group select:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(21, 222, 121, 0.1);
+.yoho-search-form-wrapper {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 950px;
+  margin: auto;
 }
 
-.search-btn {
-  background: #fff;
-  color: #000000;
-  /* border: 1px solid black; */
-  /* padding: 15px 40px; */
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 18px;
+.yoho-search-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  color:white;
+  opacity: 1;  /* Optional: make it fully opaque */
+}
+
+
+.yoho-input-group {
+  position: relative;
+  flex: 1 1 200px;
+  border-radius: 30px;
+    border: 1px solid white;
+  min-width: 200px;
+  width: 100%;
+}
+
+.yoho-input-group input,
+.yoho-input-group select {
+  width: 100%;
   font-weight: 300;
+  padding: 12px 15px 12px 42px;
+   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  background:black;
+  border: 1px solid white;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+/* Icons inside input/select */
+.yoho-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 18px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.yoho-input-group select {
+  background-image: url("data:image/svg+xml,%3Csvg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+}
+
+/* Search Button */
+.yoho-search-btn {
+  padding: 12px 25px;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  border: none;
+  background:black;
+  color:white;
+  font-weight: 300;
+  font-size: 16px;
+  border-radius: 10px;
+  /* border-radius: 30px; */
+    border: 1px solid white;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  align-self: center;
-  max-width: 200px;
-  margin: 0 auto;
-}
-.search-btn i {
-  color: green;
+  gap: 8px;
 }
 
-.search-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(21, 222, 121, 0.3);
+.yoho-search-btn:hover {
+  background:black;
+  color: white;
 }
+
+/* === MOBILE RESPONSIVE FIXES === */
+@media (max-width: 480px) {
+  .yoho-search-inputs {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .yoho-input-group {
+    width: 100%;
+    flex: none
+    
+  }
+
+  .yoho-input-group input,
+  .yoho-input-group select {
+    width: 100%;
+    padding-left: 42px;
+    font-size: 15px;
+    height: 48px;
+    box-sizing: border-box;
+  }
+
+  .yoho-options{
+    overflow-x: hidden;
+  }
+
+  .yoho-icon {
+    font-size: 15px;
+    top: 25px;
+    left: 15px
+  }
+
+  .yoho-search-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media(max-width:900px){
+ 
+}
+
+
+
+
+
 
 /* Departments Section */
 .departments-section {
@@ -353,6 +426,10 @@ p{
   border-radius: 12px;
   padding: 20px;
   color: white;
+  font-family: 'Inter', sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+	font-style: normal;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
@@ -368,7 +445,11 @@ p{
 }
 
 .department-card h3 {
-  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	color: #ffffff;
+	font-style: normal;
   margin-bottom: 12px;
 }
 
@@ -388,18 +469,26 @@ p{
 
 .learn-more-btn {
   background: transparent;
+  font-family: 'Inter', sans-serif;
   color: white;
   padding: 10px 20px;
   border: 2px solid #ffffff;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 300;
   transition: background 0.3s ease;
 }
 
 .learn-more-btn:hover {
   /* background: #17a862; */
   transform:translateY(-5px);
+}
+
+@media (max-width:576px){
+  .learn-more-btn{
+    
+       margin-left: 100px;
+  }
 }
 
 
@@ -415,10 +504,11 @@ p{
 }
 
 .featured-jobs-container h2 {
-  font-family: "Inter", sans-serif !important;
-  font-size: 42px;
-  font-weight: 200;
-  /* color: var(--dark-color); */
+  font-family: "Inter", sans-serif ;
+  font-weight: 100 ;
+  font-size: 2.5rem ;
+  color: #ffffff;
+  line-height: 1;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -452,6 +542,7 @@ p{
 }
 
 .job-header {
+  
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -459,8 +550,9 @@ p{
 }
 
 .job-header h3 {
-  font-size: 22px;
-  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
   color: #ffffff;
   margin: 0;
   flex: 1;
@@ -504,7 +596,7 @@ p{
   flex-wrap: wrap;
   gap: 20px;
   font-size: 14px;
-  color: #718096;
+  color: white;
   margin-bottom: 15px;
 }
 
@@ -550,11 +642,13 @@ p{
 .apply-btn {
   background: var(--gradient-primary);
   color: white;
+    font-family: 'Inter', sans-serif;
   border: none;
-  padding: 12px 25px;
+  padding: 8px 15px;
   border-radius: 8px;
+  border: 1px solid white;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 300;
   cursor: pointer;
   transition: all 0.3s ease;
   flex: 1;
@@ -596,12 +690,13 @@ p{
 
 .load-more-btn {
   background: transparent;
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
+  color: white;
+  border: 2px solid white;
+  font-family: 'Inter', sans-serif;
   padding: 15px 40px;
   border-radius: 8px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 300;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -709,8 +804,8 @@ p{
 
 .benefits-container h2 {
   font-family: "Inter", sans-serif;
-  font-size: 42px;
-  font-weight: 200;
+  font-size: 40px;
+  font-weight: 100;
   color: white;
   margin-bottom: 60px;
 }
@@ -746,16 +841,20 @@ p{
 }
 
 .benefit-item h3 {
-  font-size: 22px;
-  font-weight: 700;
-  color: white;
+ font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	color: #ffffff;
+	font-style: normal;
   margin-bottom: 15px;
 }
 
 .benefit-item p {
-  font-size: 16px;
-  color: var(--text-color);
-  line-height: 1.6;
+  font-family: 'Inter', 'Helvetica Neue', 'Axiforma Book', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #ffffff;
+	font-style: normal;
 }
 
 /* Enhanced Talent Network Section */
@@ -786,7 +885,7 @@ p{
 }
 
 .talent-network-content h2 {
-  font-size: 42px;
+  font-size: 40px;
   margin-bottom: 20px;
   font-family: "Inter", sans-serif !important;
   font-weight: 100 !important;
@@ -794,7 +893,11 @@ p{
 }
 
 .talent-network-content > p {
-  font-size: 18px;
+  font-family: 'Inter', 'Helvetica Neue', 'Axiforma Book', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #ffffff;
+	font-style: normal;
   margin-bottom: 40px;
   opacity: 0.9;
   line-height: 1.6;
@@ -817,8 +920,10 @@ p{
 .form-section h3 {
   font-size: 20px;
   margin-bottom: 15px;
-  color: var(--text-color);
+  color:white;
+  font-family: 'Inter', sans-serif;
   display: flex;
+  font-weight: 300;
   align-items: center;
   gap: 10px;
 }
@@ -837,8 +942,9 @@ p{
 }
 
 .form-group label {
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -847,6 +953,8 @@ p{
 .talent-network-form textarea {
   padding: 15px;
   border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -1043,7 +1151,8 @@ p{
   padding: 18px 50px;
   border-radius: 12px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
@@ -1153,6 +1262,14 @@ p{
     /* grid-template-columns: 1fr; */
     grid-template-columns: 2;
   }
+}
+
+.departments-container h2{
+  font-family: 'Inter', sans-serif;
+	font-size: 40px;
+	font-weight: 100;
+	color: #ffffff;
+	font-style: normal;
 }
 
 @media screen and (max-width: 768px) {
