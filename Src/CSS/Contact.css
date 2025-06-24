@@ -11,7 +11,6 @@ body {
       background: transparent;
       color: white;
       font-size: 1rem;
-      font-weight: 200;
       font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
       transition: all 0.3s ease-in-out;
       display: inline-flex;
@@ -31,7 +30,6 @@ body {
       background: black;
       color: white;
       font-size: 1rem;
-      font-weight: 200;
       font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
       transition: all 0.3s ease-in-out;
       display: inline-flex;
@@ -59,7 +57,7 @@ body {
 
 .custom-form .form-control::placeholder,
 .custom-form textarea::placeholder {
-  color: #ccc; 
+  color: #8a8787; 
 }
 
 .custom-form .form-control:focus,
@@ -148,14 +146,14 @@ body {
   color: #ffffff;
   font-size: 1rem;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
   text-align: left;
+  padding-left: 4px;
 }
 .description {
   color: #ffffff;
   font-size: 1rem;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
-  font-weight: 300;
+  
    text-align: center;
 }
 .responsive-img {
@@ -173,6 +171,7 @@ body {
 .contact-link {
   text-decoration: none;
   color: #f1f1f1;
+  padding-left: 4px;
 }
 
 .contact-link:hover {
@@ -243,7 +242,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     #ff6b6b,
     #ffd93d,
@@ -251,7 +250,7 @@ body {
     #4ecdc4,
     #45b7d1,
     #96ceb4
-  );
+  ); */
   opacity: 0;
   transition: opacity 0.3s ease;
 }

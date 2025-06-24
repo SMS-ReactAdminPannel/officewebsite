@@ -1,4 +1,3 @@
-/* Walmart Global Tech Hero Section */
 
 .hero-section {
   height: 110vh;
@@ -256,9 +255,7 @@
 
 .hero-code-text .highlight {
  
-  background: linear-gradient(90deg, #15de79, #3e90de);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+color: #01d871 ;
 }
 
 .hero-title {
@@ -1285,9 +1282,7 @@
               text-align: center;
               font-size: 0.9rem
             }
-            .shaping{
-               
-            }
+           
 
         }
 
@@ -1330,16 +1325,14 @@
   width: 110px;   
   height: 110px; 
   object-fit: cover;
-  margin-left: 55px; 
-
 }
 
 .text-orange {
-  color: white;
+  color: #01d871 ;
   font-weight: 500;
   margin-bottom: 5px;
-  margin-top: 35px;
-  text-align: center;
+  /* margin-top: 35px;
+  text-align: center; */
 }
 
 
@@ -1442,7 +1435,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     #ff6b6b,
     #ffd93d,
@@ -1450,7 +1443,7 @@
     #4ecdc4,
     #45b7d1,
     #96ceb4
-  );
+  ); */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1672,10 +1665,13 @@
    width: 55px;
    height: 55px;
    object-fit: cover;
+    margin-top: 20px;
+
   }
 
   
   .text-orange{
+    margin-top: 20px;
     text-align: center;
     font-size: 16px;
   }
@@ -1701,10 +1697,24 @@
   .decor-img {
     max-width: 80px;
   }
+      .stat-icon{
+   width: 55px;
+   height: 55px;
+   object-fit: cover;
+    margin-top: 20px;
+
+  }
+  
+  .text-orange{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
 
   .card-title{
     padding-left: 0px;
     text-align: center;
+
   }
 
   .project-card{

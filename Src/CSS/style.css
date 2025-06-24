@@ -288,7 +288,7 @@ h4 {
 .hero-code-text {
 	color: #ffffff;
 	font-size: 40px;
-	font-weight: 200;
+	font-weight: 100;
 	margin-bottom: 0.5rem;
 	letter-spacing: -0.02em;
 	font-family: 'Inter', sans-serif;
@@ -298,7 +298,7 @@ h4 {
 }
 
 .hero-code-text .highlight {
-	background: linear-gradient(90deg, #15de79, #3e90de);
+	color:  #15de79;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

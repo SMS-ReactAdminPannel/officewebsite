@@ -103,11 +103,12 @@
 
 .stat-icon {
   width: 110px;   
-  height: 150px;  
+  height: 110px;  
+  object-fit: cover;
 }
 
 .text-orange {
-  color: #78bd23;
+  color: #01d871 ;
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -173,6 +174,22 @@ color: #ffffff;
   font-size: 1.5rem;
   font-weight: 100;
 }
+    .stat-icon{
+   width: 55px;
+   height: 55px;
+   object-fit: cover;
+    margin-top: 20px;
+
+  }
+    .text-orange{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .card-title{
+    text-align: center;
+    font-size: 12px;
+  }
 }
 .pet { 
     padding: 10px 30px;
@@ -204,6 +221,8 @@ color: #ffffff;
     transition: 0.3s ease-in-out;
     text-decoration: none;
     width: 198px;
+    margin-top: 14px;
+    margin-bottom: 8px;
 
 }
 
@@ -405,7 +424,7 @@ color: #ffffff;
   font-size: 1rem;
   font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
   font-weight: 200;
-      max-width: 800px;
+      max-width: 727px;
     }
 
     .hero-text b {
@@ -575,23 +594,82 @@ color: #ffffff;
 
     
     /* Mobile View (≤768px): Center the heading */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .section-header-heading {
     text-align: center;
     margin-top: -52px;
   }
+   
 }
 
-    
+/*     
     .pay {
   position: absolute;
-  bottom: -50px;  /* pushes part of the image out of the box */
-  right: -86px;   /* adjusts how much it overflows horizontally */
-  width: 180px;   /* control size */
+  bottom: -30px;  
+  right: -76px;   
   height: auto;
   opacity: 0.6;
   z-index: 1;
+}  */
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .pay{
+    height: 315px;
+  }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .pay{
+height: 315px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .pay{position: absolute;
+  bottom: -30px;  
+  right: -76px;   
+  height: auto;
+  opacity: 0.6;
+  z-index: 1;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .pay{position: absolute;
+  bottom: -30px;  
+  right: -76px;   
+  height: auto;
+  opacity: 0.6;
+  z-index: 1;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .pay{position: absolute;
+  bottom: -30px;  
+  right: -76px;   
+  height: auto;
+  opacity: 0.6;
+  z-index: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero-box {
   position: relative;
 }
@@ -646,7 +724,7 @@ color: #ffffff;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     #ff6b6b,
     #ffd93d,
@@ -654,7 +732,7 @@ color: #ffffff;
     #4ecdc4,
     #45b7d1,
     #96ceb4
-  );
+  ); */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
