@@ -712,6 +712,11 @@ p {
     grid-template-columns: repeat(6, 1fr);
     gap: 30px;
   }
+  
+  .hero-section{
+    margin: 0px;
+    min-height: 80vh;
+  }
 }
 
 @media (max-width: 991px) {

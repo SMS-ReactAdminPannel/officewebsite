@@ -840,8 +840,10 @@ if (typeof module !== 'undefined' && module.exports) {
   
   statNumbers.forEach(stat => {
     const rawText = stat.textContent.trim();
-    const hasPlus = rawText.endsWith('+');
-    const target = parseInt(rawText.replace('+', ''));
+    const numberMatch = rawText.match(/^(\d+)/);
+    const suffixMatch = rawText.match(/[^0-9]+$/);
+    const target = numberMatch ? parseInt(numberMatch[0]) : 0;
+    const suffix = suffixMatch ? suffixMatch[0] : '';
     const duration = 2000; 
     const increment = target / (duration / 16); // ~60fps
     let current = 0;
@@ -850,7 +852,7 @@ if (typeof module !== 'undefined' && module.exports) {
       current += increment;
       if (current >= target) {
         clearInterval(timer);
-        stat.textContent = target + (hasPlus ? '+' : '');
+        stat.textContent = target + suffix
       } else {
         stat.textContent = Math.floor(current); 
       }
