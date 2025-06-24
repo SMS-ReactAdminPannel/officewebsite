@@ -22,18 +22,12 @@ body {
       border-radius: 999px;
     }
     .custom-outline-btn:hover {
+  transform: scale(1.07);
   
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  
+  color: white;
 }
-@media (max-width: 768px) {
-  .custom-outline-btn {
-    font-size: 0.95rem;
-    padding: 10px 16px;
-    margin-left: 33px;
-  }
-}
-
+    
 
    
 
@@ -435,6 +429,14 @@ body {
     margin-right: 85px;
     margin-top: 10px;
   }
+  .cription {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+   margin-left: 251px;
+}
   @media (max-width: 412px) {
     .responsive-select {
         width: 52%;
@@ -442,6 +444,14 @@ body {
         margin-right: 176px;
         margin-top: 10px;
     }
+    .cription {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+   margin-left: 13px;
+}
 }
   
 
@@ -532,6 +542,22 @@ body {
     margin: 0 auto;
   }
 }
+@media (max-width: 412px) {
+  .d-flex.flex-wrap.gap-3.mb-4 {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .badge-pill.box {
+    width: 55%;
+    max-width: 260px;
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    text-align: center;
+  }
+}
+
 
 
 
