@@ -1383,4 +1383,16 @@ input::placeholder {
   .save-btn {
     align-self: center;
   }
+  .job-listings{
+    justify-content: center;
+  }
+  .job-card{
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 992px){
+    .career-actions{
+      justify-content: center;
+  } 
 }
