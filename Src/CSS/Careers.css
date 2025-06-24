@@ -183,6 +183,106 @@ p{
 
 /* Responsive */
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .career-left,
+  .career-right,
+  .yoho-search-inputs,
+  .job-card,
+  .department-card,
+  .benefit-item {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .career-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .yoho-search-form-wrapper {
+    padding: 10px;
+  }
+
+  .departments-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .yoho-search-inputs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .department-card,
+  .benefit-item {
+    width: 100%;
+  }
+
+  .departments-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .careers-hero-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .career-left,
+  .career-right {
+    width: 50%;
+  }
+
+  .departments-grid,
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .career-title {
+    font-size: 2.5rem;
+  }
+
+  .yoho-search-form-wrapper {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .departments-grid,
+  .benefits-grid {
+    gap: 30px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .careers-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .yoho-search-heading {
+    font-size: 2.25rem;
+  }
+
+  .job-listings {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 20px;
+  }
+}
+
+
 
 @media (min-width: 600px) and (max-width: 910px) {
   .career-stats {
