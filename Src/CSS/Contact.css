@@ -2,6 +2,7 @@ body {
       background-color: #000;
       color: #fff;
       font-family: "Inter", sans-serif;
+      overflow-x: hidden;
     }
 
     .custom-outline-btn {
@@ -20,7 +21,23 @@ body {
      
       border-radius: 999px;
     }
+<<<<<<< HEAD
     
+=======
+    .custom-outline-btn:hover {
+  
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 768px) {
+  .custom-outline-btn {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    margin-left: 33px;
+  }
+}
+
+>>>>>>> 35fb65c4d175a8fb4a219579dad3f0455e9c1908
 
    
 
@@ -134,15 +151,19 @@ body {
   font-weight: 100;
   text-align: center;
   
+  
+  
 }
-.chennai{
-   font-family: "Inter", sans-serif;
-  color: #ffffff;
-  font-size: -8.5rem;
-  font-weight: 100;
- 
 
+.chennai {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 1.8rem; /* Base size for mobile */
+  font-weight: 200;
 }
+
+
+
 .second{
   color: #ffffff;
   font-size: 1rem;
@@ -157,17 +178,34 @@ body {
   
    text-align: center;
 }
+.cription {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+}
 .responsive-img {
     max-width: 100%;
     height: auto;
     display: block;
   }
-  .description {
+  /* .description {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   color: #f1f1f1;
   
+} */
+ 
+.box {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+  
 }
+
 
 .contact-link {
   text-decoration: none;
@@ -180,14 +218,50 @@ body {
 }
 .responsive-select {
   width: 200px; /* Default for desktop */
+  margin-bottom: -68px;
 }
+.office{
+   width: 1526px;
+   margin-top:-20px
+
+}
+
 
 /* On mobile (≤768px), make it full width */
 @media (max-width: 768px) {
   .responsive-select {
     width: 100%;
     margin-left: 90px;
+    margin-top: 7px;
   }
+  .cription {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+   margin-left: 249px;
+}
+  .office{
+  width: 370px;
+  margin-left: 20px;
+  margin-top: -21px;
+}
+  .box {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+   margin-left: 97px;
+}
+.chennai {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 2.8rem; /* Base size for mobile */
+  font-weight: 100;
+}
+
 }
 
 .collage-container::-webkit-scrollbar {
@@ -348,6 +422,119 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .head-container {
+    width: 93%;
+      overflow-x: hidden; 
+  }
+}
+
+@media (max-width: 900px) {
+  .responsive-select {
+    width: 84%;
+    margin-left: 29px;
+    margin-right: 85px;
+    margin-top: 10px;
+  }
+  @media (max-width: 412px) {
+    .responsive-select {
+        width: 52%;
+        margin-left: 92px;
+        margin-right: 176px;
+        margin-top: 10px;
+    }
+}
+  
+
+  .office {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: -20px;
+  }
+
+  .box {
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .chennai {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .custom-outline-btn {
+    font-size: 1rem;
+    padding: 10px 24px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .form-box {
+    margin: 0 10px;
+  }
+
+  .custom-form .form-control,
+  .custom-form textarea,
+  .custom-form .form-select {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-card {
+    padding: 16px;
+  }
+
+  .testimonials-container {
+    columns: 2;
+    column-gap: 16px;
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .office {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: -20px;
+  }
+
+  .office .row {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .office .col-md-4 {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .office img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
 
 
 
