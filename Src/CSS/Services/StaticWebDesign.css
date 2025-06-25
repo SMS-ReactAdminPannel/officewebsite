@@ -294,6 +294,17 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .text-section p {
+    margin-bottom:20px;
+  }
+  .services, .tags{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+  
+}
+
 @media (max-width: 768px) {
   .container1,
   .container {
@@ -351,6 +362,7 @@ body {
     text-align: center;
   }
 }
+
 
 /* h1.underline {
   position: relative;
