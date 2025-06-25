@@ -22,10 +22,12 @@ body {
       border-radius: 999px;
     }
     .custom-outline-btn:hover {
+  transform: scale(1.07);
   
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  
+  color: white;
 }
+<<<<<<< HEAD
 @media (max-width: 768px) {
   .custom-outline-btn {
     font-size: 0.95rem;
@@ -34,6 +36,9 @@ body {
   }
 }
 
+=======
+    
+>>>>>>> f90634d24a35e7e25f779c9488484b32253e52cd
 
    
 
@@ -146,6 +151,7 @@ body {
   font-size: -8.5rem;
   font-weight: 100;
   text-align: center;
+  
   
   
   
@@ -435,6 +441,15 @@ body {
     margin-right: 85px;
     margin-top: 10px;
   }
+  .cription {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+   margin-left: 251px;
+}
+
   @media (max-width: 412px) {
     .responsive-select {
         width: 52%;
@@ -442,6 +457,14 @@ body {
         margin-right: 176px;
         margin-top: 10px;
     }
+    .cription {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+   margin-left: 13px;
+}
 }
   
 
@@ -532,7 +555,118 @@ body {
     margin: 0 auto;
   }
 }
+@media (max-width: 412px) {
+  .d-flex.flex-wrap.gap-3.mb-4 {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
+  .badge-pill.box {
+    width: 55%;
+    max-width: 260px;
+    font-size: 0.95rem;
+    padding: 10px 16px;
+    text-align: center;
+  }
+}
+@media (max-width: 430px) {
+.cription {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+  font-weight: 300;
+   text-align: center;
+   margin-left: 13px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 900px) and (max-width: 1025px) {
+  .chennai {
+    font-size: 2.5rem;
+  }
+
+  .description,
+  .second {
+    font-size: 1.15rem;
+  }
+  .office{
+   width: 1024px;
+   margin-top:-20px
+
+}
+.custom-outline-btn {
+      padding: 15px 41px;
+      border: 1px solid #ffffff;
+      border-radius: 999px;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+      font-family: "Inter", "Helvetica Neue", "Axiforma Book", Arial, sans-serif;
+      transition: all 0.3s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+     
+      border-radius: 999px;
+    }
+}
+@media (max-width: 412px) {
+  .badge-pill.box {
+    width: 69%;
+    max-width: 260px;
+    font-size: 0.9rem;
+    padding: 10px 16px;
+    white-space: nowrap;         
+    overflow: hidden;            
+    text-overflow: ellipsis;     
+  }
+}
+@media (max-width: 325px) { 
+
+  .custom-outline-btn {
+    font-size: 10px;
+    padding: 11px 42px;           
+    margin: 0 auto;           
+    display: inline-block;        
+    white-space: nowrap;          
+    max-width: 100%;              
+    text-align: center;
+  }
+
+    .des {
+        font-size: 0.95rem;
+        text-align: left;
+   
+}
+}
+ 
+    @media (max-width: 320px) {
+        .responsive-select {
+            width: 52%;
+            margin-left: 72px;
+            margin-right: 176px;
+            margin-top: 10px;
+        }
+    }
+    /* @media (max-width: 320px) {
+    .description {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+} */
+
+    
 
 
 
