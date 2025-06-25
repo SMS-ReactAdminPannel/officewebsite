@@ -201,6 +201,14 @@ p {
   }
 }
 
+
+@media (min-width: 576px) and (max-width: 768px){
+  .cts-button{
+  
+    margin-left: 260px;
+  }
+}
+
 /* Services Section */
 .services-section {
   background-color: #000;

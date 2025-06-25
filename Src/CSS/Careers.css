@@ -155,7 +155,7 @@ p{
 }
 
 .stat-number {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 200;
   color: var(--primary-color);
   margin-bottom: 8px;
@@ -1483,4 +1483,16 @@ input::placeholder {
   .save-btn {
     align-self: center;
   }
+  .job-listings{
+    justify-content: center;
+  }
+  .job-card{
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 992px){
+    .career-actions{
+      justify-content: center;
+  } 
 }
