@@ -852,7 +852,7 @@
       current += increment;
       if (current >= target) {
         clearInterval(timer);
-        stat.textContent = target + suffix;
+        stat.textContent = target + suffix
       } else {
         stat.textContent = Math.floor(current); 
       }
