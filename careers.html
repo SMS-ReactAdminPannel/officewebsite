@@ -40,14 +40,11 @@
 </head>
 
 <body>
-  <!-- Loading Screen -->
-  <div id="loading-screen" class="loading-screen">
-    <img src="Src/Assets/Loaded.png" alt="Yoho Technologies Loading" class="rotating-logo">
-  </div>
+
 
   <!-- Navbar -->
   <!-- <div class="color-bar"></div> -->
-  <nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar">
     <div class="nav-container">
       <!-- Logo -->
       <div class="logo">
@@ -301,6 +298,7 @@
       </div>
     </div>
   </nav>
+
 
   <!-- Main Content -->
   <main>
@@ -857,6 +855,10 @@
   <script src="Src/JS/dropdown.js"></script>
   <script src="Src/JS/search.js"></script>
   <script src="Src/JS/ActivePage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Src/JS/Home.js"></script>
+  <script src="Src/JS/MobileNav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Ensure navbar stays fixed
     document.addEventListener('DOMContentLoaded', function () {
@@ -890,6 +892,67 @@
       // Dynamic copyright year
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
+  </script>
+  <!-- ---------- JavaScript ---------- -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  
+        // Function to animate numbers
+  function animateNumbers() {
+  const statNumbers = document.querySelectorAll('.text-orange');
+  
+  statNumbers.forEach(stat => {
+    const rawText = stat.textContent.trim();
+    const hasPlus = rawText.endsWith('+');
+    const target = parseInt(rawText.replace('+', ''));
+    const duration = 2000; 
+    const increment = target / (duration / 16); // ~60fps
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        clearInterval(timer);
+        stat.textContent = target + (hasPlus ? '+' : '');
+      } else {
+        stat.textContent = Math.floor(current); 
+      }
+    }, 16);
+  });
+}
+
+  
+  // Intersection Observer to trigger animation when scrolled to
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateNumbers();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  const statsSection = document.querySelector('.value-section');
+  if (statsSection) {
+    observer.observe(statsSection);
+  }
+});
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');   // fade / slide in
+          } else {
+            entry.target.classList.remove('visible'); // reset when it leaves
+          }
+        });
+      },
+      { threshold: 0.1 }  // fire when 10 % of the section is visible
+    );
+
+    document.querySelectorAll('.slide-section')
+      .forEach(el => observer.observe(el));
   </script>
 </body>
 
