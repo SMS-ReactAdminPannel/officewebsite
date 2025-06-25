@@ -1,6 +1,6 @@
 
 .hero-section {
-  height: 110vh;
+  height: 100%;
   background-image: linear-gradient(
       180deg,
       rgba(0, 6, 14, 0.849) 0%,
@@ -520,6 +520,8 @@ color: #01d871 ;
 }
 
 @media (max-width: 992px) {
+
+
   .hero-code-text {
     font-size: 1.8rem;
   }
@@ -529,12 +531,15 @@ color: #01d871 ;
   }
 
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    padding-right:80px;
+    
   }
 
   .hero-video-container {
     width: 280px;
     height: 280px;
+    margin: 0px auto;
     
   }
 
@@ -839,7 +844,10 @@ color: #01d871 ;
 @media (max-width: 768px) {
 
   .hero-section{
-    padding: 75px 0px
+    padding: 150px 0px 0px;
+  }
+  .hero-code-text{
+    margin-top:10px;
   }
   .section-title1 {
     margin-bottom: 40px;
@@ -1016,7 +1024,7 @@ color: #01d871 ;
   padding: 20px 30px;
   position: relative;
   transition: all 0.3s ease;
-  min-height: 180px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1098,7 +1106,9 @@ color: #01d871 ;
 
   .card-title {
     max-width: 100%;
+    max-height: 50px;
     font-size: 1.2rem;
+    overflow: hidden;
   }
 
   .service-card {
@@ -1328,6 +1338,7 @@ color: #01d871 ;
 }
 
 .text-orange {
+  padding-top: 25px;
   color: #01d871 ;
   font-weight: 500;
   margin-bottom: 5px;
@@ -1528,8 +1539,8 @@ color: #01d871 ;
 @media (max-width: 480px) {
   .testimonials-container {
     columns: 1;
-    padding: 10px;
   }
+
 }
 
 /* Tech Stack Section Styles */
