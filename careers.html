@@ -155,7 +155,7 @@
           <div class="search-container">
             <div class="search-dropdown" id="search-dropdown">
               <input type="text" placeholder="Search..." class="search-input" id="search-input">
-              <button class="search-close" id="search-close">×</button>
+              <!-- <button class="search-close" id="search-close">×</button> -->
             </div>
             <button class="search-toggle" id="search-toggle">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -350,69 +350,70 @@
 
     <!-- Job Search Section -->
     <section class="yoho-job-search-section">
-  <div class="yoho-search-container">
-    <h2 class="yoho-search-heading">Find your next role</h2>
-    <p class="yoho-search-description">
-      We think big and set the pace in this industry. We empower outcomes. We forge partnerships and bring people and technology together— and here's where your skills could define a better world.
-    </p>
+      <div class="yoho-search-container">
+        <h2 class="yoho-search-heading">Find your next role</h2>
+        <p class="yoho-search-description">
+          We think big and set the pace in this industry. We empower outcomes. We forge partnerships and bring people
+          and technology together— and here's where your skills could define a better world.
+        </p>
 
-    <div class="yoho-search-form-wrapper">
-      <form id="yoho-careers-search-form" class="yoho-advanced-search-form">
-        <div class="yoho-search-inputs">
-          <!-- Job Title -->
-          <div class="yoho-input-group">
-            <i class="fas fa-briefcase yoho-icon"></i>
-            <input type="text" name="job-keyword" placeholder="Job title, keyword, or company" />
-          </div>
+        <div class="yoho-search-form-wrapper">
+          <form id="yoho-careers-search-form" class="yoho-advanced-search-form">
+            <div class="yoho-search-inputs">
+              <!-- Job Title -->
+              <div class="yoho-input-group">
+                <i class="fas fa-briefcase yoho-icon"></i>
+                <input type="text" name="job-keyword" placeholder="Job title, keyword, or company" />
+              </div>
 
-          <!-- Location -->
-          <div class="yoho-input-group">
-            <i class="fas fa-map-marker-alt yoho-icon"></i>
-            <select name="job-location">
-              <option value="" class="yoho-options">Select</option>
-              <option value="chennai" class="yoho-options">Chennai</option>
-            </select>
-          </div>
+              <!-- Location -->
+              <div class="yoho-input-group">
+                <i class="fas fa-map-marker-alt yoho-icon"></i>
+                <select name="job-location">
+                  <option value="" class="yoho-options">Select</option>
+                  <option value="chennai" class="yoho-options">Chennai</option>
+                </select>
+              </div>
 
-          <!-- Department -->
-          <div class="yoho-input-group">
-            <i class="fas fa-layer-group yoho-icon"></i>
-            <select name="job-department">
-              <option value="" class="yoho-options">All Departments</option>
-              <option value="software-engineering" class="yoho-options">Software Engineering</option>
-              <option value="consulting" class="yoho-options">Consulting</option>
-              <option value="design-ux" class="yoho-options">Design & UX</option>
-              <option value="data-analytics" class="yoho-options">Data & Analytics</option>
-              <option value="cloud" class="yoho-options">Cloud</option>
-              <option value="security" class="yoho-options">Security</option>
-              <option value="sales" class="yoho-options">Sales</option>
-              <option value="marketing" class="yoho-options">Marketing</option>
-              <option value="project-management" class="yoho-options">Project Management</option>
-              <option value="ai-ml" class="yoho-options">AI & Machine Learning</option>
-            </select>
-          </div>
+              <!-- Department -->
+              <div class="yoho-input-group">
+                <i class="fas fa-layer-group yoho-icon"></i>
+                <select name="job-department">
+                  <option value="" class="yoho-options">All Departments</option>
+                  <option value="software-engineering" class="yoho-options">Software Engineering</option>
+                  <option value="consulting" class="yoho-options">Consulting</option>
+                  <option value="design-ux" class="yoho-options">Design & UX</option>
+                  <option value="data-analytics" class="yoho-options">Data & Analytics</option>
+                  <option value="cloud" class="yoho-options">Cloud</option>
+                  <option value="security" class="yoho-options">Security</option>
+                  <option value="sales" class="yoho-options">Sales</option>
+                  <option value="marketing" class="yoho-options">Marketing</option>
+                  <option value="project-management" class="yoho-options">Project Management</option>
+                  <option value="ai-ml" class="yoho-options">AI & Machine Learning</option>
+                </select>
+              </div>
 
-          <!-- Experience -->
-          <div class="yoho-input-group">
-            <i class="fas fa-user-tie yoho-icon"></i>
-            <select name="experience-level">
-              <option value="" class="yoho-options">Experience Levels</option>
-              <option value="entry" class="yoho-options">Entry Level (0-2 years)</option>
-              <option value="mid" class="yoho-options">Mid Level (3-5 years)</option>
-              <option value="senior" class="yoho-options">Senior Level (6-10 years)</option>
-              <option value="lead" class="yoho-options">Lead Level (10+ years)</option>
-            </select>
-          </div>
+              <!-- Experience -->
+              <div class="yoho-input-group">
+                <i class="fas fa-user-tie yoho-icon"></i>
+                <select name="experience-level">
+                  <option value="" class="yoho-options">Experience Levels</option>
+                  <option value="entry" class="yoho-options">Entry Level (0-2 years)</option>
+                  <option value="mid" class="yoho-options">Mid Level (3-5 years)</option>
+                  <option value="senior" class="yoho-options">Senior Level (6-10 years)</option>
+                  <option value="lead" class="yoho-options">Lead Level (10+ years)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="yoho-search-btn">
+              <i class="fas fa-search"></i> Search Jobs
+            </button>
+          </form>
         </div>
-
-        <!-- Submit Button -->
-        <button type="submit" class="yoho-search-btn">
-          <i class="fas fa-search"></i> Search Jobs
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- Featured Jobs Section -->
     <section class="featured-jobs-section">
@@ -443,7 +444,7 @@
             </div>
             <div class="job-details">
               <span class="job-location"><i class="ion-ios-location-outline  text-white" style="color: white;"></i>
-               Chennai</span>
+                Chennai</span>
               <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
                 Full-time</span>
               <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 2-3
@@ -497,7 +498,7 @@
             </div>
             <div class="job-details">
               <span class="job-location"><i class="ion-ios-location-outline text-white" style="color: white;"></i>
-               Chennai</span>
+                Chennai</span>
               <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
                 Full-time</span>
               <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 2-3
@@ -515,7 +516,7 @@
             </div>
             <div class="job-details">
               <span class="job-location"><i class="ion-ios-location-outline text-white" style="color: white;"></i>
-               Chennai</span>
+                Chennai</span>
               <span class="job-type"><i class="ion-ios-briefcase-outline text-white" style="color: white;"></i>
                 Full-time</span>
               <span class="job-experience"><i class="ion-ios-people-outline text-white" style="color: white;"></i> 3+
